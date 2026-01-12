@@ -92,7 +92,7 @@ export default function Technology() {
                 preload="metadata"
                 className="w-full h-full object-cover"
               >
-                <source src="/CAT.mp4" type="video/mp4" />
+                <source src="https://d2t61k482lx79u.cloudfront.net/CAT.mp4" type="video/mp4" />
               </video>
             </div>
           </div>

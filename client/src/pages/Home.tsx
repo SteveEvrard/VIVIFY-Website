@@ -35,7 +35,7 @@ export default function Home() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover opacity-35 saturate-50"
         >
-          <source src="/hero-video.mp4" type="video/mp4" />
+          <source src="https://d2t61k482lx79u.cloudfront.net/hero-video.mp4" type="video/mp4" />
         </video>
 
         {/* Overlay gradient for text readability */}
@@ -183,7 +183,7 @@ export default function Home() {
                 preload="metadata"
                 className="w-full h-full object-cover"
               >
-                <source src="/CAT.mp4" type="video/mp4" />
+                <source src="https://d2t61k482lx79u.cloudfront.net/CAT.mp4" type="video/mp4" />
               </video>
             </div>
           </div>

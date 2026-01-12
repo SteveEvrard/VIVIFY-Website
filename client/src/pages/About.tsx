@@ -96,7 +96,7 @@ export default function About() {
                 preload="metadata"
                 className="w-full h-full object-cover"
               >
-                <source src="/overview.mp4" type="video/mp4" />
+                <source src="https://d2t61k482lx79u.cloudfront.net/overview-1.mp4" type="video/mp4" />
               </video>
             </div>
           </div>

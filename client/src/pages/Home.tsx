@@ -3,26 +3,8 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Zap, Leaf, Wind, Users, TrendingUp, Shield, Flame, Droplets } from "lucide-react";
-import { buildContactMailto } from "@/lib/contactMailto";
 
 export default function Home() {
-  const brochureHref = buildContactMailto({
-    subject: "Request: Vivify Brochure",
-    bodyLines: [
-      "Hi Vivify team,",
-      "",
-      "Could you please share the latest Vivify brochure?",
-      "",
-      "Name:",
-      "Company / Organization:",
-      "Role:",
-      "Best way to reach me:",
-      "",
-      "Thanks,",
-      "",
-    ],
-  });
-
   return (
     <div className="min-h-screen flex flex-col pt-20">
       {/* Hero Section with video background */}
@@ -270,7 +252,9 @@ export default function Home() {
               className="border-black text-black hover:bg-black/10"
               asChild
             >
-              <a href={brochureHref}>Download Brochure</a>
+              <a href="/VIVIFY-Brochure.pdf" download>
+                Download Brochure
+              </a>
             </Button>
           </div>
         </div>

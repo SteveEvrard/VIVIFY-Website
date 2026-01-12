@@ -1,6 +1,7 @@
 /* VIVIFY: Professional footer with contact info and company details */
 
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Footer() {
   return (
@@ -28,11 +29,13 @@ export default function Footer() {
 
           {/* Center Column - Branding */}
           <div className="flex flex-col items-center justify-center space-y-4">
-            <img 
-              src="/vivify-logo.webp" 
-              alt="VIVIFY" 
-              className="h-20"
-            />
+            <Link href="/" className="inline-flex">
+              <img
+                src="/vivify-logo.webp"
+                alt="VIVIFY"
+                className="h-20 cursor-pointer"
+              />
+            </Link>
             <p className="text-center text-muted-foreground max-w-xs">
               Revolutionary energy technologies for a sustainable future
             </p>
@@ -44,18 +47,18 @@ export default function Footer() {
               Quick Links
             </h3>
             <div className="space-y-2">
-              <a href="#" className="block text-muted-foreground hover:text-primary transition-colors">
+              <Link href="/products" className="block text-muted-foreground hover:text-primary transition-colors">
                 Products
-              </a>
-              <a href="#" className="block text-muted-foreground hover:text-primary transition-colors">
+              </Link>
+              <Link href="/technology" className="block text-muted-foreground hover:text-primary transition-colors">
                 Technology
-              </a>
-              <a href="#" className="block text-muted-foreground hover:text-primary transition-colors">
+              </Link>
+              <Link href="/about" className="block text-muted-foreground hover:text-primary transition-colors">
                 About
-              </a>
-              <a href="#" className="block text-muted-foreground hover:text-primary transition-colors">
+              </Link>
+              <Link href="/impact" className="block text-muted-foreground hover:text-primary transition-colors">
                 Impact
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -67,15 +70,15 @@ export default function Footer() {
               <p>&copy; {new Date().getFullYear()} VIVIFY. All rights reserved.</p>
             </div>
             <div className="flex flex-wrap gap-6 justify-center">
-              <a href="#" className="hover:text-primary transition-colors">
+              <Link href="/privacy" className="hover:text-primary transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="hover:text-primary transition-colors">
+              </Link>
+              <Link href="/terms" className="hover:text-primary transition-colors">
                 Terms of Service
-              </a>
-              <a href="#" className="hover:text-primary transition-colors">
+              </Link>
+              <Link href="/cookies" className="hover:text-primary transition-colors">
                 Cookie Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>

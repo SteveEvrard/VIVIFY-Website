@@ -1,0 +1,20 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        # Builds the Vite app (root is ./client per vite.config.ts) and outputs to dist/public
+        - npm run build
+  artifacts:
+    # Vite output directory configured in vite.config.ts
+    baseDirectory: dist/public
+    files:
+      - "**/*"
+  cache:
+    paths:
+      - node_modules/**/*
+
+

@@ -219,7 +219,7 @@ export default function Home() {
             {[
               { title: "Clean Air Technology™", icon: Leaf, desc: "Five-stage emissions control system" },
               { title: "Pulsar™ Generator", icon: Zap, desc: "On-demand hydrogen production" },
-              { title: "Cold CAT™", icon: Droplets, desc: "Cryogenic CO₂ separation" }
+              { title: "Cold CAT", icon: Droplets, desc: "Cryogenic CO₂ separation" }
             ].map((product, idx) => (
               <div key={idx} className="bg-white rounded-lg p-8 border border-gray-200 hover:shadow-lg transition-shadow">
                 <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">

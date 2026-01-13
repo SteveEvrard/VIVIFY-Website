@@ -179,7 +179,7 @@ export default function Products() {
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 { icon: Droplets, title: "Hydroponic Towers", desc: "Particulate separation through water condensation" },
-                { icon: Wind, title: "Cold CAT™", desc: "Cryogenic CO₂ removal and separation" },
+                { icon: Wind, title: "Cold CAT", desc: "Cryogenic CO₂ removal and separation" },
                 { icon: Flame, title: "Clean Air Turbine™", desc: "Multi-stage pollutant incineration" },
                 { icon: Cpu, title: "AGES™ Separator", desc: "Artificial gravity water filtration" },
                 { icon: Shield, title: "Particle Acquisition Tower", desc: "Final stage particulate filtration" },

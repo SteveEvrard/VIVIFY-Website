@@ -69,7 +69,7 @@ export default function Technology() {
               <div className="space-y-6">
                 {[
                   { num: "1", title: "Heavy Particulate Removal", desc: "Hydroponic towers condense and separate particulates through water mixing and high-pressure filtration" },
-                  { num: "2", title: "CO₂ Removal (Cold CAT™)", desc: "Cryogenic technology separates CO₂ from exhaust, converting it to solid form for removal" },
+                  { num: "2", title: "CO₂ Removal (Cold CAT)", desc: "Cryogenic technology separates CO₂ from exhaust, converting it to solid form for removal" },
                   { num: "3", title: "Toxins Ignited & Burned", desc: "Clean Air Turbine™ incinerates residual pollutants using hydrogen-oxygen mixture" },
                   { num: "4", title: "Final Particulate Filter", desc: "Particle Acquisition Tower filters remaining particles for pollution-free gas release" },
                   { num: "5", title: "Water Filtration (AGES™)", desc: "Artificial Gravity Enhance Separator removes heavy particles like mercury from water" }
@@ -120,7 +120,7 @@ export default function Technology() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { icon: Flame, title: "Hydroponic Towers", desc: "Water-based particulate separation and condensation system" },
-              { icon: Wind, title: "Cold CAT™", desc: "Cryogenic CO₂ precipitation and removal technology" },
+              { icon: Wind, title: "Cold CAT", desc: "Cryogenic CO₂ precipitation and removal technology" },
               { icon: Zap, title: "Clean Air Turbine™", desc: "Multi-stage hydrogen-oxygen combustion system" },
               { icon: Droplets, title: "Particle Acquisition Tower", desc: "Final-stage particulate filtration system" },
               { icon: Cpu, title: "AGES™ Separator", desc: "Artificial gravity water filtration and purification" },
@@ -254,7 +254,7 @@ export default function Technology() {
                 <tbody>
                   {[
                     { component: "Hydroponic Towers", function: "Particulate separation", performance: "Removes 85%+ of heavy particles" },
-                    { component: "Cold CAT™", function: "CO₂ removal", performance: "Separates 95%+ of CO₂" },
+                    { component: "Cold CAT", function: "CO₂ removal", performance: "Separates 95%+ of CO₂" },
                     { component: "Clean Air Turbine™", function: "Pollutant incineration", performance: "Burns 99%+ of residual toxins" },
                     { component: "Particle Tower", function: "Final filtration", performance: "Removes 99%+ of remaining particles" },
                     { component: "AGES™ Separator", function: "Water purification", performance: "Removes heavy metals and mercury" },

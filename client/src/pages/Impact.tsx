@@ -1,6 +1,7 @@
 /* VIVIFY Impact Page: Statistics and ecological/economic impact */
 
 import { Button } from "@/components/ui/button";
+import Seo from "@/components/Seo";
 import { buildContactMailto } from "@/lib/contactMailto";
 import { TrendingUp, Leaf, Zap, Users } from "lucide-react";
 
@@ -25,6 +26,11 @@ export default function Impact() {
 
   return (
     <div className="min-h-screen flex flex-col pt-20">
+      <Seo
+        title="Impact"
+        description="Discover the environmental and economic impact of VIVIFY’s clean energy technology—reducing emissions while preserving grid reliability."
+        path="/impact"
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white py-24 md:py-32 overflow-hidden">
         {/* Subtle brand-gray tint (replaces navy/blue feel) */}

@@ -1,6 +1,13 @@
+import Seo from "@/components/Seo";
+
 export default function Privacy() {
   return (
     <div className="min-h-screen flex flex-col pt-20">
+      <Seo
+        title="Privacy Policy"
+        description="VIVIFY Privacy Policy."
+        path="/privacy"
+      />
       <section className="bg-white py-16 md:py-24">
         <div className="container">
           <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">Privacy Policy</h1>

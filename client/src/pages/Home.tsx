@@ -1,12 +1,18 @@
 /* VIVIFY Home Page: Grey Parrot-inspired template with diagonal dividers, icon grids, and modern layout */
 
 import { Button } from "@/components/ui/button";
+import Seo from "@/components/Seo";
 import { Link } from "wouter";
 import { Zap, Leaf, Wind, Users, TrendingUp, Shield, Flame, Droplets } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col pt-20">
+      <Seo
+        title="Clean Energy Technology"
+        description="VIVIFY develops Clean Air Technology™ and related clean energy solutions that enable reliable, near-zero emissions power from existing infrastructure."
+        path="/"
+      />
       {/* Hero Section with video background */}
       <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
         {/* Video Background */}

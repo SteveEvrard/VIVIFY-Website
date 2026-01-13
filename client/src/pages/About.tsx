@@ -1,6 +1,7 @@
 /* VIVIFY About Page: Split layout with company story and leadership */
 
 import { Button } from "@/components/ui/button";
+import Seo from "@/components/Seo";
 import { buildContactMailto } from "@/lib/contactMailto";
 import { Users, Lightbulb, Globe, Target } from "lucide-react";
 
@@ -25,6 +26,11 @@ export default function About() {
 
   return (
     <div className="min-h-screen flex flex-col pt-20">
+      <Seo
+        title="About"
+        description="Learn about VIVIFY’s mission and leadership—transforming existing energy infrastructure into near-zero emissions, reliable power."
+        path="/about"
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white py-24 md:py-32 overflow-hidden">
         {/* Subtle brand-gray tint (replaces navy/blue feel) */}

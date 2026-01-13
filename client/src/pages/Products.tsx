@@ -1,6 +1,7 @@
 /* VIVIFY Products Page: Grid-based product showcase with detailed cards */
 
 import { Button } from "@/components/ui/button";
+import Seo from "@/components/Seo";
 import { buildContactMailto } from "@/lib/contactMailto";
 import { Zap, Droplets, Wind, Flame, Shield, Cpu } from "lucide-react";
 
@@ -62,6 +63,11 @@ export default function Products() {
 
   return (
     <div className="min-h-screen flex flex-col pt-20">
+      <Seo
+        title="Products"
+        description="Explore VIVIFY’s product suite, including Clean Air Technology™ (CAT) and Pulsar™ hydrogen generation, delivering emissions control and clean energy solutions."
+        path="/products"
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white py-24 md:py-32 overflow-hidden">
         {/* Subtle brand-gray tint (replaces navy/blue feel) */}

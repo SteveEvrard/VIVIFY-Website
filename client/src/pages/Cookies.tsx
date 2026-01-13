@@ -1,6 +1,13 @@
+import Seo from "@/components/Seo";
+
 export default function Cookies() {
   return (
     <div className="min-h-screen flex flex-col pt-20">
+      <Seo
+        title="Cookie Policy"
+        description="VIVIFY Cookie Policy."
+        path="/cookies"
+      />
       <section className="bg-white py-16 md:py-24">
         <div className="container">
           <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">Cookie Policy</h1>

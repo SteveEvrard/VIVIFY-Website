@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vivify-technology.com/sitemap.xml
+
+

@@ -2,15 +2,36 @@
 
 import { Button } from "@/components/ui/button";
 import Seo from "@/components/Seo";
+import { buildContactMailto } from "@/lib/contactMailto";
 import { Link } from "wouter";
-import { Zap, Leaf, Wind, Users, TrendingUp, Shield, Flame, Droplets } from "lucide-react";
+import { Cpu, Leaf, Wind, TrendingUp } from "lucide-react";
 
 export default function Home() {
+  const startConversationHref = buildContactMailto({
+    subject: "VIVIFY — Renewable Infrastructure Framework",
+    bodyLines: [
+      "Hi VIVIFY team,",
+      "",
+      "I’d like to start a conversation about clean energy intelligence for an upcoming project.",
+      "",
+      "Name:",
+      "Company / Organization:",
+      "Role:",
+      "Project type (city / mobility / data center / industrial / mixed-use):",
+      "Location:",
+      "Timeline:",
+      "Best way to reach me:",
+      "",
+      "Thanks,",
+      "",
+    ],
+  });
+
   return (
     <div className="min-h-screen flex flex-col pt-20">
       <Seo
-        title="Clean Energy Technology"
-        description="VIVIFY develops Clean Air Technology™ and related clean energy solutions that enable reliable, near-zero emissions power from existing infrastructure."
+        title="Clean Energy Intelligence"
+        description="VIVIFY delivers 100% clean and renewable energy systems, intelligent data transmission, smart grids, and AI-driven infrastructure that power intelligent cities, mobility ecosystems, data centers, and large-scale developments worldwide."
         path="/"
       />
       {/* Hero Section with video background */}
@@ -40,23 +61,31 @@ export default function Home() {
         <div className="container relative z-10 pt-10 pb-20 md:pt-12 md:pb-28">
           <div className="max-w-2xl">
             <div className="inline-flex items-center bg-primary/20 border border-primary px-4 py-2 rounded-full">
-              <span className="text-primary font-semibold text-sm">Energy Innovation</span>
+              <span className="text-primary font-semibold text-sm">Clean Energy • Data • Smart Grid • AI</span>
             </div>
             
             <h1 className="mt-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-white drop-shadow-[0_2px_14px_rgba(0,0,0,0.75)]">
-              Revolutionary <span className="text-primary">Clean</span> Energy Solutions
+              VIVIFY — Bringing Technology to Life
             </h1>
+
+            <p className="mt-3 text-lg sm:text-xl md:text-2xl font-semibold text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
+              Renewable Energy, Data, and Intelligence
+            </p>
             
-            <p className="mt-5 text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
-              Transform coal-fired power plants into near-zero emission facilities. VIVIFY's Clean Air Technology™ enables baseload power generation that's both reliable and environmentally responsible.
+            <p className="mt-5 text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
+              VIVIFY delivers 100% clean and renewable energy systems, intelligent data transmission, smart grids, and AI-driven infrastructure — including coal and hydrogen advanced energy conversion technologies — that power intelligent cities, mobility ecosystems, data centers, and large-scale developments worldwide.
+            </p>
+            <p className="mt-4 text-sm sm:text-base md:text-lg text-white/85 leading-relaxed max-w-2xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
+              From district-scale energy systems to AI-optimized infrastructure, VIVIFY provides the foundational layers that enable living, adaptive systems to operate in the real world.
             </p>
             
             <div className="mt-7 flex flex-col sm:flex-row gap-4">
-              <Link href="/technology">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-black font-bold">
-                  Explore Technology
-                </Button>
-              </Link>
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-black font-bold" asChild>
+                <Link href="/technology">Explore the Renewable Infrastructure Framework</Link>
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" asChild>
+                <a href={startConversationHref}>Power Your Next Intelligent Development</a>
+              </Button>
             </div>
           </div>
         </div>
@@ -67,177 +96,276 @@ export default function Home() {
         }}></div>
       </section>
 
-      {/* Trusted By Section */}
-      <section className="bg-white py-12 md:py-16">
+      {/* Positioning Strip */}
+      <section className="bg-white py-10 md:py-12">
         <div className="container">
-          <p className="text-center text-muted-foreground font-semibold mb-8">
-            Trusted by leading energy providers and utilities worldwide
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center opacity-60">
-            <div className="h-12 bg-gray-200 rounded flex items-center justify-center text-gray-400 font-semibold">Utility Co.</div>
-            <div className="h-12 bg-gray-200 rounded flex items-center justify-center text-gray-400 font-semibold">Power Gen</div>
-            <div className="h-12 bg-gray-200 rounded flex items-center justify-center text-gray-400 font-semibold">Energy Corp</div>
-            <div className="h-12 bg-gray-200 rounded flex items-center justify-center text-gray-400 font-semibold">Grid Systems</div>
-          </div>
-        </div>
-      </section>
-
-      {/* Value Chain / Solutions Grid */}
-      <section className="bg-gray-50 py-20 md:py-28">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-              Comprehensive Energy Solutions
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              VIVIFY addresses the complete energy value chain with innovative technologies for emissions control, efficiency, and sustainability.
+          <div className="rounded-xl border border-gray-200 bg-gray-50 px-6 py-8 md:px-10 md:py-10">
+            <p className="text-center text-sm font-semibold tracking-wide text-muted-foreground">
+              Clean Energy • Data • Smart Grid • AI
+            </p>
+            <p className="mt-3 text-center text-xl md:text-2xl font-semibold text-foreground">
+              The foundational layers of intelligent, low-carbon systems.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
-            {[
-              { icon: Flame, title: "Coal Plant Retrofits", desc: "Clean Air Technology for existing facilities" },
-              { icon: Zap, title: "Hydrogen Generation", desc: "On-demand Pulsar™ hydrogen production" },
-              { icon: Leaf, title: "Emissions Control", desc: "99%+ pollutant removal from exhaust" },
-              { icon: Wind, title: "Grid Reliability", desc: "Baseload power generation solutions" }
-            ].map((item, idx) => (
-              <div key={idx} className="bg-white rounded-lg p-8 border-2 border-dashed border-primary hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                  <item.icon className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">{item.title}</h3>
-                <p className="text-muted-foreground">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/products">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-black font-bold">
-                View All Solutions
-              </Button>
-            </Link>
-            <Link href="/about">
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
-                Learn Our Story
-              </Button>
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* How It Works - Split Layout */}
-      <section className="relative bg-primary md:bg-transparent py-16 md:py-28 overflow-hidden">
-        {/* Diagonal background shape */}
-        <div className="hidden md:block absolute left-0 top-0 bottom-0 w-1/2 bg-primary" style={{
-          clipPath: 'polygon(0 0, 100% 10%, 100% 90%, 0 100%)'
-        }}></div>
-
-        <div className="container relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="text-white">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-8 text-white tracking-tight leading-[1.05] drop-shadow-[0_3px_18px_rgba(0,0,0,0.35)]">
-                How VIVIFY Works
-              </h2>
-              
-              <div className="space-y-6">
+      {/* Core Domains Visual */}
+      <section className="bg-white pb-8 md:pb-12">
+        <div className="container">
+          <div className="rounded-xl border border-gray-200 bg-white px-6 py-10 md:px-10">
+            <div className="flex flex-col items-center justify-center gap-8">
+              <div className="w-full flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
                 {[
-                  { num: "1", title: "Analyze", desc: "Assess your facility's current emissions profile" },
-                  { num: "2", title: "Integrate", desc: "Install Clean Air Technology™ system" },
-                  { num: "3", title: "Monitor", desc: "Real-time dashboard tracking and reporting" },
-                  { num: "4", title: "Optimize", desc: "Continuous improvement and compliance" }
-                ].map((step) => (
-                  <div key={step.num} className="flex gap-4">
-                    <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 border-2 border-white">
-                      <span className="text-white font-bold text-lg">{step.num}</span>
+                  { icon: Leaf, label: "Clean Energy" },
+                  { icon: Cpu, label: "Data" },
+                  { icon: Wind, label: "Smart Grid" },
+                  { icon: TrendingUp, label: "AI" },
+                ].map((item, idx, arr) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={item.label} className="flex items-center gap-6">
+                      <div className="flex flex-col items-center text-center">
+                        <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center">
+                          <Icon className="w-10 h-10 text-primary" />
+                        </div>
+                        <p className="mt-3 text-sm md:text-base font-semibold text-muted-foreground">
+                          {item.label}
+                        </p>
+                      </div>
+                      {idx < arr.length - 1 && (
+                        <div
+                          aria-hidden="true"
+                          className="hidden md:flex text-3xl font-semibold text-muted-foreground/60"
+                        >
+                          +
+                        </div>
+                      )}
                     </div>
-                    <div>
-                      <h3 className="font-extrabold text-lg sm:text-xl mb-1 text-white tracking-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.25)]">
-                        {step.title}
-                      </h3>
-                      <p className="text-white/80 leading-relaxed">{step.desc}</p>
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
-            </div>
 
-            <div className="bg-white/10 border border-white/20 md:border-transparent md:bg-gray-300 rounded-lg h-80 md:h-96 overflow-hidden">
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                className="w-full h-full object-cover"
-              >
-                <source src="https://d2t61k482lx79u.cloudfront.net/CAT.mp4" type="video/mp4" />
-              </video>
+              <p className="text-center text-lg md:text-xl tracking-wide text-muted-foreground">
+                <span className="font-semibold text-foreground">VIVIFY</span> | Core Domains
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Key Statistics */}
+      {/* Four Pillars Section */}
       <section className="bg-white py-20 md:py-28">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-              The Impact of Clean Air Technology™
+              The Foundations of Intelligent, Clean Energy Systems
             </h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+              Every intelligent city, mobility network, or digital environment depends on resilient, clean, and intelligent infrastructure. VIVIFY delivers that foundation through four tightly integrated pillars.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8">
             {[
-              { stat: "99%+", label: "Pollutant Removal", desc: "From power plant exhaust" },
-              { stat: "0%", label: "Parasitic Load", desc: "On plant efficiency" },
-              { stat: "420K", label: "Jobs Preserved", desc: "In coal industry" }
-            ].map((item, idx) => (
-              <div key={idx} className="bg-gray-50 rounded-lg p-8 text-center border border-gray-200">
-                <p className="text-6xl md:text-7xl font-bold text-primary mb-4">{item.stat}</p>
-                <h3 className="text-xl font-bold text-foreground mb-2">{item.label}</h3>
-                <p className="text-muted-foreground">{item.desc}</p>
+              {
+                icon: Leaf,
+                title: "Clean & Renewable Energy Systems",
+                desc:
+                  "VIVIFY designs and delivers advanced clean energy systems that combine renewables, hydrogen, storage, and energy conversion technologies to support net-zero and post-carbon infrastructure.",
+                capabilities: [
+                  "Solar (utility-scale, district-scale, and building-integrated)",
+                  "Wind and hybrid renewable generation",
+                  "Battery energy storage systems (BESS)",
+                  "Green hydrogen production, storage, and integration",
+                  "Power-to-X systems for fuels and industrial energy",
+                  "Clean energy conversion (coal, oil & gas) and transition systems",
+                  "Renewable microgeneration and district energy",
+                  "Net-zero and carbon-neutral energy planning",
+                ],
+                outcome: "Clean, resilient energy systems designed for intelligent, future-ready infrastructure.",
+              },
+              {
+                icon: Cpu,
+                title: "Data Transmission & Digital Infrastructure",
+                desc:
+                  "VIVIFY builds the digital nervous system that allows intelligent environments to sense, communicate, and adapt in real time.",
+                capabilities: [
+                  "High-capacity, low-latency data transmission",
+                  "Energy-efficient digital networks",
+                  "Edge computing and modular data infrastructure",
+                  "Secure data movement for critical systems",
+                  "AI-ready digital environments",
+                ],
+                outcome: "Reliable, low-carbon digital infrastructure optimized for AI-driven and energy-intensive systems.",
+              },
+              {
+                icon: Wind,
+                title: "Smart Renewable Grids",
+                desc:
+                  "VIVIFY delivers intelligent, renewable-first grids designed for modern energy demand, mobility integration, and decentralized generation.",
+                capabilities: [
+                  "Renewable microgrids and district grids",
+                  "Intelligent load balancing and demand response",
+                  "Grid-edge intelligence and automation",
+                  "Integration of storage, hydrogen, and variable renewables",
+                  "EV, autonomous mobility, and data-center-ready grids",
+                  "Utility modernization and resilience planning",
+                ],
+                outcome: "Adaptive grids that optimize clean energy flows in real time.",
+              },
+              {
+                icon: TrendingUp,
+                title: "AI & System Intelligence",
+                desc:
+                  "VIVIFY applies artificial intelligence to continuously optimize energy, data, and grid systems across complex environments.",
+                capabilities: [
+                  "AI-driven energy optimization",
+                  "Renewable and hydrogen forecasting",
+                  "Digital twins for infrastructure systems",
+                  "Predictive maintenance and performance analytics",
+                  "Autonomous system coordination",
+                ],
+                outcome: "Infrastructure that learns, adapts, and improves over time.",
+              },
+            ].map((pillar) => {
+              const Icon = pillar.icon;
+              return (
+                <div
+                  key={pillar.title}
+                  className="bg-gray-50 rounded-lg p-8 border border-gray-200 hover:shadow-lg transition-shadow"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                      <Icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-foreground">{pillar.title}</h3>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed">{pillar.desc}</p>
+
+                  <div className="mt-6">
+                    <p className="text-sm font-semibold text-foreground uppercase tracking-wider mb-3">
+                      Capabilities
+                    </p>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      {pillar.capabilities.map((cap) => (
+                        <li key={cap} className="flex gap-2">
+                          <span className="text-primary font-bold">✓</span>
+                          <span>{cap}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mt-6 rounded-lg bg-white border border-gray-200 p-4">
+                    <p className="text-sm font-semibold text-foreground mb-1">Outcome</p>
+                    <p className="text-sm text-muted-foreground">{pillar.outcome}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-black font-bold" asChild>
+              <Link href="/technology">Explore the Renewable Infrastructure Framework</Link>
+            </Button>
+            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10" asChild>
+              <a href={startConversationHref}>Start a Conversation</a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Ecosystem Enablement */}
+      <section className="relative bg-primary md:bg-transparent py-16 md:py-28 overflow-hidden">
+        <div
+          className="hidden md:block absolute left-0 top-0 bottom-0 w-1/2 bg-primary"
+          style={{ clipPath: "polygon(0 0, 100% 10%, 100% 90%, 0 100%)" }}
+        ></div>
+
+        <div className="container relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div className="text-white">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-8 text-white tracking-tight leading-[1.05] drop-shadow-[0_3px_18px_rgba(0,0,0,0.35)]">
+                Enabling Living Systems at Scale
+              </h2>
+              <div className="space-y-5 text-white/90 leading-relaxed">
+                <p>
+                  VIVIFY’s clean energy, data, smart grid, and AI capabilities provide the foundational infrastructure required to support advanced intelligent systems across cities, campuses, industrial zones, and digital environments.
+                </p>
+                <p>
+                  In mobility-led developments, VIVIFY works in close partnership with <span className="font-semibold text-white">MOBIA</span>, the Smart City Operating System for Living Mobility, delivering the energy and intelligence required to bring living urban systems to life.
+                </p>
+                <p>
+                  Beyond mobility, VIVIFY powers clean, intelligent infrastructure for data centers, industrial campuses, mixed-use developments, and next-generation cities.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg p-8 border border-gray-200">
+              <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">Note</p>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Symbiosis: MOBIA + VIVIFY</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                MOBIA is the Smart City Operating System — a living ecosystem spanning hardware, software, and Mobility-as-a-Service. VIVIFY provides the clean energy, hydrogen, data, smart grid, and AI foundation that powers and brings MOBIA’s living systems to life in real-world environments.
+              </p>
+              <div className="mt-6">
+                <Button className="w-full bg-black hover:bg-black/90 text-primary font-bold" asChild>
+                  <a href={startConversationHref}>Power Your Next Intelligent Development</a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Applications */}
+      <section className="bg-white py-20 md:py-28">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">Where VIVIFY Operates</h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              "Intelligent cities and districts",
+              "Mobility and MaaS infrastructure",
+              "Data centers and digital hubs",
+              "Industrial and logistics campuses",
+              "Large-scale mixed-use developments",
+              "Energy transition and industrial decarbonization environments",
+            ].map((item) => (
+              <div key={item} className="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                <p className="font-semibold text-foreground">{item}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Featured Products */}
+      {/* Value Proposition */}
       <section className="bg-gray-50 py-20 md:py-28">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-              Featured Technologies
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Discover the innovations powering the future of clean energy
-            </p>
+            <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">Why VIVIFY</h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {[
-              { title: "Clean Air Technology™", icon: Leaf, desc: "Five-stage emissions control system" },
-              { title: "Pulsar™ Generator", icon: Zap, desc: "On-demand hydrogen production" },
-              { title: "Cold CAT", icon: Droplets, desc: "Cryogenic CO₂ separation" }
-            ].map((product, idx) => (
-              <div key={idx} className="bg-white rounded-lg p-8 border border-gray-200 hover:shadow-lg transition-shadow">
-                <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                  <product.icon className="w-7 h-7 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold text-foreground mb-3">{product.title}</h3>
-                <p className="text-muted-foreground mb-6">{product.desc}</p>
-                <a href="/products" className="text-primary font-semibold hover:underline">Learn more →</a>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <a href="/products">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-black font-bold">
-                Explore All Products
-              </Button>
-            </a>
+          <div className="max-w-4xl mx-auto bg-white rounded-lg border border-gray-200 p-8 md:p-10">
+            <ul className="grid md:grid-cols-2 gap-4 text-muted-foreground">
+              {[
+                "100% clean and renewable energy focus",
+                "Hydrogen and energy transition expertise",
+                "Designed for AI and autonomous systems",
+                "Scalable from single sites to city-scale systems",
+                "Built for resilience, performance, and longevity",
+                "Independent, partner-ready, future-proof",
+              ].map((v) => (
+                <li key={v} className="flex gap-3">
+                  <span className="text-primary font-bold">✓</span>
+                  <span>{v}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -245,21 +373,17 @@ export default function Home() {
       {/* CTA Section */}
       <section className="bg-primary text-black py-16 md:py-24">
         <div className="container text-center">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">
-            Ready to Transform Your Facility?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
-            Join leading utilities and energy providers in adopting clean energy solutions that work today.
+          <h2 className="text-5xl md:text-6xl font-bold mb-6">Power the Future with Clean Energy Intelligence</h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
+            Whether developing a city, mobility ecosystem, industrial campus, or digital environment, VIVIFY provides the clean energy and intelligent infrastructure foundation required to succeed in a net-zero future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-black text-black hover:bg-black/10"
-              asChild
-            >
+            <Button size="lg" className="bg-black hover:bg-black/90 text-primary font-bold" asChild>
+              <a href={startConversationHref}>Start a Conversation</a>
+            </Button>
+            <Button size="lg" variant="outline" className="border-black text-black hover:bg-black/10" asChild>
               <a href="/VIVIFY-Brochure.pdf" download>
-                Download Brochure
+                Download the Infrastructure Framework
               </a>
             </Button>
           </div>

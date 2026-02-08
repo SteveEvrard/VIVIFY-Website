@@ -1,22 +1,25 @@
-/* VIVIFY Technology Page: Five-stage process with detailed technical information */
+/* VIVIFY Framework Page: Renewable Infrastructure Framework (4 pillars) */
 
 import { Button } from "@/components/ui/button";
 import Seo from "@/components/Seo";
 import { buildContactMailto } from "@/lib/contactMailto";
-import { Zap, Droplets, Wind, Cpu, Shield, Flame } from "lucide-react";
+import { Cpu, Leaf, TrendingUp, Wind } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Technology() {
-  const whitepaperHref = buildContactMailto({
-    subject: "Request: Vivify Technical Whitepaper",
+  const startConversationHref = buildContactMailto({
+    subject: "VIVIFY — Renewable Infrastructure Framework",
     bodyLines: [
-      "Hi Vivify team,",
+      "Hi VIVIFY team,",
       "",
-      "Could you please share the Vivify technical whitepaper?",
+      "I’d like to learn more about the Renewable Infrastructure Framework and how it applies to our project.",
       "",
       "Name:",
       "Company / Organization:",
       "Role:",
-      "What are you evaluating?",
+      "Project type (city / mobility / data center / industrial / mixed-use):",
+      "Location:",
+      "Timeline:",
       "",
       "Thanks,",
       "",
@@ -26,8 +29,8 @@ export default function Technology() {
   return (
     <div className="min-h-screen flex flex-col pt-20">
       <Seo
-        title="Technology"
-        description="Learn how VIVIFY’s Clean Air Technology™ works—from the five-stage CAT process to on-demand hydrogen generation with Pulsar™."
+        title="Renewable Infrastructure Framework"
+        description="Explore VIVIFY’s Renewable Infrastructure Framework—four integrated pillars: clean energy systems, data transmission, smart grids, and AI-driven system intelligence."
         path="/technology"
       />
       {/* Hero Section */}
@@ -38,10 +41,10 @@ export default function Technology() {
         <div className="container relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-6xl md:text-7xl font-bold mb-6">
-              Our <span className="text-primary">Technology</span>
+              Renewable <span className="text-primary">Infrastructure Framework</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/80 mb-8">
-              Revolutionary Clean Air Technology™ powered by patented hydrogen generation systems
+              Clean energy, data, smart grids, and AI — the foundational layers of intelligent, low-carbon systems.
             </p>
           </div>
         </div>
@@ -52,250 +55,169 @@ export default function Technology() {
         }}></div>
       </section>
 
-      {/* Five-Stage Process - Split Layout */}
-      <section className="relative bg-primary md:bg-transparent py-16 md:py-28 overflow-hidden">
-        {/* Diagonal background shape */}
-        <div className="hidden md:block absolute left-0 top-0 bottom-0 w-1/2 bg-primary" style={{
-          clipPath: 'polygon(0 0, 100% 10%, 100% 90%, 0 100%)'
-        }}></div>
-
-        <div className="container relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            <div className="text-white">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-8 text-white tracking-tight leading-[1.05] drop-shadow-[0_3px_18px_rgba(0,0,0,0.35)]">
-                The Five-Stage CAT Process
-              </h2>
-              
-              <div className="space-y-6">
-                {[
-                  { num: "1", title: "Heavy Particulate Removal", desc: "Hydroponic towers condense and separate particulates through water mixing and high-pressure filtration" },
-                  { num: "2", title: "CO₂ Removal (Cold CAT)", desc: "Cryogenic technology separates CO₂ from exhaust, converting it to solid form for removal" },
-                  { num: "3", title: "Toxins Ignited & Burned", desc: "Clean Air Turbine™ incinerates residual pollutants using hydrogen-oxygen mixture" },
-                  { num: "4", title: "Final Particulate Filter", desc: "Particle Acquisition Tower filters remaining particles for pollution-free gas release" },
-                  { num: "5", title: "Water Filtration (AGES™)", desc: "Artificial Gravity Enhance Separator removes heavy particles like mercury from water" }
-                ].map((stage) => (
-                  <div key={stage.num} className="flex gap-4">
-                    <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 border-2 border-white">
-                      <span className="text-white font-bold text-lg">{stage.num}</span>
-                    </div>
-                    <div>
-                      <h3 className="font-extrabold text-lg sm:text-xl mb-1 text-white tracking-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.25)]">
-                        {stage.title}
-                      </h3>
-                      <p className="text-white/80 text-sm sm:text-base leading-relaxed">{stage.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="bg-white/10 border border-white/20 md:border-transparent md:bg-gray-200 rounded-lg h-80 md:h-96 overflow-hidden">
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                className="w-full h-full object-cover"
-              >
-                <source src="https://d2t61k482lx79u.cloudfront.net/CAT.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Technologies Grid */}
+      {/* Four Pillars */}
       <section className="bg-white py-20 md:py-28">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-              Core Technologies
+              The Foundations of Intelligent, Clean Energy Systems
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Integrated systems working together to achieve near-zero emissions
+              VIVIFY delivers the core infrastructure stack required for intelligent cities, mobility ecosystems, data centers, and large-scale developments.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8">
             {[
-              { icon: Flame, title: "Hydroponic Towers", desc: "Water-based particulate separation and condensation system" },
-              { icon: Wind, title: "Cold CAT", desc: "Cryogenic CO₂ precipitation and removal technology" },
-              { icon: Zap, title: "Clean Air Turbine™", desc: "Multi-stage hydrogen-oxygen combustion system" },
-              { icon: Droplets, title: "Particle Acquisition Tower", desc: "Final-stage particulate filtration system" },
-              { icon: Cpu, title: "AGES™ Separator", desc: "Artificial gravity water filtration and purification" },
-              { icon: Shield, title: "Pulsar™ Generator", desc: "On-demand hydrogen generation and fuel supply" }
-            ].map((tech, idx) => {
-              const Icon = tech.icon;
+              {
+                icon: Leaf,
+                title: "Clean & Renewable Energy Systems",
+                desc:
+                  "Advanced clean energy systems that combine renewables, hydrogen, storage, and energy conversion technologies to support net-zero and post-carbon infrastructure.",
+                capabilities: [
+                  "Solar (utility-scale, district-scale, and building-integrated)",
+                  "Wind and hybrid renewable generation",
+                  "Battery energy storage systems (BESS)",
+                  "Green hydrogen production, storage, and integration",
+                  "Power-to-X systems for fuels and industrial energy",
+                  "Renewable microgeneration and district energy",
+                ],
+              },
+              {
+                icon: Cpu,
+                title: "Data & Digital Connectivity",
+                desc:
+                  "The digital nervous system that lets intelligent environments sense, communicate, and adapt in real time.",
+                capabilities: [
+                  "High-capacity, low-latency data transmission",
+                  "Energy-efficient digital networks",
+                  "Edge computing and modular data infrastructure",
+                  "Secure data movement for critical systems",
+                  "AI-ready digital environments",
+                ],
+              },
+              {
+                icon: Wind,
+                title: "Smart Renewable Grids",
+                desc:
+                  "Renewable-first grid infrastructure designed for modern energy demand, mobility integration, and decentralized generation.",
+                capabilities: [
+                  "Renewable microgrids and district grids",
+                  "Intelligent load balancing and demand response",
+                  "Grid-edge intelligence and automation",
+                  "Integration of storage, hydrogen, and variable renewables",
+                  "EV and data-center-ready grids",
+                ],
+              },
+              {
+                icon: TrendingUp,
+                title: "AI & Energy Intelligence",
+                desc:
+                  "Artificial intelligence that continuously optimizes energy, data, and grid systems across complex environments.",
+                capabilities: [
+                  "AI-driven energy optimization",
+                  "Renewable and hydrogen forecasting",
+                  "Digital twins for infrastructure systems",
+                  "Predictive maintenance and performance analytics",
+                  "Autonomous system coordination",
+                ],
+              },
+            ].map((pillar) => {
+              const Icon = pillar.icon;
               return (
-                <div key={idx} className="bg-gray-50 rounded-lg p-8 border border-gray-200 hover:shadow-lg transition-shadow">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-primary" />
+                <div
+                  key={pillar.title}
+                  className="bg-gray-50 rounded-lg p-8 border border-gray-200 hover:shadow-lg transition-shadow"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                      <Icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-foreground">{pillar.title}</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3">{tech.title}</h3>
-                  <p className="text-muted-foreground">{tech.desc}</p>
+                  <p className="text-muted-foreground leading-relaxed">{pillar.desc}</p>
+                  <div className="mt-6">
+                    <p className="text-sm font-semibold text-foreground uppercase tracking-wider mb-3">Capabilities</p>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      {pillar.capabilities.map((cap) => (
+                        <li key={cap} className="flex gap-2">
+                          <span className="text-primary font-bold">✓</span>
+                          <span>{cap}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               );
             })}
           </div>
+
+          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-black font-bold" asChild>
+              <a href={startConversationHref}>Start a Conversation</a>
+            </Button>
+            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10" asChild>
+              <a href="/VIVIFY-Brochure.pdf" download>
+                Download the Infrastructure Framework
+              </a>
+            </Button>
+          </div>
         </div>
       </section>
 
-      {/* Pulsar™ Technology */}
-      <section className="bg-gray-50 py-20 md:py-28">
+      {/* Ecosystem Enablement */}
+      <section className="relative bg-primary md:bg-transparent py-16 md:py-28 overflow-hidden">
+        <div
+          className="hidden md:block absolute left-0 top-0 bottom-0 w-1/2 bg-primary"
+          style={{ clipPath: "polygon(0 0, 100% 10%, 100% 90%, 0 100%)" }}
+        ></div>
+
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-              Pulsar™ Hydrogen Generator
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              The heart of VIVIFY's technology platform
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-white rounded-lg p-8 border border-gray-200">
-              <h3 className="text-3xl font-bold text-foreground mb-6">How It Works</h3>
-              
-              <div className="space-y-4">
-                <div className="bg-primary/10 rounded-lg p-4">
-                  <p className="font-semibold text-foreground mb-2">On-Demand Generation</p>
-                  <p className="text-muted-foreground text-sm">Generates hydrogen exactly when and where it's needed for the CAT process</p>
-                </div>
-
-                <div className="bg-primary/10 rounded-lg p-4">
-                  <p className="font-semibold text-foreground mb-2">Patented Technology</p>
-                  <p className="text-muted-foreground text-sm">Dozens of patents protect the unique hydrogen generation process</p>
-                </div>
-
-                <div className="bg-primary/10 rounded-lg p-4">
-                  <p className="font-semibold text-foreground mb-2">Scalable Design</p>
-                  <p className="text-muted-foreground text-sm">Can be scaled from small industrial applications to large power plants</p>
-                </div>
-
-                <div className="bg-primary/10 rounded-lg p-4">
-                  <p className="font-semibold text-foreground mb-2">Future-Ready</p>
-                  <p className="text-muted-foreground text-sm">Foundation for hydrogen economy transition and alternative fuel applications</p>
-                </div>
+          <div className="grid md:grid-cols-2 gap-12 items-start relative z-10">
+            <div className="text-white">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-8 text-white tracking-tight leading-[1.05] drop-shadow-[0_3px_18px_rgba(0,0,0,0.35)]">
+                Enabling Living Systems at Scale
+              </h2>
+              <div className="space-y-5 text-white/90 leading-relaxed">
+                <p>
+                  VIVIFY’s clean energy, data, smart grid, and AI capabilities provide the foundational infrastructure required to support advanced intelligent systems across cities, campuses, industrial zones, and digital environments.
+                </p>
+                <p>
+                  In mobility-led developments, VIVIFY works in close partnership with <span className="font-semibold text-white">MOBIA</span>, the Smart City Operating System for Living Mobility, delivering the energy and intelligence required to bring living urban systems to life.
+                </p>
+                <p>
+                  Beyond mobility, VIVIFY powers clean, intelligent infrastructure for data centers, industrial campuses, mixed-use developments, and next-generation cities.
+                </p>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg p-8 border border-primary/20">
-              <h3 className="text-3xl font-bold text-foreground mb-6">Key Features</h3>
-              
-              <ul className="space-y-4">
+            <div className="bg-white rounded-lg p-8 border border-gray-200">
+              <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">Where VIVIFY Operates</p>
+              <ul className="space-y-3 text-muted-foreground">
                 {[
-                  "Generates hydrogen on-demand without storage requirements",
-                  "Powers entire Clean Air Technology system",
-                  "Enables CO₂ capture and incineration stages",
-                  "Bridge technology to hydrogen-powered future",
-                  "Enables distributed hydrogen production",
-                  "Supports multiple industrial applications"
-                ].map((feature, idx) => (
-                  <li key={idx} className="flex gap-3">
-                    <span className="text-primary font-bold flex-shrink-0">✓</span>
-                    <span className="text-foreground">{feature}</span>
+                  "Intelligent cities and districts",
+                  "Mobility and MaaS infrastructure",
+                  "Data centers and digital hubs",
+                  "Industrial and logistics campuses",
+                  "Large-scale mixed-use developments",
+                  "Energy transition and industrial decarbonization environments",
+                ].map((item) => (
+                  <li key={item} className="flex gap-3">
+                    <span className="text-primary font-bold">✓</span>
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Performance Metrics */}
-      <section className="bg-white py-20 md:py-28">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-              Performance Specifications
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Industry-leading metrics and capabilities
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              { metric: "99%+", label: "Pollutant Removal", desc: "CO₂, SO₂, NOₓ, Mercury, Particulates" },
-              { metric: "0%", label: "Parasitic Load", desc: "System increases plant output, not drains it" },
-              { metric: "Weeks", label: "Installation Time", desc: "Minimal disruption to plant operations" },
-              { metric: "Fraction", label: "Retrofit Cost", desc: "Compared to conventional systems" }
-            ].map((spec, idx) => (
-              <div key={idx} className="bg-gray-50 rounded-lg p-8 border border-gray-200 text-center">
-                <p className="text-6xl md:text-7xl font-bold text-primary mb-4">{spec.metric}</p>
-                <h3 className="text-xl font-bold text-foreground mb-2">{spec.label}</h3>
-                <p className="text-muted-foreground">{spec.desc}</p>
+              <div className="mt-8 flex flex-col gap-3">
+                <Button className="bg-black hover:bg-black/90 text-primary font-bold" asChild>
+                  <a href={startConversationHref}>Start a Conversation</a>
+                </Button>
+                <Button variant="outline" className="border-primary text-primary hover:bg-primary/10" asChild>
+                  <Link href="/products">Explore Capabilities</Link>
+                </Button>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technical Specifications Table */}
-      <section className="bg-gray-50 py-20 md:py-28">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-              Technical Specifications
-            </h2>
-          </div>
-
-          <div className="bg-white rounded-lg overflow-hidden border border-gray-200">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b border-gray-200">
-                    <th className="text-left p-6 font-bold text-foreground">Component</th>
-                    <th className="text-left p-6 font-bold text-foreground">Function</th>
-                    <th className="text-left p-6 font-bold text-primary">Performance</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    { component: "Hydroponic Towers", function: "Particulate separation", performance: "Removes 85%+ of heavy particles" },
-                    { component: "Cold CAT", function: "CO₂ removal", performance: "Separates 95%+ of CO₂" },
-                    { component: "Clean Air Turbine™", function: "Pollutant incineration", performance: "Burns 99%+ of residual toxins" },
-                    { component: "Particle Tower", function: "Final filtration", performance: "Removes 99%+ of remaining particles" },
-                    { component: "AGES™ Separator", function: "Water purification", performance: "Removes heavy metals and mercury" },
-                    { component: "Pulsar™ Generator", function: "Hydrogen generation", performance: "On-demand production, scalable" }
-                  ].map((row, idx) => (
-                    <tr key={idx} className="border-b border-gray-200 hover:bg-gray-50">
-                      <td className="p-6 font-semibold text-foreground">{row.component}</td>
-                      <td className="p-6 text-muted-foreground">{row.function}</td>
-                      <td className="p-6 text-primary font-bold">{row.performance}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Innovation & Patents */}
-      <section className="bg-primary text-black py-20 md:py-28">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
-              Innovation & Patents
-            </h2>
-            <p className="text-xl text-black/80 max-w-2xl mx-auto">
-              Decades of research and development protected by dozens of patents
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { title: "50+ Patents", desc: "Patents and patents pending covering core technologies" },
-              { title: "Proprietary Systems", desc: "Unique hydrogen generation and emissions control processes" },
-              { title: "Continuous Innovation", desc: "Ongoing R&D for next-generation applications" }
-            ].map((innovation, idx) => (
-              <div key={idx} className="bg-white/10 rounded-lg p-8 border border-white/20 text-center">
-                <h3 className="text-2xl font-bold mb-3">{innovation.title}</h3>
-                <p className="text-black/80">{innovation.desc}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -304,19 +226,19 @@ export default function Technology() {
       <section className="bg-white py-16 md:py-24">
         <div className="container text-center">
           <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-            Ready to Learn More?
+            Power Your Next Intelligent Development
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Discover how VIVIFY's breakthrough technology can transform your facility
+            If you’re building a city, mobility ecosystem, industrial campus, or digital environment, VIVIFY can deliver the clean energy and system intelligence foundation to make it real.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary/10"
-              asChild
-            >
-              <a href={whitepaperHref}>Download Technical Whitepaper</a>
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-black font-bold" asChild>
+              <a href={startConversationHref}>Start a Conversation</a>
+            </Button>
+            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10" asChild>
+              <a href="/VIVIFY-Brochure.pdf" download>
+                Download the Infrastructure Framework
+              </a>
             </Button>
           </div>
         </div>

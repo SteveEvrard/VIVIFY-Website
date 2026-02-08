@@ -37,7 +37,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-center text-muted-foreground max-w-xs">
-              Revolutionary energy technologies for a sustainable future
+              Clean energy, digital connectivity, smart grids, and AI-driven infrastructure.
             </p>
           </div>
 
@@ -48,16 +48,16 @@ export default function Footer() {
             </h3>
             <div className="space-y-2">
               <Link href="/products" className="block text-muted-foreground hover:text-primary transition-colors">
-                Products
+                Capabilities
               </Link>
               <Link href="/technology" className="block text-muted-foreground hover:text-primary transition-colors">
-                Technology
+                Framework
               </Link>
               <Link href="/about" className="block text-muted-foreground hover:text-primary transition-colors">
                 About
               </Link>
               <Link href="/impact" className="block text-muted-foreground hover:text-primary transition-colors">
-                Impact
+                Applications
               </Link>
             </div>
           </div>

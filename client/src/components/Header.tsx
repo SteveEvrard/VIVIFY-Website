@@ -14,16 +14,17 @@ export default function Header() {
   const isActive = (href: string) => normalizePath(location) === normalizePath(href);
 
   const contactHref = buildContactMailto({
-    subject: "Vivify — Clean Energy Technology Inquiry",
+    subject: "VIVIFY — Clean Energy Intelligence Inquiry",
     bodyLines: [
-      "Hi Vivify team,",
+      "Hi VIVIFY team,",
       "",
-      "I'm interested in learning more about Vivify’s Clean Air Technology™ and related clean energy solutions.",
+      "I'm interested in learning more about VIVIFY’s Renewable Infrastructure Framework (clean energy, data, smart grids, and AI) for an upcoming project.",
       "",
       "Name:",
       "Company / Organization:",
       "Role:",
-      "Project / Facility details:",
+      "Project type (city / mobility / data center / industrial / mixed-use):",
+      "Project details:",
       "Timeline:",
       "Best way to reach me:",
       "",
@@ -64,7 +65,7 @@ export default function Header() {
               aria-current={isActive("/products") ? "page" : undefined}
               className={`transition-colors font-medium hover:text-primary ${isActive("/products") ? "text-primary" : ""}`}
             >
-              Products
+              Capabilities
             </Link>
             <Link
               href="/about"
@@ -78,14 +79,14 @@ export default function Header() {
               aria-current={isActive("/impact") ? "page" : undefined}
               className={`transition-colors font-medium hover:text-primary ${isActive("/impact") ? "text-primary" : ""}`}
             >
-              Impact
+              Applications
             </Link>
             <Link
               href="/technology"
               aria-current={isActive("/technology") ? "page" : undefined}
               className={`transition-colors font-medium hover:text-primary ${isActive("/technology") ? "text-primary" : ""}`}
             >
-              Technology
+              Framework
             </Link>
           </nav>
 
@@ -127,7 +128,7 @@ export default function Header() {
               className="block hover:text-primary transition-colors font-medium"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Products
+              Capabilities
             </Link>
             <Link
               href="/about"
@@ -141,14 +142,14 @@ export default function Header() {
               className="block hover:text-primary transition-colors font-medium"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Impact
+              Applications
             </Link>
             <Link
               href="/technology"
               className="block hover:text-primary transition-colors font-medium"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Technology
+              Framework
             </Link>
             <a href="tel:8882778370" className="flex items-center gap-2">
               <Phone className="w-4 h-4" />

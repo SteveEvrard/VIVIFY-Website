@@ -58,7 +58,7 @@ export default function Home() {
           <div className="absolute top-0 right-0 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
         </div>
 
-        <div className="container relative z-10 pt-10 pb-20 md:pt-12 md:pb-28">
+        <div className="container relative z-10 pt-10 pb-36 sm:pb-24 md:pt-12 md:pb-28">
           <div className="max-w-2xl">
             <div className="inline-flex items-center bg-primary/20 border border-primary px-4 py-2 rounded-full">
               <span className="text-primary font-semibold text-sm">Clean Energy • Data • Smart Grid • AI</span>
@@ -79,11 +79,20 @@ export default function Home() {
               From district-scale energy systems to AI-optimized infrastructure, VIVIFY provides the foundational layers that enable living, adaptive systems to operate in the real world.
             </p>
             
-            <div className="mt-7 flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-black font-bold" asChild>
+            <div className="mt-7 flex flex-col sm:flex-row gap-4 sm:items-center">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-black font-bold w-full sm:w-auto whitespace-normal text-center leading-tight"
+                asChild
+              >
                 <Link href="/technology">Explore the Renewable Infrastructure Framework</Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" asChild>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white/10 w-full sm:w-auto whitespace-normal text-center leading-tight"
+                asChild
+              >
                 <a href={startConversationHref}>Power Your Next Intelligent Development</a>
               </Button>
             </div>

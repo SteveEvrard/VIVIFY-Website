@@ -3,6 +3,8 @@
 import { Mail, Phone } from "lucide-react";
 import { Link } from "wouter";
 
+const SHOW_FRAMEWORK_PAGE = false;
+
 export default function Footer() {
   return (
     <footer className="bg-white border-t border-gray-200 pt-16 pb-8">
@@ -47,16 +49,21 @@ export default function Footer() {
               Quick Links
             </h3>
             <div className="space-y-2">
-              <Link href="/products" className="block text-muted-foreground hover:text-primary transition-colors">
-                Capabilities
-              </Link>
               <Link href="/technology" className="block text-muted-foreground hover:text-primary transition-colors">
-                Framework
+                Technology
+              </Link>
+              {SHOW_FRAMEWORK_PAGE && (
+                <Link href="/framework" className="block text-muted-foreground hover:text-primary transition-colors">
+                  Framework
+                </Link>
+              )}
+              <Link href="/news" className="block text-muted-foreground hover:text-primary transition-colors">
+                News
               </Link>
               <Link href="/about" className="block text-muted-foreground hover:text-primary transition-colors">
                 About
               </Link>
-              <Link href="/impact" className="block text-muted-foreground hover:text-primary transition-colors">
+              <Link href="/applications" className="block text-muted-foreground hover:text-primary transition-colors">
                 Applications
               </Link>
             </div>

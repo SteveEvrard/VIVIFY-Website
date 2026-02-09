@@ -6,6 +6,8 @@ import { Menu, Phone, Mail } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
 
+const SHOW_FRAMEWORK_PAGE = false;
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [location] = useLocation();
@@ -61,11 +63,11 @@ export default function Header() {
               Home
             </Link>
             <Link
-              href="/products"
-              aria-current={isActive("/products") ? "page" : undefined}
-              className={`transition-colors font-medium hover:text-primary ${isActive("/products") ? "text-primary" : ""}`}
+              href="/technology"
+              aria-current={isActive("/technology") ? "page" : undefined}
+              className={`transition-colors font-medium hover:text-primary ${isActive("/technology") ? "text-primary" : ""}`}
             >
-              Capabilities
+              Technology
             </Link>
             <Link
               href="/about"
@@ -75,18 +77,27 @@ export default function Header() {
               About
             </Link>
             <Link
-              href="/impact"
-              aria-current={isActive("/impact") ? "page" : undefined}
-              className={`transition-colors font-medium hover:text-primary ${isActive("/impact") ? "text-primary" : ""}`}
+              href="/applications"
+              aria-current={isActive("/applications") ? "page" : undefined}
+              className={`transition-colors font-medium hover:text-primary ${isActive("/applications") ? "text-primary" : ""}`}
             >
               Applications
             </Link>
+            {SHOW_FRAMEWORK_PAGE && (
+              <Link
+                href="/framework"
+                aria-current={isActive("/framework") ? "page" : undefined}
+                className={`transition-colors font-medium hover:text-primary ${isActive("/framework") ? "text-primary" : ""}`}
+              >
+                Framework
+              </Link>
+            )}
             <Link
-              href="/technology"
-              aria-current={isActive("/technology") ? "page" : undefined}
-              className={`transition-colors font-medium hover:text-primary ${isActive("/technology") ? "text-primary" : ""}`}
+              href="/news"
+              aria-current={isActive("/news") ? "page" : undefined}
+              className={`transition-colors font-medium hover:text-primary ${isActive("/news") ? "text-primary" : ""}`}
             >
-              Framework
+              News
             </Link>
           </nav>
 
@@ -124,11 +135,11 @@ export default function Header() {
               Home
             </Link>
             <Link
-              href="/products"
+              href="/technology"
               className="block hover:text-primary transition-colors font-medium"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Capabilities
+              Technology
             </Link>
             <Link
               href="/about"
@@ -138,18 +149,27 @@ export default function Header() {
               About
             </Link>
             <Link
-              href="/impact"
+              href="/applications"
               className="block hover:text-primary transition-colors font-medium"
               onClick={() => setMobileMenuOpen(false)}
             >
               Applications
             </Link>
+            {SHOW_FRAMEWORK_PAGE && (
+              <Link
+                href="/framework"
+                className="block hover:text-primary transition-colors font-medium"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Framework
+              </Link>
+            )}
             <Link
-              href="/technology"
+              href="/news"
               className="block hover:text-primary transition-colors font-medium"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Framework
+              News
             </Link>
             <a href="tel:8882778370" className="flex items-center gap-2">
               <Phone className="w-4 h-4" />

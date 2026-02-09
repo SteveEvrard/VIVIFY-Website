@@ -5,17 +5,21 @@ import { Route, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
-import Products from "./pages/Products";
 import About from "./pages/About";
 import Cookies from "./pages/Cookies";
-import Impact from "./pages/Impact";
+import Applications from "./pages/Applications";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Technology from "./pages/Technology";
+import Framework from "./pages/Framework";
+import News from "./pages/News";
+import NewsArticle from "./pages/NewsArticle";
+import Redirect from "./pages/Redirect";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { useEffect } from "react";
 
+const SHOW_FRAMEWORK_PAGE = false;
 
 function Router() {
   const [location] = useLocation();
@@ -28,10 +32,15 @@ function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
-      <Route path={"/products"} component={Products} />
-      <Route path={"/about"} component={About} />
-      <Route path={"/impact"} component={Impact} />
       <Route path={"/technology"} component={Technology} />
+      <Route path={"/capabilities"} component={() => <Redirect to="/technology" />} />
+      <Route path={"/products"} component={() => <Redirect to="/technology" />} />
+      <Route path={"/about"} component={About} />
+      <Route path={"/applications"} component={Applications} />
+      <Route path={"/impact"} component={() => <Redirect to="/applications" />} />
+      {SHOW_FRAMEWORK_PAGE && <Route path={"/framework"} component={Framework} />}
+      <Route path={"/news"} component={News} />
+      <Route path={"/news/:slug"} component={NewsArticle} />
       <Route path={"/privacy"} component={Privacy} />
       <Route path={"/terms"} component={Terms} />
       <Route path={"/cookies"} component={Cookies} />

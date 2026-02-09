@@ -5,6 +5,8 @@ type SeoProps = {
   description: string;
   /** Path like "/products". Defaults to current window.location.pathname. */
   path?: string;
+  /** If true, format title as "VIVIFY | Page" instead of "Page | VIVIFY". */
+  brandFirst?: boolean;
   /** Set true for pages you don't want indexed (e.g. 404). */
   noIndex?: boolean;
   /** Absolute URL to an image for link previews. */
@@ -36,9 +38,13 @@ function upsertLink(rel: string, href: string) {
   el.setAttribute("href", href);
 }
 
-export default function Seo({ title, description, path, noIndex, ogImage }: SeoProps) {
+export default function Seo({ title, description, path, brandFirst, noIndex, ogImage }: SeoProps) {
   useEffect(() => {
-    const finalTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
+    const finalTitle = title.includes(SITE_NAME)
+      ? title
+      : brandFirst
+        ? `${SITE_NAME} | ${title}`
+        : `${title} | ${SITE_NAME}`;
     document.title = finalTitle;
 
     const pathname = path ?? window.location.pathname ?? "/";
@@ -66,7 +72,7 @@ export default function Seo({ title, description, path, noIndex, ogImage }: SeoP
       const robots = document.head.querySelector<HTMLMetaElement>('meta[name="robots"]');
       if (robots) robots.remove();
     }
-  }, [title, description, path, noIndex, ogImage]);
+  }, [title, description, path, brandFirst, noIndex, ogImage]);
 
   return null;
 }

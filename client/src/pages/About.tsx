@@ -53,57 +53,44 @@ export default function About() {
         }}></div>
       </section>
 
-      {/* Company Mission - Split Layout */}
-      <section className="relative bg-primary md:bg-transparent py-16 md:py-28 overflow-hidden">
-        {/* Diagonal background shape */}
-        <div className="hidden md:block absolute left-0 top-0 bottom-0 w-1/2 bg-primary" style={{
-          clipPath: 'polygon(0 0, 100% 10%, 100% 90%, 0 100%)'
-        }}></div>
-
-        <div className="container relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="text-white">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-8 text-white tracking-tight leading-[1.05] drop-shadow-[0_3px_18px_rgba(0,0,0,0.35)]">
+      {/* Our Mission */}
+      <section className="bg-white py-20 md:py-28">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
                 Our Mission
               </h2>
-              
-              <p className="text-base sm:text-lg leading-relaxed mb-6 text-white/90">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 VIVIFY is dedicated to transforming global energy infrastructure by enabling coal-fired, diesel, and natural gas power plants to operate at near-zero emissions while maintaining reliability and profitability.
               </p>
-
-              <p className="text-base sm:text-lg leading-relaxed mb-8 text-white/90">
-                We believe the world doesn't have to choose between clean energy and reliable power. Through revolutionary technologies like Clean Air Technology™ and Pulsar™, we're building the bridge to a sustainable energy future where both are possible.
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                We believe the world doesn&apos;t have to choose between clean energy and reliable power. Through technologies like Clean Air Technology™ and Pulsar™, we&apos;re building the bridge to a sustainable energy future where both are possible.
               </p>
-
-              <div className="space-y-4">
-                <div className="flex gap-3">
-                  <Lightbulb className="w-6 h-6 flex-shrink-0" />
-                  <span className="text-white/95 font-semibold">Innovate breakthrough energy solutions</span>
-                </div>
-                <div className="flex gap-3">
-                  <Globe className="w-6 h-6 flex-shrink-0" />
-                  <span className="text-white/95 font-semibold">Enable global energy transformation</span>
-                </div>
-                <div className="flex gap-3">
-                  <Users className="w-6 h-6 flex-shrink-0" />
-                  <span className="text-white/95 font-semibold">Preserve jobs and communities</span>
-                </div>
-                <div className="flex gap-3">
-                  <Target className="w-6 h-6 flex-shrink-0" />
-                  <span className="text-white/95 font-semibold">Pioneer the hydrogen economy</span>
-                </div>
-              </div>
             </div>
 
-            <div className="bg-white/10 border border-white/20 md:border-transparent md:bg-gray-200 rounded-lg h-80 md:h-96 overflow-hidden">
-              <video
-                controls
-                playsInline
-                preload="metadata"
-                className="w-full h-full object-cover"
-              >
-                <source src="https://d2t61k482lx79u.cloudfront.net/overview-1.mp4" type="video/mp4" />
-              </video>
+            <div className="bg-gray-50 rounded-xl border border-gray-200 p-8">
+              <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-4">
+                What we&apos;re here to do
+              </p>
+              <div className="space-y-4">
+                {[
+                  { icon: Lightbulb, text: "Innovate breakthrough energy solutions" },
+                  { icon: Globe, text: "Enable global energy transformation" },
+                  { icon: Users, text: "Preserve jobs and communities" },
+                  { icon: Target, text: "Advance the hydrogen economy" },
+                ].map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={item.text} className="flex gap-3">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Icon className="w-5 h-5 text-primary" />
+                      </div>
+                      <p className="text-foreground font-semibold leading-relaxed">{item.text}</p>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

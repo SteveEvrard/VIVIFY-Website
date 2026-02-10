@@ -8,9 +8,11 @@ export default function Cookies() {
         description="VIVIFY Cookie Policy."
         path="/cookies"
       />
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-white py-16 md:py-24" aria-labelledby="cookies-title">
         <div className="container">
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">Cookie Policy</h1>
+          <h1 id="cookies-title" className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+            Cookie Policy
+          </h1>
           <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
             This page will be updated with VIVIFY&apos;s Cookie Policy. For questions in the meantime, please use the Contact button to email us.
           </p>

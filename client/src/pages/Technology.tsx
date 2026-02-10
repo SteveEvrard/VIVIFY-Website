@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Seo from "@/components/Seo";
 import { buildContactMailto } from "@/lib/contactMailto";
 import { Cpu, Droplets, Flame, Shield, Zap } from "lucide-react";
+import { Link } from "wouter";
 
 const CAT_IMAGE_URL = "https://d2t61k482lx79u.cloudfront.net/CAT.jpg";
 const PULSAR_VIDEO_URL = "https://d2t61k482lx79u.cloudfront.net/Pulsar.mp4";
@@ -73,11 +74,14 @@ export default function Technology() {
       />
 
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white py-24 md:py-32 overflow-hidden">
+      <section
+        className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white py-24 md:py-32 overflow-hidden"
+        aria-labelledby="technology-hero-title"
+      >
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#75787B]/18 via-[#75787B]/12 to-[#75787B]/10"></div>
         <div className="container relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-6xl md:text-7xl font-bold mb-6">
+            <h1 id="technology-hero-title" className="text-6xl md:text-7xl font-bold mb-6">
               Our <span className="text-primary">Technology</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/80 mb-8">
@@ -92,12 +96,21 @@ export default function Technology() {
       </section>
 
       {/* Core Technologies */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white py-20 md:py-28" aria-labelledby="technology-core-title">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">Core Technologies</h2>
+            <h2 id="technology-core-title" className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+              Core Technologies
+            </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Clean Air Technology™ (CAT) and Pulsar™ form an integrated platform for emissions control and hydrogen power.
+            </p>
+            <p className="mt-5 text-base text-muted-foreground max-w-2xl mx-auto">
+              See how these technologies map to{" "}
+              <Link href="/applications" className="font-semibold text-primary hover:underline underline-offset-4">
+                hydrogen power, clean emissions, water treatment, and aerospace applications
+              </Link>
+              .
             </p>
           </div>
 
@@ -108,7 +121,9 @@ export default function Technology() {
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                   <Flame className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-3xl md:text-4xl font-bold text-foreground">Clean Air Technology™</h3>
+                <h3 id="technology-cat-title" className="text-3xl md:text-4xl font-bold text-foreground">
+                  Clean Air Technology™
+                </h3>
               </div>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Our flagship five-stage emissions control system removes virtually all pollutants from exhaust, achieving near-zero emissions while maintaining operational efficiency.
@@ -138,7 +153,12 @@ export default function Technology() {
 
           {/* CAT Component Technologies */}
           <div className="mt-16">
-            <h3 className="text-3xl font-bold text-foreground mb-8 text-center">CAT Component Technologies</h3>
+            <h4
+              id="technology-cat-components-title"
+              className="text-3xl font-bold text-foreground mb-8 text-center"
+            >
+              CAT Component Technologies
+            </h4>
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 { icon: Droplets, title: "Hydroponic Towers", desc: "Particulate separation through water condensation" },
@@ -166,7 +186,9 @@ export default function Technology() {
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                   <Zap className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-3xl md:text-4xl font-bold text-foreground">Pulsar™ Generator</h3>
+                <h3 id="technology-pulsar-title" className="text-3xl md:text-4xl font-bold text-foreground">
+                  Pulsar™ Generator
+                </h3>
               </div>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Patented on-demand hydrogen generation technology that supports scalable hydrogen power deployments and integrates with the Clean Air Technology platform.
@@ -200,7 +222,12 @@ export default function Technology() {
 
           {/* Pulsar Component Technologies */}
           <div className="mt-16">
-            <h3 className="text-3xl font-bold text-foreground mb-8 text-center">Pulsar Component Technologies</h3>
+            <h4
+              id="technology-pulsar-components-title"
+              className="text-3xl font-bold text-foreground mb-8 text-center"
+            >
+              Pulsar Component Technologies
+            </h4>
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 { icon: Zap, title: "Hydrogen Generation Core", desc: "On-demand hydrogen generation for power and process needs" },
@@ -220,13 +247,30 @@ export default function Technology() {
               ))}
             </div>
           </div>
+
+          <div className="mt-16 rounded-2xl border border-gray-200 bg-gray-50 p-8">
+            <h3 className="text-xl md:text-2xl font-extrabold text-foreground tracking-tight">Related</h3>
+            <p className="mt-3 text-muted-foreground leading-relaxed">
+              Explore{" "}
+              <Link href="/applications" className="font-semibold text-primary hover:underline underline-offset-4">
+                use cases and deployments
+              </Link>{" "}
+              or read{" "}
+              <Link href="/news" className="font-semibold text-primary hover:underline underline-offset-4">
+                press releases and updates
+              </Link>
+              .
+            </p>
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-primary text-black py-16 md:py-24">
+      <section className="bg-primary text-black py-16 md:py-24" aria-labelledby="technology-cta-title">
         <div className="container text-center">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">Request a Technology Overview</h2>
+          <h2 id="technology-cta-title" className="text-5xl md:text-6xl font-bold mb-6">
+            Request a Technology Overview
+          </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
             Share what you’re evaluating and we’ll send the right technical materials and next steps.
           </p>

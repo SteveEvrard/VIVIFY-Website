@@ -38,7 +38,10 @@ export default function Home() {
         brandFirst
       />
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white pt-16 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+      <section
+        className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white pt-16 pb-20 md:pt-20 md:pb-28 overflow-hidden"
+        aria-labelledby="home-hero-title"
+      >
         {/* Video background */}
         <video
           autoPlay
@@ -65,7 +68,10 @@ export default function Home() {
               <span className="text-primary font-semibold text-sm">Clean Energy • Data • Smart Grid • AI</span>
             </div>
             
-            <h1 className="mt-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-white drop-shadow-[0_2px_14px_rgba(0,0,0,0.75)]">
+            <h1
+              id="home-hero-title"
+              className="mt-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-white drop-shadow-[0_2px_14px_rgba(0,0,0,0.75)]"
+            >
               VIVIFY — Bringing Technology to Life
             </h1>
 
@@ -78,6 +84,18 @@ export default function Home() {
             </p>
             <p className="mt-4 text-sm sm:text-base md:text-lg text-white/85 leading-relaxed max-w-2xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
               From district-scale energy systems to AI-optimized infrastructure, VIVIFY provides the foundational layers that enable living, adaptive systems to operate in the real world.
+            </p>
+
+            <p className="mt-5 text-sm sm:text-base text-white/85 drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
+              Explore{" "}
+              <Link href="/applications" className="font-semibold text-primary hover:underline underline-offset-4">
+                real-world applications
+              </Link>{" "}
+              or read the{" "}
+              <Link href="/news" className="font-semibold text-primary hover:underline underline-offset-4">
+                latest company news
+              </Link>
+              .
             </p>
             
             <div className="mt-7 flex flex-col sm:flex-row gap-4 sm:items-center">
@@ -107,7 +125,7 @@ export default function Home() {
       </section>
 
       {/* Four Pillars (at-a-glance) */}
-      <section className="relative bg-white py-16 md:py-20 overflow-hidden">
+      <section className="relative bg-white py-16 md:py-20 overflow-hidden" aria-labelledby="home-pillars-title">
         {/* subtle background texture */}
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-primary/10 blur-3xl"></div>
@@ -118,7 +136,7 @@ export default function Home() {
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted-foreground">
               The VIVIFY stack
             </p>
-            <h2 className="mt-3 text-4xl md:text-5xl font-extrabold text-foreground tracking-tight">
+            <h2 id="home-pillars-title" className="mt-3 text-4xl md:text-5xl font-extrabold text-foreground tracking-tight">
               Four <span className="text-primary">Pillars</span>
             </h2>
             <p className="mt-3 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -292,7 +310,10 @@ export default function Home() {
       )}
 
       {/* Ecosystem Enablement */}
-      <section className="relative bg-primary md:bg-transparent py-16 md:py-28 overflow-hidden">
+      <section
+        className="relative bg-primary md:bg-transparent py-16 md:py-28 overflow-hidden"
+        aria-labelledby="home-ecosystem-title"
+      >
         <div
           className="hidden md:block absolute left-0 top-0 bottom-0 w-1/2 bg-primary"
           style={{ clipPath: "polygon(0 0, 100% 10%, 100% 90%, 0 100%)" }}
@@ -301,7 +322,10 @@ export default function Home() {
         <div className="container relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div className="text-white">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-8 text-white tracking-tight leading-[1.05] drop-shadow-[0_3px_18px_rgba(0,0,0,0.35)]">
+              <h2
+                id="home-ecosystem-title"
+                className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-8 text-white tracking-tight leading-[1.05] drop-shadow-[0_3px_18px_rgba(0,0,0,0.35)]"
+              >
                 Enabling Living Systems at Scale
               </h2>
               <div className="space-y-5 text-white/90 leading-relaxed">
@@ -329,9 +353,11 @@ export default function Home() {
 
               <div className="mt-6 border-t border-gray-200 bg-black">
                 <video
+                  autoPlay
+                  muted
                   controls
                   playsInline
-                  preload="metadata"
+                  preload="auto"
                   className="w-full aspect-video"
                 >
                   <source
@@ -357,9 +383,11 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-primary text-black py-16 md:py-24">
+      <section className="bg-primary text-black py-16 md:py-24" aria-labelledby="home-cta-title">
         <div className="container text-center">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">Power the Future with Clean Energy Intelligence</h2>
+          <h2 id="home-cta-title" className="text-5xl md:text-6xl font-bold mb-6">
+            Power the Future with Clean Energy Intelligence
+          </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
             Whether developing a city, mobility ecosystem, industrial campus, or digital environment, VIVIFY provides the clean energy and intelligent infrastructure foundation required to succeed in a net-zero future.
           </p>

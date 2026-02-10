@@ -22,11 +22,14 @@ export default function News() {
       />
 
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white py-24 md:py-32 overflow-hidden">
+      <section
+        className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white py-24 md:py-32 overflow-hidden"
+        aria-labelledby="news-hero-title"
+      >
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#75787B]/18 via-[#75787B]/12 to-[#75787B]/10"></div>
         <div className="container relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-6xl md:text-7xl font-bold mb-6">
+            <h1 id="news-hero-title" className="text-6xl md:text-7xl font-bold mb-6">
               Company <span className="text-primary">News</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/80 mb-0">
@@ -41,8 +44,11 @@ export default function News() {
       </section>
 
       {/* Tiles */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white py-20 md:py-28" aria-labelledby="news-list-title">
         <div className="container">
+          <h2 id="news-list-title" className="sr-only">
+            News articles
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {posts.map((post) => (
               <Link key={post.slug} href={`/news/${post.slug}`} className="group">

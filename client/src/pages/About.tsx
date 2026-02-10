@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Seo from "@/components/Seo";
 import { buildContactMailto } from "@/lib/contactMailto";
 import { Users, Lightbulb, Globe, Target } from "lucide-react";
+import { Link } from "wouter";
 
 export default function About() {
   const getInTouchHref = buildContactMailto({
@@ -32,13 +33,16 @@ export default function About() {
         path="/about"
       />
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white py-24 md:py-32 overflow-hidden">
+      <section
+        className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white py-24 md:py-32 overflow-hidden"
+        aria-labelledby="about-hero-title"
+      >
         {/* Subtle brand-gray tint (replaces navy/blue feel) */}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#75787B]/18 via-[#75787B]/12 to-[#75787B]/10"></div>
 
         <div className="container relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-6xl md:text-7xl font-bold mb-6">
+            <h1 id="about-hero-title" className="text-6xl md:text-7xl font-bold mb-6">
               About <span className="text-primary">VIVIFY</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/80 mb-8">
@@ -54,11 +58,11 @@ export default function About() {
       </section>
 
       {/* Our Mission */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white py-20 md:py-28" aria-labelledby="about-mission-title">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+              <h2 id="about-mission-title" className="text-5xl md:text-6xl font-bold text-foreground mb-6">
                 Our Mission
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
@@ -66,6 +70,21 @@ export default function About() {
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 We believe the world doesn&apos;t have to choose between clean energy and reliable power. Through technologies like Clean Air Technology™ and Pulsar™, we&apos;re building the bridge to a sustainable energy future where both are possible.
+              </p>
+              <p className="mt-6 text-base text-muted-foreground leading-relaxed">
+                Explore our{" "}
+                <Link href="/technology" className="font-semibold text-primary hover:underline underline-offset-4">
+                  core technologies
+                </Link>
+                , see{" "}
+                <Link href="/applications" className="font-semibold text-primary hover:underline underline-offset-4">
+                  where they’re applied
+                </Link>
+                , or read{" "}
+                <Link href="/news" className="font-semibold text-primary hover:underline underline-offset-4">
+                  recent press releases
+                </Link>
+                .
               </p>
             </div>
 
@@ -97,10 +116,10 @@ export default function About() {
       </section>
 
       {/* Core Values */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white py-20 md:py-28" aria-labelledby="about-values-title">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+            <h2 id="about-values-title" className="text-5xl md:text-6xl font-bold text-foreground mb-6">
               Our Core Values
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -125,10 +144,10 @@ export default function About() {
       </section>
 
       {/* Leadership */}
-      <section className="bg-gray-50 py-20 md:py-28">
+      <section className="bg-gray-50 py-20 md:py-28" aria-labelledby="about-leadership-title">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+            <h2 id="about-leadership-title" className="text-5xl md:text-6xl font-bold text-foreground mb-6">
               Leadership
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -274,10 +293,10 @@ export default function About() {
       )}
 
       {/* Company Stats */}
-      <section className="bg-primary text-black py-20 md:py-28">
+      <section className="bg-primary text-black py-20 md:py-28" aria-labelledby="about-stats-title">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            <h2 id="about-stats-title" className="text-5xl md:text-6xl font-bold mb-6">
               By The Numbers
             </h2>
           </div>
@@ -299,10 +318,10 @@ export default function About() {
       </section>
 
       {/* Vision for the Future */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white py-20 md:py-28" aria-labelledby="about-vision-title">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+            <h2 id="about-vision-title" className="text-5xl md:text-6xl font-bold text-foreground mb-6">
               Our Vision for the Future
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -335,9 +354,9 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-primary text-black py-16 md:py-24">
+      <section className="bg-primary text-black py-16 md:py-24" aria-labelledby="about-cta-title">
         <div className="container text-center">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">
+          <h2 id="about-cta-title" className="text-5xl md:text-6xl font-bold mb-6">
             Join Us in Transforming Energy
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto leading-relaxed">

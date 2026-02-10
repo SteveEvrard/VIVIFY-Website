@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import Seo from "@/components/Seo";
 import { buildContactMailto } from "@/lib/contactMailto";
+import { Link } from "wouter";
 
 const CLOUDFRONT_BASE = "https://d2t61k482lx79u.cloudfront.net";
 
@@ -33,13 +34,16 @@ export default function Applications() {
         path="/applications"
       />
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white py-24 md:py-32 overflow-hidden">
+      <section
+        className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white py-24 md:py-32 overflow-hidden"
+        aria-labelledby="applications-hero-title"
+      >
         {/* Subtle brand-gray tint (replaces navy/blue feel) */}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#75787B]/18 via-[#75787B]/12 to-[#75787B]/10"></div>
 
         <div className="container relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-6xl md:text-7xl font-bold mb-6">
+            <h1 id="applications-hero-title" className="text-6xl md:text-7xl font-bold mb-6">
               Our <span className="text-primary">Applications</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/80 mb-8">
@@ -56,13 +60,25 @@ export default function Applications() {
       </section>
 
       {/* Hydrogen Power */}
-      <section className="bg-gray-50 py-20 md:py-28">
+      <section className="bg-gray-50 py-20 md:py-28" aria-labelledby="applications-hydrogen-title">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">Cost‑Effective, Abundant Hydrogen Power</h2>
+              <h2 id="applications-hydrogen-title" className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+                Cost‑Effective, Abundant Hydrogen Power
+              </h2>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                 Hydrogen is a cornerstone for cleaner, resilient infrastructure — but it only works when it’s available where you need it, at the scale you need, at an economics that pencil. VIVIFY’s approach is built to deliver practical hydrogen power for real-world deployments.
+              </p>
+              <p className="mt-4 text-base text-muted-foreground leading-relaxed">
+                Learn how{" "}
+                <Link
+                  href="/technology#technology-pulsar-title"
+                  className="font-semibold text-primary hover:underline underline-offset-4"
+                >
+                  Pulsar™ on-demand hydrogen generation
+                </Link>{" "}
+                supports scalable deployments.
               </p>
 
               <div className="mt-10">
@@ -106,15 +122,22 @@ export default function Applications() {
       </section>
 
       {/* Clean Emissions Technology */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white py-20 md:py-28" aria-labelledby="applications-emissions-title">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="lg:order-2">
-              <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+              <h2 id="applications-emissions-title" className="text-5xl md:text-6xl font-bold text-foreground mb-6">
                 Clean Emissions Technology
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                VIVIFY’s Clean Air Technology™ (CAT) is a retrofit-ready platform designed to remove virtually all pollutants from exhaust streams while maintaining reliable operations. It’s built for real-world integration across multiple fuel types and industrial environments.
+                VIVIFY’s{" "}
+                <Link
+                  href="/technology#technology-cat-title"
+                  className="font-semibold text-primary hover:underline underline-offset-4"
+                >
+                  Clean Air Technology™ (CAT)
+                </Link>{" "}
+                is a retrofit-ready platform designed to remove virtually all pollutants from exhaust streams while maintaining reliable operations. It’s built for real-world integration across multiple fuel types and industrial environments.
               </p>
 
               <div className="mt-10">
@@ -162,15 +185,22 @@ export default function Applications() {
       </section>
 
       {/* Water Treatment */}
-      <section className="bg-gray-50 py-20 md:py-28">
+      <section className="bg-gray-50 py-20 md:py-28" aria-labelledby="applications-water-title">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+              <h2 id="applications-water-title" className="text-5xl md:text-6xl font-bold text-foreground mb-6">
                 Industrial Water Treatment
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Through a configuration and expansion of Pulsar™ technology, VIVIFY enables industrial water treatment applications designed for difficult, high-variability streams—supporting cleaner discharge, reuse, and safer handling.
+                Through a configuration and expansion of{" "}
+                <Link
+                  href="/technology#technology-pulsar-title"
+                  className="font-semibold text-primary hover:underline underline-offset-4"
+                >
+                  Pulsar™ technology
+                </Link>
+                , VIVIFY enables industrial water treatment applications designed for difficult, high-variability streams—supporting cleaner discharge, reuse, and safer handling.
               </p>
 
               <div className="mt-10">
@@ -218,11 +248,11 @@ export default function Applications() {
       </section>
 
       {/* Aerospace */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white py-20 md:py-28" aria-labelledby="applications-aerospace-title">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="lg:order-2">
-              <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+              <h2 id="applications-aerospace-title" className="text-5xl md:text-6xl font-bold text-foreground mb-6">
                 Aerospace Energy Systems
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
@@ -270,13 +300,30 @@ export default function Applications() {
               ))}
             </div>
           </div>
+
+          <div className="mt-12 rounded-2xl border border-gray-200 bg-gray-50 p-8">
+            <h3 className="text-xl md:text-2xl font-extrabold text-foreground tracking-tight">Related</h3>
+            <p className="mt-3 text-muted-foreground leading-relaxed">
+              Explore the full{" "}
+              <Link href="/technology" className="font-semibold text-primary hover:underline underline-offset-4">
+                technology overview
+              </Link>{" "}
+              or read the{" "}
+              <Link href="/news" className="font-semibold text-primary hover:underline underline-offset-4">
+                latest company updates
+              </Link>
+              .
+            </p>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="bg-primary text-black py-16 md:py-24">
+      <section className="bg-primary text-black py-16 md:py-24" aria-labelledby="applications-cta-title">
         <div className="container text-center">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">Let&apos;s Talk</h2>
+          <h2 id="applications-cta-title" className="text-5xl md:text-6xl font-bold mb-6">
+            Let&apos;s Talk
+          </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
             Tell us what you&apos;re building and we&apos;ll share how VIVIFY can support your application.
           </p>

@@ -25,7 +25,23 @@ function Router() {
   const [location] = useLocation();
 
   useEffect(() => {
-    // Reset scroll position on route changes (SPA behavior).
+    // Reset scroll position on route changes (SPA behavior), but respect hash anchors.
+    // This keeps internal "deep links" (e.g. /technology#technology-cat-title) working.
+    const hash = window.location.hash;
+    if (hash && hash.length > 1) {
+      const id = decodeURIComponent(hash.slice(1));
+      // Defer until after the new route has rendered.
+      requestAnimationFrame(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: "auto", block: "start" });
+          return;
+        }
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      });
+      return;
+    }
+
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, [location]);
 

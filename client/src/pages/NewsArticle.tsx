@@ -55,7 +55,7 @@ export default function NewsArticle(props: Props) {
         path={`/news/${post.slug}`}
       />
 
-      <section className="bg-white py-16 md:py-20">
+      <section className="bg-white py-16 md:py-20" aria-labelledby="news-article-title">
         <div className="container max-w-4xl">
           <div className="mb-8">
             <Button variant="outline" className="border-primary text-primary hover:bg-primary/10" asChild>
@@ -73,13 +73,33 @@ export default function NewsArticle(props: Props) {
             <span>{formatDate(post.date)}</span>
           </div>
 
-          <h1 className="mt-5 text-4xl md:text-5xl font-bold text-foreground leading-tight">
+          <h1
+            id="news-article-title"
+            className="mt-5 text-4xl md:text-5xl font-bold text-foreground leading-tight"
+          >
             {post.title}
           </h1>
 
           <p className="mt-4 text-lg text-muted-foreground">
             {post.excerpt}
           </p>
+
+          <div className="mt-8 rounded-2xl border border-gray-200 bg-gray-50 p-6">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+              Learn more
+            </p>
+            <p className="mt-2 text-base text-muted-foreground leading-relaxed">
+              Explore{" "}
+              <Link href="/technology" className="font-semibold text-primary hover:underline underline-offset-4">
+                Clean Air Technology™ and Pulsar™
+              </Link>{" "}
+              and see{" "}
+              <Link href="/applications" className="font-semibold text-primary hover:underline underline-offset-4">
+                where VIVIFY’s capabilities are applied
+              </Link>
+              .
+            </p>
+          </div>
 
           <article className="mt-10 space-y-5">
             {(() => {

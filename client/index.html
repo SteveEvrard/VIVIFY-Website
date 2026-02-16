@@ -8,6 +8,17 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <title>VIVIFY - Clean Energy Technology</title>
     <meta name="description" content="VIVIFY develops clean energy technology that enables reliable, near-zero emissions power from existing infrastructure." />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CC1RMWP8C"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      // SPA: we send page_view events on route changes (see Seo.tsx)
+      gtag('config', 'G-8CC1RMWP8C', { send_page_view: false });
+    </script>
+
     <meta property="og:site_name" content="VIVIFY" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="VIVIFY - Clean Energy Technology" />

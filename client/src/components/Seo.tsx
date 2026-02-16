@@ -1,5 +1,12 @@
 import { useEffect } from "react";
 
+declare global {
+  interface Window {
+    dataLayer?: unknown[];
+    gtag?: (...args: any[]) => void;
+  }
+}
+
 type SeoProps = {
   title: string;
   description: string;
@@ -71,6 +78,16 @@ export default function Seo({ title, description, path, brandFirst, noIndex, ogI
       // Ensure we don't accidentally keep noindex from a previous route.
       const robots = document.head.querySelector<HTMLMetaElement>('meta[name="robots"]');
       if (robots) robots.remove();
+    }
+
+    // GA4 (gtag) SPA pageviews: fire after title/canonical are set.
+    // `client/index.html` sets send_page_view:false to avoid double-counting.
+    if (!noIndex && typeof window.gtag === "function") {
+      window.gtag("event", "page_view", {
+        page_title: finalTitle,
+        page_location: canonical,
+        page_path: `${pathname}${window.location.search ?? ""}${window.location.hash ?? ""}`,
+      });
     }
   }, [title, description, path, brandFirst, noIndex, ogImage]);
 

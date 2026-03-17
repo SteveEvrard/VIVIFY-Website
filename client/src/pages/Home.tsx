@@ -370,7 +370,7 @@ export default function Home() {
 
           <div className="container relative z-10">
             <div className="grid md:grid-cols-2 gap-12 items-start">
-              <div className={section.mediaOnLeft ? "order-2 md:order-2 text-white" : "text-white"}>
+              <div className={section.mediaOnLeft ? "order-2 md:order-2 text-white" : "order-2 md:order-1 text-white"}>
                 <h2
                   id={section.id}
                   className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-8 text-white tracking-tight leading-[1.05] drop-shadow-[0_3px_18px_rgba(0,0,0,0.35)]"
@@ -399,7 +399,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className={`bg-white rounded-lg border border-gray-200 overflow-hidden ${section.mediaOnLeft ? "order-1 md:order-1" : ""}`}>
+              <div className={`order-1 bg-white rounded-lg border border-gray-200 overflow-hidden ${section.mediaOnLeft ? "md:order-1" : "md:order-2"}`}>
                 <div className="px-8 pt-8">
                   <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">
                     {section.mediaLabel}

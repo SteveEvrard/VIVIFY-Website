@@ -1,15 +1,31 @@
-/* VIVIFY Technology Page: CAT + Pulsar + component technologies */
-
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Seo from "@/components/Seo";
 import { buildContactMailto } from "@/lib/contactMailto";
 import { Cpu, Droplets, Flame, Shield, Zap } from "lucide-react";
 import { Link } from "wouter";
 
 const CAT_IMAGE_URL = "https://d2t61k482lx79u.cloudfront.net/CAT.jpg";
-const PULSAR_VIDEO_URL = "https://d2t61k482lx79u.cloudfront.net/Pulsar.mp4";
 
 export default function Technology() {
+  const learnMoreHogHref = buildContactMailto({
+    subject: "Vivify — Learn More (HOG System)",
+    bodyLines: [
+      "Hi Vivify team,",
+      "",
+      "I'd like to learn more about the HOG system and how it fits within your technology platform.",
+      "",
+      "Name:",
+      "Company / Organization:",
+      "Role:",
+      "Project details:",
+      "Timeline:",
+      "",
+      "Thanks,",
+      "",
+    ],
+  });
+
   const learnMoreCatHref = buildContactMailto({
     subject: "Vivify — Learn More (Clean Air Technology™)",
     bodyLines: [
@@ -22,26 +38,6 @@ export default function Technology() {
       "Role:",
       "Facility / Project details:",
       "Timeline:",
-      "Best way to reach me:",
-      "",
-      "Thanks,",
-      "",
-    ],
-  });
-
-  const learnMorePulsarHref = buildContactMailto({
-    subject: "Vivify — Learn More (Pulsar™ Hydrogen Generator)",
-    bodyLines: [
-      "Hi Vivify team,",
-      "",
-      "I'd like to learn more about the Pulsar™ hydrogen generator and how it integrates with Clean Air Technology™.",
-      "",
-      "Name:",
-      "Company / Organization:",
-      "Role:",
-      "Facility / Project details:",
-      "Timeline:",
-      "Best way to reach me:",
       "",
       "Thanks,",
       "",
@@ -69,7 +65,7 @@ export default function Technology() {
     <div className="min-h-screen flex flex-col pt-20">
       <Seo
         title="Technology"
-        description="Explore VIVIFY’s core technologies—Clean Air Technology™ (CAT), Pulsar™ hydrogen generation, and the components that enable near-zero emissions and scalable hydrogen power."
+        description="Explore VIVIFY’s technology platform through two product sections: HOG and Clean Air Technology™ (CAT)."
         path="/technology"
       />
 
@@ -85,7 +81,7 @@ export default function Technology() {
               Our <span className="text-primary">Technology</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/80 mb-8">
-              Core technologies and component systems that enable cleaner operations and scalable hydrogen power.
+              Explore HOG and CAT as distinct parts of the VIVIFY technology platform.
             </p>
           </div>
         </div>
@@ -103,10 +99,10 @@ export default function Technology() {
               Core Technologies
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Clean Air Technology™ (CAT) and Pulsar™ form an integrated platform for emissions control and hydrogen power.
+              VIVIFY’s technology story is organized around two distinct product sections: HOG and CAT.
             </p>
             <p className="mt-5 text-base text-muted-foreground max-w-2xl mx-auto">
-              See how these technologies map to{" "}
+              Each system was carefully designed to maximize output while removing as many innefficinceies from the traditional energy generation systems previously available. Explore how they map to{" "}
               <Link href="/applications" className="font-semibold text-primary hover:underline underline-offset-4">
                 hydrogen power, clean emissions, water treatment, and aerospace applications
               </Link>
@@ -114,138 +110,162 @@ export default function Technology() {
             </p>
           </div>
 
-          {/* Clean Air Technology™ + Image */}
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div className="bg-gray-50 rounded-xl border border-gray-200 p-8">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <Flame className="w-6 h-6 text-primary" />
-                </div>
-                <h3 id="technology-cat-title" className="text-3xl md:text-4xl font-bold text-foreground">
-                  Clean Air Technology™
-                </h3>
-              </div>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Our flagship five-stage emissions control system removes virtually all pollutants from exhaust, achieving near-zero emissions while maintaining operational efficiency.
-              </p>
-              <ul className="space-y-3 text-muted-foreground mb-8">
-                {["99%+ pollutant removal", "Zero parasitic load", "Increased plant efficiency", "Cost-effective retrofit"].map((x) => (
-                  <li key={x} className="flex gap-3">
-                    <span className="text-primary font-bold">✓</span>
-                    <span>{x}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button className="w-full bg-primary hover:bg-primary/90 text-black font-bold" asChild>
-                <a href={learnMoreCatHref}>Learn More About CAT</a>
-              </Button>
-            </div>
-
-            <div className="bg-black rounded-xl overflow-hidden border border-gray-200">
-              <img
-                src={CAT_IMAGE_URL}
-                alt="Clean Air Technology™ overview"
-                className="w-full aspect-video object-cover"
-                loading="lazy"
-              />
-            </div>
-          </div>
-
-          {/* CAT Component Technologies */}
-          <div className="mt-16">
-            <h4
-              id="technology-cat-components-title"
-              className="text-3xl font-bold text-foreground mb-8 text-center"
-            >
-              CAT Component Technologies
-            </h4>
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                { icon: Droplets, title: "Hydroponic Towers", desc: "Particulate separation through water condensation" },
-                { icon: Cpu, title: "Cold CAT", desc: "Cryogenic CO₂ removal and separation" },
-                { icon: Flame, title: "Clean Air Turbine™", desc: "Multi-stage pollutant incineration" },
-                { icon: Shield, title: "AGES™ Separator", desc: "Artificial gravity water filtration" },
-                { icon: Shield, title: "Particle Acquisition Tower", desc: "Final stage particulate filtration" },
-                { icon: Zap, title: "Multi‑Fuel Inputs", desc: "Integrates with coal, natural gas, diesel, and other exhaust streams—cleaning emissions without changing core operations." },
-              ].map((comp, idx) => (
-                <div key={idx} className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <comp.icon className="w-6 h-6 text-primary" />
+          <div className="mx-auto max-w-5xl rounded-3xl border border-gray-200 bg-white p-4 shadow-sm md:p-6">
+            <Accordion type="single" collapsible defaultValue="hog" className="w-full">
+              <AccordionItem value="hog" className="border-gray-200">
+                <AccordionTrigger className="px-2 py-6 text-left text-base font-semibold hover:no-underline md:px-4">
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                      <Cpu className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">Section 01</p>
+                      <h3 className="mt-1 text-2xl md:text-3xl font-bold text-foreground">HOG</h3>
+                    </div>
                   </div>
-                  <h4 className="font-bold text-foreground mb-2">{comp.title}</h4>
-                  <p className="text-sm text-muted-foreground">{comp.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-2 pb-6 md:px-4">
+                  <div className="rounded-3xl bg-gray-50 p-6 md:p-8">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                        <Cpu className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 id="technology-hog-title" className="text-3xl md:text-4xl font-bold text-foreground">
+                        HOG (Hydrogen Oxygen Generator)
+                      </h3>
+                    </div>
 
-          {/* Pulsar™ + Video */}
-          <div className="mt-20 grid lg:grid-cols-2 gap-12 items-start">
-            <div className="bg-gray-50 rounded-xl border border-gray-200 p-8">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <Zap className="w-6 h-6 text-primary" />
-                </div>
-                <h3 id="technology-pulsar-title" className="text-3xl md:text-4xl font-bold text-foreground">
-                  Pulsar™ Generator
-                </h3>
-              </div>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Patented on-demand hydrogen generation technology that supports scalable hydrogen power deployments and integrates with the Clean Air Technology platform.
-              </p>
-              <ul className="space-y-3 text-muted-foreground mb-8">
-                {["On-demand production", "Dozens of patents", "Scalable technology", "Future-ready"].map((x) => (
-                  <li key={x} className="flex gap-3">
-                    <span className="text-primary font-bold">✓</span>
-                    <span>{x}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button className="w-full bg-primary hover:bg-primary/90 text-black font-bold" asChild>
-                <a href={learnMorePulsarHref}>Learn More About Pulsar</a>
-              </Button>
-            </div>
+                    <p className="text-muted-foreground leading-relaxed mb-6 max-w-3xl">
+                      Our flagship energy system designed to be a self supporting hydrogen energy source powered from a simple H2O based starter. HOG provides a pollutant free hydrogen energy source designed for behind the meter services
+                    </p>
 
-            <div className="bg-black rounded-xl overflow-hidden border border-gray-200">
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                className="w-full aspect-video object-cover"
-              >
-                <source src={PULSAR_VIDEO_URL} type="video/mp4" />
-              </video>
-            </div>
-          </div>
+                    <ul className="space-y-3 text-muted-foreground mb-10">
+                      {[
+                        "Self supporting energy system for maximum energy creation with minimum inneddiciencied",
+                        "99% emission free energy",
+                        "Scalable infrastructure to accommodate all power requirement needs",
+                        "On demand hydrogen system",
+                      ].map((item) => (
+                        <li key={item} className="flex gap-3">
+                          <span className="text-primary font-bold">✓</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
 
-          {/* Pulsar Component Technologies */}
-          <div className="mt-16">
-            <h4
-              id="technology-pulsar-components-title"
-              className="text-3xl font-bold text-foreground mb-8 text-center"
-            >
-              Pulsar Component Technologies
-            </h4>
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                { icon: Zap, title: "Hydrogen Generation Core", desc: "On-demand hydrogen generation for power and process needs" },
-                { icon: Shield, title: "Safety + Containment", desc: "Designed for safe operation in real-world deployments" },
-                { icon: Cpu, title: "Controls & Telemetry", desc: "Monitoring, automation, and performance optimization" },
-                { icon: Flame, title: "Integration Interface", desc: "Connects to downstream systems for continuous operation" },
-                { icon: Shield, title: "Power Conditioning", desc: "Stabilization and control for consistent output" },
-                { icon: Cpu, title: "System Diagnostics", desc: "Predictive insights for uptime and maintenance planning" },
-              ].map((comp, idx) => (
-                <div key={idx} className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <comp.icon className="w-6 h-6 text-primary" />
+                    <div className="rounded-2xl border border-gray-200 bg-white p-6">
+                      <h4 className="text-2xl font-bold text-foreground mb-6">HOG Component Technology</h4>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        {[
+                          { icon: Zap, title: "Pulsar", desc: "For on demand hydrogen creation and system revitalization" },
+                          { icon: Cpu, title: "Multi Stage Turbine system", desc: "" },
+                          { icon: Shield, title: "Multi functioning Transformers", desc: "" },
+                          { icon: Droplets, title: "H2O Input Generator", desc: "" },
+                          { icon: Flame, title: "Combustion chambers for power and heat distribution", desc: "" },
+                        ].map((component) => (
+                          <div key={component.title} className="rounded-xl border border-gray-200 bg-gray-50 p-5">
+                            <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                              <component.icon className="w-5 h-5 text-primary" />
+                            </div>
+                            <h5 className="font-bold text-foreground">{component.title}</h5>
+                            {component.desc ? <p className="mt-2 text-sm text-muted-foreground">{component.desc}</p> : null}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <Button className="mt-8 bg-primary hover:bg-primary/90 text-black font-bold" asChild>
+                      <a href={learnMoreHogHref}>Learn More About HOG</a>
+                    </Button>
                   </div>
-                  <h4 className="font-bold text-foreground mb-2">{comp.title}</h4>
-                  <p className="text-sm text-muted-foreground">{comp.desc}</p>
-                </div>
-              ))}
-            </div>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="cat" className="border-gray-200">
+                <AccordionTrigger className="px-2 py-6 text-left text-base font-semibold hover:no-underline md:px-4">
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                      <Flame className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">Section 02</p>
+                      <h3 className="mt-1 text-2xl md:text-3xl font-bold text-foreground">CAT</h3>
+                    </div>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-2 pb-6 md:px-4">
+                  <div className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6">
+                    <p className="text-lg text-muted-foreground max-w-3xl">
+                      Clean Air Technology™ (CAT) and Pulsar™ form an integrated platform for emissions control and hydrogen power.
+                    </p>
+                  </div>
+
+                  <div className="grid lg:grid-cols-2 gap-12 items-start">
+                    <div className="bg-gray-50 rounded-xl border border-gray-200 p-8">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                          <Flame className="w-6 h-6 text-primary" />
+                        </div>
+                        <h3 id="technology-cat-title" className="text-3xl md:text-4xl font-bold text-foreground">
+                          Clean Air Technology™
+                        </h3>
+                      </div>
+                      <p className="text-muted-foreground leading-relaxed mb-6">
+                        Our flagship five-stage emissions control system removes virtually all pollutants from exhaust, achieving near-zero emissions while maintaining operational efficiency.
+                      </p>
+                      <ul className="space-y-3 text-muted-foreground mb-8">
+                        {["99%+ pollutant removal", "Zero parasitic load", "Increased plant efficiency", "Cost-effective retrofit"].map((x) => (
+                          <li key={x} className="flex gap-3">
+                            <span className="text-primary font-bold">✓</span>
+                            <span>{x}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <Button className="w-full bg-primary hover:bg-primary/90 text-black font-bold" asChild>
+                        <a href={learnMoreCatHref}>Learn More About CAT</a>
+                      </Button>
+                    </div>
+
+                    <div className="bg-black rounded-xl overflow-hidden border border-gray-200">
+                      <img
+                        src={CAT_IMAGE_URL}
+                        alt="Clean Air Technology™ overview"
+                        className="w-full aspect-video object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="mt-16">
+                    <h4
+                      id="technology-cat-components-title"
+                      className="text-3xl font-bold text-foreground mb-8 text-center"
+                    >
+                      CAT Component Technologies
+                    </h4>
+                    <div className="grid md:grid-cols-3 gap-6">
+                      {[
+                        { icon: Droplets, title: "Hydroponic Towers", desc: "Particulate separation through water condensation" },
+                        { icon: Cpu, title: "Cold CAT", desc: "Cryogenic CO2 removal and separation" },
+                        { icon: Flame, title: "Clean Air Turbine™", desc: "Multi-stage pollutant incineration" },
+                        { icon: Shield, title: "AGES™ Separator", desc: "Artificial gravity water filtration" },
+                        { icon: Shield, title: "Particle Acquisition Tower", desc: "Final stage particulate filtration" },
+                        { icon: Zap, title: "Multi-Fuel Inputs", desc: "Integrates with coal, natural gas, diesel, and other exhaust streams-cleaning emissions without changing core operations." },
+                      ].map((comp) => (
+                        <div key={comp.title} className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+                          <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                            <comp.icon className="w-6 h-6 text-primary" />
+                          </div>
+                          <h4 className="font-bold text-foreground mb-2">{comp.title}</h4>
+                          <p className="text-sm text-muted-foreground">{comp.desc}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+
+            </Accordion>
           </div>
 
           <div className="mt-16 rounded-2xl border border-gray-200 bg-gray-50 p-8">

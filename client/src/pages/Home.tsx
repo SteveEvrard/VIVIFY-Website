@@ -8,6 +8,9 @@ import { Cpu, Leaf, Wind, TrendingUp } from "lucide-react";
 
 export default function Home() {
   const SHOW_FRAMEWORK_SECTION = false;
+  const mobiaVideoUrl = "https://d2t61k482lx79u.cloudfront.net/VIVIFY-Mobia_020526_v1.mp4";
+  const hogImageUrl = "/hog-system.png";
+  const catImageUrl = "/cat-system.png";
 
   const startConversationHref = buildContactMailto({
     subject: "VIVIFY — Renewable Infrastructure Framework",
@@ -28,6 +31,76 @@ export default function Home() {
       "",
     ],
   });
+
+  const featureSections = [
+    {
+      id: "home-hog-title",
+      title: "HOG",
+      subtitle: "Hydrogen Oxygen Generator",
+      mediaLabel: "Featured Product",
+      mediaTitle: "HOG System Overview",
+      mediaSummary:
+        "A visual concept of the HOG system and its integrated energy-generation architecture.",
+      ctaLabel: "Learn More About HOG",
+      ctaHref: "/technology",
+      showCta: false,
+      mediaOnLeft: true,
+      sectionClassName: "py-16 md:pt-28 md:pb-16",
+      paragraphs: [
+        "Our flagship energy system designed to be a self supporting hydrogen energy source powered from a simple H2O based starter. HOG provides a pollutant free hydrogen energy source designed for behind the meter services",
+        "Designed as a self supporting energy platform, HOG is built to maximize energy creation while minimizing traditional inefficiencies. The system is positioned as a 99% emission free, scalable, on demand hydrogen solution that can support a wide range of behind the meter power requirements.",
+        "Its integrated architecture brings together Pulsar for on demand hydrogen creation and system revitalization, alongside multi stage turbines, multi functioning transformers, an H2O input generator, and combustion chambers for power and heat distribution.",
+      ],
+      mediaType: "image",
+      mediaSrc: hogImageUrl,
+      mediaAlt: "HOG system concept rendering",
+    },
+    {
+      id: "home-cat-title",
+      title: "CAT",
+      subtitle: "Clean Air Technology",
+      mediaLabel: "Featured Product",
+      mediaTitle: "CAT System Overview",
+      mediaSummary:
+        "An overview of the CAT platform and its role in cleaner, more efficient industrial energy systems.",
+      ctaLabel: "Learn More About CAT",
+      ctaHref: "/technology",
+      showCta: true,
+      mediaOnLeft: false,
+      sectionClassName: "py-16 md:pt-28 md:pb-16",
+      paragraphs: [
+        "Our flagship five-stage emissions control system is designed to remove virtually all pollutants from exhaust while maintaining strong operational performance. CAT helps industrial systems move toward near-zero emissions without compromising practical deployment needs.",
+        "Built as a retrofit-friendly clean energy solution, CAT is positioned to reduce parasitic load, improve plant efficiency, and deliver a more cost-effective path toward cleaner output across legacy and modern infrastructure environments.",
+        "Its integrated platform brings together multiple stages of filtration, separation, and incineration technologies to support cleaner exhaust streams and a more scalable emissions-control strategy for real-world operations.",
+      ],
+      mediaType: "image",
+      mediaSrc: catImageUrl,
+      mediaAlt: "Clean Air Technology system rendering",
+      mediaClassName: "object-[50%_60%]",
+    },
+    {
+      id: "home-ecosystem-title",
+      title: "Enabling Living Systems at Scale",
+      mediaLabel: "Featured Video",
+      mediaTitle: "MOBIA + VIVIFY Overview",
+      mediaSummary:
+        "See how VIVIFY provides the clean energy, digital infrastructure, smart grid, and AI foundation that brings living mobility systems to life.",
+      ctaLabel: "Learn More",
+      ctaHref: "https://mobia.ai/",
+      showCta: true,
+      ctaNewTab: true,
+      mediaOnLeft: true,
+      sectionClassName: "py-16 md:pt-28 md:pb-16",
+      paragraphs: [
+        "VIVIFY’s clean energy, data, smart grid, and AI capabilities provide the foundational infrastructure required to support advanced intelligent systems across cities, campuses, industrial zones, and digital environments.",
+        "In mobility-led developments, VIVIFY works in close partnership with MOBIA, the Smart City Operating System for Living Mobility, delivering the energy and intelligence required to bring living urban systems to life.",
+        "Beyond mobility, VIVIFY powers clean, intelligent infrastructure for data centers, industrial campuses, mixed-use developments, and next-generation cities.",
+      ],
+      mediaType: "video",
+      mediaSrc: mobiaVideoUrl,
+      mediaAlt: "MOBIA and VIVIFY overview video",
+    },
+  ] as const;
 
   return (
     <div className="min-h-screen flex flex-col pt-20">
@@ -80,41 +153,8 @@ export default function Home() {
             </p>
             
             <p className="mt-5 text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
-              VIVIFY delivers 100% clean and renewable energy systems, intelligent data transmission, smart grids, and AI-driven infrastructure — including coal and hydrogen advanced energy conversion technologies — that power intelligent cities, mobility ecosystems, data centers, and large-scale developments worldwide.
+              VIVIFY delivers 100% clean and renewable energy systems, intelligent data transmission, smart grids, and AI-driven infrastructure — including coal and hydrogen advanced energy conversion technologies.
             </p>
-            <p className="mt-4 text-sm sm:text-base md:text-lg text-white/85 leading-relaxed max-w-2xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
-              From district-scale energy systems to AI-optimized infrastructure, VIVIFY provides the foundational layers that enable living, adaptive systems to operate in the real world.
-            </p>
-
-            <p className="mt-5 text-sm sm:text-base text-white/85 drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
-              Explore{" "}
-              <Link href="/applications" className="font-semibold text-primary hover:underline underline-offset-4">
-                real-world applications
-              </Link>{" "}
-              or read the{" "}
-              <Link href="/news" className="font-semibold text-primary hover:underline underline-offset-4">
-                latest company news
-              </Link>
-              .
-            </p>
-            
-            <div className="mt-7 flex flex-col sm:flex-row gap-4 sm:items-center">
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-black font-bold w-full sm:w-auto whitespace-normal text-center leading-tight h-auto py-3 sm:h-10 sm:py-0"
-                asChild
-              >
-                <Link href="/technology">Explore Technology</Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white/10 w-full sm:w-auto whitespace-normal text-center leading-tight h-auto py-3 sm:h-10 sm:py-0"
-                asChild
-              >
-                <a href={startConversationHref}>Power Your Next Intelligent Development</a>
-              </Button>
-            </div>
           </div>
         </div>
 
@@ -133,6 +173,9 @@ export default function Home() {
         </div>
         <div className="container">
           <div className="text-center mb-10 md:mb-12 relative z-10">
+            <p className="mt-4 mb-8 text-sm sm:text-base md:text-lg font-semibold text-muted-foreground leading-relaxed max-w-4xl mx-auto">
+              District-scale energy systems to AI-optimized infrastructure, VIVIFY provides the foundational layers that enable living, adaptive systems to operate in the real world.
+            </p>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted-foreground">
               The VIVIFY stack
             </p>
@@ -309,78 +352,112 @@ export default function Home() {
       </section>
       )}
 
-      {/* Ecosystem Enablement */}
-      <section
-        className="relative bg-primary md:bg-transparent py-16 md:py-28 overflow-hidden"
-        aria-labelledby="home-ecosystem-title"
-      >
-        <div
-          className="hidden md:block absolute left-0 top-0 bottom-0 w-1/2 bg-primary"
-          style={{ clipPath: "polygon(0 0, 100% 10%, 100% 90%, 0 100%)" }}
-        ></div>
+      {featureSections.map((section) => (
+        <section
+          key={section.id}
+          className={`relative bg-primary md:bg-transparent overflow-hidden ${"sectionClassName" in section ? section.sectionClassName : "py-16 md:py-28"}`}
+          aria-labelledby={section.id}
+        >
+          <div
+            className={`hidden md:block absolute top-0 bottom-0 w-1/2 bg-primary ${
+              section.mediaOnLeft ? "right-0" : "left-0"
+            }`}
+            style={{
+              clipPath: section.mediaOnLeft
+                ? "polygon(0 10%, 100% 0, 100% 100%, 0 90%)"
+                : "polygon(0 0, 100% 10%, 100% 90%, 0 100%)",
+            }}
+          ></div>
 
-        <div className="container relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            <div className="text-white">
-              <h2
-                id="home-ecosystem-title"
-                className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-8 text-white tracking-tight leading-[1.05] drop-shadow-[0_3px_18px_rgba(0,0,0,0.35)]"
-              >
-                Enabling Living Systems at Scale
-              </h2>
-              <div className="space-y-5 text-white/90 leading-relaxed">
-                <p>
-                  VIVIFY’s clean energy, data, smart grid, and AI capabilities provide the foundational infrastructure required to support advanced intelligent systems across cities, campuses, industrial zones, and digital environments.
-                </p>
-                <p>
-                  In mobility-led developments, VIVIFY works in close partnership with <span className="font-semibold text-white">MOBIA</span>, the Smart City Operating System for Living Mobility, delivering the energy and intelligence required to bring living urban systems to life.
-                </p>
-                <p>
-                  Beyond mobility, VIVIFY powers clean, intelligent infrastructure for data centers, industrial campuses, mixed-use developments, and next-generation cities.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="px-8 pt-8">
-                <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">
-                  Featured Video
-                </p>
-                <h3 className="text-2xl font-bold text-foreground">
-                  MOBIA + VIVIFY Overview
-                </h3>
-              </div>
-
-              <div className="mt-6 border-t border-gray-200 bg-black">
-                <video
-                  autoPlay
-                  muted
-                  controls
-                  playsInline
-                  preload="auto"
-                  className="w-full aspect-video"
+          <div className="container relative z-10">
+            <div className="grid md:grid-cols-2 gap-12 items-start">
+              <div className={section.mediaOnLeft ? "order-2 md:order-2 text-white" : "text-white"}>
+                <h2
+                  id={section.id}
+                  className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-8 text-white tracking-tight leading-[1.05] drop-shadow-[0_3px_18px_rgba(0,0,0,0.35)]"
                 >
-                  <source
-                    src="https://d2t61k482lx79u.cloudfront.net/VIVIFY-Mobia_020526_v1.mp4"
-                    type="video/mp4"
-                  />
-                </video>
+                  {section.title}
+                </h2>
+                {"subtitle" in section ? (
+                  <p className="-mt-4 mb-6 text-xl sm:text-2xl font-semibold text-white/95 tracking-tight">
+                    {section.subtitle}
+                  </p>
+                ) : null}
+                <div className="space-y-5 text-white/90 leading-relaxed">
+                  {section.paragraphs.map((paragraph, index) => (
+                    <p key={index}>
+                      {paragraph.includes("MOBIA") ? (
+                        <>
+                          {paragraph.split("MOBIA")[0]}
+                          <span className="font-semibold text-white">MOBIA</span>
+                          {paragraph.split("MOBIA")[1]}
+                        </>
+                      ) : (
+                        paragraph
+                      )}
+                    </p>
+                  ))}
+                </div>
               </div>
 
-              <div className="px-8 pb-8 pt-6">
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  See how VIVIFY provides the clean energy, digital infrastructure, smart grid, and AI foundation that brings living mobility systems to life.
-                </p>
-                <div className="mt-6">
-                  <Button className="w-full bg-black hover:bg-black/90 text-primary font-bold whitespace-normal text-center leading-tight h-auto py-3" asChild>
-                    <a href={startConversationHref}>Power Your Next Intelligent Development</a>
-                  </Button>
+              <div className={`bg-white rounded-lg border border-gray-200 overflow-hidden ${section.mediaOnLeft ? "order-1 md:order-1" : ""}`}>
+                <div className="px-8 pt-8">
+                  <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">
+                    {section.mediaLabel}
+                  </p>
+                  <h3 className="text-2xl font-bold text-foreground">
+                    {section.mediaTitle}
+                  </h3>
+                </div>
+
+                <div className="mt-6 border-t border-gray-200 bg-black">
+                  {section.mediaType === "image" ? (
+                    <img
+                      src={section.mediaSrc}
+                      alt={section.mediaAlt}
+                      className={`w-full aspect-video object-cover ${"mediaClassName" in section ? section.mediaClassName : ""}`}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <video
+                      autoPlay
+                      muted
+                      controls
+                      playsInline
+                      preload="auto"
+                      className="w-full aspect-video"
+                    >
+                      <source
+                        src={section.mediaSrc}
+                        type="video/mp4"
+                      />
+                    </video>
+                  )}
+                </div>
+
+                <div className="px-8 pb-8 pt-6">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {section.mediaSummary}
+                  </p>
+                  {section.showCta ? (
+                    <div className="mt-6">
+                      <Button className="w-full bg-black hover:bg-black/90 text-primary font-bold whitespace-normal text-center leading-tight h-auto py-3" asChild>
+                        <a
+                          href={section.ctaHref}
+                          target={"ctaNewTab" in section && section.ctaNewTab ? "_blank" : undefined}
+                          rel={"ctaNewTab" in section && section.ctaNewTab ? "noreferrer" : undefined}
+                        >
+                          {section.ctaLabel}
+                        </a>
+                      </Button>
+                    </div>
+                  ) : null}
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ))}
 
       {/* CTA Section */}
       <section className="bg-primary text-black py-16 md:py-24" aria-labelledby="home-cta-title">

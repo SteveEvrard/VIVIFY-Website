@@ -137,23 +137,22 @@ export default function Home() {
 
         <div className="container relative z-10 pb-14 sm:pb-10">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center bg-primary/20 border border-primary px-4 py-2 rounded-full">
-              <span className="text-primary font-semibold text-sm">Clean Energy • Data • Smart Grid • AI</span>
-            </div>
-            
-            <h1
-              id="home-hero-title"
-              className="mt-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-white drop-shadow-[0_2px_14px_rgba(0,0,0,0.75)]"
-            >
-              VIVIFY — Bringing Technology to Life
+            <h1 id="home-hero-title" className="sr-only">
+              VIVIFY
             </h1>
+
+            <img
+              src="/vivify-hero-logo.png"
+              alt="VIVIFY"
+              className="h-32 sm:h-40 md:h-48 lg:h-56 w-auto object-contain drop-shadow-[0_2px_14px_rgba(0,0,0,0.75)]"
+            />
 
             <p className="mt-3 text-lg sm:text-xl md:text-2xl font-semibold text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
               Renewable Energy, Data, and Intelligence
             </p>
             
             <p className="mt-5 text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
-              VIVIFY delivers 100% clean and renewable energy systems, intelligent data transmission, smart grids, and AI-driven infrastructure — including coal and hydrogen advanced energy conversion technologies.
+              VIVIFY delivers 100% clean and renewable energy systems, intelligent data transmission, smart grids, and AI-driven infrastructure including coal and hydrogen advanced energy conversion technologies.
             </p>
           </div>
         </div>

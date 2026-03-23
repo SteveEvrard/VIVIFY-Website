@@ -42,6 +42,64 @@ export const NEWS_POSTS: NewsPost[] = [
       "310-299-6143",
     ].join("\n\n"),
   },
+  {
+    slug: "vivify-technology-joins-president-donald-j-trump",
+    title:
+      "VIVIFY Technology Joins President Donald J. Trump and National Leaders at Palm Beach County Lincoln Day Gala, Showcasing Florida-First Leadership in Energy Innovation",
+    date: "2026-03-24",
+    category: "Press Release",
+    excerpt:
+      "PALM BEACH, FL — March 23, 2026 — VIVIFY Technology took a prominent role at the Palm Beach County Lincoln Day Gala held at Mar-a-Lago on March 20, 2026, joining President Donald J. Trump and a distinguished group of national leaders, policymakers, and business executives for one of the region’s most influential political gatherings of the year.",
+    content: [
+      "IMMEDIATE RELEASE",
+      "",
+      "PALM BEACH, FL — March 23, 2026 — VIVIFY Technology took a prominent role at the Palm Beach\n" +
+      "County Lincoln Day Gala held at Mar-a-Lago on March 20, 2026, joining President Donald J. Trump\n" +
+      "and a distinguished group of national leaders, policymakers, and business executives for one of the\n" +
+      "region’s most influential political gatherings of the year.\n",
+      "",
+      "As a premier sponsor of the Presidential Table and Poolside Cocktail Reception, VIVIFY Technology\n" +
+      "stood at the center of an evening focused on advancing pro-growth policies, strengthening\n" +
+      "American industry, and driving forward a new era of domestic innovation.\n",
+      "",
+      "VIVIFY Founder & CEO Jason Herring, alongside senior leadership and strategic partners, engaged\n" +
+      "directly with top-tier decision-makers, reinforcing the company’s alignment with leadership\n" +
+      "committed to economic expansion, energy independence, and infrastructure modernization.\n",
+      "",
+      "As a Florida-based company with an expanding global footprint, VIVIFY is emerging as a disruptor in\n" +
+      "the energy space and is increasingly recognized as a Florida-first thought leader in energy,\n" +
+      "infrastructure, and advanced technology. The company is at the forefront of developing the future\n" +
+      "of energy, with a growing emphasis on hydrogen innovation, positioning VIVIFY as a leading\n" +
+      "hydrogen energy company advancing next-generation infrastructure solutions to meet evolving\n" +
+      "global demand.\n",
+      "",
+      "“America’s future depends on bold leadership and decisive action,” said Herring. “VIVIFY is proud to\n" +
+      "stand alongside leaders who prioritize innovation, American strength, and the policies that enable\n" +
+      "businesses to scale, compete, and win on a global stage.”\n",
+      "",
+      "The event highlighted a powerful convergence of political influence and private-sector execution,\n" +
+      "with VIVIFY emerging as a key player in advancing next-generation infrastructure and energy\n" +
+      "solutions aligned with national priorities.With strategic initiatives underway across multiple markets,\n" +
+      "VIVIFY Technology continues to position itself as a driving force behind innovation, investment, and large-scale infrastructure\n" +
+      "development.\n",
+      "",
+      "As the national conversation around economic growth and energy leadership accelerates, VIVIFY\n" +
+      "remains committed to supporting policies and partnerships that strengthen America’s competitive\n" +
+      "edge and long-term prosperity.\n",
+      "",
+      "About VIVIFY Technology",
+      "VIVIFY is a technology, power, and systems integration partner specializing in the execution of\n" +
+      "complex, high-impact infrastructure and digital initiatives. The company supports visionary\n" +
+      "organizations through advanced energy solutions, systems coordination, and implementation at\n" +
+      "scale. Learn more at https://vivify-technology.com/",
+      "",
+      "Media Contact:",
+      "Lynn Aronberg",
+      "Lynn Aronberg Public Relations",
+      "lynn@lynnaronberg.com",
+      "310-299-6143",
+    ].join("\n\n"),
+  },
 ];
 
 export function getNewsPost(slug: string): NewsPost | undefined {

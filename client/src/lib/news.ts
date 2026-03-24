@@ -79,7 +79,7 @@ export const NEWS_POSTS: NewsPost[] = [
       "stand alongside leaders who prioritize innovation, American strength, and the policies that enable\n" +
       "businesses to scale, compete, and win on a global stage.”\n",
       "",
-      "Among the evening’s distinguished attendees, Representative <a target='_blank' href='https://www.flhouse.gov/Sections/Representatives/custom/details.aspx?MemberId=4926&LegislativeTermId=91'>Meg Weinberger</a> joined the VIVIFY\n" +
+      "Among the evening’s distinguished attendees, Representative <a target='_blank' href='https://www.megforflorida.com/'>Meg Weinberger</a> joined the VIVIFY\n" +
       "table, underscoring the company’s growing engagement with policymakers advancing pro-growth,\n" +
       "pro-innovation initiatives across Florida. Conversations throughout the evening focused on\n" +
       "economic expansion, infrastructure modernization, and strengthening public-private collaboration\n" +

@@ -53,8 +53,10 @@ export const NEWS_POSTS: NewsPost[] = [
     content: [
       "IMMEDIATE RELEASE",
       "",
-      "PALM BEACH, FL — March 23, 2026 — VIVIFY Technology took a prominent role at the Palm Beach\n" +
-      "County Lincoln Day Gala held at Mar-a-Lago on March 20, 2026, joining President Donald J. Trump\n" +
+      "<img src='/images/DPL22238.jpg' />",
+      "",
+      "PALM BEACH, FL — March 23, 2026 — <a href='https://vivify-technology.com/'>VIVIFY Technology</a> took a prominent role at the <a target='_blank' href='https://www.palmbeach.gop/'>Palm Beach\n" +
+      "County</a> Lincoln Day Gala held at <a target='_blank' href='https://www.maralagoclub.com/'>Mar-a-Lago</a> on March 20, 2026, joining President Donald J. Trump\n" +
       "and a distinguished group of national leaders, policymakers, and business executives for one of the\n" +
       "region’s most influential political gatherings of the year.\n",
       "",
@@ -62,7 +64,7 @@ export const NEWS_POSTS: NewsPost[] = [
       "stood at the center of an evening focused on advancing pro-growth policies, strengthening\n" +
       "American industry, and driving forward a new era of domestic innovation.\n",
       "",
-      "VIVIFY Founder & CEO Jason Herring, alongside senior leadership and strategic partners, engaged\n" +
+      "VIVIFY Founder & <a href='https://vivify-technology.com/about'>CEO Jason Herring</a>, alongside senior leadership and strategic partners, engaged\n" +
       "directly with top-tier decision-makers, reinforcing the company’s alignment with leadership\n" +
       "committed to economic expansion, energy independence, and infrastructure modernization.\n",
       "",
@@ -76,6 +78,12 @@ export const NEWS_POSTS: NewsPost[] = [
       "“America’s future depends on bold leadership and decisive action,” said Herring. “VIVIFY is proud to\n" +
       "stand alongside leaders who prioritize innovation, American strength, and the policies that enable\n" +
       "businesses to scale, compete, and win on a global stage.”\n",
+      "",
+      "Among the evening’s distinguished attendees, Representative <a target='_blank' href='https://www.flhouse.gov/Sections/Representatives/custom/details.aspx?MemberId=4926&LegislativeTermId=91'>Meg Weinberger</a> joined the VIVIFY\n" +
+      "table, underscoring the company’s growing engagement with policymakers advancing pro-growth,\n" +
+      "pro-innovation initiatives across Florida. Conversations throughout the evening focused on\n" +
+      "economic expansion, infrastructure modernization, and strengthening public-private collaboration\n" +
+      "at both the state and national levels.\n",
       "",
       "The event highlighted a powerful convergence of political influence and private-sector execution,\n" +
       "with VIVIFY emerging as a key player in advancing next-generation infrastructure and energy\n" +
@@ -91,7 +99,7 @@ export const NEWS_POSTS: NewsPost[] = [
       "VIVIFY is a technology, power, and systems integration partner specializing in the execution of\n" +
       "complex, high-impact infrastructure and digital initiatives. The company supports visionary\n" +
       "organizations through advanced energy solutions, systems coordination, and implementation at\n" +
-      "scale. Learn more at https://vivify-technology.com/",
+      "scale. Learn more at <a href='https://vivify-technology.com/'>https://vivify-technology.com/</a>",
       "",
       "Media Contact:",
       "Lynn Aronberg",

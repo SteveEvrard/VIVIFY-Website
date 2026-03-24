@@ -170,3 +170,8 @@
     @apply bg-[#75787B] text-white;
   }
 }
+
+.vivify-article a {
+  color: var(--primary);
+  text-decoration: underline;
+}

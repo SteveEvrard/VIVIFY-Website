@@ -56,7 +56,7 @@ export default function NewsArticle(props: Props) {
       />
 
       <section className="bg-white py-16 md:py-20" aria-labelledby="news-article-title">
-        <div className="container max-w-4xl">
+        <div className="container max-w-4xl vivify-article">
           <div className="mb-8">
             <Button variant="outline" className="border-primary text-primary hover:bg-primary/10" asChild>
               <Link href="/news">
@@ -151,7 +151,7 @@ export default function NewsArticle(props: Props) {
                         >
                           <div className="space-y-1 text-base md:text-lg text-muted-foreground leading-relaxed">
                             {lines.map((line, idx) => (
-                              <div key={idx}>{line}</div>
+                              <div key={idx} dangerouslySetInnerHTML={{ __html: line }} />
                             ))}
                           </div>
                         </div>
@@ -182,9 +182,11 @@ export default function NewsArticle(props: Props) {
                 }
 
                 nodes.push(
-                  <p key={`p-${i}`} className="text-base md:text-lg leading-relaxed text-muted-foreground">
-                    {para}
-                  </p>
+                  <p
+                    key={`p-${i}`}
+                    className="text-base md:text-lg leading-relaxed text-muted-foreground"
+                    dangerouslySetInnerHTML={{ __html: para }}
+                  />
                 );
               }
 

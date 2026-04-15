@@ -108,6 +108,36 @@ export const NEWS_POSTS: NewsPost[] = [
       "310-299-6143",
     ].join("\n\n"),
   },
+  {
+    slug: "vivify-technology-supports-floridas-energy-growth-and-infrastructure-future",
+    title:
+      "VIVIFY Technology Supports Florida’s Energy Growth and Infrastructure Future Through Strategic Engagement and Civic Investment",
+    date: "2026-04-13",
+    category: "Press Release",
+    excerpt:
+      "VIVIFY Technology, a leader in advanced energy solutions and infrastructure systems integration, today announced its continued commitment to supporting Florida’s rapid growth through investments in energy innovation, grid resilience, and strategic civic engagement.",
+    content: [
+      "IMMEDIATE RELEASE",
+      "",
+      "<img src='/images/DSC02610.jpg' />",
+      "",
+      "DELRAY BEACH, FL, April 13, 2026 — VIVIFY Technology, a leader in advanced energy solutions and infrastructure systems integration, today announced its continued commitment to supporting Florida’s rapid growth through investments in energy innovation, grid resilience, and strategic civic engagement.",
+      "As Florida continues to lead the nation in population growth and economic expansion, demand for reliable, scalable energy infrastructure has intensified. VIVIFY is supporting this growth through strategic partnerships, project development, and engagement with policymakers advancing pro-growth, infrastructure-focused energy solutions.",
+      "VIVIFY, a Florida-based company with an expanding global footprint, is emerging as a disruptor in the energy space and is increasingly recognized as a Florida-first thought leader in energy, infrastructure, and advanced technology. With a growing emphasis on hydrogen innovation, VIVIFY is helping shape next-generation energy systems designed to meet evolving global demand.",
+      "<a href='https://vivify-technology.com/'>VIVIFY</a> has supported candidates and initiatives aligned with economic development, energy independence, and infrastructure modernization as part of its civic engagement efforts. This includes a $500,000 contribution to the campaign of <a target='_blank' href='https://friendsofbyrondonalds.com/'>Byron Donalds</a>, who represents Florida’s 19th Congressional District and is a leading voice on economic policy and American energy independence. VIVIFY has also supported candidates across the political spectrum focused on advancing responsible energy policy and long-term infrastructure investment.",
+      "“Energy is the foundation of economic growth, national security, and quality of life,” said Jason Herring, <a href='https://vivify-technology.com/about'>Founder</a> and CEO of VIVIFY Technology. “Florida is setting the pace for the country, and it is critical to support leaders and policies that prioritize American energy strength, infrastructure investment, and long-term resilience.”",
+      "VIVIFY delivers integrated energy systems designed for modern infrastructure, including power generation, grid optimization, and emerging technologies such as hydrogen and alternative energy frameworks. Through engineering expertise, strategic partnerships, and policy alignment, VIVIFY is helping build resilient, future-ready energy systems at scale.",
+      "“Our goal is to help build the infrastructure that powers tomorrow,” Herring added. “That requires strong leadership, smart policy, and collaboration across sectors.”",
+      "",
+      "About VIVIFY Technology",
+      "VIVIFY Technology is an advanced clean energy technology company focused on solving large-scale energy and environmental challenges. The company designs, builds, and deploys systems that allow legacy energy infrastructure—including coal, diesel, and natural gas—to operate as near-zero-emission power sources while producing low-cost, reliable baseload electricity. VIVIFY’s platform is built around clean air and hydrogen technologies designed to eliminate pollutants, preserve grid stability, protect jobs, and modernize infrastructure without sacrificing performance. The company is also advancing solutions in wastewater treatment, potable water restoration, habitat protection, waste-to-energy conversion, and carbon capture.",
+      "",
+      "Media Contact:",
+      "Ashley Stevenson",
+      "VIVIFY Technology",
+      "ashley@vivify-technology.com"
+    ].join("\n\n"),
+  }
 ];
 
 export function getNewsPost(slug: string): NewsPost | undefined {

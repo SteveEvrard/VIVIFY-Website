@@ -158,9 +158,9 @@ export default function About() {
           <div className="space-y-16">
             {/* CEO & Founder */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="bg-gray-300 rounded-lg h-80 md:h-96 overflow-hidden">
+              <div className="bg-gray-300 rounded-lg h-[32rem] md:h-[40rem] overflow-hidden">
                 <img
-                  src="/CEO.jpeg"
+                  src="/images/jason/Jason-Stairs.jpg"
                   alt="Jason Herring"
                   className="w-full h-full object-cover"
                 />
@@ -174,8 +174,10 @@ export default function About() {
                   Jason Herring
                 </h3>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Jason founded VIVIFY to eliminate the false choice between clean energy and reliable power. He believes the fastest path to meaningful
-                  decarbonization is transforming the grid-connected systems we already have—without breaking communities, budgets, or stability.
+                  Jason founded VIVIFY to eliminate the false choice between clean energy and reliable power. He
+                  believes the fastest path to meaningful
+                  decarbonization is transforming the grid-connected systems we already have—without breaking
+                  communities, budgets, or stability.
                 </p>
 
                 <div className="bg-white rounded-lg border border-gray-200 p-6 mb-6">
@@ -197,7 +199,8 @@ export default function About() {
                 </div>
 
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  His mission is straightforward: keep the grid stable, keep electricity affordable, and make the air cleaner—at speed and at scale.
+                  His mission is straightforward: keep the grid stable, keep electricity affordable, and make the air
+                  cleaner—at speed and at scale.
                 </p>
               </div>
             </div>

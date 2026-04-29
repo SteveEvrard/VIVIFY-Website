@@ -205,36 +205,79 @@ export default function About() {
               </div>
             </div>
 
-            {/* Chief Engineer (no image) */}
-            <div className="bg-white rounded-lg border border-gray-200 p-8">
-              <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">
-                Technical Leadership
-              </p>
-              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Chief Engineer
-              </h3>
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                VIVIFY&apos;s Chief Engineer leads the engineering execution of our Clean Air Technology™ platform—from plant integration and reliability to
-                monitoring, controls, and long-term performance in real-world operations.
-              </p>
-
-              <div className="bg-primary/10 border-l-4 border-primary p-6 rounded">
-                <p className="text-foreground font-semibold mb-2">Areas of Focus</p>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex gap-2">
-                    <span className="text-primary font-bold">•</span>
-                    <span>Systems engineering for retrofit deployments with minimal operational disruption</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-primary font-bold">•</span>
-                    <span>Safety, compliance, and performance validation across emissions-control stages</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-primary font-bold">•</span>
-                    <span>Controls, telemetry, and continuous optimization for predictable results</span>
-                  </li>
-                </ul>
+            {/* Chief Engineer */}
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="bg-gray-300 rounded-lg h-[32rem] md:h-[40rem] overflow-hidden">
+                <img
+                  src="/images/team/buddy-paul.jpg"
+                  alt="Chief Engineer"
+                  className="w-full h-full object-cover"
+                />
               </div>
+
+              <div>
+                <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">
+                  Chief Engineer
+                </p>
+                <h3 className="text-4xl font-bold text-foreground mb-4">
+                  Buddy Paul
+                </h3>
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  VIVIFY&apos;s Chief Engineer leads the engineering execution of our Clean Air Technology™ platform—from plant integration and reliability to
+                  monitoring, controls, and long-term performance in real-world operations.
+                </p>
+
+                <div className="bg-white rounded-lg border border-gray-200 p-6">
+                  <p className="text-foreground font-semibold mb-2">Areas of Focus</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="flex gap-2">
+                      <span className="text-primary font-bold">•</span>
+                      <span>Systems engineering for retrofit deployments with minimal operational disruption</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-primary font-bold">•</span>
+                      <span>Safety, compliance, and performance validation across emissions-control stages</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-primary font-bold">•</span>
+                      <span>Controls, telemetry, and continuous optimization for predictable results</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Additional Leadership Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+              {[
+                { name: "Monica Victoria", title: "Director of Operations", img: "/images/team/monica-victoria.jpg" },
+                { name: "Steve Evrard", title: "Vice President of Business Development", img: "/images/team/steve-evrard.jpg" },
+                { name: "Prajwal Nagaraj", title: "Director of AI Deployment", img: "/images/team/prajwal-nagaraj.jpg" },
+                { name: "Zac DelVecchio", title: "Director of Innovations and Solutions", img: "/images/team/zac-delvecchio.jpg" },
+                { name: "Ashley Stevenson", title: "Director of Marketing", img: "/images/team/ashley-stevenson.jpg" },
+                { name: "Monica Pineiro", title: "Chief of Staff", img: "/images/team/monica-pineiro.jpg" },
+                { name: "Melanie A. Tacher", title: "Director of Government Affairs & Strategic Communications", img: "/images/team/melanie-tacher.jpg" },
+                { name: "Denise Starrantino", title: "Office Assistant", img: "/images/team/denise-starrantino.jpg" }
+              ].map((member, idx) => (
+                <div key={idx} className="relative aspect-[4/5] overflow-hidden rounded-xl group border border-gray-200">
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  {/* Subtle gradient shadow underneath text */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+
+                  <div className="absolute bottom-0 left-0 p-6 w-full">
+                    <h4 className="text-xl font-bold text-white leading-tight">
+                      {member.name}
+                    </h4>
+                    <p className="text-sm text-white/80 font-medium mt-1">
+                      {member.title}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

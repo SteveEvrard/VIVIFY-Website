@@ -38,7 +38,8 @@ export default function About() {
         aria-labelledby="about-hero-title"
       >
         {/* Subtle brand-gray tint (replaces navy/blue feel) */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#75787B]/18 via-[#75787B]/12 to-[#75787B]/10"></div>
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#75787B]/18 via-[#75787B]/12 to-[#75787B]/10"></div>
 
         <div className="container relative z-10">
           <div className="max-w-3xl">
@@ -46,14 +47,15 @@ export default function About() {
               About <span className="text-primary">VIVIFY</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/80 mb-8">
-              Pioneering revolutionary energy technologies that solve the world's most pressing environmental and economic challenges
+              Pioneering revolutionary energy technologies that solve the world's most pressing environmental and
+              economic challenges
             </p>
           </div>
         </div>
 
         {/* Diagonal divider */}
         <div className="absolute bottom-0 left-0 right-0 z-20 h-32 bg-white" style={{
-          clipPath: 'polygon(0 50%, 100% 0, 100% 100%, 0 100%)'
+          clipPath: "polygon(0 50%, 100% 0, 100% 100%, 0 100%)",
         }}></div>
       </section>
 
@@ -66,10 +68,14 @@ export default function About() {
                 Our Mission
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                VIVIFY is dedicated to transforming global energy infrastructure by enabling coal-fired, diesel, and natural gas power plants to operate at near-zero emissions while maintaining reliability and profitability.
+                VIVIFY is dedicated to transforming global energy infrastructure by enabling coal-fired, diesel, and
+                natural gas power plants to operate at near-zero emissions while maintaining reliability and
+                profitability.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                We believe the world doesn&apos;t have to choose between clean energy and reliable power. Through technologies like Clean Air Technology™ and Pulsar™, we&apos;re building the bridge to a sustainable energy future where both are possible.
+                We believe the world doesn&apos;t have to choose between clean energy and reliable power. Through
+                technologies like Clean Air Technology™ and Pulsar™, we&apos;re building the bridge to a sustainable
+                energy future where both are possible.
               </p>
               <p className="mt-6 text-base text-muted-foreground leading-relaxed">
                 Explore our{" "}
@@ -102,7 +108,8 @@ export default function About() {
                   const Icon = item.icon;
                   return (
                     <div key={item.text} className="flex gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <div
+                        className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                         <Icon className="w-5 h-5 text-primary" />
                       </div>
                       <p className="text-foreground font-semibold leading-relaxed">{item.text}</p>
@@ -132,9 +139,10 @@ export default function About() {
               { title: "Innovation", desc: "Breakthrough technologies that transform industries" },
               { title: "Sustainability", desc: "Environmental responsibility and long-term impact" },
               { title: "Reliability", desc: "Dependable solutions that power the world" },
-              { title: "Partnership", desc: "Collaborative relationships with our customers" }
+              { title: "Partnership", desc: "Collaborative relationships with our customers" },
             ].map((value, idx) => (
-              <div key={idx} className="bg-gray-50 rounded-lg p-8 border border-gray-200 text-center hover:shadow-lg transition-shadow">
+              <div key={idx}
+                   className="bg-gray-50 rounded-lg p-8 border border-gray-200 text-center hover:shadow-lg transition-shadow">
                 <h3 className="text-2xl font-bold text-foreground mb-4">{value.title}</h3>
                 <p className="text-muted-foreground">{value.desc}</p>
               </div>
@@ -206,43 +214,48 @@ export default function About() {
             </div>
 
             {/* Chief Engineer */}
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="bg-gray-300 rounded-lg h-[32rem] md:h-[40rem] overflow-hidden">
-                <img
-                  src="/images/team/buddy-paul.jpg"
-                  alt="Chief Engineer"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            <div className="bg-white rounded-lg border border-gray-200 p-8">
+              <div className="grid md:grid-cols-[1fr_320px] gap-12 items-center">
+                <div className="order-2 md:order-1">
+                  <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">
+                    Chief Engineer
+                  </p>
+                  <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                    Buddy Paul
+                  </h3>
+                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                    VIVIFY&apos;s Chief Engineer leads the engineering execution of our Clean Air Technology™ platform—from
+                    plant integration and reliability to
+                    monitoring, controls, and long-term performance in real-world operations.
+                  </p>
 
-              <div>
-                <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">
-                  Chief Engineer
-                </p>
-                <h3 className="text-4xl font-bold text-foreground mb-4">
-                  Buddy Paul
-                </h3>
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  VIVIFY&apos;s Chief Engineer leads the engineering execution of our Clean Air Technology™ platform—from plant integration and reliability to
-                  monitoring, controls, and long-term performance in real-world operations.
-                </p>
+                  <div className="bg-primary/10 border-l-4 border-primary p-6 rounded">
+                    <p className="text-foreground font-semibold mb-2">Areas of Focus</p>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li className="flex gap-2">
+                        <span className="text-primary font-bold">•</span>
+                        <span>Systems engineering for retrofit deployments with minimal operational disruption</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <span className="text-primary font-bold">•</span>
+                        <span>Safety, compliance, and performance validation across emissions-control stages</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <span className="text-primary font-bold">•</span>
+                        <span>Controls, telemetry, and continuous optimization for predictable results</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
 
-                <div className="bg-white rounded-lg border border-gray-200 p-6">
-                  <p className="text-foreground font-semibold mb-2">Areas of Focus</p>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex gap-2">
-                      <span className="text-primary font-bold">•</span>
-                      <span>Systems engineering for retrofit deployments with minimal operational disruption</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <span className="text-primary font-bold">•</span>
-                      <span>Safety, compliance, and performance validation across emissions-control stages</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <span className="text-primary font-bold">•</span>
-                      <span>Controls, telemetry, and continuous optimization for predictable results</span>
-                    </li>
-                  </ul>
+                <div className="order-1 md:order-2">
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+                    <img
+                      src="/images/team/buddy-paul.jpg"
+                      alt="Chief Engineer"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -251,22 +264,40 @@ export default function About() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
               {[
                 { name: "Monica Victoria", title: "Director of Operations", img: "/images/team/monica-victoria.jpg" },
-                { name: "Steve Evrard", title: "Vice President of Business Development", img: "/images/team/steve-evrard.jpg" },
-                { name: "Prajwal Nagaraj", title: "Director of AI Deployment", img: "/images/team/prajwal-nagaraj.jpg" },
-                { name: "Zac DelVecchio", title: "Director of Innovations and Solutions", img: "/images/team/zac-delvecchio.jpg" },
+                {
+                  name: "Steve Evrard",
+                  title: "Vice President of Business Development",
+                  img: "/images/team/steve-evrard.jpg",
+                },
+                {
+                  name: "Prajwal Nagaraj",
+                  title: "Director of AI Deployment",
+                  img: "/images/team/prajwal-nagaraj.jpg",
+                },
+                {
+                  name: "Zac DelVecchio",
+                  title: "Director of Innovations and Solutions",
+                  img: "/images/team/zac-delvecchio.jpg",
+                },
                 { name: "Ashley Stevenson", title: "Director of Marketing", img: "/images/team/ashley-stevenson.jpg" },
                 { name: "Monica Pineiro", title: "Chief of Staff", img: "/images/team/monica-pineiro.jpg" },
-                { name: "Melanie A. Tacher", title: "Director of Government Affairs & Strategic Communications", img: "/images/team/melanie-tacher.jpg" },
-                { name: "Denise Starrantino", title: "Office Assistant", img: "/images/team/denise-starrantino.jpg" }
+                {
+                  name: "Melanie A. Tacher",
+                  title: "Director of Government Affairs & Strategic Communications",
+                  img: "/images/team/melanie-tacher.jpg",
+                },
+                { name: "Denise Starrantino", title: "Office Assistant", img: "/images/team/denise-starrantino.jpg" },
               ].map((member, idx) => (
-                <div key={idx} className="relative aspect-[4/5] overflow-hidden rounded-xl group border border-gray-200">
+                <div key={idx}
+                     className="relative aspect-[4/5] overflow-hidden rounded-xl group border border-gray-200">
                   <img
                     src={member.img}
                     alt={member.name}
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   {/* Subtle gradient shadow underneath text */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
+                  <div
+                    className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>
 
                   <div className="absolute bottom-0 left-0 p-6 w-full">
                     <h4 className="text-xl font-bold text-white leading-tight">
@@ -352,7 +383,7 @@ export default function About() {
               { stat: "50+", label: "Patents & Patents Pending" },
               { stat: "420K", label: "Jobs Supported" },
               { stat: "99%+", label: "Emissions Reduction" },
-              { stat: "Global", label: "Market Reach" }
+              { stat: "Global", label: "Market Reach" },
             ].map((item, idx) => (
               <div key={idx} className="text-center">
                 <p className="text-5xl md:text-6xl font-bold mb-2">{item.stat}</p>
@@ -379,16 +410,16 @@ export default function About() {
             {[
               {
                 title: "Clean Energy Everywhere",
-                desc: "Hydrogen-powered systems providing clean, reliable energy for all applications"
+                desc: "Hydrogen-powered systems providing clean, reliable energy for all applications",
               },
               {
                 title: "Zero Emissions",
-                desc: "All energy production operating at near-zero emissions with full environmental compliance"
+                desc: "All energy production operating at near-zero emissions with full environmental compliance",
               },
               {
                 title: "Economic Prosperity",
-                desc: "Jobs, communities, and industries thriving in the hydrogen economy transition"
-              }
+                desc: "Jobs, communities, and industries thriving in the hydrogen economy transition",
+              },
             ].map((vision, idx) => (
               <div key={idx} className="bg-gray-50 rounded-lg p-8 border border-gray-200">
                 <h3 className="text-2xl font-bold text-foreground mb-4">{vision.title}</h3>

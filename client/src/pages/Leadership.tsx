@@ -161,29 +161,30 @@ export default function Leadership() {
             {/* Additional Leadership Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { name: "Monica Victoria", title: "Director of Operations", img: "/images/team/monica-victoria.jpg" },
                 {
                   name: "Lisa Hill",
                   title: "Chief of Staff",
                   img: "/images/team/lisa-hill.jpg",
+                },
+                { name: "Monica Pineiro", title: "Chief of Staff to Jason Herring, Chief Executive Officer & Founder", img: "/images/team/monica-pineiro.jpg" },
+                { name: "Monica Victoria", title: "Director of Operations", img: "/images/team/monica-victoria.jpg" },
+                { name: "Guy Fronstin, ESQ", title: "Lead Director & Chief Legal Officer", img: "/images/team/guy-fronstin.jpg" },
+                {
+                  name: "Zac DelVecchio",
+                  title: "Director of Innovations and Solutions",
+                  img: "/images/team/zac-delvecchio.jpg",
                 },
                 {
                   name: "Steve Evrard",
                   title: "Vice President of Business Development",
                   img: "/images/team/steve-evrard.jpg",
                 },
+                { name: "Ashley Stevenson", title: "Director of Marketing", img: "/images/team/ashley-stevenson.jpg" },
                 {
                   name: "Prajwal Nagaraj",
                   title: "Director of AI Deployment",
                   img: "/images/team/prajwal-nagaraj.jpg",
                 },
-                {
-                  name: "Zac DelVecchio",
-                  title: "Director of Innovations and Solutions",
-                  img: "/images/team/zac-delvecchio.jpg",
-                },
-                { name: "Ashley Stevenson", title: "Director of Marketing", img: "/images/team/ashley-stevenson.jpg" },
-                { name: "Monica Pineiro", title: "Chief of Staff to Jason Herring, Chief Executive Officer & Founder", img: "/images/team/monica-pineiro.jpg" },
                 {
                   name: "Melanie A. Tacher",
                   title: "Government Affairs & Strategic Communications Liaison",

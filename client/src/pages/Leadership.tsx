@@ -163,6 +163,11 @@ export default function Leadership() {
               {[
                 { name: "Monica Victoria", title: "Director of Operations", img: "/images/team/monica-victoria.jpg" },
                 {
+                  name: "Lisa Hill",
+                  title: "Chief of Staff",
+                  img: "/images/team/lisa-hill.jpg",
+                },
+                {
                   name: "Steve Evrard",
                   title: "Vice President of Business Development",
                   img: "/images/team/steve-evrard.jpg",
@@ -178,13 +183,13 @@ export default function Leadership() {
                   img: "/images/team/zac-delvecchio.jpg",
                 },
                 { name: "Ashley Stevenson", title: "Director of Marketing", img: "/images/team/ashley-stevenson.jpg" },
-                { name: "Monica Pineiro", title: "Chief of Staff", img: "/images/team/monica-pineiro.jpg" },
+                { name: "Monica Pineiro", title: "Chief of Staff to Jason Herring, Chief Executive Officer & Founder", img: "/images/team/monica-pineiro.jpg" },
                 {
                   name: "Melanie A. Tacher",
-                  title: "Director of Government Affairs & Strategic Communications",
+                  title: "Government Affairs & Strategic Communications Liaison",
                   img: "/images/team/melanie-tacher.jpg",
                 },
-                { name: "Denise Starrantino", title: "Office Assistant", img: "/images/team/denise-starrantino.jpg" },
+                { name: "Denise Starrantino", title: "Front Office Coordinator", img: "/images/team/denise-starrantino.jpg" },
               ].map((member, idx) => (
                 <div key={idx}
                      className="relative aspect-[4/5] overflow-hidden rounded-xl group border border-gray-200">

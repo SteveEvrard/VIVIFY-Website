@@ -6,6 +6,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Leadership from "./pages/Leadership";
 import Cookies from "./pages/Cookies";
 import Applications from "./pages/Applications";
 import Privacy from "./pages/Privacy";
@@ -52,6 +53,7 @@ function Router() {
       <Route path={"/capabilities"} component={() => <Redirect to="/technology" />} />
       <Route path={"/products"} component={() => <Redirect to="/technology" />} />
       <Route path={"/about"} component={About} />
+      <Route path={"/leadership"} component={Leadership} />
       <Route path={"/applications"} component={Applications} />
       <Route path={"/impact"} component={() => <Redirect to="/applications" />} />
       {SHOW_FRAMEWORK_PAGE && <Route path={"/framework"} component={Framework} />}

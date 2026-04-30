@@ -83,6 +83,13 @@ export default function Header() {
             >
               Applications
             </Link>
+            <Link
+              href="/leadership"
+              aria-current={isActive("/leadership") ? "page" : undefined}
+              className={`transition-colors font-medium hover:text-primary ${isActive("/leadership") ? "text-primary" : ""}`}
+            >
+              Leadership
+            </Link>
             {SHOW_FRAMEWORK_PAGE && (
               <Link
                 href="/framework"
@@ -154,6 +161,13 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Applications
+            </Link>
+            <Link
+              href="/leadership"
+              className="block hover:text-primary transition-colors font-medium"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Leadership
             </Link>
             {SHOW_FRAMEWORK_PAGE && (
               <Link

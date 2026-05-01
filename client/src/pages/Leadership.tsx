@@ -64,11 +64,11 @@ export default function Leadership() {
           <div className="space-y-16">
             {/* CEO & Founder */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="bg-gray-300 rounded-lg h-[32rem] md:h-[40rem] overflow-hidden">
+              <div className="bg-gray-300 rounded-lg aspect-[10/11] overflow-hidden">
                 <img
                   src="/images/jason/Jason-Stairs.jpg"
                   alt="Jason Herring"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
 
@@ -161,14 +161,14 @@ export default function Leadership() {
             {/* Additional Leadership Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
               {[
+                { name: "Monica Pineiro", title: "Chief of Staff to Jason Herring, Chief Executive Officer & Founder", img: "/images/team/monica-pineiro.jpg" },
                 {
                   name: "Lisa Hill",
                   title: "Chief of Staff",
                   img: "/images/team/lisa-hill.jpg",
                 },
-                { name: "Monica Pineiro", title: "Chief of Staff to Jason Herring, Chief Executive Officer & Founder", img: "/images/team/monica-pineiro.jpg" },
-                { name: "Monica Victoria", title: "Director of Operations", img: "/images/team/monica-victoria.jpg" },
                 { name: "Guy Fronstin, ESQ", title: "Lead Director & Chief Legal Officer", img: "/images/team/guy-fronstin.jpg" },
+                { name: "Monica Victoria", title: "Director of Operations", img: "/images/team/monica-victoria.jpg" },
                 {
                   name: "Zac DelVecchio",
                   title: "Director of Innovations and Solutions",
@@ -181,14 +181,14 @@ export default function Leadership() {
                 },
                 { name: "Ashley Stevenson", title: "Director of Marketing", img: "/images/team/ashley-stevenson.jpg" },
                 {
+                  name: "Melanie A. Tacher",
+                  title: "Government Affairs & Strategic Communications",
+                  img: "/images/team/melanie-tacher.jpg",
+                },
+                {
                   name: "Prajwal Nagaraj",
                   title: "Director of AI Deployment",
                   img: "/images/team/prajwal-nagaraj.jpg",
-                },
-                {
-                  name: "Melanie A. Tacher",
-                  title: "Government Affairs & Strategic Communications Liaison",
-                  img: "/images/team/melanie-tacher.jpg",
                 },
                 { name: "Denise Starrantino", title: "Front Office Coordinator", img: "/images/team/denise-starrantino.jpg" },
               ].map((member, idx) => (

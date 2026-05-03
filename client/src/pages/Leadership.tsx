@@ -180,6 +180,7 @@ export default function Leadership() {
                   img: "/images/team/steve-evrard.jpg",
                 },
                 { name: "Ashley Stevenson", title: "Director of Marketing", img: "/images/team/ashley-stevenson.jpg" },
+                { name: "Anastasia Voll", title: "Content Specialist", img: "/images/team/anastasia-voll.jpg" },
                 {
                   name: "Melanie A. Tacher",
                   title: "Government Affairs & Strategic Communications",
@@ -190,6 +191,7 @@ export default function Leadership() {
                   title: "Director of AI Deployment",
                   img: "/images/team/prajwal-nagaraj.jpg",
                 },
+                { name: "Juan Carlos De La Coba", title: "AI Optimization Analyst", img: "/images/team/juan-carlos.jpg" },
                 { name: "Denise Starrantino", title: "Front Office Coordinator", img: "/images/team/denise-starrantino.jpg" },
               ].map((member, idx) => (
                 <div key={idx}

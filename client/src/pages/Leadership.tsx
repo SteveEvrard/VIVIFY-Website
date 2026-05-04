@@ -193,6 +193,7 @@ export default function Leadership() {
                 },
                 { name: "Juan Carlos De La Coba", title: "AI Optimization Analyst", img: "/images/team/juan-carlos.jpg" },
                 { name: "Denise Starrantino", title: "Front Office Coordinator", img: "/images/team/denise-starrantino.jpg" },
+                { name: "Josef Enns", title: "Director of Security", img: "/images/team/josef-enns.jpg" },
               ].map((member, idx) => (
                 <div key={idx}
                      className="relative aspect-[4/5] overflow-hidden rounded-xl group border border-gray-200">

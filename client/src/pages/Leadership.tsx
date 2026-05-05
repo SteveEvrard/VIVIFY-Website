@@ -183,7 +183,7 @@ export default function Leadership() {
                 { name: "Anastasia Voll", title: "Content Specialist", img: "/images/team/anastasia-voll.jpg" },
                 {
                   name: "Melanie A. Tacher",
-                  title: "Government Affairs & Strategic Communications",
+                  title: "Director of Government Affairs & Strategic Communications",
                   img: "/images/team/melanie-tacher.jpg",
                 },
                 {

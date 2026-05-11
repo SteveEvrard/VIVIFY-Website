@@ -137,6 +137,47 @@ export const NEWS_POSTS: NewsPost[] = [
       "VIVIFY Technology",
       "ashley@vivify-technology.com"
     ].join("\n\n"),
+  },
+  {
+    slug: "vivify-technology-founder-jason-herring-highlights-closed-loop-hydrogen-power-solution-during-florida-ai-and-data-center-press-conference",
+    title:
+      "VIVIFY Technology Founder Jason Herring Highlights Closed-Loop Hydrogen Power Solution During Florida AI and Data Center Press Conference",
+    date: "2026-05-12",
+    category: "Press Release",
+    excerpt:
+      "Florida-based energy technology company positions its self-funded hydrogen platform as a scalable solution for AI-era power demand, grid resilience and lower-impact energy deployment.",
+    content: [
+      "IMMEDIATE RELEASE",
+      "",
+      // "<img src='/images/DSC02610.jpg' />",
+      "",
+      "LAKELAND, Fla., May 11, 2026 — <a href='https://vivify-technology.com/'>VIVIFY Technology</a> Founder and CEO Jason Herring spoke today during a press conference hosted by <a target=\"_blank\" href='https://jayforflorida.com/'>Florida Lieutenant Governor Jay Collins</a>, where Collins announced a five-point plan addressing the future of artificial intelligence and data center development in Florida.",
+      "While the broader event focused on the rapid growth of AI infrastructure and its impact on Florida’s energy, water and community resources, Herring focused his remarks on VIVIFY Technology’s closed-loop hydrogen power platform and the company’s commitment to advancing Florida-first energy innovation.",
+      "“Technology is moving fast, but energy has to move with it responsibly,” said <a href='https://vivify-technology.com/about'>Jason Herring, Founder and CEO of VIVIFY Technology</a>. “At VIVIFY, we have spent more than a decade developing solutions that support progress without sacrificing the communities, natural resources and environmental priorities that make Florida worth protecting.”",
+      "During his remarks, Herring discussed VIVIFY’s <a href='https://vivify-technology.com/technology'>development of a closed-loop hydrogen power source</a> designed to help reduce dependency on the traditional grid while supporting the growing energy demands of AI, data centers and other critical infrastructure.",
+      "According to Herring, VIVIFY’s mobile one-megawatt power source is designed to be pre-filled with approximately 500 gallons of water at the factory and operate without requiring external water sources from streams, lakes or other natural bodies of water. The system is being developed to provide long-term hydrogen power generation in a controlled, closed-loop environment.",
+      "“This is how we bridge the gap,” Herring said. “AI is here. Data centers are coming. The question is whether we power that future in a way that drains communities and resources, or whether we build smarter systems that protect both innovation and quality of life.”",
+      "VIVIFY’s platform is part of a broader effort to create cleaner, more resilient power systems capable of supporting high-demand infrastructure while reducing strain on existing utilities. The company has also developed clean air technologies for power generation and continues to focus on energy systems that can support American energy independence, environmental stewardship and infrastructure resilience.",
+      "Herring emphasized that VIVIFY has remained self-funded in order to protect the company’s long-term mission and avoid outside pressure to shelve or redirect its technology.",
+      "“We have had opportunities to sell this company, but that was never the goal,” Herring said. “We built VIVIFY to solve real energy problems. Self-funding has allowed us to protect the technology, protect the mission and keep our focus on Florida-first and America-first energy solutions.”",
+      "Collins praised VIVIFY during the event, calling the company’s work a potential game changer for safe, reliable and affordable energy.",
+      "“When you talk about safe, reliable and affordable energy, and not just for data centers, not just within this AI paradigm, we have Florida people and Florida companies solving complex problems right now,” Collins said during the press conference.",
+      "Zac DelVecchio also spoke briefly on behalf of VIVIFY, noting that the company’s closed-loop hydrogen system is nearing deployment.",
+      "“As Jason mentioned, our closed-loop hydrogen system is one of the first of its kind,” DelVecchio said. “This technology is near ready for deployment, and we are ready to execute shortly on this.”",
+      "As AI and data center growth accelerate across the country, VIVIFY Technology is positioning its hydrogen platform as part of the energy infrastructure needed to support that demand responsibly. For Florida, where proposed data center projects have already raised concerns around water supply, energy capacity and community impact, Herring said the path forward must include energy solutions that can scale without placing unnecessary pressure on local resources.",
+      "“Florida has an opportunity to lead,” Herring said. “But leadership means more than bringing new technology here. It means making sure the infrastructure behind that technology is cleaner, smarter and more resilient from the start.”",
+      "",
+      "About VIVIFY Technology",
+      "VIVIFY Technology is a Florida-based energy and infrastructure technology company focused on advancing resilient, cleaner and more efficient power solutions for the future of critical infrastructure. Founded by Jason Herring, VIVIFY develops next-generation energy systems designed to support grid resilience, American energy independence and lower-impact power deployment for high-demand industries, including AI, data centers and advanced infrastructure.",
+      "",
+      "Media Contact:",
+      "Ashley Stevenson",
+      "Director of Marketing",
+      "VIVIFY Technology",
+      "<a href='mailto:ashley@vivify-technology.com'>ashley@vivify-technology.com</a>",
+      "<a href='https://www.vivify-technology.com'>www.vivify-technology.com</a>",
+      "<a target='_blank' href='https://www.instagram.com/vivify_tech/'>Instagram</a> | <a target='_blank' href='https://www.linkedin.com/company/vivifytechnology'>LinkedIn</a> | <a target='_blank' href='https://www.facebook.com/people/VIVIFY-Technology/61586714503615/'>Facebook</a> | <a target='_blank' href='https://x.com/VIVIFY_Tech'>X</a>"
+    ].join("\n\n"),
   }
 ];
 

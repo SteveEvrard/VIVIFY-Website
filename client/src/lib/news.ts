@@ -149,7 +149,7 @@ export const NEWS_POSTS: NewsPost[] = [
     content: [
       "IMMEDIATE RELEASE",
       "",
-      "<img src='/images/DSC07447[1].jpg' />",
+      "<img src='/images/DSC07447.JPG' />",
       "",
       "LAKELAND, Fla., May 11, 2026 — <a href='https://vivify-technology.com/'>VIVIFY Technology</a> Founder and CEO Jason Herring spoke today during a press conference hosted by <a target=\"_blank\" href='https://jayforflorida.com/'>Florida Lieutenant Governor Jay Collins</a>, where Collins announced a five-point plan addressing the future of artificial intelligence and data center development in Florida.",
       "While the broader event focused on the rapid growth of AI infrastructure and its impact on Florida’s energy, water and community resources, Herring focused his remarks on VIVIFY Technology’s closed-loop hydrogen power platform and the company’s commitment to advancing Florida-first energy innovation.",

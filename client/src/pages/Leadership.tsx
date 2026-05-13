@@ -116,13 +116,13 @@ export default function Leadership() {
               <div className="grid md:grid-cols-[1fr_320px] gap-12 items-center">
                 <div className="order-2 md:order-1">
                   <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">
-                    Chief Engineer
+                    Distinguished Engineer & Chief Systems Architect
                   </p>
                   <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                     Buddy Paul
                   </h3>
                   <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                    VIVIFY&apos;s Chief Engineer leads the engineering execution of our Clean Air Technology™ platform—from
+                    VIVIFY&apos;s Distinguished Engineer & Chief Systems Architect leads the engineering execution of our Clean Air Technology™ platform—from
                     plant integration and reliability to
                     monitoring, controls, and long-term performance in real-world operations.
                   </p>
@@ -150,7 +150,7 @@ export default function Leadership() {
                   <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-gray-200 shadow-sm">
                     <img
                       src="/images/team/buddy-paul.jpg"
-                      alt="Chief Engineer"
+                      alt="Distinguished Engineer & Chief Systems Architect"
                       className="absolute inset-0 w-full h-full object-cover"
                     />
                   </div>
@@ -167,7 +167,8 @@ export default function Leadership() {
                   title: "Chief of Staff",
                   img: "/images/team/lisa-hill.jpg",
                 },
-                { name: "Guy Fronstin, ESQ", title: "Lead Director & Chief Legal Officer", img: "/images/team/guy-fronstin.jpg" },
+                { name: "Guy Fronstin, ESQ", title: "Executive Vice President", img: "/images/team/guy-fronstin.jpg" },
+                { name: "Arthur L. Bernstein", title: "Director of Strategic Relations", img: "/images/team/arthur-bernstein.jpg" },
                 { name: "Monica Victoria", title: "Director of Operations", img: "/images/team/monica-victoria.jpg" },
                 {
                   name: "Zac DelVecchio",
@@ -193,6 +194,8 @@ export default function Leadership() {
                 },
                 { name: "Juan Carlos De La Coba", title: "AI Optimization Analyst", img: "/images/team/juan-carlos.jpg" },
                 { name: "Denise Starrantino", title: "Front Office Coordinator", img: "/images/team/denise-starrantino.jpg" },
+                { name: "Brett Nortman", title: "Co-Director of Talent Acquisition", img: "/images/team/brett-nortman.jpg" },
+                { name: "Ross Cohen", title: "Co-Director of Talent Acquisition", img: "/images/team/ross-cohen.jpg" },
                 { name: "Josef Enns", title: "Director of Security", img: "/images/team/josef-enns.jpg" },
                 { name: "Josh Baker", title: "Web Developer", img: "/images/team/josh-baker.jpg" },
               ].map((member, idx) => (

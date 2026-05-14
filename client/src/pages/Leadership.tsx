@@ -167,7 +167,7 @@ export default function Leadership() {
                   title: "Chief of Staff",
                   img: "/images/team/lisa-hill.jpg",
                 },
-                { name: "Guy Fronstin, ESQ", title: "Executive Vice President", img: "/images/team/guy-fronstin.jpg" },
+                { name: "Guy Fronstin, ESQ", title: "Lead Director & Chief Legal Officer", img: "/images/team/guy-fronstin.jpg" },
                 { name: "Arthur L. Bernstein", title: "Director of Strategic Relations", img: "/images/team/arthur-bernstein.jpg" },
                 { name: "Monica Victoria", title: "Director of Operations", img: "/images/team/monica-victoria.jpg" },
                 {
@@ -194,8 +194,8 @@ export default function Leadership() {
                 },
                 { name: "Juan Carlos De La Coba", title: "AI Optimization Analyst", img: "/images/team/juan-carlos.jpg" },
                 { name: "Denise Starrantino", title: "Front Office Coordinator", img: "/images/team/denise-starrantino.jpg" },
-                { name: "Brett Nortman", title: "Co-Director of Talent Acquisition", img: "/images/team/brett-nortman.jpg" },
-                { name: "Ross Cohen", title: "Co-Director of Talent Acquisition", img: "/images/team/ross-cohen.jpg" },
+                { name: "Ross Cohen", title: "Co-Director of Talent Acquisition", img: "/images/team/brett-nortman.jpg" },
+                { name: "Brett Nortman", title: "Co-Director of Talent Acquisition", img: "/images/team/ross-cohen.jpg" },
                 { name: "Josef Enns", title: "Director of Security", img: "/images/team/josef-enns.jpg" },
                 { name: "Josh Baker", title: "Web Developer", img: "/images/team/josh-baker.jpg" },
               ].map((member, idx) => (

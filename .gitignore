@@ -105,3 +105,10 @@ temp/
 *.sqlite
 *.sqlite3
 client/public/*.mp4
+
+#AI files
+CLAUDE.md
+GEMINI.md
+AGENTS.md
+.codex*
+

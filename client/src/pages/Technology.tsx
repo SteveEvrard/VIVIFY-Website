@@ -3,12 +3,43 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Seo from "@/components/Seo";
 import { buildContactMailto } from "@/lib/contactMailto";
 import { Cpu, Droplets, Flame, Shield, Zap } from "lucide-react";
-import { Link } from "wouter";
+import { useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "wouter";
 
 const HOG_IMAGE_URL = "/hog-system.png";
+const FLYING_PIG_IMAGE_URL = "/flying-pig-system.png";
 const CAT_IMAGE_URL = "/cat-system.png";
 
+const PRODUCT_TABS = ["hog", "flying-pig", "cat"] as const;
+type ProductTab = (typeof PRODUCT_TABS)[number];
+
 export default function Technology() {
+  const [location] = useLocation();
+  const [activeTab, setActiveTab] = useState<ProductTab>("hog");
+  const tabsSectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const applyHash = (smooth: boolean) => {
+      const hash = window.location.hash.replace(/^#/, "");
+      if ((PRODUCT_TABS as readonly string[]).includes(hash)) {
+        setActiveTab(hash as ProductTab);
+        requestAnimationFrame(() => {
+          tabsSectionRef.current?.scrollIntoView({
+            behavior: smooth ? "smooth" : "auto",
+            block: "start",
+          });
+        });
+      }
+    };
+
+    applyHash(false);
+    const onHashChange = () => applyHash(true);
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, [location]);
+
   const learnMoreHogHref = buildContactMailto({
     subject: "Vivify — Learn More (HOG System)",
     bodyLines: [
@@ -20,6 +51,25 @@ export default function Technology() {
       "Company / Organization:",
       "Role:",
       "Project details:",
+      "Timeline:",
+      "",
+      "Thanks,",
+      "",
+    ],
+  });
+
+  const learnMoreFlyingPigHref = buildContactMailto({
+    subject: "Vivify — Learn More (Flying Pig 1MW)",
+    bodyLines: [
+      "Hi Vivify team,",
+      "",
+      "I'd like to learn more about the VIVIFY Flying Pig 1MW system and how it could support our project.",
+      "",
+      "Name:",
+      "Company / Organization:",
+      "Role:",
+      "Project details:",
+      "Deployment location:",
       "Timeline:",
       "",
       "Thanks,",
@@ -129,6 +179,71 @@ export default function Technology() {
       ctaLabel: "Learn More About HOG",
     },
     {
+      value: "flying-pig",
+      label: "Flying Pig",
+      titleId: "technology-flying-pig-title",
+      title: "Flying Pig",
+      subtitle: "1MW Scalable Containerized Solution",
+      icon: Zap,
+      imageSrc: FLYING_PIG_IMAGE_URL,
+      imageAlt: "VIVIFY Flying Pig containerized 1MW system rendering",
+      imageClassName: "object-[50%_55%]",
+      eyebrow: "Containerized power product",
+      intro:
+        "VIVIFY Flying Pig is a 1MW scalable containerized solution that packages core elements of the flagship HOG platform into a deployable modular power product. It combines micro hydro turbines and Pulsar technology within self-contained housing built for quick assembly, practical connection points, and remote-location deployment.",
+      overview:
+        "Powered by a water-based input source, Flying Pig is designed to scale by adding additional modules when a site needs more capacity. The product gives operators a contained 1MW building block for projects that need cleaner on-site power, simplified infrastructure integration, and a clearer cost profile than conventional diesel generation.",
+      whatItIs:
+        "Flying Pig is a containerized 1MW energy system that brings HOG-derived generation, water handling, thermal exchange, transformers, sensors, and quick-connect infrastructure into one deployable unit. It is built around self-contained housing and modular expansion rather than a fixed central plant model.",
+      whatItDoes:
+        "The system supports scalable power delivery from a water-based input while reducing maintenance exposure and deployment complexity. In the source cost model, Flying Pig is positioned at $2.5M per unit and shows a projected $9.8M five-year savings versus diesel generation at $4.00 per delivered gallon.",
+      benefits: [
+        "1MW containerized output profile that can scale through additional modules as project demand grows.",
+        "Water-based input architecture paired with filtration that can be ported for other uses once cleaned.",
+        "Self-contained housing with pre-installed sensors and quick-connect points for faster field deployment.",
+        "Lower maintenance profile with yearly carbon element service and an estimated 5% annual water-supply loss.",
+      ],
+      useCases: [
+        "Remote sites and infrastructure projects that need deployable 1MW power without a large fixed plant buildout.",
+        "Industrial, mobility, and advanced-facility deployments evaluating modular behind-the-meter power blocks.",
+        "Projects comparing long-term operating economics against diesel generation and fuel-delivery exposure.",
+      ],
+      components: [
+        {
+          icon: Droplets,
+          title: "Micro Hydro Turbine",
+          desc: "Provides one hydro generation stage within the containerized power-generation core.",
+        },
+        {
+          icon: Flame,
+          title: "Micro Steam Turbine",
+          desc: "Adds a compact steam turbine stage to support usable power output inside the 1MW module.",
+        },
+        {
+          icon: Zap,
+          title: "Pulsar Array",
+          desc: "Includes eight Pulsar units that connect the product back to VIVIFY's hydrogen power architecture.",
+        },
+        {
+          icon: Droplets,
+          title: "Water Storage and Filtration",
+          desc: "Combines 500 gallons of water tank storage with an integrated filtration system for cleaned water handling.",
+        },
+        {
+          icon: Shield,
+          title: "Primary Transformers",
+          desc: "Uses two primary transformers for power distribution and closed-loop power-source integration.",
+        },
+        {
+          icon: Cpu,
+          title: "Coupling System",
+          desc: "Ships with pre-installed sensors and quick-connect points to simplify assembly and site integration.",
+        },
+      ],
+      href: learnMoreFlyingPigHref,
+      ctaLabel: "Learn More About Flying Pig",
+    },
+    {
       value: "cat",
       label: "CAT",
       titleId: "technology-cat-title",
@@ -199,7 +314,7 @@ export default function Technology() {
     <div className="min-h-screen flex flex-col pt-20">
       <Seo
         title="Technology"
-        description="Explore VIVIFY’s technology platform through two product sections: HOG and Clean Air Technology™ (CAT)."
+        description="Explore VIVIFY’s technology platform through HOG, Flying Pig 1MW, and Clean Air Technology™ (CAT)."
         path="/technology"
       />
 
@@ -215,7 +330,7 @@ export default function Technology() {
               Our <span className="text-primary">Technology</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/80 mb-8">
-              Explore HOG and CAT as distinct parts of the VIVIFY technology platform.
+              Explore HOG, Flying Pig, and CAT as distinct parts of the VIVIFY technology platform.
             </p>
           </div>
         </div>
@@ -226,14 +341,18 @@ export default function Technology() {
       </section>
 
       {/* Core Technologies */}
-      <section className="bg-white py-20 md:py-28" aria-labelledby="technology-core-title">
+      <section
+        ref={tabsSectionRef}
+        className="bg-white py-20 md:py-28 scroll-mt-24"
+        aria-labelledby="technology-core-title"
+      >
         <div className="container">
           <div className="text-center mb-16">
             <h2 id="technology-core-title" className="text-5xl md:text-6xl font-bold text-foreground mb-6">
               Core Technologies
             </h2>
             <p className="mt-5 text-base text-muted-foreground max-w-2xl mx-auto">
-              Each system was carefully designed to maximize output while removing as many innefficinceies from the traditional energy generation systems previously available. Explore how they map to{" "}
+              Each system was carefully designed to maximize output while removing as many inefficiencies from the traditional energy generation systems previously available. Explore how they map to{" "}
               <Link href="/applications" className="font-semibold text-primary hover:underline underline-offset-4">
                 hydrogen power, clean emissions, water treatment, and aerospace applications
               </Link>
@@ -242,13 +361,17 @@ export default function Technology() {
           </div>
 
           <div className="mx-auto max-w-5xl rounded-3xl border border-gray-200 bg-white p-4 shadow-sm md:p-6">
-            <Tabs defaultValue="hog" className="w-full">
-              <TabsList className="mx-auto mb-10 grid h-auto w-full max-w-3xl grid-cols-2 rounded-full border-4 border-primary bg-white p-2">
+            <Tabs
+              value={activeTab}
+              onValueChange={(value) => setActiveTab(value as ProductTab)}
+              className="w-full"
+            >
+              <TabsList className="mx-auto mb-10 grid h-auto w-full max-w-4xl grid-cols-1 rounded-3xl border-4 border-primary bg-white p-2 sm:grid-cols-3 sm:rounded-full">
                 {products.map((product) => (
                   <TabsTrigger
                     key={product.value}
                     value={product.value}
-                    className="rounded-full px-6 py-4 text-lg font-bold text-primary data-[state=active]:bg-primary data-[state=active]:text-black data-[state=active]:shadow-none"
+                    className="rounded-full px-4 py-4 text-base font-bold text-primary whitespace-normal data-[state=active]:bg-primary data-[state=active]:text-black data-[state=active]:shadow-none md:text-lg"
                   >
                     {product.label}
                   </TabsTrigger>
@@ -346,7 +469,6 @@ export default function Technology() {
                           ))}
                         </div>
                       </div>
-
                     </div>
                   </TabsContent>
                 );
@@ -395,4 +517,3 @@ export default function Technology() {
     </div>
   );
 }
-

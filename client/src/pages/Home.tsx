@@ -1,28 +1,51 @@
-/* VIVIFY Home Page: Grey Parrot-inspired template with diagonal dividers, icon grids, and modern layout */
+/* VIVIFY Home Page: Manifesto-driven layout introducing HOG, CAT, and Flying Pig as the platform arsenal. */
 
 import { Button } from "@/components/ui/button";
 import Seo from "@/components/Seo";
 import { buildContactMailto } from "@/lib/contactMailto";
 import { Link } from "wouter";
-import { Cpu, Leaf, Wind, TrendingUp } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+
+type PlatformSpec = { label: string; value: string };
+type PlatformComponent = { title: string; desc: string };
+
+type Platform = {
+  id: string;
+  number: string;
+  category: string;
+  status?: string;
+  title: string;
+  titleLines?: string[];
+  subtitle: string;
+  paragraphs: string[];
+  specs: PlatformSpec[];
+  imageSrc: string;
+  imageAlt: string;
+  imageCaption: string;
+  imageClassName?: string;
+  ctaHref: string;
+  ctaLabel: string;
+  mediaOnLeft: boolean;
+  components?: PlatformComponent[];
+};
 
 export default function Home() {
-  const SHOW_FRAMEWORK_SECTION = false;
-  const mobiaVideoUrl = "https://d2t61k482lx79u.cloudfront.net/VIVIFY-Mobia_020526_v1.mp4";
   const hogImageUrl = "/hog-system.png";
   const catImageUrl = "/cat-system.png";
+  const flyingPigImageUrl = "/flying-pig-system.png";
+  const brochureHref = "/VIVIFY-Brochure.pdf";
 
-  const startConversationHref = buildContactMailto({
-    subject: "VIVIFY — Renewable Infrastructure Framework",
+  const getInTheRoomHref = buildContactMailto({
+    subject: "VIVIFY — Get In the Room",
     bodyLines: [
       "Hi VIVIFY team,",
       "",
-      "I’d like to start a conversation about clean energy intelligence for an upcoming project.",
+      "I'd like to get in the room and discuss VIVIFY's platform — HOG, CAT, and Flying Pig — for an upcoming project.",
       "",
       "Name:",
       "Company / Organization:",
       "Role:",
-      "Project type (city / mobility / data center / industrial / mixed-use):",
+      "Project type (industrial / remote site / behind-the-meter / mixed-use / other):",
       "Location:",
       "Timeline:",
       "Best way to reach me:",
@@ -32,90 +55,137 @@ export default function Home() {
     ],
   });
 
-  const featureSections = [
+  const platforms: Platform[] = [
     {
-      id: "home-hog-title",
+      id: "platform-hog",
+      number: "01",
+      category: "Hydrogen Energy",
       title: "HOG",
       subtitle: "Hydrogen Oxygen Generator",
-      mediaLabel: "Featured Product",
-      mediaTitle: "HOG System Overview",
-      mediaSummary:
-        "A visual concept of the HOG system and its integrated energy-generation architecture.",
-      ctaLabel: "Learn More About HOG",
-      ctaHref: "/technology",
-      showCta: false,
-      mediaOnLeft: true,
-      sectionClassName: "py-16 md:pt-28 md:pb-16",
       paragraphs: [
-        "Our flagship energy system designed to be a self supporting hydrogen energy source powered from a simple H2O based starter. HOG provides a pollutant free hydrogen energy source designed for behind the meter services",
-        "Designed as a self supporting energy platform, HOG is built to maximize energy creation while minimizing traditional inefficiencies. The system is positioned as a 99% emission free, scalable, on demand hydrogen solution that can support a wide range of behind the meter power requirements.",
-        "Its integrated architecture brings together Pulsar for on demand hydrogen creation and system revitalization, alongside multi stage turbines, multi functioning transformers, an H2O input generator, and combustion chambers for power and heat distribution.",
+        "The HOG is not a prototype. It is a fully realized, self-supporting hydrogen energy system — powered by water, producing zero pollutants, and scaling on demand. While the industry was busy defending its oil contracts, we built a hydrogen generator that doesn't need them.",
+        "Built for behind-the-meter deployment, HOG integrates Pulsar for on-demand hydrogen creation and system revitalization, multi-stage turbines, multi-functioning transformers, an H₂O input generator, and combustion chambers for power and heat distribution. The result is a 99% emission-free energy source that answers to no grid and no monopoly.",
       ],
-      mediaType: "image",
-      mediaSrc: hogImageUrl,
-      mediaAlt: "HOG system concept rendering",
+      specs: [
+        { label: "Fuel Source", value: "H₂O (Water)" },
+        { label: "Emissions Profile", value: "99% Pollutant-Free" },
+        { label: "Architecture", value: "Self-Supporting, Behind-the-Meter" },
+        { label: "Scalability", value: "Site to District" },
+        { label: "Key Integration", value: "Pulsar On-Demand Revitalization" },
+      ],
+      imageSrc: hogImageUrl,
+      imageAlt: "HOG Hydrogen Oxygen Generator system rendering",
+      imageCaption: "HOG System — Integrated Energy-Generation Architecture",
+      ctaHref: "/technology#hog",
+      ctaLabel: "Full HOG Specifications",
+      mediaOnLeft: false,
     },
     {
-      id: "home-cat-title",
+      id: "platform-cat",
+      number: "02",
+      category: "Emissions Control",
       title: "CAT",
       subtitle: "Clean Air Technology",
-      mediaLabel: "Featured Product",
-      mediaTitle: "CAT System Overview",
-      mediaSummary:
-        "An overview of the CAT platform and its role in cleaner, more efficient industrial energy systems.",
-      ctaLabel: "Learn More About CAT",
-      ctaHref: "/technology",
-      showCta: true,
-      mediaOnLeft: false,
-      sectionClassName: "py-16 md:pt-28 md:pb-16",
       paragraphs: [
-        "Our flagship five-stage emissions control system is designed to remove virtually all pollutants from exhaust while maintaining strong operational performance. CAT helps industrial systems move toward near-zero emissions without compromising practical deployment needs.",
-        "Built as a retrofit-friendly clean energy solution, CAT is positioned to reduce parasitic load, improve plant efficiency, and deliver a more cost-effective path toward cleaner output across legacy and modern infrastructure environments.",
-        "Its integrated platform brings together multiple stages of filtration, separation, and incineration technologies to support cleaner exhaust streams and a more scalable emissions-control strategy for real-world operations.",
+        "Legacy industrial infrastructure is not going away overnight. CAT is the answer to that reality — a five-stage emissions control system that removes virtually every pollutant from exhaust streams without forcing operators to shut down and start over.",
+        "Built as a retrofit-friendly platform, CAT reduces parasitic load, improves plant efficiency, and delivers a cost-effective path to near-zero output across both legacy and modern environments. The industry has been managing pollution for decades. VIVIFY built a system to eliminate it.",
       ],
-      mediaType: "image",
-      mediaSrc: catImageUrl,
-      mediaAlt: "Clean Air Technology system rendering",
-      mediaClassName: "object-[50%_60%]",
+      specs: [
+        { label: "Architecture", value: "Five-Stage Filtration System" },
+        { label: "Deployment", value: "Retrofit-Ready, No Teardown Required" },
+        { label: "Parasitic Load", value: "Significantly Reduced" },
+        { label: "Targets", value: "Legacy & Modern Industrial" },
+        { label: "Process", value: "Filtration, Separation, Incineration" },
+      ],
+      imageSrc: catImageUrl,
+      imageAlt: "CAT Clean Air Technology system rendering",
+      imageCaption: "CAT System — Five-Stage Emissions-Control Architecture",
+      imageClassName: "object-[50%_60%]",
+      ctaHref: "/technology#cat",
+      ctaLabel: "Full CAT Specifications",
+      mediaOnLeft: true,
     },
     {
-      id: "home-ecosystem-title",
-      title: "Enabling Living Systems at Scale",
-      mediaLabel: "Featured Video",
-      mediaTitle: "MOBIA + VIVIFY Overview",
-      mediaSummary:
-        "See how VIVIFY provides the clean energy, digital infrastructure, smart grid, and AI foundation that brings living mobility systems to life.",
-      ctaLabel: "Learn More",
-      ctaHref: "https://mobia.ai/",
-      showCta: true,
-      ctaNewTab: true,
-      mediaOnLeft: true,
-      sectionClassName: "py-16 md:pt-28 md:pb-16",
+      id: "platform-flying-pig",
+      number: "03",
+      category: "Containerized Power",
+      title: "Flying Pig",
+      titleLines: ["Flying", "Pig"],
+      subtitle: "1MW Scalable Containerized Solution",
       paragraphs: [
-        "VIVIFY’s clean energy, data, smart grid, and AI capabilities provide the foundational infrastructure required to support advanced intelligent systems across cities, campuses, industrial zones, and digital environments.",
-        "In mobility-led developments, VIVIFY works in close partnership with MOBIA, the Smart City Operating System for Living Mobility, delivering the energy and intelligence required to bring living urban systems to life.",
-        "Beyond mobility, VIVIFY powers clean, intelligent infrastructure for data centers, industrial campuses, mixed-use developments, and next-generation cities.",
+        "They said it couldn't be done in a box. The Flying Pig is HOG's most formidable offspring — all the power of our flagship hydrogen platform, distilled into a single deployable container ready to generate 1MW the moment it arrives on site.",
+        "Micro hydro turbines, Pulsar technology, water handling, thermal exchange, transformers, and quick-connect infrastructure — all inside self-contained housing built for remote locations, rapid assembly, and zero tolerance for diesel dependence. Scale by adding modules. The grid can't follow you where the Flying Pig will go.",
       ],
-      mediaType: "video",
-      mediaSrc: mobiaVideoUrl,
-      mediaAlt: "MOBIA and VIVIFY overview video",
+      specs: [
+        { label: "Output", value: "1MW Per Unit, Infinitely Scalable" },
+        { label: "Fuel Source", value: "Water-Based Input" },
+        { label: "Unit Cost", value: "$2.5M" },
+        { label: "5-Year Savings vs. Diesel", value: "$9.8M Projected (@ $4.00/gal)" },
+        { label: "Maintenance", value: "Yearly Carbon Service · ~5% Annual Water Loss" },
+        { label: "Deployment", value: "Remote Sites · Industrial · Behind-the-Meter" },
+      ],
+      imageSrc: flyingPigImageUrl,
+      imageAlt: "VIVIFY Flying Pig 1MW containerized power system rendering",
+      imageCaption: "Flying Pig — 1MW Containerized Power Architecture",
+      imageClassName: "object-[50%_55%]",
+      ctaHref: "/technology#flying-pig",
+      ctaLabel: "Full Flying Pig Specifications",
+      mediaOnLeft: false,
+      components: [
+        {
+          title: "Micro Hydro Turbine",
+          desc: "One hydro generation stage inside the containerized power-generation core.",
+        },
+        {
+          title: "Micro Steam Turbine",
+          desc: "Compact steam turbine stage for maximum usable output inside the 1MW module.",
+        },
+        {
+          title: "Pulsar Array",
+          desc: "Eight Pulsar units tying the container directly into VIVIFY's hydrogen power architecture.",
+        },
+        {
+          title: "Water Storage & Filtration",
+          desc: "500-gallon tank with integrated filtration — cleaned water portable for secondary use.",
+        },
+        {
+          title: "Primary Transformers",
+          desc: "Two primary transformers for power distribution and closed-loop source integration.",
+        },
+        {
+          title: "Coupling System",
+          desc: "Pre-installed sensors and quick-connect points. Field assembly measured in hours, not weeks.",
+        },
+      ],
     },
-  ] as const;
+  ];
+
+  const arsenalCards = [
+    { number: "01", title: "HOG", subtitle: "Hydrogen Energy", anchor: "#platform-hog" },
+    { number: "02", title: "CAT", subtitle: "Emissions Control", anchor: "#platform-cat" },
+    { number: "03", title: "Flying Pig", subtitle: "Coming Soon", anchor: "#platform-flying-pig" },
+  ];
+
+  const arsenalStats = [
+    { value: "99%", label: "Emission-Free Output" },
+    { value: "3", label: "Breakthrough Platforms" },
+    { value: "∞", label: "Scalability" },
+  ];
 
   return (
     <div className="min-h-screen flex flex-col pt-20">
       <Seo
-        title="Clean Energy Intelligence"
-        description="VIVIFY delivers 100% clean and renewable energy systems, intelligent data transmission, smart grids, and AI-driven infrastructure that power intelligent cities, mobility ecosystems, data centers, and large-scale developments worldwide."
+        title="The Energy Empire Ends Here"
+        description="VIVIFY is making America energy independent with three breakthrough platforms — HOG hydrogen energy, CAT emissions control, and Flying Pig containerized 1MW power. Cleaner energy, built in America, controlled by the people who use it."
         path="/"
         brandFirst
       />
-      {/* Hero Section */}
+
+      {/* Hero — The Energy Empire Ends Here */}
       <section
-        className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white pt-16 pb-20 md:pt-20 md:pb-28 overflow-hidden"
+        className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white pt-16 pb-24 md:pt-20 md:pb-32 overflow-hidden"
         aria-labelledby="home-hero-title"
       >
-        {/* Video background */}
         <video
           autoPlay
           muted
@@ -130,352 +200,366 @@ export default function Home() {
           />
         </video>
 
-        {/* Subtle brand-gray tint (keeps header style consistent) */}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#75787B]/18 via-[#75787B]/12 to-[#75787B]/10"></div>
-        {/* Small dark layer for legibility */}
-        <div className="pointer-events-none absolute inset-0 bg-black/35"></div>
+        <div className="pointer-events-none absolute inset-0 bg-black/45"></div>
 
-        <div className="container relative z-10 pb-14 sm:pb-10">
-          <div className="max-w-2xl">
-            <h1 id="home-hero-title" className="sr-only">
-              VIVIFY
+        <div className="container relative z-10">
+          <div className="max-w-3xl">
+            <h1
+              id="home-hero-title"
+              className="mt-8 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] text-white drop-shadow-[0_3px_18px_rgba(0,0,0,0.55)]"
+            >
+              <span className="block">The Energy</span>
+              <span className="block">Empire</span>
+              <span className="block text-primary">Ends Here.</span>
             </h1>
 
-            <img
-              src="/vivify-hero-logo.png"
-              alt="VIVIFY"
-              className="h-32 sm:h-40 md:h-48 lg:h-56 w-auto object-contain drop-shadow-[0_2px_14px_rgba(0,0,0,0.75)]"
-            />
+            <p className="mt-8 text-base sm:text-lg md:text-xl text-white/85 leading-relaxed max-w-2xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
+              The big energy companies have had a century to get it right. They didn't. VIVIFY did. We are making America energy independent — not by asking permission, but by making the old model irrelevant.
+            </p>
 
-            <p className="mt-3 text-lg sm:text-xl md:text-2xl font-semibold text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
-              Renewable Energy, Data, and Intelligence
-            </p>
-            
-            <p className="mt-5 text-base sm:text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
-              VIVIFY delivers 100% clean and renewable energy systems, intelligent data transmission, smart grids, and AI-driven infrastructure including coal and hydrogen advanced energy conversion technologies.
-            </p>
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-black font-bold"
+                asChild
+              >
+                <a href="#arsenal">See Our Technology</a>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white bg-transparent hover:bg-white/10"
+                asChild
+              >
+                <Link href="/technology">
+                  Full Platform <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
 
-        {/* Diagonal divider */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-white" style={{
-          clipPath: 'polygon(0 50%, 100% 0, 100% 100%, 0 100%)'
-        }}></div>
+        <div
+          className="absolute bottom-0 left-0 right-0 h-24 md:h-32 bg-black"
+          style={{ clipPath: "polygon(0 50%, 100% 0, 100% 100%, 0 100%)" }}
+        ></div>
       </section>
 
-      {/* Four Pillars (at-a-glance) */}
-      <section className="relative bg-white py-16 md:py-20 overflow-hidden" aria-labelledby="home-pillars-title">
-        {/* subtle background texture */}
+      {/* Our Mission — Manifesto */}
+      <section
+        className="relative bg-black text-white py-20 md:py-32 overflow-hidden"
+        aria-labelledby="home-mission-title"
+      >
+        <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl"></div>
+        <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl"></div>
+
+        <div className="container relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">
+                Our Mission
+              </p>
+              <h2
+                id="home-mission-title"
+                className="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.15] text-white"
+              >
+                <span className="block">Take out the big</span>
+                <span className="block">energy companies.</span>
+                <span className="block text-primary">Make America</span>
+                <span className="block text-primary">independent.</span>
+                <span className="block">Change the world.</span>
+              </h2>
+            </div>
+
+            <div className="grid gap-6 text-base md:text-lg text-white/80 leading-relaxed">
+              <p>
+                That is not a tagline. That is the plan. The century-long stranglehold of fossil fuel monopolies ends with a simple, undeniable equation:{" "}
+                <strong className="font-bold text-white">
+                  cleaner energy, built in America, controlled by no one but the people who use it.
+                </strong>
+              </p>
+              <p>
+                We did not build VIVIFY to compete inside a broken system. We built it to make that system obsolete. The technologies exist. The engineering is done. What changes now is the world's access to it.
+              </p>
+              <p>
+                This is not environmentalism. This is not politics. This is physics, chemistry, and engineering — executed at a level the incumbent industry is not equipped to answer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Arsenal — Three Technologies. One Outcome. */}
+      <section
+        id="arsenal"
+        className="relative bg-white py-20 md:py-28 overflow-hidden scroll-mt-24"
+        aria-labelledby="home-arsenal-title"
+      >
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-primary/10 blur-3xl"></div>
           <div className="absolute -bottom-28 -left-28 h-72 w-72 rounded-full bg-primary/10 blur-3xl"></div>
         </div>
-        <div className="container">
-          <div className="text-center mb-10 md:mb-12 relative z-10">
-            <p className="mt-4 mb-8 text-sm sm:text-base md:text-lg font-semibold text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-              District-scale energy systems to AI-optimized infrastructure, VIVIFY provides the foundational layers that enable living, adaptive systems to operate in the real world.
+
+        <div className="container relative z-10">
+          <div className="max-w-3xl mx-auto text-center mb-14 md:mb-16">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">
+              The Arsenal
             </p>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-              The VIVIFY stack
-            </p>
-            <h2 id="home-pillars-title" className="mt-3 text-4xl md:text-5xl font-extrabold text-foreground tracking-tight">
-              Four <span className="text-primary">Pillars</span>
+            <h2
+              id="home-arsenal-title"
+              className="mt-4 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-foreground"
+            >
+              Three Technologies. <span className="text-primary">One Outcome.</span>
             </h2>
-            <p className="mt-3 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-              A tight, integrated set of capabilities that power intelligent, low‑carbon systems.
+            <p className="mt-6 text-base md:text-lg text-muted-foreground leading-relaxed">
+              The energy grid as you know it was designed for dependence. VIVIFY's technologies were designed for the opposite. Each system stands alone. Together, they form the infrastructure of an independent America.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
-            {[
-              { icon: Leaf, name: "Clean Energy", tagline: "Net‑zero energy systems that scale from site to district." },
-              { icon: Cpu, name: "Data", tagline: "The secure, real‑time digital backbone for connected infrastructure." },
-              { icon: Wind, name: "Smart Grid", tagline: "Renewable‑first grids that balance generation, storage, and demand." },
-              { icon: TrendingUp, name: "AI", tagline: "AI optimization for forecasting, digital twins, and predictive performance." },
-            ].map((p, idx) => {
-              const Icon = p.icon;
-              return (
-                <div
-                  key={p.name}
-                  className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-gradient-to-b from-white via-white to-gray-50 p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-xl"
-                >
-                  <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-transparent group-hover:ring-primary/20 transition"></div>
-                  <div className="absolute left-0 top-0 h-1 w-full rounded-t-2xl bg-gradient-to-r from-primary/70 via-primary to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-
-                  {/* Decorative blobs */}
-                  <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-primary/10 blur-2xl opacity-70 group-hover:opacity-90 transition-opacity"></div>
-                  <div className="pointer-events-none absolute -left-12 -bottom-12 h-28 w-28 rounded-full bg-primary/10 blur-2xl opacity-60 group-hover:opacity-85 transition-opacity"></div>
-
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                    Pillar {String(idx + 1).padStart(2, "0")}
-                  </p>
-
-                  <div className="mt-4 w-12 h-12 rounded-xl bg-primary/12 flex items-center justify-center shadow-sm ring-1 ring-primary/15 group-hover:bg-primary/15 transition-colors">
-                    <Icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <p className="mt-5 text-xl font-extrabold text-foreground tracking-tight">
-                    {p.name}
-                  </p>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {p.tagline}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Four Pillars Section */}
-      {SHOW_FRAMEWORK_SECTION && (
-      <section className="bg-white py-20 md:py-28">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-              The Foundations of Intelligent, Clean Energy Systems
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Every intelligent city, mobility network, or digital environment depends on resilient, clean, and intelligent infrastructure. VIVIFY delivers that foundation through four tightly integrated pillars.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-8">
-            {[
-              {
-                icon: Leaf,
-                title: "Clean & Renewable Energy Systems",
-                desc:
-                  "VIVIFY designs and delivers advanced clean energy systems that combine renewables, hydrogen, storage, and energy conversion technologies to support net-zero and post-carbon infrastructure.",
-                capabilities: [
-                  "District-scale clean energy systems and on-site generation",
-                  "Hybrid generation, storage, and energy conversion integration",
-                  "Battery energy storage systems (BESS)",
-                  "Green hydrogen production, storage, and integration",
-                  "Power-to-X systems for fuels and industrial energy",
-                  "Clean energy conversion (coal, oil & gas) and transition systems",
-                  "Renewable microgeneration and district energy",
-                  "Net-zero and carbon-neutral energy planning",
-                ],
-                outcome: "Clean, resilient energy systems designed for intelligent, future-ready infrastructure.",
-              },
-              {
-                icon: Cpu,
-                title: "Data Transmission & Digital Infrastructure",
-                desc:
-                  "VIVIFY builds the digital nervous system that allows intelligent environments to sense, communicate, and adapt in real time.",
-                capabilities: [
-                  "High-capacity, low-latency data transmission",
-                  "Energy-efficient digital networks",
-                  "Edge computing and modular data infrastructure",
-                  "Secure data movement for critical systems",
-                  "AI-ready digital environments",
-                ],
-                outcome: "Reliable, low-carbon digital infrastructure optimized for AI-driven and energy-intensive systems.",
-              },
-              {
-                icon: Wind,
-                title: "Smart Renewable Grids",
-                desc:
-                  "VIVIFY delivers intelligent, renewable-first grids designed for modern energy demand, mobility integration, and decentralized generation.",
-                capabilities: [
-                  "Renewable microgrids and district grids",
-                  "Intelligent load balancing and demand response",
-                  "Grid-edge intelligence and automation",
-                  "Integration of storage, hydrogen, and variable renewables",
-                  "EV, autonomous mobility, and data-center-ready grids",
-                  "Utility modernization and resilience planning",
-                ],
-                outcome: "Adaptive grids that optimize clean energy flows in real time.",
-              },
-              {
-                icon: TrendingUp,
-                title: "AI & System Intelligence",
-                desc:
-                  "VIVIFY applies artificial intelligence to continuously optimize energy, data, and grid systems across complex environments.",
-                capabilities: [
-                  "AI-driven energy optimization",
-                  "Renewable and hydrogen forecasting",
-                  "Digital twins for infrastructure systems",
-                  "Predictive maintenance and performance analytics",
-                  "Autonomous system coordination",
-                ],
-                outcome: "Infrastructure that learns, adapts, and improves over time.",
-              },
-            ].map((pillar) => {
-              const Icon = pillar.icon;
-              return (
-                <div
-                  key={pillar.title}
-                  className="bg-gray-50 rounded-lg p-8 border border-gray-200 hover:shadow-lg transition-shadow"
-                >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-foreground">{pillar.title}</h3>
-                  </div>
-                  <p className="text-muted-foreground leading-relaxed">{pillar.desc}</p>
-
-                  <div className="mt-6">
-                    <p className="text-sm font-semibold text-foreground uppercase tracking-wider mb-3">
-                      Capabilities
-                    </p>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      {pillar.capabilities.map((cap) => (
-                        <li key={cap} className="flex gap-2">
-                          <span className="text-primary font-bold">✓</span>
-                          <span>{cap}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mt-6 rounded-lg bg-white border border-gray-200 p-4">
-                    <p className="text-sm font-semibold text-foreground mb-1">Outcome</p>
-                    <p className="text-sm text-muted-foreground">{pillar.outcome}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-black font-bold" asChild>
-              <Link href="/technology">Explore Technology</Link>
-            </Button>
-            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10" asChild>
-              <a href={startConversationHref}>Start a Conversation</a>
-            </Button>
-          </div>
-        </div>
-      </section>
-      )}
-
-      {featureSections.map((section) => (
-        <section
-          key={section.id}
-          className={`relative bg-primary md:bg-transparent overflow-hidden ${"sectionClassName" in section ? section.sectionClassName : "py-16 md:py-28"}`}
-          aria-labelledby={section.id}
-        >
-          <div
-            className={`hidden md:block absolute top-0 bottom-0 w-1/2 bg-primary ${
-              section.mediaOnLeft ? "right-0" : "left-0"
-            }`}
-            style={{
-              clipPath: section.mediaOnLeft
-                ? "polygon(0 10%, 100% 0, 100% 100%, 0 90%)"
-                : "polygon(0 0, 100% 10%, 100% 90%, 0 100%)",
-            }}
-          ></div>
-
-          <div className="container relative z-10">
-            <div className="grid md:grid-cols-2 gap-12 items-start">
-              <div className={section.mediaOnLeft ? "order-2 md:order-2 text-white" : "order-2 md:order-1 text-white"}>
-                <h2
-                  id={section.id}
-                  className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-8 text-white tracking-tight leading-[1.05] drop-shadow-[0_3px_18px_rgba(0,0,0,0.35)]"
-                >
-                  {section.title}
-                </h2>
-                {"subtitle" in section ? (
-                  <p className="-mt-4 mb-6 text-xl sm:text-2xl font-semibold text-white/95 tracking-tight">
-                    {section.subtitle}
-                  </p>
-                ) : null}
-                <div className="space-y-5 text-white/90 leading-relaxed">
-                  {section.paragraphs.map((paragraph, index) => (
-                    <p key={index}>
-                      {paragraph.includes("MOBIA") ? (
-                        <>
-                          {paragraph.split("MOBIA")[0]}
-                          <span className="font-semibold text-white">MOBIA</span>
-                          {paragraph.split("MOBIA")[1]}
-                        </>
-                      ) : (
-                        paragraph
-                      )}
-                    </p>
-                  ))}
-                </div>
+          {/* Stats */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16 max-w-4xl mx-auto">
+            {arsenalStats.map((stat) => (
+              <div
+                key={stat.label}
+                className="rounded-2xl border border-gray-200 bg-gradient-to-b from-white to-gray-50 p-8 text-center shadow-sm"
+              >
+                <p className="text-5xl md:text-6xl font-extrabold text-primary leading-none">
+                  {stat.value}
+                </p>
+                <p className="mt-4 text-xs sm:text-sm font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                  {stat.label}
+                </p>
               </div>
-
-              <div className={`order-1 bg-white rounded-lg border border-gray-200 overflow-hidden ${section.mediaOnLeft ? "md:order-1" : "md:order-2"}`}>
-                <div className="px-8 pt-8">
-                  <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">
-                    {section.mediaLabel}
-                  </p>
-                  <h3 className="text-2xl font-bold text-foreground">
-                    {section.mediaTitle}
-                  </h3>
-                </div>
-
-                <div className="mt-6 border-t border-gray-200 bg-black">
-                  {section.mediaType === "image" ? (
-                    <img
-                      src={section.mediaSrc}
-                      alt={section.mediaAlt}
-                      className={`w-full aspect-video object-cover ${"mediaClassName" in section ? section.mediaClassName : ""}`}
-                      loading="lazy"
-                    />
-                  ) : (
-                    <video
-                      autoPlay
-                      muted
-                      controls
-                      playsInline
-                      preload="auto"
-                      className="w-full aspect-video"
-                    >
-                      <source
-                        src={section.mediaSrc}
-                        type="video/mp4"
-                      />
-                    </video>
-                  )}
-                </div>
-
-                <div className="px-8 pb-8 pt-6">
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {section.mediaSummary}
-                  </p>
-                  {section.showCta ? (
-                    <div className="mt-6">
-                      <Button className="w-full bg-black hover:bg-black/90 text-primary font-bold whitespace-normal text-center leading-tight h-auto py-3" asChild>
-                        <a
-                          href={section.ctaHref}
-                          target={"ctaNewTab" in section && section.ctaNewTab ? "_blank" : undefined}
-                          rel={"ctaNewTab" in section && section.ctaNewTab ? "noreferrer" : undefined}
-                        >
-                          {section.ctaLabel}
-                        </a>
-                      </Button>
-                    </div>
-                  ) : null}
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
-        </section>
-      ))}
 
-      {/* CTA Section */}
-      <section className="bg-primary text-black py-16 md:py-24" aria-labelledby="home-cta-title">
-        <div className="container text-center">
-          <h2 id="home-cta-title" className="text-5xl md:text-6xl font-bold mb-6">
-            Power the Future with Clean Energy Intelligence
-          </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
-            Whether developing a city, mobility ecosystem, industrial campus, or digital environment, VIVIFY provides the clean energy and intelligent infrastructure foundation required to succeed in a net-zero future.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-black hover:bg-black/90 text-primary font-bold h-auto py-3 sm:h-10 sm:py-0 whitespace-normal text-center leading-tight" asChild>
-              <a href={startConversationHref}>Start a Conversation</a>
-            </Button>
-            <Button size="lg" variant="outline" className="border-black text-black hover:bg-black/10 h-auto py-3 sm:h-10 sm:py-0 whitespace-normal text-center leading-tight" asChild>
-              <a href="/VIVIFY-Brochure.pdf" download>
-                Download the Infrastructure Framework
+          {/* Platform Cards */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {arsenalCards.map((card) => (
+              <a
+                key={card.number}
+                href={card.anchor}
+                className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-gradient-to-b from-white via-white to-gray-50 p-8 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-xl"
+              >
+                <div className="absolute left-0 top-0 h-1 w-full rounded-t-2xl bg-gradient-to-r from-primary/70 via-primary to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-primary/10 blur-2xl opacity-70 group-hover:opacity-90 transition-opacity"></div>
+
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+                  {card.number}
+                </p>
+                <p className="mt-6 text-4xl md:text-5xl font-extrabold tracking-tight text-foreground">
+                  {card.title}
+                </p>
+                <p className="mt-2 text-sm font-semibold uppercase tracking-wider text-primary">
+                  {card.subtitle}
+                </p>
+                <span className="mt-8 inline-flex items-center gap-2 text-sm font-bold text-foreground">
+                  Explore
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </span>
               </a>
-            </Button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Platform Deep-Dives — HOG, CAT, Flying Pig */}
+      {platforms.map((platform, index) => {
+        const isDark = index % 2 === 0;
+        const sectionBg = isDark ? "bg-black text-white" : "bg-gray-50 text-foreground";
+        const eyebrowColor = isDark ? "text-primary" : "text-primary";
+        const headingColor = isDark ? "text-white" : "text-foreground";
+        const bodyColor = isDark ? "text-white/85" : "text-muted-foreground";
+        const specLabelColor = isDark ? "text-white/55" : "text-muted-foreground";
+        const specValueColor = isDark ? "text-white" : "text-foreground";
+        const specDividerColor = isDark ? "border-white/10" : "border-gray-200";
+
+        return (
+          <section
+            key={platform.id}
+            id={platform.id}
+            className={`relative overflow-hidden py-20 md:py-28 scroll-mt-24 ${sectionBg}`}
+            aria-labelledby={`${platform.id}-title`}
+          >
+            {isDark && (
+              <>
+                <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl"></div>
+                <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl"></div>
+              </>
+            )}
+
+            <div className="container relative z-10">
+              <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                {/* Text Column */}
+                <div className={platform.mediaOnLeft ? "order-2 lg:order-2" : "order-2 lg:order-1"}>
+                  <p className={`text-xs sm:text-sm font-semibold uppercase tracking-[0.22em] ${eyebrowColor}`}>
+                    Platform {platform.number} — {platform.category}
+                  </p>
+
+                  <h2
+                    id={`${platform.id}-title`}
+                    className={`mt-5 text-6xl sm:text-7xl md:text-8xl font-extrabold tracking-tight leading-[0.92] ${headingColor}`}
+                  >
+                    {platform.titleLines ? (
+                      platform.titleLines.map((line) => (
+                        <span key={line} className="block">
+                          {line}
+                        </span>
+                      ))
+                    ) : (
+                      platform.title
+                    )}
+                  </h2>
+
+                  <p className={`mt-4 text-xl md:text-2xl font-semibold tracking-tight ${isDark ? "text-white/90" : "text-foreground/85"}`}>
+                    {platform.subtitle}
+                  </p>
+
+                  <div className={`mt-8 space-y-5 text-base md:text-lg leading-relaxed ${bodyColor}`}>
+                    {platform.paragraphs.map((paragraph, pIdx) => (
+                      <p key={pIdx}>{paragraph}</p>
+                    ))}
+                  </div>
+
+                  {/* Specs */}
+                  <dl className={`mt-10 grid grid-cols-1 sm:grid-cols-2 gap-x-8 border-t ${specDividerColor}`}>
+                    {platform.specs.map((spec) => (
+                      <div key={spec.label} className={`border-b ${specDividerColor} py-4`}>
+                        <dt className={`text-xs font-semibold uppercase tracking-[0.18em] ${specLabelColor}`}>
+                          {spec.label}
+                        </dt>
+                        <dd className={`mt-2 text-base md:text-lg font-semibold ${specValueColor}`}>
+                          {spec.value}
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+
+                  <div className="mt-10">
+                    <Button
+                      size="lg"
+                      className="bg-primary hover:bg-primary/90 text-black font-bold"
+                      asChild
+                    >
+                      <Link href={platform.ctaHref}>
+                        {platform.ctaLabel} <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+
+                {/* Media Column */}
+                <div
+                  className={`order-1 ${platform.mediaOnLeft ? "lg:order-1" : "lg:order-2"} lg:sticky lg:top-24`}
+                >
+                  <div className="rounded-2xl border border-gray-200 bg-white overflow-hidden shadow-xl">
+                    <div className="bg-black">
+                      <img
+                        src={platform.imageSrc}
+                        alt={platform.imageAlt}
+                        className={`w-full aspect-[4/3] object-cover ${platform.imageClassName ?? ""}`}
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="px-6 py-5 bg-white">
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                        Platform {platform.number}
+                      </p>
+                      <p className="mt-2 text-base font-semibold text-foreground leading-snug">
+                        {platform.imageCaption}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Core System Elements (Flying Pig only) */}
+              {platform.components && (
+                <div className="mt-20">
+                  <h3 className={`text-3xl md:text-4xl font-extrabold tracking-tight text-center ${headingColor}`}>
+                    Core System Elements
+                  </h3>
+                  <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    {platform.components.map((component) => (
+                      <div
+                        key={component.title}
+                        className={`rounded-2xl border p-6 ${
+                          isDark
+                            ? "border-white/10 bg-white/5 backdrop-blur-sm"
+                            : "border-gray-200 bg-white"
+                        }`}
+                      >
+                        <h4 className={`text-lg font-bold ${headingColor}`}>{component.title}</h4>
+                        <p className={`mt-3 text-sm leading-relaxed ${bodyColor}`}>
+                          {component.desc}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </section>
+        );
+      })}
+
+      {/* The Decision — Final CTA */}
+      <section
+        className="relative bg-primary text-black py-20 md:py-28 overflow-hidden"
+        aria-labelledby="home-decision-title"
+      >
+        <div className="container relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-black/70">
+              The Decision
+            </p>
+            <h2
+              id="home-decision-title"
+              className="mt-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] text-black"
+            >
+              <span className="block">America Doesn't</span>
+              <span className="block">Need Permission</span>
+              <span className="block">Anymore.</span>
+            </h2>
+
+            <p className="mt-8 text-base md:text-lg text-black/85 leading-relaxed max-w-2xl mx-auto">
+              Energy independence is not a campaign promise. It is an engineering problem. We solved it. The century-long grip of the energy establishment ends the moment you choose to operate outside it. That moment is now.
+            </p>
+
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="bg-black hover:bg-black/90 text-primary font-bold h-auto py-3 sm:h-10 sm:py-0 whitespace-normal text-center leading-tight"
+                asChild
+              >
+                <a href={getInTheRoomHref}>Get In the Room</a>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-black text-black hover:bg-black/10 h-auto py-3 sm:h-10 sm:py-0 whitespace-normal text-center leading-tight"
+                asChild
+              >
+                <a href={brochureHref} download>
+                  Download the Platform Overview
+                </a>
+              </Button>
+            </div>
+
+            <p className="mt-10 text-sm md:text-base font-semibold text-black/80">
+              Or call us directly —{" "}
+              <a href="tel:+18882778370" className="underline underline-offset-4 hover:text-black">
+                888.277.8370
+              </a>
+              {"  ·  "}
+              <a
+                href="mailto:info@vivify-technology.com"
+                className="underline underline-offset-4 hover:text-black"
+              >
+                info@vivify-technology.com
+              </a>
+            </p>
           </div>
         </div>
       </section>

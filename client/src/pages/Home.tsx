@@ -23,6 +23,7 @@ type Platform = {
   imageAlt: string;
   imageCaption: string;
   imageClassName?: string;
+  nativeAspect?: boolean;
   ctaHref: string;
   ctaLabel: string;
   mediaOnLeft: boolean;
@@ -30,9 +31,9 @@ type Platform = {
 };
 
 export default function Home() {
-  const hogImageUrl = "/hog-system.png";
+  const hogImageUrl = "/images/vivify-hog.jpg";
   const catImageUrl = "/cat-system.png";
-  const flyingPigImageUrl = "/flying-pig-system.png";
+  const flyingPigImageUrl = "/images/vivify-flying-pig-shipping-case.jpg";
   const brochureHref = "/VIVIFY-Brochure.pdf";
 
   const getInTheRoomHref = buildContactMailto({
@@ -76,6 +77,7 @@ export default function Home() {
       imageSrc: hogImageUrl,
       imageAlt: "HOG Hydrogen Oxygen Generator system rendering",
       imageCaption: "HOG System — Integrated Energy-Generation Architecture",
+      nativeAspect: true,
       ctaHref: "/technology#hog",
       ctaLabel: "Full HOG Specifications",
       mediaOnLeft: false,
@@ -128,6 +130,7 @@ export default function Home() {
       imageAlt: "VIVIFY Flying Pig 1MW containerized power system rendering",
       imageCaption: "Flying Pig — 1MW Containerized Power Architecture",
       imageClassName: "object-[50%_55%]",
+      nativeAspect: true,
       ctaHref: "/technology#flying-pig",
       ctaLabel: "Full Flying Pig Specifications",
       mediaOnLeft: false,
@@ -183,25 +186,10 @@ export default function Home() {
 
       {/* Hero — The Energy Empire Ends Here */}
       <section
-        className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white pt-16 pb-24 md:pt-20 md:pb-32 overflow-hidden"
+        className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white overflow-hidden pt-16 pb-28 md:pt-20 md:pb-36"
         aria-labelledby="home-hero-title"
       >
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          className="absolute inset-0 h-full w-full object-cover opacity-40 saturate-75"
-        >
-          <source
-            src="https://d2t61k482lx79u.cloudfront.net/VIVIFY-hero-background.mp4"
-            type="video/mp4"
-          />
-        </video>
-
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#75787B]/18 via-[#75787B]/12 to-[#75787B]/10"></div>
-        <div className="pointer-events-none absolute inset-0 bg-black/45"></div>
 
         <div className="container relative z-10">
           <div className="max-w-3xl">
@@ -251,7 +239,7 @@ export default function Home() {
         className="relative bg-black text-white py-20 md:py-32 overflow-hidden"
         aria-labelledby="home-mission-title"
       >
-        <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl"></div>
+        <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl"></div>
         <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl"></div>
 
         <div className="container relative z-10">
@@ -458,7 +446,11 @@ export default function Home() {
                       <img
                         src={platform.imageSrc}
                         alt={platform.imageAlt}
-                        className={`w-full aspect-[4/3] object-cover ${platform.imageClassName ?? ""}`}
+                        className={
+                          platform.nativeAspect
+                            ? "w-full h-auto"
+                            : `w-full aspect-[4/3] object-cover ${platform.imageClassName ?? ""}`
+                        }
                         loading="lazy"
                       />
                     </div>

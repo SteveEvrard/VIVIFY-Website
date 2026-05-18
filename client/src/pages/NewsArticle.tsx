@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { getNewsPost } from "@/lib/news";
 import NotFound from "@/pages/NotFound";
 import { ArrowLeft } from "lucide-react";
+import type { ReactElement } from "react";
 import { Link } from "wouter";
 
 type Props = {
@@ -103,7 +104,7 @@ export default function NewsArticle(props: Props) {
 
           <article className="mt-10 space-y-5">
             {(() => {
-              const nodes: JSX.Element[] = [];
+              const nodes: ReactElement[] = [];
 
               for (let i = 0; i < paragraphs.length; i++) {
                 const para = paragraphs[i]!;

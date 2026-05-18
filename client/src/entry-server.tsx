@@ -4,10 +4,10 @@ import { Router } from "wouter";
 import App from "./App";
 
 type NavigateFn = (to: string) => void;
-type LocationHook = () => readonly [string, NavigateFn];
+type LocationHook = () => [string, NavigateFn];
 
 function createStaticLocationHook(url: string): LocationHook {
-  return () => [url, () => {}] as const;
+  return () => [url, () => {}];
 }
 
 export function render(url: string) {

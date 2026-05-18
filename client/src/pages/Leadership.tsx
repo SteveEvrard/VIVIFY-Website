@@ -3,19 +3,22 @@
 import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { buildContactMailto } from "@/lib/contactMailto";
+import { ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Leadership() {
-  const getInTouchHref = buildContactMailto({
-    subject: "Vivify — Leadership Inquiry",
+  const getInTheRoomHref = buildContactMailto({
+    subject: "VIVIFY — Work With Us (Leadership)",
     bodyLines: [
-      "Hi Vivify team,",
+      "Hi VIVIFY team,",
       "",
-      "I'd like to connect with your leadership team regarding Vivify’s clean energy technology.",
+      "I'm ready to talk about moving on energy independence. Here's where I'm coming from:",
       "",
       "Name:",
       "Company / Organization:",
       "Role:",
-      "Subject of Interest:",
+      "What you want to deploy or discuss:",
+      "Timeline:",
       "Best way to reach me:",
       "",
       "Thanks,",
@@ -26,32 +29,40 @@ export default function Leadership() {
   return (
     <div className="min-h-screen flex flex-col pt-20">
       <Seo
-        title="Leadership"
-        description="Meet the visionary leaders at VIVIFY driving innovation in clean energy and transforming global energy infrastructure."
+        title="Leadership — The People Who Actually Mean It"
+        description="VIVIFY was built by people who spent a decade engineering the alternative instead of announcing it. Meet the team executing on American energy independence."
         path="/leadership"
       />
 
       {/* Hero Section */}
       <section
-        className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white py-24 md:py-32 overflow-hidden"
+        className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white overflow-hidden pt-16 pb-28 md:pt-20 md:pb-36"
         aria-labelledby="leadership-hero-title"
       >
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#75787B]/18 via-[#75787B]/12 to-[#75787B]/10"></div>
 
         <div className="container relative z-10">
           <div className="max-w-3xl">
-            <h1 id="leadership-hero-title" className="text-6xl md:text-7xl font-bold mb-6">
-              Our <span className="text-primary">Leadership</span>
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">
+              Leadership
+            </p>
+            <h1
+              id="leadership-hero-title"
+              className="mt-6 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] text-white drop-shadow-[0_3px_18px_rgba(0,0,0,0.55)]"
+            >
+              <span className="block">The People</span>
+              <span className="block">Who Actually</span>
+              <span className="block text-primary">Mean It.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/80 mb-8">
-              Visionary leaders driving innovation in clean energy and building the bridge to a sustainable energy future.
+            <p className="mt-8 text-base sm:text-lg md:text-xl text-white/85 leading-relaxed max-w-2xl">
+              Talk is the cheapest thing the energy industry produces. VIVIFY was built by people who spent a decade engineering the alternative instead of announcing it. This is who they are.
             </p>
           </div>
         </div>
 
         {/* Diagonal divider */}
         <div
-          className="absolute bottom-0 left-0 right-0 z-20 h-32 bg-white"
+          className="absolute bottom-0 left-0 right-0 z-20 h-24 md:h-32 bg-white"
           style={{
             clipPath: "polygon(0 50%, 100% 0, 100% 100%, 0 100%)",
           }}
@@ -74,40 +85,32 @@ export default function Leadership() {
 
               <div>
                 <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">
-                  CEO &amp; Founder
+                  Founder &amp; CEO
                 </p>
                 <h3 className="text-4xl font-bold text-foreground mb-4">
                   Jason Herring
                 </h3>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Jason founded VIVIFY to eliminate the false choice between clean energy and reliable power. He
-                  believes the fastest path to meaningful
-                  decarbonization is transforming the grid-connected systems we already have—without breaking
-                  communities, budgets, or stability.
+                  Jason Herring founded VIVIFY with one objective: dismantle the grip of the big energy companies, make America energy independent, and change the world. More than a decade of self-funded development later, the technology exists. The mission is now deployment at scale.
                 </p>
 
-                <div className="bg-gray-50 rounded-lg border border-gray-200 p-6 mb-6">
-                  <p className="text-foreground font-semibold mb-2">Founder Perspective</p>
+                <div className="bg-primary/10 border-l-4 border-primary p-6 rounded">
+                  <p className="text-foreground font-semibold mb-2">Areas of Focus</p>
                   <ul className="space-y-2 text-muted-foreground">
                     <li className="flex gap-2">
                       <span className="text-primary font-bold">•</span>
-                      <span>Legacy infrastructure is leverage: capital-dense, grid-connected assets that can be upgraded rather than abandoned</span>
+                      <span>Hydrogen energy platform development and closed-loop power architecture</span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-primary font-bold">•</span>
-                      <span>AI, data centers, and electrification demand reliable baseload power—intermittency isn&apos;t an option</span>
+                      <span>American energy independence and Florida-first infrastructure strategy</span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-primary font-bold">•</span>
-                      <span>VIVIFY focuses on solutions that scale within existing operations and timelines</span>
+                      <span>Strategic leadership at the intersection of energy policy and engineering execution</span>
                     </li>
                   </ul>
                 </div>
-
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  His mission is straightforward: keep the grid stable, keep electricity affordable, and make the air
-                  cleaner—at speed and at scale.
-                </p>
               </div>
             </div>
 
@@ -122,9 +125,7 @@ export default function Leadership() {
                     Buddy Paul
                   </h3>
                   <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                    VIVIFY&apos;s Distinguished Engineer & Chief Systems Architect leads the engineering execution of our Clean Air Technology™ platform—from
-                    plant integration and reliability to
-                    monitoring, controls, and long-term performance in real-world operations.
+                    VIVIFY&apos;s Distinguished Engineer & Chief Systems Architect leads the engineering execution of our Clean Air Technology™ platform — from plant integration and reliability to monitoring, controls, and long-term performance in real-world operations.
                   </p>
 
                   <div className="bg-primary/10 border-l-4 border-primary p-6 rounded">
@@ -181,7 +182,8 @@ export default function Leadership() {
                   img: "/images/team/steve-evrard.jpg",
                 },
                 { name: "Ashley Stevenson", title: "Director of Marketing", img: "/images/team/ashley-stevenson.jpg" },
-                { name: "Anastasia Voll", title: "Content Specialist", img: "/images/team/anastasia-voll.jpg" },
+                { name: "Anastasia Voll", title: "Director of Content Strategy", img: "/images/team/anastasia-voll.jpg" },
+                { name: "Chris Duncan", title: "Director of Creative Content", img: "/images/team/chris-duncan.jpg" },
                 {
                   name: "Melanie A. Tacher",
                   title: "Director of Government Affairs & Strategic Communications",
@@ -225,19 +227,62 @@ export default function Leadership() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-primary text-black py-16 md:py-24" aria-labelledby="leadership-cta-title">
-        <div className="container text-center">
-          <h2 id="leadership-cta-title" className="text-5xl md:text-6xl font-bold mb-6">
-            Connect with Our Team
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
-            Interested in learning more about our leadership's vision for the future of clean energy?
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-black hover:bg-black/90 text-primary font-bold" asChild>
-              <a href={getInTouchHref}>Get in Touch</a>
-            </Button>
+      {/* Final CTA */}
+      <section
+        className="relative bg-primary text-black py-20 md:py-28 overflow-hidden"
+        aria-labelledby="leadership-cta-title"
+      >
+        <div className="container relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-black/70">
+              Work With Us
+            </p>
+            <h2
+              id="leadership-cta-title"
+              className="mt-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] text-black"
+            >
+              <span className="block">This Team</span>
+              <span className="block">Doesn't Wait</span>
+              <span className="block">for Consensus.</span>
+            </h2>
+
+            <p className="mt-8 text-base md:text-lg text-black/85 leading-relaxed max-w-2xl mx-auto">
+              If you are ready to move on energy independence — not study it, not committee it, not schedule it for next quarter — the conversation starts now.
+            </p>
+
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="bg-black hover:bg-black/90 text-primary font-bold h-auto py-3 sm:h-10 sm:py-0 whitespace-normal text-center leading-tight"
+                asChild
+              >
+                <a href={getInTheRoomHref}>Get In the Room</a>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-black text-black hover:bg-black/10 h-auto py-3 sm:h-10 sm:py-0 whitespace-normal text-center leading-tight"
+                asChild
+              >
+                <Link href="/technology">
+                  See the Technology <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+
+            <p className="mt-10 text-sm md:text-base font-semibold text-black/80">
+              Or call directly —{" "}
+              <a href="tel:+18882778370" className="underline underline-offset-4 hover:text-black">
+                888.277.8370
+              </a>
+              {"  ·  "}
+              <a
+                href="mailto:info@vivify-technology.com"
+                className="underline underline-offset-4 hover:text-black"
+              >
+                info@vivify-technology.com
+              </a>
+            </p>
           </div>
         </div>
       </section>

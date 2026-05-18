@@ -39,7 +39,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-center text-muted-foreground max-w-xs">
-              Clean energy, digital connectivity, smart grids, and AI-driven infrastructure.
+              Dismantling the energy establishment. Making America independent. Changing the world. This is what we built VIVIFY to do.
             </p>
           </div>
 

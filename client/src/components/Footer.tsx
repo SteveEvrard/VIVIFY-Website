@@ -66,6 +66,9 @@ export default function Footer() {
               <Link href="/applications" className="block text-muted-foreground hover:text-primary transition-colors">
                 Applications
               </Link>
+              <Link href="/safety" className="block text-muted-foreground hover:text-primary transition-colors">
+                Safety
+              </Link>
               <Link href="/leadership" className="block text-muted-foreground hover:text-primary transition-colors">
                 Leadership
               </Link>

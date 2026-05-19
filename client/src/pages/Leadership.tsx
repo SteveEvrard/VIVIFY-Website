@@ -3,6 +3,7 @@
 import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { buildContactMailto } from "@/lib/contactMailto";
+import { TM } from "@/lib/tm";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 
@@ -125,7 +126,7 @@ export default function Leadership() {
                     Buddy Paul
                   </h3>
                   <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                    VIVIFY&apos;s Distinguished Engineer & Chief Systems Architect leads the engineering execution of our Clean Air Technology™ platform — from plant integration and reliability to monitoring, controls, and long-term performance in real-world operations.
+                    VIVIFY&apos;s Distinguished Engineer & Chief Systems Architect leads the engineering execution of our Clean Air Technology<TM /> platform — from plant integration and reliability to monitoring, controls, and long-term performance in real-world operations.
                   </p>
 
                   <div className="bg-primary/10 border-l-4 border-primary p-6 rounded">
@@ -168,8 +169,12 @@ export default function Leadership() {
                   title: "Chief of Staff",
                   img: "/images/team/lisa-hill.jpg",
                 },
+                {
+                  name: "Melanie A. Tacher",
+                  title: "Director of Government Affairs & Strategic Communications",
+                  img: "/images/team/melanie-tacher.jpg",
+                },
                 { name: "Guy Fronstin, ESQ", title: "Lead Director & Chief Legal Officer", img: "/images/team/guy-fronstin.jpg" },
-                { name: "Arthur L. Bernstein", title: "Director of Strategic Relations", img: "/images/team/arthur-bernstein.jpg" },
                 { name: "Monica Victoria", title: "Director of Operations", img: "/images/team/monica-victoria.jpg" },
                 {
                   name: "Zac DelVecchio",
@@ -178,28 +183,26 @@ export default function Leadership() {
                 },
                 {
                   name: "Steve Evrard",
-                  title: "Vice President of Business Development",
+                  title: "Director of Business Development",
                   img: "/images/team/steve-evrard.jpg",
                 },
+                { name: "Arthur L. Bernstein", title: "Director of Strategic Relations", img: "/images/team/arthur-bernstein.jpg" },
+
+
                 { name: "Ashley Stevenson", title: "Director of Marketing", img: "/images/team/ashley-stevenson.jpg" },
                 { name: "Anastasia Voll", title: "Director of Content Strategy", img: "/images/team/anastasia-voll.jpg" },
                 { name: "Chris Duncan", title: "Director of Creative Content", img: "/images/team/chris-duncan.jpg" },
-                {
-                  name: "Melanie A. Tacher",
-                  title: "Director of Government Affairs & Strategic Communications",
-                  img: "/images/team/melanie-tacher.jpg",
-                },
+                { name: "Josh Baker", title: "Web Developer", img: "/images/team/josh-baker.jpg" },
                 {
                   name: "Prajwal Nagaraj",
                   title: "Director of AI Deployment",
                   img: "/images/team/prajwal-nagaraj.jpg",
                 },
                 { name: "Juan Carlos De La Coba", title: "AI Optimization Analyst", img: "/images/team/juan-carlos.jpg" },
-                { name: "Denise Starrantino", title: "Front Office Coordinator", img: "/images/team/denise-starrantino.jpg" },
                 { name: "Ross Cohen", title: "Co-Director of Talent Acquisition", img: "/images/team/brett-nortman.jpg" },
                 { name: "Brett Nortman", title: "Co-Director of Talent Acquisition", img: "/images/team/ross-cohen.jpg" },
+                { name: "Denise Starrantino", title: "Front Office Coordinator", img: "/images/team/denise-starrantino.jpg" },
                 { name: "Josef Enns", title: "Director of Security", img: "/images/team/josef-enns.jpg" },
-                { name: "Josh Baker", title: "Web Developer", img: "/images/team/josh-baker.jpg" },
               ].map((member, idx) => (
                 <div key={idx}
                      className="relative aspect-[4/5] overflow-hidden rounded-xl group border border-gray-200">

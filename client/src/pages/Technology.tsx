@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Seo from "@/components/Seo";
 import { buildContactMailto } from "@/lib/contactMailto";
+import { tm, TM } from "@/lib/tm";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "wouter";
@@ -44,11 +45,11 @@ export default function Technology() {
   }, [location]);
 
   const learnMoreHogHref = buildContactMailto({
-    subject: "VIVIFY — Learn More (HOG System)",
+    subject: "VIVIFY — Learn More (HOG™ System)",
     bodyLines: [
       "Hi VIVIFY team,",
       "",
-      "I'd like to learn more about the HOG system and how it fits within your technology platform.",
+      "I'd like to learn more about the HOG™ system and how it fits within your technology platform.",
       "",
       "Name:",
       "Company / Organization:",
@@ -62,11 +63,11 @@ export default function Technology() {
   });
 
   const learnMoreFlyingPigHref = buildContactMailto({
-    subject: "VIVIFY — Learn More (Flying Pig 1MW)",
+    subject: "VIVIFY — Learn More (Flying Pig™ 1MW)",
     bodyLines: [
       "Hi VIVIFY team,",
       "",
-      "I'd like to learn more about the VIVIFY Flying Pig 1MW system and how it could support our project.",
+      "I'd like to learn more about the VIVIFY Flying Pig™ 1MW system and how it could support our project.",
       "",
       "Name:",
       "Company / Organization:",
@@ -85,7 +86,7 @@ export default function Technology() {
     bodyLines: [
       "Hi VIVIFY team,",
       "",
-      "I'd like to learn more about Clean Air Technology™ (CAT) and how it could apply to our facility.",
+      "I'd like to learn more about Clean Air Technology™ (CAT™) and how it could apply to our facility.",
       "",
       "Name:",
       "Company / Organization:",
@@ -103,12 +104,12 @@ export default function Technology() {
     bodyLines: [
       "Hi VIVIFY team,",
       "",
-      "I'd like to talk about deploying VIVIFY's platform — HOG, CAT, and Flying Pig.",
+      "I'd like to talk about deploying VIVIFY's platform — HOG™, CAT™, and Flying Pig™.",
       "",
       "Name:",
       "Company / Organization:",
       "Role:",
-      "Platform of interest (HOG / CAT / Flying Pig / all):",
+      "Platform of interest (HOG™ / CAT™ / Flying Pig™ / all):",
       "Project type:",
       "Timeline:",
       "Best way to reach me:",
@@ -121,63 +122,63 @@ export default function Technology() {
   const products = [
     {
       value: "hog",
-      label: "HOG",
+      label: "HOG™",
       titleId: "technology-hog-title",
-      title: "HOG",
+      title: "HOG™",
       subtitle: "Hydrogen Oxygen Generator",
       imageSrc: HOG_IMAGE_URL,
       imageAlt: "HOG system concept rendering",
       imageClassName: "object-center",
       nativeAspect: true,
       paragraphs: [
-        "Our flagship energy system designed to be a self-supporting hydrogen energy source powered from a simple H₂O-based starter. HOG provides a pollutant-free hydrogen energy source designed for behind-the-meter services.",
-        "Designed as a self-supporting energy platform, HOG is built to maximize energy creation while minimizing traditional inefficiencies. The system is positioned as a 99% emission-free, scalable, on-demand hydrogen solution that can support a wide range of behind-the-meter power requirements.",
-        "Its integrated architecture brings together Pulsar for on-demand hydrogen creation and system revitalization, alongside multi-stage turbines, multi-functioning transformers, an H₂O input generator, and combustion chambers for power and heat distribution.",
+        "Our flagship energy system designed to be a self-supporting hydrogen energy source powered from a simple H₂O-based starter. HOG™ provides a pollutant-free hydrogen energy source designed for behind-the-meter services.",
+        "Designed as a self-supporting energy platform, HOG™ is built to maximize energy creation while minimizing traditional inefficiencies. The system is positioned as a 99% emission-free, scalable, on-demand hydrogen solution that can support a wide range of behind-the-meter power requirements.",
+        "Its integrated architecture brings together Pulsar™ for on-demand hydrogen creation and system revitalization, alongside multi-stage turbines, multi-functioning transformers, an H₂O input generator, and combustion chambers for power and heat distribution.",
       ],
-      overviewTitle: "HOG System Overview",
+      overviewTitle: "HOG™ System Overview",
       overviewCaption:
-        "A visual concept of the HOG system and its integrated energy-generation architecture.",
+        "A visual concept of the HOG™ system and its integrated energy-generation architecture.",
       href: learnMoreHogHref,
-      ctaLabel: "Learn More About HOG",
+      ctaLabel: "Learn More About HOG™",
     },
     {
       value: "flying-pig",
-      label: "Flying Pig",
+      label: "Flying Pig™",
       titleId: "technology-flying-pig-title",
-      title: "Flying Pig",
+      title: "Flying Pig™",
       subtitle: "1MW Scalable Containerized Solution",
       imageSrc: FLYING_PIG_IMAGE_URL,
       imageAlt: "VIVIFY Flying Pig containerized 1MW system rendering",
       imageClassName: "object-[50%_55%]",
       nativeAspect: true,
       paragraphs: [
-        "Featuring the core elements of the flagship HOG, the Flying Pig delivers power using turbines and Pulsar technology within a scalable containerized architecture. Designed for quick assembly and connection points, it can be deployed in remote areas. This modular system is capable of scaling when additional modules are applied.",
+        "Featuring the core elements of the flagship HOG™, the Flying Pig™ delivers power using turbines and Pulsar™ technology within a scalable containerized architecture. Designed for quick assembly and connection points, it can be deployed in remote areas. This modular system is capable of scaling when additional modules are applied.",
       ],
-      overviewTitle: "Flying Pig System Overview",
+      overviewTitle: "Flying Pig™ System Overview",
       overviewCaption:
-        "A visual concept of the Flying Pig 1MW containerized power product and its modular architecture.",
+        "A visual concept of the Flying Pig™ 1MW containerized power product and its modular architecture.",
       href: learnMoreFlyingPigHref,
-      ctaLabel: "Learn More About Flying Pig",
+      ctaLabel: "Learn More About Flying Pig™",
     },
     {
       value: "cat",
-      label: "CAT",
+      label: "CAT™",
       titleId: "technology-cat-title",
-      title: "CAT",
+      title: "CAT™",
       subtitle: "Clean Air Technology",
       imageSrc: CAT_IMAGE_URL,
       imageAlt: "Clean Air Technology system rendering",
       imageClassName: "object-[50%_60%]",
       paragraphs: [
-        "Our flagship five-stage emissions control system is designed to remove virtually all pollutants from exhaust while maintaining strong operational performance. CAT helps industrial systems move toward near-zero emissions without compromising practical deployment needs.",
-        "Built as a retrofit-friendly clean energy solution, CAT is positioned to reduce parasitic load, improve plant efficiency, and deliver a more cost-effective path toward cleaner output across legacy and modern infrastructure environments.",
+        "Our flagship five-stage emissions control system is designed to remove virtually all pollutants from exhaust while maintaining strong operational performance. CAT™ helps industrial systems move toward near-zero emissions without compromising practical deployment needs.",
+        "Built as a retrofit-friendly clean energy solution, CAT™ is positioned to reduce parasitic load, improve plant efficiency, and deliver a more cost-effective path toward cleaner output across legacy and modern infrastructure environments.",
         "Its integrated platform brings together multiple stages of filtration, separation, and incineration technologies to support cleaner exhaust streams and a more scalable emissions-control strategy for real-world operations.",
       ],
-      overviewTitle: "CAT System Overview",
+      overviewTitle: "CAT™ System Overview",
       overviewCaption:
-        "An overview of the CAT platform and its role in cleaner, more efficient industrial energy systems.",
+        "An overview of the CAT™ platform and its role in cleaner, more efficient industrial energy systems.",
       href: learnMoreCatHref,
-      ctaLabel: "Learn More About CAT",
+      ctaLabel: "Learn More About CAT™",
     },
   ] as const;
 
@@ -185,7 +186,7 @@ export default function Technology() {
     <div className="min-h-screen flex flex-col pt-20">
       <Seo
         title="Technology — The Proof Is in the Engineering"
-        description="VIVIFY's clean energy platforms — HOG hydrogen energy, CAT emissions control, and Flying Pig 1MW containerized power. Engineered, integrated, and ready to operate at scale."
+        description="VIVIFY's clean energy platforms — HOG™ hydrogen energy, CAT™ emissions control, and Flying Pig™ 1MW containerized power. Engineered, integrated, and ready to operate at scale."
         path="/technology"
       />
 
@@ -249,7 +250,7 @@ export default function Technology() {
                 VIVIFY develops clean energy technology that enables reliable, near-zero emissions power from existing infrastructure. These are not concepts under development or prototypes awaiting funding. They are engineered, integrated platforms ready to operate at scale.
               </p>
               <p>
-                The HOG, the CAT, and the Flying Pig each address a specific failure of the incumbent energy model. Together, they form the complete alternative to it.
+                The HOG<TM />, the CAT<TM />, and the Flying Pig<TM /> each address a specific failure of the incumbent energy model. Together, they form the complete alternative to it.
               </p>
             </div>
           </div>
@@ -267,7 +268,7 @@ export default function Technology() {
                     value={product.value}
                     className="rounded-full px-4 py-4 text-base font-bold text-primary whitespace-normal data-[state=active]:bg-primary data-[state=active]:text-black data-[state=active]:shadow-none md:text-lg"
                   >
-                    {product.label}
+                    {tm(product.label)}
                   </TabsTrigger>
                 ))}
               </TabsList>
@@ -285,7 +286,7 @@ export default function Technology() {
                           id={product.titleId}
                           className="mt-4 text-5xl md:text-6xl font-bold tracking-tight text-foreground"
                         >
-                          {product.title}
+                          {tm(product.title)}
                         </h3>
                         <p className="mt-2 text-lg md:text-xl font-semibold text-foreground/80">
                           {product.subtitle}
@@ -293,7 +294,7 @@ export default function Technology() {
 
                         <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground">
                           {product.paragraphs.map((paragraph, pIdx) => (
-                            <p key={pIdx}>{paragraph}</p>
+                            <p key={pIdx}>{tm(paragraph)}</p>
                           ))}
                         </div>
 
@@ -304,7 +305,7 @@ export default function Technology() {
                             asChild
                           >
                             <a href={product.href}>
-                              {product.ctaLabel} <ArrowRight className="ml-2 h-4 w-4" />
+                              {tm(product.ctaLabel)} <ArrowRight className="ml-2 h-4 w-4" />
                             </a>
                           </Button>
                         </div>
@@ -327,10 +328,10 @@ export default function Technology() {
                           </div>
                           <div className="px-6 py-5 bg-white">
                             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                              {product.overviewTitle}
+                              {tm(product.overviewTitle)}
                             </p>
                             <p className="mt-2 text-base font-semibold text-foreground leading-snug">
-                              {product.overviewCaption}
+                              {tm(product.overviewCaption)}
                             </p>
                           </div>
                         </div>

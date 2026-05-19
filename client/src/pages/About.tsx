@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import Seo from "@/components/Seo";
 import { buildContactMailto } from "@/lib/contactMailto";
+import { tm, TM } from "@/lib/tm";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 
@@ -14,6 +15,17 @@ type MissionPillar = {
 type VisionCard = {
   title: string;
   body: string;
+};
+
+type StandForValue = {
+  category: string;
+  headline: string;
+  body: string;
+};
+
+type OperateLine = {
+  category: string;
+  line: string;
 };
 
 export default function About() {
@@ -58,7 +70,7 @@ export default function About() {
     },
     {
       title: "Industrial Transformation",
-      body: "The industrial base of this country does not need to choose between economic viability and clean operation. CAT retrofits existing infrastructure. HOG and Flying Pig replace the need for diesel and grid dependence entirely. The transition is not a sacrifice — it is an upgrade. VIVIFY makes that upgrade available now.",
+      body: "The industrial base of this country does not need to choose between economic viability and clean operation. CAT™ retrofits existing infrastructure. HOG™ and Flying Pig™ replace the need for diesel and grid dependence entirely. The transition is not a sacrifice — it is an upgrade. VIVIFY makes that upgrade available now.",
     },
     {
       title: "American Leadership",
@@ -70,11 +82,89 @@ export default function About() {
     },
   ];
 
+  const standForValues: StandForValue[] = [
+    {
+      category: "People",
+      headline: "We hire thinkers.",
+      body: "We hire exceptional people and then trust them completely. Smart people think and say things that challenge the direction — that is not a problem to manage. It is the engine of everything we build.",
+    },
+    {
+      category: "Respect",
+      headline: "Greatness earns attention.",
+      body: "Inventors, scientists, and thought leaders who risked everything to push the world forward — they are our benchmark. We are humbled by what they built. We intend to be worthy of the same standard.",
+    },
+    {
+      category: "Visionary",
+      headline: "No does not exist here.",
+      body: "We do not use the word \"no.\" There are things we have not yet created — that is a reason to be excited, not cautious. The boundaries of what is possible are a starting point, not a ceiling.",
+    },
+    {
+      category: "Laser Focused",
+      headline: "The mission is engraved.",
+      body: "We exist at the intersection of science and technology, and we do not wander from it. Our mission is not a statement that changes with the market. It is fixed, and we are not afraid to defend it.",
+    },
+    {
+      category: "Innovative",
+      headline: "The only static thing is our IP.",
+      body: "We are dynamic, and that is not a buzzword — it is an operating principle. The desire to make things better is not occasional inspiration. It is the fuel running the whole organization, every day. Technology is what we use. Science is what we are made of. The only thing at VIVIFY that stays fixed is the intellectual property we create. Everything else is in motion.",
+    },
+    {
+      category: "Perspective",
+      headline: "Clean is a choice.",
+      body: "We build clean. We operate clean. We believe a cleaner world is not an aspiration — it is an engineering problem, and engineering problems have solutions. The question is whether you are willing to build them.",
+    },
+    {
+      category: "Action",
+      headline: "We do. Others discuss.",
+      body: "Others theorize about what might be possible. We build it. Obstacles do not slow us — they raise the standard. The extra mile is not a measure of effort. It is where the work actually starts.",
+    },
+    {
+      category: "Results",
+      headline: "Tomorrow's solutions, today.",
+      body: "Possibility is a starting point. What matters is delivery. We are not in the business of what could happen — we are in the business of making it happen, ahead of schedule, at a standard the industry has not yet set.",
+    },
+  ];
+
+  const operateLines: OperateLine[] = [
+    {
+      category: "People",
+      line: "We hire exceptional people and then get out of their way.",
+    },
+    {
+      category: "Respect",
+      line: "The inventors who came before us set a bar. We intend to clear it.",
+    },
+    {
+      category: "Visionary",
+      line: "We don't use the word \"no.\" We haven't created the answer yet. We're excited to.",
+    },
+    {
+      category: "Laser Focused",
+      line: "Where science meets technology is exactly where we live. We don't leave.",
+    },
+    {
+      category: "Innovative",
+      line: "Everything moves. Technology is our fuel. Science is our energy.",
+    },
+    {
+      category: "Perspective",
+      line: "We are clean. We believe in a cleaner world. Shouldn't you?",
+    },
+    {
+      category: "Action",
+      line: "We do what others think. The extra mile is where we start.",
+    },
+    {
+      category: "Results",
+      line: "Some discuss possibilities. We deliver. Tomorrow's solutions, today.",
+    },
+  ];
+
   return (
     <div className="min-h-screen flex flex-col pt-20">
       <Seo
         title="About — Built to Break an Empire"
-        description="VIVIFY is a clean energy technology company building the platforms — HOG, CAT, and Flying Pig — that make the existing energy establishment irrelevant. Read the mission, the vision, and the case for replacement."
+        description="VIVIFY is a clean energy technology company building the platforms — HOG™, CAT™, and Flying Pig™ — that make the existing energy establishment irrelevant. Read the mission, the vision, and the case for replacement."
         path="/about"
       />
 
@@ -141,7 +231,7 @@ export default function About() {
                 <strong className="font-bold text-white">Now.</strong>
               </p>
               <p>
-                The HOG. The CAT. The Flying Pig. Each platform is a working system, engineered to operate in the real world, at real scale, without the fuel contracts, delivery chains, or monopoly pricing that the incumbent industry has weaponized against American independence for a century.
+                The HOG<TM />. The CAT<TM />. The Flying Pig<TM />. Each platform is a working system, engineered to operate in the real world, at real scale, without the fuel contracts, delivery chains, or monopoly pricing that the incumbent industry has weaponized against American independence for a century.
               </p>
               <p>
                 We did not arrive with a roadmap asking for permission. We arrived with systems that work, a mission that doesn't flinch, and the conviction that the most patriotic thing an American company can do right now is make the energy establishment obsolete.
@@ -213,6 +303,108 @@ export default function About() {
         </div>
       </section>
 
+      {/* What We Stand For */}
+      <section
+        className="relative bg-black text-white py-20 md:py-32 overflow-hidden"
+        aria-labelledby="about-stand-for-title"
+      >
+        <div className="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl"></div>
+        <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl"></div>
+
+        <div className="container relative z-10">
+          <div className="max-w-4xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">
+              What We Stand For
+            </p>
+            <h2
+              id="about-stand-for-title"
+              className="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.15] text-white"
+            >
+              <span className="block">Eight Things</span>
+              <span className="block">That Are</span>
+              <span className="block text-primary">Non-Negotiable.</span>
+            </h2>
+            <p className="mt-8 text-base md:text-lg text-white/80 leading-relaxed">
+              Every company claims values. Most of them are posters on a wall. Ours are operational — they describe how decisions get made, who gets hired, and what we refuse to compromise on regardless of how inconvenient it becomes. Read them that way.
+            </p>
+          </div>
+
+          <div className="mt-16 md:mt-20 grid gap-6 md:grid-cols-2">
+            {standForValues.map((value, idx) => (
+              <div
+                key={value.category}
+                className="relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-8"
+              >
+                <div className="flex items-baseline gap-4">
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
+                    {String(idx + 1).padStart(2, "0")}
+                  </p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/60">
+                    {value.category}
+                  </p>
+                </div>
+                <h3 className="mt-4 text-2xl md:text-3xl font-bold tracking-tight text-white leading-tight">
+                  {value.headline}
+                </h3>
+                <p className="mt-4 text-base text-white/80 leading-relaxed">
+                  {value.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How We Operate */}
+      <section
+        className="relative bg-white py-20 md:py-32 overflow-hidden"
+        aria-labelledby="about-operate-title"
+      >
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-primary/10 blur-3xl"></div>
+          <div className="absolute -bottom-28 -right-28 h-72 w-72 rounded-full bg-primary/10 blur-3xl"></div>
+        </div>
+
+        <div className="container relative z-10">
+          <div className="max-w-4xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">
+              How We Operate
+            </p>
+            <h2
+              id="about-operate-title"
+              className="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.15] text-foreground"
+            >
+              <span className="block">Eight Lines.</span>
+              <span className="block text-primary">No Ambiguity.</span>
+            </h2>
+            <p className="mt-8 text-base md:text-lg text-muted-foreground leading-relaxed">
+              If you want to understand VIVIFY in a single reading, this is it. Not a vision statement. Not an aspirational paragraph. Eight operating principles, written the way we mean them.
+            </p>
+          </div>
+
+          <div className="mt-16 md:mt-20 grid gap-10 md:grid-cols-2 md:gap-x-12 md:gap-y-12">
+            {operateLines.map((line, idx) => (
+              <div
+                key={line.category}
+                className="relative pl-6 border-l-2 border-primary"
+              >
+                <div className="flex items-baseline gap-4">
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
+                    {String(idx + 1).padStart(2, "0")}
+                  </p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-foreground/60">
+                    {line.category}
+                  </p>
+                </div>
+                <p className="mt-3 text-lg md:text-xl font-semibold text-foreground leading-snug">
+                  {line.line}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Vision for the Future */}
       <section
         className="relative bg-black text-white py-20 md:py-32 overflow-hidden"
@@ -266,14 +458,14 @@ export default function About() {
                 <h3 className="mt-4 text-2xl md:text-3xl font-bold tracking-tight text-white">
                   {card.title}
                 </h3>
-                <p className="mt-4 text-base text-white/80 leading-relaxed">{card.body}</p>
+                <p className="mt-4 text-base text-white/80 leading-relaxed">{tm(card.body)}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Final CTA — You've Heard the Mission */}
+      {/* Join the Mission CTA */}
       <section
         className="relative bg-primary text-black py-20 md:py-28 overflow-hidden"
         aria-labelledby="about-cta-title"
@@ -281,19 +473,19 @@ export default function About() {
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-black/70">
-              You've Heard the Mission
+              Join the Mission
             </p>
             <h2
               id="about-cta-title"
               className="mt-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] text-black"
             >
-              <span className="block">Now Decide</span>
-              <span className="block">Which Side</span>
-              <span className="block">You're On.</span>
+              <span className="block">Be Part of</span>
+              <span className="block">What Comes</span>
+              <span className="block">Next.</span>
             </h2>
 
             <p className="mt-8 text-base md:text-lg text-black/85 leading-relaxed max-w-2xl mx-auto">
-              The energy establishment is not going to move voluntarily. It never does. The only thing that ends a monopoly is a better option made undeniable. That option exists. It is called VIVIFY. If you are ready to be part of what replaces the old order — not reform it, replace it — this is the conversation to have.
+              VIVIFY is building something that will matter for generations. If that is the kind of work you want to be part of — as an operator, a partner, or an investor — the conversation starts here.
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
@@ -310,8 +502,8 @@ export default function About() {
                 className="border-black text-black hover:bg-black/10 h-auto py-3 sm:h-10 sm:py-0 whitespace-normal text-center leading-tight"
                 asChild
               >
-                <Link href="/leadership">
-                  Meet the Team <ArrowRight className="ml-2 h-4 w-4" />
+                <Link href="/technology">
+                  See the Technology <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>

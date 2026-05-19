@@ -12,6 +12,8 @@ import Applications from "./pages/Applications";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Technology from "./pages/Technology";
+import Safety from "./pages/Safety";
+import FAQ from "./pages/FAQ";
 import Framework from "./pages/Framework";
 import News from "./pages/News";
 import NewsArticle from "./pages/NewsArticle";
@@ -56,6 +58,8 @@ function Router() {
       <Route path={"/leadership"} component={Leadership} />
       <Route path={"/applications"} component={Applications} />
       <Route path={"/impact"} component={() => <Redirect to="/applications" />} />
+      <Route path={"/safety"} component={Safety} />
+      <Route path={"/faq"} component={FAQ} />
       {SHOW_FRAMEWORK_PAGE && <Route path={"/framework"} component={Framework} />}
       <Route path={"/news"} component={News} />
       <Route path={"/news/:slug"} component={NewsArticle} />

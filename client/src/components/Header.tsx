@@ -84,6 +84,13 @@ export default function Header() {
               Applications
             </Link>
             <Link
+              href="/safety"
+              aria-current={isActive("/safety") ? "page" : undefined}
+              className={`transition-colors font-medium hover:text-primary ${isActive("/safety") ? "text-primary" : ""}`}
+            >
+              Safety
+            </Link>
+            <Link
               href="/leadership"
               aria-current={isActive("/leadership") ? "page" : undefined}
               className={`transition-colors font-medium hover:text-primary ${isActive("/leadership") ? "text-primary" : ""}`}
@@ -161,6 +168,13 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Applications
+            </Link>
+            <Link
+              href="/safety"
+              className="block hover:text-primary transition-colors font-medium"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Safety
             </Link>
             <Link
               href="/leadership"

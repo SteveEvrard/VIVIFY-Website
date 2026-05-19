@@ -1,6 +1,7 @@
 import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { getNewsPost } from "@/lib/news";
+import { TM } from "@/lib/tm";
 import NotFound from "@/pages/NotFound";
 import { ArrowLeft } from "lucide-react";
 import type { ReactElement } from "react";
@@ -92,7 +93,7 @@ export default function NewsArticle(props: Props) {
             <p className="mt-2 text-base text-muted-foreground leading-relaxed">
               Explore{" "}
               <Link href="/technology" className="font-semibold text-primary hover:underline underline-offset-4">
-                Clean Air Technology™ and Pulsar™
+                Clean Air Technology<TM /> and Pulsar<TM />
               </Link>{" "}
               and see{" "}
               <Link href="/applications" className="font-semibold text-primary hover:underline underline-offset-4">

@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import Seo from "@/components/Seo";
 import { buildContactMailto } from "@/lib/contactMailto";
+import { tm } from "@/lib/tm";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 
@@ -41,7 +42,7 @@ export default function Home() {
     bodyLines: [
       "Hi VIVIFY team,",
       "",
-      "I'd like to get in the room and discuss VIVIFY's platform — HOG, CAT, and Flying Pig — for an upcoming project.",
+      "I'd like to get in the room and discuss VIVIFY's platform — HOG™, CAT™, and Flying Pig™ — for an upcoming project.",
       "",
       "Name:",
       "Company / Organization:",
@@ -61,36 +62,36 @@ export default function Home() {
       id: "platform-hog",
       number: "01",
       category: "Hydrogen Energy",
-      title: "HOG",
+      title: "HOG™",
       subtitle: "Hydrogen Oxygen Generator",
       paragraphs: [
-        "The HOG is not a prototype. It is a fully realized, self-supporting hydrogen energy system — powered by water, producing zero pollutants, and scaling on demand. While the industry was busy defending its oil contracts, we built a hydrogen generator that doesn't need them.",
-        "Built for behind-the-meter deployment, HOG integrates Pulsar for on-demand hydrogen creation and system revitalization, multi-stage turbines, multi-functioning transformers, an H₂O input generator, and combustion chambers for power and heat distribution. The result is a 99% emission-free energy source that answers to no grid and no monopoly.",
+        "The HOG™ is not a prototype. It is a fully realized, self-supporting hydrogen energy system — powered by water, producing zero pollutants, and scaling on demand. While the industry was busy defending its oil contracts, we built a hydrogen generator that doesn't need them.",
+        "Built for behind-the-meter deployment, HOG™ integrates Pulsar™ for on-demand hydrogen creation and system revitalization, multi-stage turbines, multi-functioning transformers, an H₂O input generator, and combustion chambers for power and heat distribution. The result is a 99% emission-free energy source that answers to no grid and no monopoly.",
       ],
       specs: [
         { label: "Fuel Source", value: "H₂O (Water)" },
         { label: "Emissions Profile", value: "99% Pollutant-Free" },
         { label: "Architecture", value: "Self-Supporting, Behind-the-Meter" },
         { label: "Scalability", value: "Site to District" },
-        { label: "Key Integration", value: "Pulsar On-Demand Revitalization" },
+        { label: "Key Integration", value: "Pulsar™ On-Demand Revitalization" },
       ],
       imageSrc: hogImageUrl,
       imageAlt: "HOG Hydrogen Oxygen Generator system rendering",
-      imageCaption: "HOG System — Integrated Energy-Generation Architecture",
+      imageCaption: "HOG™ System — Integrated Energy-Generation Architecture",
       nativeAspect: true,
       ctaHref: "/technology#hog",
-      ctaLabel: "Full HOG Specifications",
+      ctaLabel: "Full HOG™ Specifications",
       mediaOnLeft: false,
     },
     {
       id: "platform-cat",
       number: "02",
       category: "Emissions Control",
-      title: "CAT",
+      title: "CAT™",
       subtitle: "Clean Air Technology",
       paragraphs: [
-        "Legacy industrial infrastructure is not going away overnight. CAT is the answer to that reality — a five-stage emissions control system that removes virtually every pollutant from exhaust streams without forcing operators to shut down and start over.",
-        "Built as a retrofit-friendly platform, CAT reduces parasitic load, improves plant efficiency, and delivers a cost-effective path to near-zero output across both legacy and modern environments. The industry has been managing pollution for decades. VIVIFY built a system to eliminate it.",
+        "Legacy industrial infrastructure is not going away overnight. CAT™ is the answer to that reality — a five-stage emissions control system that removes virtually every pollutant from exhaust streams without forcing operators to shut down and start over.",
+        "Built as a retrofit-friendly platform, CAT™ reduces parasitic load, improves plant efficiency, and delivers a cost-effective path to near-zero output across both legacy and modern environments. The industry has been managing pollution for decades. VIVIFY built a system to eliminate it.",
       ],
       specs: [
         { label: "Architecture", value: "Five-Stage Filtration System" },
@@ -101,38 +102,37 @@ export default function Home() {
       ],
       imageSrc: catImageUrl,
       imageAlt: "CAT Clean Air Technology system rendering",
-      imageCaption: "CAT System — Five-Stage Emissions-Control Architecture",
+      imageCaption: "CAT™ System — Five-Stage Emissions-Control Architecture",
       imageClassName: "object-[50%_60%]",
       ctaHref: "/technology#cat",
-      ctaLabel: "Full CAT Specifications",
+      ctaLabel: "Full CAT™ Specifications",
       mediaOnLeft: true,
     },
     {
       id: "platform-flying-pig",
       number: "03",
       category: "Containerized Power",
-      title: "Flying Pig",
-      titleLines: ["Flying", "Pig"],
+      title: "Flying Pig™",
+      titleLines: ["Flying", "Pig™"],
       subtitle: "1MW Scalable Containerized Solution",
       paragraphs: [
-        "They said it couldn't be done in a box. The Flying Pig is HOG's most formidable offspring — all the power of our flagship hydrogen platform, distilled into a single deployable container ready to generate 1MW the moment it arrives on site.",
-        "Micro hydro turbines, Pulsar technology, water handling, thermal exchange, transformers, and quick-connect infrastructure — all inside self-contained housing built for remote locations, rapid assembly, and zero tolerance for diesel dependence. Scale by adding modules. The grid can't follow you where the Flying Pig will go.",
+        "They said it couldn't be done in a box. The Flying Pig™ is HOG™'s most formidable offspring — all the power of our flagship hydrogen platform, distilled into a single deployable container ready to generate 1MW the moment it arrives on site.",
+        "Micro hydro turbines, Pulsar™ technology, water handling, thermal exchange, transformers, and quick-connect infrastructure — all inside self-contained housing built for remote locations, rapid assembly, and zero tolerance for diesel dependence. Scale by adding modules. The grid can't follow you where the Flying Pig™ will go.",
       ],
       specs: [
         { label: "Output", value: "1MW Per Unit, Infinitely Scalable" },
         { label: "Fuel Source", value: "Water-Based Input" },
-        { label: "Unit Cost", value: "$2.5M" },
         { label: "5-Year Savings vs. Diesel", value: "$9.8M Projected (@ $4.00/gal)" },
         { label: "Maintenance", value: "Yearly Carbon Service · ~5% Annual Water Loss" },
         { label: "Deployment", value: "Remote Sites · Industrial · Behind-the-Meter" },
       ],
       imageSrc: flyingPigImageUrl,
       imageAlt: "VIVIFY Flying Pig 1MW containerized power system rendering",
-      imageCaption: "Flying Pig — 1MW Containerized Power Architecture",
+      imageCaption: "Flying Pig™ — 1MW Containerized Power Architecture",
       imageClassName: "object-[50%_55%]",
       nativeAspect: true,
       ctaHref: "/technology#flying-pig",
-      ctaLabel: "Full Flying Pig Specifications",
+      ctaLabel: "Full Flying Pig™ Specifications",
       mediaOnLeft: false,
       components: [
         {
@@ -144,8 +144,8 @@ export default function Home() {
           desc: "Compact steam turbine stage for maximum usable output inside the 1MW module.",
         },
         {
-          title: "Pulsar Array",
-          desc: "Eight Pulsar units tying the container directly into VIVIFY's hydrogen power architecture.",
+          title: "Pulsar™ Array",
+          desc: "Eight Pulsar™ units tying the container directly into VIVIFY's hydrogen power architecture.",
         },
         {
           title: "Water Storage & Filtration",
@@ -164,9 +164,9 @@ export default function Home() {
   ];
 
   const arsenalCards = [
-    { number: "01", title: "HOG", subtitle: "Hydrogen Energy", anchor: "#platform-hog" },
-    { number: "02", title: "CAT", subtitle: "Emissions Control", anchor: "#platform-cat" },
-    { number: "03", title: "Flying Pig", subtitle: "Coming Soon", anchor: "#platform-flying-pig" },
+    { number: "01", title: "HOG™", subtitle: "Hydrogen Energy", anchor: "#platform-hog" },
+    { number: "02", title: "CAT™", subtitle: "Emissions Control", anchor: "#platform-cat" },
+    { number: "03", title: "Flying Pig™", subtitle: "Coming Soon", anchor: "#platform-flying-pig" },
   ];
 
   const arsenalStats = [
@@ -179,7 +179,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col pt-20">
       <Seo
         title="The Energy Empire Ends Here"
-        description="VIVIFY is making America energy independent with three breakthrough platforms — HOG hydrogen energy, CAT emissions control, and Flying Pig containerized 1MW power. Cleaner energy, built in America, controlled by the people who use it."
+        description="VIVIFY is making America energy independent with three breakthrough platforms — HOG™ hydrogen energy, CAT™ emissions control, and Flying Pig™ containerized 1MW power. Cleaner energy, built in America, controlled by the people who use it."
         path="/"
         brandFirst
       />
@@ -337,7 +337,7 @@ export default function Home() {
                   {card.number}
                 </p>
                 <p className="mt-6 text-4xl md:text-5xl font-extrabold tracking-tight text-foreground">
-                  {card.title}
+                  {tm(card.title)}
                 </p>
                 <p className="mt-2 text-sm font-semibold uppercase tracking-wider text-primary">
                   {card.subtitle}
@@ -392,11 +392,11 @@ export default function Home() {
                     {platform.titleLines ? (
                       platform.titleLines.map((line) => (
                         <span key={line} className="block">
-                          {line}
+                          {tm(line)}
                         </span>
                       ))
                     ) : (
-                      platform.title
+                      tm(platform.title)
                     )}
                   </h2>
 
@@ -406,7 +406,7 @@ export default function Home() {
 
                   <div className={`mt-8 space-y-5 text-base md:text-lg leading-relaxed ${bodyColor}`}>
                     {platform.paragraphs.map((paragraph, pIdx) => (
-                      <p key={pIdx}>{paragraph}</p>
+                      <p key={pIdx}>{tm(paragraph)}</p>
                     ))}
                   </div>
 
@@ -418,7 +418,7 @@ export default function Home() {
                           {spec.label}
                         </dt>
                         <dd className={`mt-2 text-base md:text-lg font-semibold ${specValueColor}`}>
-                          {spec.value}
+                          {tm(spec.value)}
                         </dd>
                       </div>
                     ))}
@@ -431,7 +431,7 @@ export default function Home() {
                       asChild
                     >
                       <Link href={platform.ctaHref}>
-                        {platform.ctaLabel} <ArrowRight className="ml-2 h-4 w-4" />
+                        {tm(platform.ctaLabel)} <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>
                   </div>
@@ -459,7 +459,7 @@ export default function Home() {
                         Platform {platform.number}
                       </p>
                       <p className="mt-2 text-base font-semibold text-foreground leading-snug">
-                        {platform.imageCaption}
+                        {tm(platform.imageCaption)}
                       </p>
                     </div>
                   </div>
@@ -482,9 +482,9 @@ export default function Home() {
                             : "border-gray-200 bg-white"
                         }`}
                       >
-                        <h4 className={`text-lg font-bold ${headingColor}`}>{component.title}</h4>
+                        <h4 className={`text-lg font-bold ${headingColor}`}>{tm(component.title)}</h4>
                         <p className={`mt-3 text-sm leading-relaxed ${bodyColor}`}>
-                          {component.desc}
+                          {tm(component.desc)}
                         </p>
                       </div>
                     ))}
@@ -526,16 +526,6 @@ export default function Home() {
                 asChild
               >
                 <a href={getInTheRoomHref}>Get In the Room</a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-black text-black hover:bg-black/10 h-auto py-3 sm:h-10 sm:py-0 whitespace-normal text-center leading-tight"
-                asChild
-              >
-                <a href={brochureHref} download>
-                  Download the Platform Overview
-                </a>
               </Button>
             </div>
 

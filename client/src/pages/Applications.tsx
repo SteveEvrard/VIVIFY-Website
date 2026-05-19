@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import Seo from "@/components/Seo";
 import { buildContactMailto } from "@/lib/contactMailto";
+import { tm, TM } from "@/lib/tm";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 
@@ -117,7 +118,7 @@ export default function Applications() {
       headingLines: ["Near-Zero", "Emissions.", "No Excuses."],
       primaryLineIndex: 2,
       paragraphs: [
-        "The industrial sector has been told for decades that clean operation means compromised performance. VIVIFY's Clean Air Technology™ (CAT) is the answer to that false choice. A retrofit-ready five-stage platform designed to remove virtually all pollutants from exhaust streams — built for real-world integration across multiple fuel types and industrial environments, without touching operational reliability.",
+        "The industrial sector has been told for decades that clean operation means compromised performance. VIVIFY's Clean Air Technology™ (CAT™) is the answer to that false choice. A retrofit-ready five-stage platform designed to remove virtually all pollutants from exhaust streams — built for real-world integration across multiple fuel types and industrial environments, without touching operational reliability.",
       ],
       ctaSubject: "VIVIFY — Clean Emissions Application",
       ctaLabel: "Talk to Us About Clean Emissions",
@@ -365,7 +366,7 @@ export default function Applications() {
 
                   <div className={`mt-8 space-y-5 text-base md:text-lg leading-relaxed ${bodyColor}`}>
                     {app.paragraphs.map((paragraph, pIdx) => (
-                      <p key={pIdx}>{paragraph}</p>
+                      <p key={pIdx}>{tm(paragraph)}</p>
                     ))}
                     {app.pulsarBlurb && (
                       <p className={subheadingColor}>
@@ -374,7 +375,7 @@ export default function Applications() {
                           href="/technology#hog"
                           className="font-semibold text-primary hover:underline underline-offset-4"
                         >
-                          {app.pulsarBlurb.linkText}
+                          {tm(app.pulsarBlurb.linkText)}
                         </Link>
                         {app.pulsarBlurb.suffix}
                       </p>
@@ -495,7 +496,7 @@ export default function Applications() {
                   See How It's Built
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  Deep-dives on HOG, CAT, and Flying Pig — the three platforms behind every application on this page.
+                  Deep-dives on HOG<TM />, CAT<TM />, and Flying Pig<TM /> — the three platforms behind every application on this page.
                 </p>
                 <p className="mt-5 inline-flex items-center text-sm font-semibold text-primary group-hover:underline underline-offset-4">
                   Explore the Platform <ArrowRight className="ml-2 h-4 w-4" />

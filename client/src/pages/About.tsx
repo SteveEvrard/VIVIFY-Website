@@ -355,63 +355,15 @@ export default function About() {
         </div>
       </section>
 
-      {/* How We Operate */}
-      <section
-        className="relative bg-white py-20 md:py-32 overflow-hidden"
-        aria-labelledby="about-operate-title"
-      >
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-primary/10 blur-3xl"></div>
-          <div className="absolute -bottom-28 -right-28 h-72 w-72 rounded-full bg-primary/10 blur-3xl"></div>
-        </div>
-
-        <div className="container relative z-10">
-          <div className="max-w-4xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">
-              How We Operate
-            </p>
-            <h2
-              id="about-operate-title"
-              className="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.15] text-foreground"
-            >
-              <span className="block">Eight Lines.</span>
-              <span className="block text-primary">No Ambiguity.</span>
-            </h2>
-            <p className="mt-8 text-base md:text-lg text-muted-foreground leading-relaxed">
-              If you want to understand VIVIFY in a single reading, this is it. Not a vision statement. Not an aspirational paragraph. Eight operating principles, written the way we mean them.
-            </p>
-          </div>
-
-          <div className="mt-16 md:mt-20 grid gap-10 md:grid-cols-2 md:gap-x-12 md:gap-y-12">
-            {operateLines.map((line, idx) => (
-              <div
-                key={line.category}
-                className="relative pl-6 border-l-2 border-primary"
-              >
-                <div className="flex items-baseline gap-4">
-                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-                    {String(idx + 1).padStart(2, "0")}
-                  </p>
-                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-foreground/60">
-                    {line.category}
-                  </p>
-                </div>
-                <p className="mt-3 text-lg md:text-xl font-semibold text-foreground leading-snug">
-                  {line.line}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Vision for the Future */}
       <section
-        className="relative bg-black text-white py-20 md:py-32 overflow-hidden"
+        className="relative bg-white py-20 md:py-32 overflow-hidden"
         aria-labelledby="about-vision-title"
       >
-        <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl"></div>
-        <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl"></div>
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl"></div>
+          <div className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl"></div>
+        </div>
 
         <div className="container relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -421,7 +373,7 @@ export default function About() {
               </p>
               <h2
                 id="about-vision-title"
-                className="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.15] text-white"
+                className="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.15] text-foreground"
               >
                 <span className="block">The Old Order</span>
                 <span className="block">Has an</span>
@@ -431,11 +383,11 @@ export default function About() {
 
             <div className="grid gap-8">
               <blockquote className="relative border-l-4 border-primary pl-6 py-2">
-                <p className="text-xl md:text-2xl font-semibold leading-snug text-white">
+                <p className="text-xl md:text-2xl font-semibold leading-snug text-foreground">
                   "We are not here to participate in the existing energy economy. We are here to end it."
                 </p>
               </blockquote>
-              <div className="grid gap-6 text-base md:text-lg text-white/80 leading-relaxed">
+              <div className="grid gap-6 text-base md:text-lg text-muted-foreground leading-relaxed">
                 <p>
                   The world runs on infrastructure built for fossil fuels, maintained by companies whose survival depends on that infrastructure never changing. VIVIFY represents the end of that arrangement. Not the beginning of a negotiation — the end.
                 </p>
@@ -450,15 +402,15 @@ export default function About() {
             {visionCards.map((card, idx) => (
               <div
                 key={card.title}
-                className="relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-8"
+                className="relative rounded-2xl border border-gray-200 bg-gray-50 p-8"
               >
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
                   {String(idx + 1).padStart(2, "0")}
                 </p>
-                <h3 className="mt-4 text-2xl md:text-3xl font-bold tracking-tight text-white">
+                <h3 className="mt-4 text-2xl md:text-3xl font-bold tracking-tight text-foreground">
                   {card.title}
                 </h3>
-                <p className="mt-4 text-base text-white/80 leading-relaxed">{tm(card.body)}</p>
+                <p className="mt-4 text-base text-muted-foreground leading-relaxed">{tm(card.body)}</p>
               </div>
             ))}
           </div>

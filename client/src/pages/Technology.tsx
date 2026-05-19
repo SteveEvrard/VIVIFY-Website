@@ -368,23 +368,13 @@ export default function Technology() {
               The technology is built, documented, and ready to operate. The only question is when you stop running on the old model and start running on the new one.
             </p>
 
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="mt-10 flex justify-center">
               <Button
                 size="lg"
                 className="bg-black hover:bg-black/90 text-primary font-bold h-auto py-3 sm:h-10 sm:py-0 whitespace-normal text-center leading-tight"
                 asChild
               >
                 <a href={getInTheRoomHref}>Get In the Room</a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-black text-black hover:bg-black/10 h-auto py-3 sm:h-10 sm:py-0 whitespace-normal text-center leading-tight"
-                asChild
-              >
-                <a href={BROCHURE_HREF} download>
-                  Download Platform Overview
-                </a>
               </Button>
             </div>
 

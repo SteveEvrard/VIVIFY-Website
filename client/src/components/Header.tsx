@@ -54,7 +54,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-muted-foreground">
+          <nav className="hidden xl:flex items-center gap-5 2xl:gap-7 text-muted-foreground">
             <Link
               href="/"
               aria-current={isActive("/") ? "page" : undefined}
@@ -113,6 +113,13 @@ export default function Header() {
             >
               News
             </Link>
+            <Link
+              href="/faq"
+              aria-current={isActive("/faq") ? "page" : undefined}
+              className={`transition-colors font-medium hover:text-primary ${isActive("/faq") ? "text-primary" : ""}`}
+            >
+              FAQ
+            </Link>
           </nav>
 
           {/* Right side actions */}
@@ -130,7 +137,7 @@ export default function Header() {
               <a href={contactHref}>Contact</a>
             </Button>
             <button
-              className="lg:hidden text-muted-foreground"
+              className="xl:hidden text-muted-foreground"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <Menu className="w-6 h-6" />
@@ -140,7 +147,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden pb-4 space-y-3 text-muted-foreground">
+          <div className="xl:hidden pb-4 space-y-3 text-muted-foreground">
             <Link
               href="/"
               className="block hover:text-primary transition-colors font-medium"
@@ -198,6 +205,13 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               News
+            </Link>
+            <Link
+              href="/faq"
+              className="block hover:text-primary transition-colors font-medium"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              FAQ
             </Link>
             <a href="tel:8882778370" className="flex items-center gap-2">
               <Phone className="w-4 h-4" />

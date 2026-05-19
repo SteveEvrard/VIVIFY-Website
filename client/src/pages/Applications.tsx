@@ -77,9 +77,73 @@ export default function Applications() {
 
   const applications: Application[] = [
     {
-      id: "application-hydrogen",
+      id: "application-emergency",
       number: "01",
       eyebrow: "Application 01",
+      isNew: true,
+      headingLines: ["Power That", "Deploys When", "the Grid Doesn't."],
+      primaryLineIndex: 2,
+      paragraphs: [
+        "When disaster strikes, when the mission demands field power, when the grid is damaged, delayed, or simply absent — the agencies responsible for the response cannot wait for utility restoration. VIVIFY's modular hydrogen units are built for exactly this: rapid deployment, zero fuel supply chain, and scalable capacity that moves with the mission.",
+        "From disaster recovery to forward operating bases to humanitarian infrastructure restoration, VIVIFY provides containerized power that can be transported, deployed, and scaled without dependence on any external fuel delivery chain or grid connection.",
+      ],
+      ctaSubject: "VIVIFY — Emergency Deployment Application",
+      ctaLabel: "Talk to Us About Emergency Deployment",
+      media: { kind: "placeholder", category: "Government & Emergency" },
+      mediaCaption: "Containerized hydrogen power for emergency and government deployment",
+      mediaOnLeft: false,
+      fitTitle: "Where government & emergency response fits",
+      fitCards: [
+        {
+          title: "Disaster Response",
+          body: "Emergency power for damaged or unavailable grid regions — deployable on hours, not weeks.",
+        },
+        {
+          title: "Defense + Forward Operations",
+          body: "Remote field operations, military sites, mobile command centers, and strategic deployments.",
+        },
+        {
+          title: "Critical Infrastructure",
+          body: "Public facility resiliency, humanitarian restoration, and temporary operating bases.",
+        },
+      ],
+    },
+    {
+      id: "application-data-centers",
+      number: "02",
+      eyebrow: "Application 02",
+      isNew: true,
+      headingLines: ["The Grid Can't", "Keep Pace.", "VIVIFY Can."],
+      primaryLineIndex: 2,
+      paragraphs: [
+        "Utility interconnection queues stretch years. Grid congestion in high-demand corridors is structural. The AI and data center boom is real — and the power infrastructure to support it is not keeping pace. VIVIFY provides behind-the-meter power that moves on the project's timeline, not the utility's.",
+        "Modular units for phased demand. Site-specific plants engineered to long-term load profiles. Both built on VIVIFY's hydrogen platform — no interconnection queue, no utility dependency, no waiting.",
+      ],
+      ctaSubject: "VIVIFY — Data Center Power Application",
+      ctaLabel: "Talk to Us About Data Center Power",
+      media: { kind: "placeholder", category: "Data Center & High-Demand Infrastructure" },
+      mediaCaption: "Behind-the-meter hydrogen power for AI and data center campuses",
+      mediaOnLeft: true,
+      fitTitle: "Where data center & high-demand power fits",
+      fitCards: [
+        {
+          title: "AI + Data Center Campuses",
+          body: "Behind-the-meter generation for facilities that cannot wait on interconnection queues.",
+        },
+        {
+          title: "High-Performance Computing",
+          body: "Dedicated power for HPC facilities with demanding, continuous load profiles.",
+        },
+        {
+          title: "Large-Load Development",
+          body: "Site-specific plants or modular deployments engineered to the customer's actual requirements.",
+        },
+      ],
+    },
+    {
+      id: "application-hydrogen",
+      number: "03",
+      eyebrow: "Application 03",
       headingLines: ["Hydrogen Power.", "On Demand.", "Without Compromise."],
       primaryLineIndex: 2,
       paragraphs: [
@@ -113,8 +177,8 @@ export default function Applications() {
     },
     {
       id: "application-emissions",
-      number: "02",
-      eyebrow: "Application 02",
+      number: "04",
+      eyebrow: "Application 04",
       headingLines: ["Near-Zero", "Emissions.", "No Excuses."],
       primaryLineIndex: 2,
       paragraphs: [
@@ -143,8 +207,8 @@ export default function Applications() {
     },
     {
       id: "application-water",
-      number: "03",
-      eyebrow: "Application 03",
+      number: "05",
+      eyebrow: "Application 05",
       headingLines: ["Industrial Water", "Treatment", "That Holds."],
       primaryLineIndex: 2,
       paragraphs: [
@@ -168,100 +232,6 @@ export default function Applications() {
         {
           title: "Leachate + Industrial Runoff",
           body: "Address landfill leachate and other high-strength industrial water cases.",
-        },
-      ],
-    },
-    {
-      id: "application-aerospace",
-      number: "04",
-      eyebrow: "Application 04",
-      headingLines: ["The Next Chapter", "of Space Needs", "Better Power."],
-      primaryLineIndex: 2,
-      paragraphs: [
-        "The ISS's decommissioning isn't a crisis — it's an opening. The next generation of orbital research, deep space operations, and sustained habitation requires energy systems that the last generation of technology cannot deliver. VIVIFY's patented hydrogen platform enables regenerative fuel cells capable of longer missions, deeper range, and more power than any prior architecture — resulting in increased trip duration, deeper space travel, and output that finally matches the ambition.",
-      ],
-      ctaSubject: "VIVIFY — Aerospace Application",
-      ctaLabel: "Talk to Us About Aerospace",
-      media: { kind: "video", src: `${CLOUDFRONT_BASE}/Fuel-Cells.mp4` },
-      mediaCaption: "Hydrogen-powered regenerative fuel cells for orbital systems",
-      mediaOnLeft: true,
-      fitTitle: "Where aerospace fits",
-      fitCards: [
-        {
-          title: "Orbital Research Platforms",
-          body: "Sustain longer research cycles beyond ISS-era constraints.",
-        },
-        {
-          title: "Deep Space Travel",
-          body: "Increase trip duration and support more demanding power profiles.",
-        },
-        {
-          title: "Future Stations + Habitats",
-          body: "Enable scalable hydrogen energy systems for sustained operations.",
-        },
-      ],
-    },
-    {
-      id: "application-emergency",
-      number: "05",
-      eyebrow: "Application 05",
-      isNew: true,
-      headingLines: ["Power That", "Deploys When", "the Grid Doesn't."],
-      primaryLineIndex: 2,
-      paragraphs: [
-        "When disaster strikes, when the mission demands field power, when the grid is damaged, delayed, or simply absent — the agencies responsible for the response cannot wait for utility restoration. VIVIFY's modular hydrogen units are built for exactly this: rapid deployment, zero fuel supply chain, and scalable capacity that moves with the mission.",
-        "From disaster recovery to forward operating bases to humanitarian infrastructure restoration, VIVIFY provides containerized power that can be transported, deployed, and scaled without dependence on any external fuel delivery chain or grid connection.",
-      ],
-      ctaSubject: "VIVIFY — Emergency Deployment Application",
-      ctaLabel: "Talk to Us About Emergency Deployment",
-      media: { kind: "placeholder", category: "Government & Emergency" },
-      mediaCaption: "Containerized hydrogen power for emergency and government deployment",
-      mediaOnLeft: false,
-      fitTitle: "Where government & emergency response fits",
-      fitCards: [
-        {
-          title: "Disaster Response",
-          body: "Emergency power for damaged or unavailable grid regions — deployable on hours, not weeks.",
-        },
-        {
-          title: "Defense + Forward Operations",
-          body: "Remote field operations, military sites, mobile command centers, and strategic deployments.",
-        },
-        {
-          title: "Critical Infrastructure",
-          body: "Public facility resiliency, humanitarian restoration, and temporary operating bases.",
-        },
-      ],
-    },
-    {
-      id: "application-data-centers",
-      number: "06",
-      eyebrow: "Application 06",
-      isNew: true,
-      headingLines: ["The Grid Can't", "Keep Pace.", "VIVIFY Can."],
-      primaryLineIndex: 2,
-      paragraphs: [
-        "Utility interconnection queues stretch years. Grid congestion in high-demand corridors is structural. The AI and data center boom is real — and the power infrastructure to support it is not keeping pace. VIVIFY provides behind-the-meter power that moves on the project's timeline, not the utility's.",
-        "Modular units for phased demand. Site-specific plants engineered to long-term load profiles. Both built on VIVIFY's hydrogen platform — no interconnection queue, no utility dependency, no waiting.",
-      ],
-      ctaSubject: "VIVIFY — Data Center Power Application",
-      ctaLabel: "Talk to Us About Data Center Power",
-      media: { kind: "placeholder", category: "Data Center & High-Demand Infrastructure" },
-      mediaCaption: "Behind-the-meter hydrogen power for AI and data center campuses",
-      mediaOnLeft: true,
-      fitTitle: "Where data center & high-demand power fits",
-      fitCards: [
-        {
-          title: "AI + Data Center Campuses",
-          body: "Behind-the-meter generation for facilities that cannot wait on interconnection queues.",
-        },
-        {
-          title: "High-Performance Computing",
-          body: "Dedicated power for HPC facilities with demanding, continuous load profiles.",
-        },
-        {
-          title: "Large-Load Development",
-          body: "Site-specific plants or modular deployments engineered to the customer's actual requirements.",
         },
       ],
     },
@@ -296,7 +266,7 @@ export default function Applications() {
               <span className="block text-primary">Actually Deploys.</span>
             </h1>
             <p className="mt-8 text-base sm:text-lg md:text-xl text-white/85 leading-relaxed max-w-2xl">
-              Clean hydrogen power. Near-zero emissions. Water treatment. Aerospace. Emergency response. Data centers. Six applications. One engineering platform. None of it theoretical.
+              Emergency response. Data centers. Clean hydrogen power. Near-zero emissions. Water treatment. Five applications. One engineering platform. None of it theoretical.
             </p>
           </div>
         </div>

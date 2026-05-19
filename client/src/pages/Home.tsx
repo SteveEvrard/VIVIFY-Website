@@ -113,7 +113,7 @@ export default function Home() {
       number: "03",
       category: "Containerized Power",
       title: "Flying Pig™",
-      titleLines: ["Flying", "Pig™"],
+      titleLines: ["Flying Pig™"],
       subtitle: "1MW Scalable Containerized Solution",
       paragraphs: [
         "They said it couldn't be done in a box. The Flying Pig™ is HOG™'s most formidable offspring — all the power of our flagship hydrogen platform, distilled into a single deployable container ready to generate 1MW the moment it arrives on site.",

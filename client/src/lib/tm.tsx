@@ -7,12 +7,12 @@ export function tm(text: string): ReactNode {
     <Fragment key={i}>
       {part}
       {i < parts.length - 1 && (
-        <sup className="text-[0.55em] font-normal tracking-normal align-super">™</sup>
+        <sup className="text-[0.55em] font-normal tracking-normal [vertical-align:0.15em]">™</sup>
       )}
     </Fragment>
   ));
 }
 
 export function TM() {
-  return <sup className="text-[0.55em] font-normal tracking-normal align-super">™</sup>;
+  return <sup className="text-[0.55em] font-normal tracking-normal [vertical-align:0.15em]">™</sup>;
 }

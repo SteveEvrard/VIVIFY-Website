@@ -29,7 +29,7 @@ export default function News() {
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#75787B]/18 via-[#75787B]/12 to-[#75787B]/10"></div>
         <div className="container relative z-10">
           <div className="max-w-3xl">
-            <h1 id="news-hero-title" className="text-6xl md:text-7xl font-bold mb-6">
+            <h1 id="news-hero-title" className="text-6xl md:text-7xl font-bold mb-6 text-white">
               Company <span className="text-primary">News</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/80 mb-0">

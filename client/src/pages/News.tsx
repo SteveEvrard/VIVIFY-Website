@@ -29,8 +29,11 @@ export default function News() {
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#75787B]/18 via-[#75787B]/12 to-[#75787B]/10"></div>
         <div className="container relative z-10">
           <div className="max-w-3xl">
-            <h1 id="news-hero-title" className="text-6xl md:text-7xl font-bold mb-6 text-white">
-              Company <span className="text-primary">News</span>
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">
+               News
+            </p>
+            <h1 id="news-hero-title" className="mt-6 text-6xl md:text-7xl font-bold mb-6 text-white">
+              Latest from <span className="text-primary">VIVIFY</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/80 mb-0">
               Press releases and updates from VIVIFY.

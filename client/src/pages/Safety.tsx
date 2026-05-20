@@ -100,7 +100,7 @@ export default function Safety() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col pt-20">
+    <div className="min-h-screen flex flex-col pt-16 md:pt-20">
       <Seo
         title="Safety — The Conversation Is Shorter Than You Think"
         description="VIVIFY's on-demand hydrogen platform is categorically different from stored hydrogen systems. No tank. No reserve. No accumulation. See the physics, the engineering, and the five reasons the safety case is straightforward."

@@ -149,7 +149,7 @@ export default function Cookies() {
   );
 
   return (
-    <div className="min-h-screen flex flex-col pt-20">
+    <div className="min-h-screen flex flex-col pt-16 md:pt-20">
       <Seo
         title="Cookie Policy"
         description="VIVIFY Technology, Inc. Cookie Policy — how we use cookies and similar tracking technologies on our website."

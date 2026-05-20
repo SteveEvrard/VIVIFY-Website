@@ -50,7 +50,7 @@ export default function NewsArticle(props: Props) {
     .filter(Boolean);
 
   return (
-    <div className="min-h-screen flex flex-col pt-20">
+    <div className="min-h-screen flex flex-col pt-16 md:pt-20">
       <Seo
         title={post.title}
         description={post.excerpt}

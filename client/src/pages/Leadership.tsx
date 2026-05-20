@@ -28,7 +28,7 @@ export default function Leadership() {
   });
 
   return (
-    <div className="min-h-screen flex flex-col pt-20">
+    <div className="min-h-screen flex flex-col pt-16 md:pt-20">
       <Seo
         title="Leadership — The People Who Actually Mean It"
         description="VIVIFY was built by people who spent a decade engineering the alternative instead of announcing it. Meet the team executing on American energy independence."

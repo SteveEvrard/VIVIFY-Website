@@ -389,7 +389,7 @@ export default function FAQ() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col pt-20">
+    <div className="min-h-screen flex flex-col pt-16 md:pt-20">
       <Seo
         title="FAQ — Questions Answered. Plainly."
         description="The questions we hear most about VIVIFY's on-demand hydrogen platform — technology, safety, applications, environmental impact, partnerships, and cost. Answered without jargon."

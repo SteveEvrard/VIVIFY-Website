@@ -90,7 +90,7 @@ export default function Applications() {
       ],
       ctaSubject: "VIVIFY — Emergency Deployment Application",
       ctaLabel: "Talk to Us About Emergency Deployment",
-      media: { kind: "video", src: `/video/Website_AI_Final_CC_Compressedd.mp4` },
+      media: { kind: "video", src: `/video/Website_AI_Final_CC_Compressed.mp4` },
       mediaCaption: "Containerized hydrogen power for emergency and government deployment",
       mediaOnLeft: false,
       fitTitle: "Where government & emergency response fits",

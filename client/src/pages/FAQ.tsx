@@ -120,7 +120,7 @@ export default function FAQ() {
           question: "Is hydrogen dangerous? Should I be concerned?",
           answer: [
             "The concerns people have about hydrogen come from a specific type of hydrogen system — one that stores large volumes under high pressure. Those concerns are legitimate for that architecture. They are not applicable to VIVIFY's.",
-            "VIVIFY generates hydrogen on demand and consumes it as it is produced. There is no storage phase. There is no pressurized reserve. At any given moment of operation, the volume of hydrogen in the system is minimal — the worst-case failure scenario is roughly equivalent to a balloon popping. Not a pressure vessel rupturing. A pop — and then it is over, because there is nothing left to sustain it.",
+            "VIVIFY generates hydrogen on demand and consumes it as it is produced. There is no storage phase. There is no pressurized reserve. At any given moment of operation, the volume of hydrogen in the system is minimal. In a worst-case failure scenario, the result is a small combustive reaction at the turbine level: contained and limited entirely by the amount of hydrogen present in the system at that moment. There is nothing additional to sustain it beyond that.",
           ],
         },
         {
@@ -147,8 +147,8 @@ export default function FAQ() {
         {
           question: "What is the fuel source, and is it safe to handle?",
           answer: [
-            "The input that drives hydrogen generation is water. There is no diesel on site, no natural gas connection, no combustible fuel delivery chain, and no flammable inventory of any kind. The supply chain for this fuel is a water line.",
-            "The risk profile of the fuel input is zero. It is the same material used to suppress fires.",
+            "VIVIFY's hydrogen generation runs on water as its primary fuel input. The supply chain is a water line. The raw material is non-volatile and inert by definition, the same material used to suppress fires.",
+            "The risk profile of the fuel input is as low as it gets.",
           ],
         },
       ],

@@ -61,8 +61,8 @@ export default function Safety() {
     },
     {
       number: "05",
-      headingLines: ["The Fuel Source", "Is Water."],
-      body: "There is no diesel on site. No natural gas connection. No fuel delivery schedule. No combustible inventory of any kind. The input that drives VIVIFY's hydrogen generation is water — the same material used to suppress fires. The supply chain for this fuel is a water line. The risk profile of the fuel input is zero.",
+      headingLines: ["The Fuel Source", "Is Safe by Design."],
+      body: "VIVIFY's hydrogen generation runs on water as its primary fuel input — the same material used to suppress fires. The supply chain is a water line. The system is engineered from the ground up around non-volatile inputs, giving operators a fundamentally safer site profile regardless of application or environment. The risk profile starts low and stays there.",
     },
   ];
 
@@ -80,7 +80,7 @@ export default function Safety() {
     {
       value: "H₂O",
       label: "The Fuel Input",
-      body: "Water is the only input the system requires. No combustible fuel supply. No flammable delivery chain. The raw material is inert by definition.",
+      body: "Water is VIVIFY's primary fuel input. It's non-volatile and available through a standard water line. The raw material is inert by definition.",
     },
     {
       value: "Closed",

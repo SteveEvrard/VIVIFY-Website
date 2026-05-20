@@ -166,7 +166,7 @@ export default function Home() {
   const arsenalCards = [
     { number: "01", title: "HOG™", subtitle: "Hydrogen Energy", anchor: "#platform-hog" },
     { number: "02", title: "CAT™", subtitle: "Emissions Control", anchor: "#platform-cat" },
-    { number: "03", title: "Flying Pig™", subtitle: "Coming Soon", anchor: "#platform-flying-pig" },
+    { number: "03", title: "Flying Pig™", subtitle: "Containerized Power", anchor: "#platform-flying-pig" },
   ];
 
   const arsenalStats = [

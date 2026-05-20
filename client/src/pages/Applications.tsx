@@ -13,6 +13,7 @@ type FitCard = { title: string; body: string };
 
 type MediaSpec =
   | { kind: "video"; src: string }
+  | { kind: "image"; src: string; alt: string }
   | { kind: "placeholder"; category: string };
 
 type Application = {
@@ -89,7 +90,7 @@ export default function Applications() {
       ],
       ctaSubject: "VIVIFY — Emergency Deployment Application",
       ctaLabel: "Talk to Us About Emergency Deployment",
-      media: { kind: "placeholder", category: "Government & Emergency" },
+      media: { kind: "video", src: `/video/Website_AI_Final_CC_Compressedd.mp4` },
       mediaCaption: "Containerized hydrogen power for emergency and government deployment",
       mediaOnLeft: false,
       fitTitle: "Where government & emergency response fits",
@@ -121,7 +122,11 @@ export default function Applications() {
       ],
       ctaSubject: "VIVIFY — Data Center Power Application",
       ctaLabel: "Talk to Us About Data Center Power",
-      media: { kind: "placeholder", category: "Data Center & High-Demand Infrastructure" },
+      media: {
+        kind: "image",
+        src: "/images/HOG_DataCenter2.jpg",
+        alt: "Behind-the-meter hydrogen power for AI and data center campuses",
+      },
       mediaCaption: "Behind-the-meter hydrogen power for AI and data center campuses",
       mediaOnLeft: true,
       fitTitle: "Where data center & high-demand power fits",
@@ -156,7 +161,11 @@ export default function Applications() {
       },
       ctaSubject: "VIVIFY — Hydrogen Power Application",
       ctaLabel: "Talk to Us About Hydrogen Power",
-      media: { kind: "placeholder", category: "Hydrogen Power Deployment" },
+      media: {
+        kind: "image",
+        src: "/images/HOG_Residential5.jpg",
+        alt: "Hydrogen power deployment in a connected infrastructure environment",
+      },
       mediaCaption: "Hydrogen power deployment in a connected infrastructure environment",
       mediaOnLeft: false,
       fitTitle: "Where hydrogen power fits",
@@ -246,7 +255,7 @@ export default function Applications() {
       ],
       ctaSubject: "VIVIFY — Aerospace Application",
       ctaLabel: "Talk to Us About Aerospace",
-      media: { kind: "video", src: `${CLOUDFRONT_BASE}/Fuel-Cells.mp4` },
+      media: { kind: "video", src: `/video/futuristic-holographic-network-reveals-hydrogen-compressed.mp4` },
       mediaCaption: "Hydrogen-powered regenerative fuel cells for orbital systems",
       mediaOnLeft: true,
       fitTitle: "Where aerospace fits",
@@ -411,6 +420,15 @@ export default function Applications() {
                         >
                           <source src={app.media.src} type="video/mp4" />
                         </video>
+                      </div>
+                    ) : app.media.kind === "image" ? (
+                      <div className="bg-black">
+                        <img
+                          src={app.media.src}
+                          alt={app.media.alt}
+                          loading="lazy"
+                          className="w-full aspect-video object-cover"
+                        />
                       </div>
                     ) : (
                       <div className="relative aspect-video bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 overflow-hidden">

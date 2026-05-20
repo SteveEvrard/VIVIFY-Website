@@ -44,7 +44,7 @@ export default function Footer() {
           </div>
 
           {/* Right Column - Links */}
-          <div className="space-y-4">
+          <div className="space-y-4 md:text-right">
             <h3 className="text-sm font-bold text-foreground uppercase tracking-wider">
               Quick Links
             </h3>
@@ -71,6 +71,9 @@ export default function Footer() {
               </Link>
               <Link href="/leadership" className="block text-muted-foreground hover:text-primary transition-colors">
                 Leadership
+              </Link>
+              <Link href="/faq" className="block text-muted-foreground hover:text-primary transition-colors">
+                FAQ
               </Link>
             </div>
           </div>

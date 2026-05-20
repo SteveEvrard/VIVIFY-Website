@@ -430,14 +430,13 @@ export default function FAQ() {
 
       {/* FAQ Body — Sidebar + Accordion */}
       <section
-        className="relative bg-black text-white py-20 md:py-28 overflow-hidden"
+        className="relative bg-black text-white py-20 md:py-28"
         aria-labelledby="faq-body-title"
       >
         <h2 id="faq-body-title" className="sr-only">
           Frequently asked questions
         </h2>
-        <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl"></div>
-        <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl"></div>
+        <div className="pointer-events-none absolute bottom-0 right-0 h-96 w-96 rounded-full bg-primary/10 blur-3xl"></div>
 
         <div className="container relative z-10">
           <div className="grid lg:grid-cols-[260px_minmax(0,1fr)] gap-10 lg:gap-16 items-start">

@@ -235,6 +235,36 @@ export default function Applications() {
         },
       ],
     },
+    {
+      id: "application-aerospace",
+      number: "06",
+      eyebrow: "Application 06",
+      headingLines: ["The Next Chapter", "of Space Needs", "Better Power."],
+      primaryLineIndex: 2,
+      paragraphs: [
+        "The ISS's decommissioning isn't a crisis — it's an opening. The next generation of orbital research, deep space operations, and sustained habitation requires energy systems that the last generation of technology cannot deliver. VIVIFY's patented hydrogen platform enables regenerative fuel cells capable of longer missions, deeper range, and more power than any prior architecture — resulting in increased trip duration, deeper space travel, and output that finally matches the ambition.",
+      ],
+      ctaSubject: "VIVIFY — Aerospace Application",
+      ctaLabel: "Talk to Us About Aerospace",
+      media: { kind: "video", src: `${CLOUDFRONT_BASE}/Fuel-Cells.mp4` },
+      mediaCaption: "Hydrogen-powered regenerative fuel cells for orbital systems",
+      mediaOnLeft: true,
+      fitTitle: "Where aerospace fits",
+      fitCards: [
+        {
+          title: "Orbital Research Platforms",
+          body: "Sustain longer research cycles beyond ISS-era constraints.",
+        },
+        {
+          title: "Deep Space Travel",
+          body: "Increase trip duration and support more demanding power profiles.",
+        },
+        {
+          title: "Future Stations + Habitats",
+          body: "Enable scalable hydrogen energy systems for sustained operations.",
+        },
+      ],
+    },
   ];
 
   return (

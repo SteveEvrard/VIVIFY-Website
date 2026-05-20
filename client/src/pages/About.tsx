@@ -161,7 +161,7 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col pt-20">
+    <div className="min-h-screen flex flex-col pt-16 md:pt-20">
       <Seo
         title="About — Built to Break an Empire"
         description="VIVIFY is a clean energy technology company building the platforms — HOG™, CAT™, and Flying Pig™ — that make the existing energy establishment irrelevant. Read the mission, the vision, and the case for replacement."

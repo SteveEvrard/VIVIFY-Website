@@ -268,7 +268,7 @@ export default function Applications() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col pt-20">
+    <div className="min-h-screen flex flex-col pt-16 md:pt-20">
       <Seo
         title="Applications — Where the Technology Actually Deploys"
         description="VIVIFY's clean energy platform deploys across hydrogen power, near-zero emissions retrofits, and difficult industrial water treatment — built for real-world conditions, not lab assumptions."

@@ -14,7 +14,7 @@ export default function News() {
   const posts = [...NEWS_POSTS].sort((a, b) => (a.date < b.date ? 1 : -1));
 
   return (
-    <div className="min-h-screen flex flex-col pt-20">
+    <div className="min-h-screen flex flex-col pt-16 md:pt-20">
       <Seo
         title="News"
         description="Press releases and company updates from VIVIFY."
@@ -23,28 +23,32 @@ export default function News() {
 
       {/* Hero */}
       <section
-        className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white py-24 md:py-32 overflow-hidden"
+        className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white overflow-hidden pt-16 pb-28 md:pt-20 md:pb-36"
         aria-labelledby="news-hero-title"
       >
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#75787B]/18 via-[#75787B]/12 to-[#75787B]/10"></div>
         <div className="container relative z-10">
           <div className="max-w-3xl">
-            <h1 id="news-hero-title" className="text-6xl md:text-7xl font-bold mb-6 text-white">
-              Company <span className="text-primary">News</span>
+            <h1
+              id="news-hero-title"
+              className="mt-8 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] text-white drop-shadow-[0_3px_18px_rgba(0,0,0,0.55)]"
+            >
+              <span className="block">Company</span>
+              <span className="block text-primary">News.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/80 mb-0">
+            <p className="mt-8 text-base sm:text-lg md:text-xl text-white/85 leading-relaxed max-w-2xl">
               Press releases and updates from VIVIFY.
             </p>
           </div>
         </div>
         <div
-          className="absolute bottom-0 left-0 right-0 z-20 h-32 bg-white"
+          className="absolute -bottom-px left-0 right-0 h-24 md:h-32 bg-white z-20"
           style={{ clipPath: "polygon(0 50%, 100% 0, 100% 100%, 0 100%)" }}
         ></div>
       </section>
 
       {/* Tiles */}
-      <section className="bg-white py-20 md:py-28" aria-labelledby="news-list-title">
+      <section className="bg-white pt-8 pb-20 md:pt-12 md:pb-28" aria-labelledby="news-list-title">
         <div className="container">
           <h2 id="news-list-title" className="sr-only">
             News articles

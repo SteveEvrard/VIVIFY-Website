@@ -183,7 +183,7 @@ export default function Technology() {
   ] as const;
 
   return (
-    <div className="min-h-screen flex flex-col pt-20">
+    <div className="min-h-screen flex flex-col pt-16 md:pt-20">
       <Seo
         title="Technology — The Proof Is in the Engineering"
         description="VIVIFY's clean energy platforms — HOG™ hydrogen energy, CAT™ emissions control, and Flying Pig™ 1MW containerized power. Engineered, integrated, and ready to operate at scale."

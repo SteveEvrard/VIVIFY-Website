@@ -27,7 +27,7 @@ export default function Framework() {
   });
 
   return (
-    <div className="min-h-screen flex flex-col pt-20">
+    <div className="min-h-screen flex flex-col pt-16 md:pt-20">
       <Seo
         title="Renewable Infrastructure Framework"
         description="Explore VIVIFY’s Renewable Infrastructure Framework—four integrated pillars: clean energy systems, data transmission, smart grids, and AI-driven system intelligence."

@@ -176,7 +176,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col pt-20">
+    <div className="min-h-screen flex flex-col pt-16 md:pt-20">
       <Seo
         title="The Energy Empire Ends Here"
         description="VIVIFY is making America energy independent with three breakthrough platforms — HOG™ hydrogen energy, CAT™ emissions control, and Flying Pig™ containerized 1MW power. Cleaner energy, built in America, controlled by the people who use it."

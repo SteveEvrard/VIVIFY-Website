@@ -164,6 +164,17 @@ export default function NewsArticle(props: Props) {
                   continue;
                 }
 
+                if (para.trimStart().startsWith("<video")) {
+                  nodes.push(
+                    <div
+                      key={`video-${i}`}
+                      className="rounded-xl border border-gray-200 overflow-hidden bg-black"
+                      dangerouslySetInnerHTML={{ __html: para }}
+                    />
+                  );
+                  continue;
+                }
+
                 if (isMultimediaPlaceholder(para)) {
                   nodes.push(
                     <div

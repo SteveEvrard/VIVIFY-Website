@@ -206,6 +206,55 @@ export default function Technology() {
         "A visual concept of the Flying Pig™ 1MW containerized power product and its modular architecture.",
       href: learnMoreFlyingPigHref,
       ctaLabel: "Learn More About Flying Pig™",
+      whatItIs:
+        "Flying Pig™ is a containerized hydrogen power unit that packages the core architecture of the HOG™ platform into a deployable module. It is engineered for environments where reliable power is needed on a schedule the existing grid cannot deliver — remote sites, field operations, and high-demand developments where waiting on utility infrastructure is not an option.",
+      whatItDoes:
+        "Flying Pig™ provides hydrogen power from the moment it arrives on site. It operates independently of the grid, requires no external fuel delivery chain, and scales by adding modules as demand grows. It replaces diesel dependence with a self-contained hydrogen platform that delivers dependable, dedicated power wherever the work is.",
+      benefits: [
+        "A containerized output profile that scales through additional modules as project demand grows.",
+        "Water-based input architecture paired with integrated filtration; cleaned water portable for secondary use.",
+        "Self-contained housing with pre-installed sensors and quick-connect points for faster field deployment.",
+        "Lower maintenance profile with yearly carbon element service and an estimated 5% annual water-supply loss.",
+        "Projected $9.8M five-year savings versus diesel generation at $4.00 per delivered gallon.",
+      ],
+      useCases: [
+        "Remote sites and infrastructure projects that need deployable power without a large fixed plant buildout.",
+        "Industrial, mobility, and advanced-facility deployments evaluating modular behind-the-meter power blocks.",
+        "Government, defense, and emergency response operations requiring rapid power deployment in field conditions.",
+        "Projects comparing long-term operating economics against diesel generation and fuel-delivery exposure.",
+      ],
+      components: [
+        {
+          icon: Shield,
+          title: "Remote Deployment Architecture",
+          desc: "No grid connection required. No fuel delivery chain. Flying Pig™ generates power on arrival from a water-based input, engineered for sites where conventional infrastructure is unavailable, delayed, or simply not coming.",
+        },
+        {
+          icon: Zap,
+          title: "Scalable Power Output",
+          desc: "The architecture is the same at every scale — only the number of containers changes. Add modules as demand grows without redesigning the system or rebuilding the foundation.",
+        },
+        {
+          icon: Flame,
+          title: "All-Environment Engineering",
+          desc: "Built to operate where the conditions are not controlled. Flying Pig™ housing and systems are engineered to perform in extreme heat, extreme cold, and adverse weather — the environments where reliable power matters most.",
+        },
+        {
+          icon: Cpu,
+          title: "Pulsar™ Array",
+          desc: "Pulsar™ units tie directly into VIVIFY's hydrogen power architecture, generating hydrogen on demand at the rate the system consumes it and delivering controlled fuel flow throughout the platform.",
+        },
+        {
+          icon: Droplets,
+          title: "Water Storage & Filtration",
+          desc: "A water tank with integrated filtration supports the system's hydrogen production. Cleaned water is portable for secondary use on site.",
+        },
+        {
+          icon: Shield,
+          title: "Quick Assembly System",
+          desc: "Pre-installed sensors and quick-connect infrastructure throughout. Field assembly measured in hours, not weeks — engineered for the environments and timelines where setup time directly affects mission outcomes.",
+        },
+      ],
     },
     {
       value: "cat",

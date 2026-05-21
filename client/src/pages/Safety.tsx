@@ -175,11 +175,11 @@ export default function Safety() {
                 Most hydrogen safety concerns are about stored hydrogen — large quantities held under high pressure, accumulated in enclosed spaces, sitting in delivery vessels traveling down public roads. Those concerns are legitimate for those systems. They are simply irrelevant to VIVIFY's.
               </p>
               <p>
-                VIVIFY's platform produces hydrogen at the moment it is needed and consumes it as it is produced. The process is closed-loop and continuous. At any given instant during operation, the volume of hydrogen present in the system is minimal — comparable, in practical terms, to what you would find inside a balloon.
+                VIVIFY's platform produces hydrogen at the moment it is needed and consumes it as it is produced. The process is closed-loop and continuous. At any given instant during operation, the volume of hydrogen present in the system is minimal — contained within the active generation cycle, with nothing held in reserve.
               </p>
               <blockquote className="relative border-l-4 border-primary pl-6 py-2 my-2">
                 <p className="text-xl md:text-2xl font-semibold leading-snug text-white">
-                  The worst-case failure scenario for a VIVIFY system is roughly equivalent to a balloon popping. Not a pressure vessel rupturing. Not a storage tank failing. A pop — and then it is over, because there is nothing left to sustain it.
+                  The worst-case failure scenario for a VIVIFY system is a small combustive reaction at the turbine level — contained and limited entirely by the amount of hydrogen present in the system at that moment. There is nothing additional to sustain it beyond that.
                 </p>
               </blockquote>
             </div>
@@ -249,7 +249,7 @@ export default function Safety() {
                 Generated On Demand
               </h3>
               <p className="mt-6 text-base md:text-lg text-muted-foreground leading-relaxed">
-                No stored reserve. No pressurized tank. No delivery chain. Hydrogen is produced and consumed in a closed-loop process — continuously, in minimal volumes. The fuel source is water. The risk profile is a balloon. There is nothing left to sustain a failure event.
+                No stored reserve. No pressurized tank. No delivery chain. Hydrogen is produced and consumed in a closed-loop process — continuously, in minimal volumes. The primary fuel input is water. In a worst-case failure scenario, the result is a small combustive reaction, contained and limited entirely by the hydrogen present in the system at that moment.
               </p>
             </div>
           </div>

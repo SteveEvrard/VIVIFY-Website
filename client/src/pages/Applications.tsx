@@ -122,11 +122,7 @@ export default function Applications() {
       ],
       ctaSubject: "VIVIFY — Data Center Power Application",
       ctaLabel: "Talk to Us About Data Center Power",
-      media: {
-        kind: "image",
-        src: "/images/HOG_DataCenter2.jpg",
-        alt: "Behind-the-meter hydrogen power for AI and data center campuses",
-      },
+      media: { kind: "video", src: `/video/Final_Website_DataCenter_CC_Compressed.mp4` },
       mediaCaption: "Behind-the-meter hydrogen power for AI and data center campuses",
       mediaOnLeft: true,
       fitTitle: "Where data center & high-demand power fits",

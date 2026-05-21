@@ -5,8 +5,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Seo from "@/components/Seo";
 import { buildContactMailto } from "@/lib/contactMailto";
 import { tm, TM } from "@/lib/tm";
-import { ArrowRight } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { ArrowRight, Cpu, Droplets, Flame, Shield, Zap } from "lucide-react";
+import { type ComponentType, useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "wouter";
 
 const HOG_IMAGE_URL = "/images/vivify-hog.jpg";
@@ -140,6 +140,53 @@ export default function Technology() {
         "A visual concept of the HOG™ system and its integrated energy-generation architecture.",
       href: learnMoreHogHref,
       ctaLabel: "Learn More About HOG™",
+      whatItIs:
+        "HOG™ is an integrated hydrogen energy system engineered to support on-site power creation with a focus on controllability, lower emissions, and operational independence. It is designed for environments where reliability, efficiency, and deployment flexibility matter as much as raw output.",
+      whatItDoes:
+        "In practical terms, HOG™ helps organizations generate and manage a pollutant-free hydrogen energy source for behind-the-meter services, power resilience planning, and future-ready infrastructure. It is intended to support both immediate operational needs and longer-horizon energy transition strategies.",
+      benefits: [
+        "Self-supporting energy architecture designed to maximize output while minimizing traditional system inefficiencies.",
+        "99% emission-free positioning for organizations seeking cleaner industrial and on-site energy solutions.",
+        "Scalable infrastructure that can be configured around a broad range of power requirement profiles.",
+        "On-demand hydrogen system logic that supports more responsive energy delivery and operational control.",
+      ],
+      useCases: [
+        "Industrial campuses and production environments requiring resilient on-site power support.",
+        "Large facilities and developments evaluating behind-the-meter energy independence strategies.",
+        "Projects that need a modular hydrogen platform aligned with long-term clean infrastructure goals.",
+      ],
+      components: [
+        {
+          icon: Zap,
+          title: "Pulsar™ Integration",
+          desc: "Supports on-demand hydrogen creation and system revitalization as part of the broader HOG™ architecture.",
+        },
+        {
+          icon: Cpu,
+          title: "Multi-Stage Turbine System",
+          desc: "Converts system energy into usable output through a staged approach built for controlled performance and operational continuity.",
+        },
+        {
+          icon: Shield,
+          title: "Multi-Functioning Transformers",
+          desc: "Condition, regulate, and route energy across the system so output can be aligned with practical site-level requirements.",
+        },
+        {
+          icon: Droplets,
+          title: "H₂O Input Generator",
+          desc: "Anchors the system's water-based starting input and supports the platform's self-supporting hydrogen energy narrative.",
+        },
+        {
+          icon: Flame,
+          title: "Combustion and Thermal Distribution",
+          desc: "Delivers power and heat distribution through integrated chambers designed to support usable industrial energy applications.",
+        },
+        {
+          icon: Shield,
+          title: "Deployment-Ready System Packaging",
+          desc: "Brings generation, conversion, and control functions into a single platform story for cleaner implementation at project scale.",
+        },
+      ],
     },
     {
       value: "flying-pig",
@@ -179,6 +226,53 @@ export default function Technology() {
         "An overview of the CAT™ platform and its role in cleaner, more efficient industrial energy systems.",
       href: learnMoreCatHref,
       ctaLabel: "Learn More About CAT™",
+      whatItIs:
+        "CAT™ is a five-stage emissions-control and air-quality platform engineered to treat exhaust and process-output streams in a structured, performance-oriented sequence. It is designed for organizations that need cleaner operation, practical deployment, and a system architecture that can integrate with existing infrastructure.",
+      whatItDoes:
+        "Operationally, CAT™ helps reduce pollutants, lower parasitic load, improve system efficiency, and create a clearer route to cleaner industrial performance. It gives operators a productized technology story that supports environmental targets while remaining grounded in real-world facility and retrofit considerations.",
+      benefits: [
+        "99%+ pollutant-removal positioning for cleaner industrial exhaust treatment and stronger environmental performance.",
+        "Zero parasitic load narrative focused on protecting useful system output while improving emissions handling.",
+        "Plant-efficiency improvement potential through better treatment logic and integrated system design.",
+        "Cost-effective retrofit profile that supports modernization without requiring a full operational redesign.",
+      ],
+      useCases: [
+        "Industrial facilities seeking a cleaner path for existing exhaust-heavy operations.",
+        "Energy and process environments where retrofit practicality matters as much as emissions performance.",
+        "Operators preparing for stricter environmental standards while preserving core production capability.",
+      ],
+      components: [
+        {
+          icon: Droplets,
+          title: "Hydroponic Towers",
+          desc: "Support particulate separation through water condensation and help prepare the exhaust stream for downstream treatment stages.",
+        },
+        {
+          icon: Cpu,
+          title: "Cold CAT™",
+          desc: "Applies cryogenic CO2 removal and separation logic to strengthen the platform's overall emissions-treatment profile.",
+        },
+        {
+          icon: Flame,
+          title: "Clean Air Turbine",
+          desc: "Provides multi-stage pollutant incineration as part of the platform's broader strategy for cleaner final output.",
+        },
+        {
+          icon: Shield,
+          title: "AGES™ Separator",
+          desc: "Uses artificial-gravity water filtration to improve treatment performance within the CAT™ process chain.",
+        },
+        {
+          icon: Shield,
+          title: "Particle Acquisition Tower",
+          desc: "Acts as a final-stage particulate filtration element to support cleaner downstream release conditions.",
+        },
+        {
+          icon: Zap,
+          title: "Multi-Fuel Input Compatibility",
+          desc: "Integrates with coal, natural gas, diesel, and other exhaust streams so operators can clean emissions without changing core operations.",
+        },
+      ],
     },
   ] as const;
 
@@ -337,6 +431,61 @@ export default function Technology() {
                         </div>
                       </div>
                     </div>
+
+                    {"whatItIs" in product && (
+                      <>
+                        <div className="mt-10 grid gap-6 md:grid-cols-2">
+                          <div className="rounded-2xl border border-gray-200 bg-white p-6">
+                            <h4 className="text-xl font-bold text-foreground">What It Is</h4>
+                            <p className="mt-4 text-muted-foreground leading-relaxed">{tm((product as any).whatItIs)}</p>
+                          </div>
+                          <div className="rounded-2xl border border-gray-200 bg-white p-6">
+                            <h4 className="text-xl font-bold text-foreground">What It Does</h4>
+                            <p className="mt-4 text-muted-foreground leading-relaxed">{tm((product as any).whatItDoes)}</p>
+                          </div>
+                        </div>
+
+                        <div className="mt-10 grid gap-6 md:grid-cols-2">
+                          <div className="rounded-2xl border border-gray-200 bg-white p-6">
+                            <h4 className="text-xl font-bold text-foreground">Operational Value</h4>
+                            <ul className="mt-4 space-y-3 text-muted-foreground">
+                              {(product as any).benefits.map((benefit: string) => (
+                                <li key={benefit} className="flex gap-3">
+                                  <span className="text-primary font-bold">✓</span>
+                                  <span>{benefit}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div className="rounded-2xl border border-gray-200 bg-white p-6">
+                            <h4 className="text-xl font-bold text-foreground">Deployment Fit</h4>
+                            <ul className="mt-4 space-y-3 text-muted-foreground">
+                              {(product as any).useCases.map((useCase: string) => (
+                                <li key={useCase} className="flex gap-3">
+                                  <span className="text-primary font-bold">•</span>
+                                  <span>{useCase}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div className="mt-10">
+                          <h4 className="text-2xl font-bold text-foreground text-center">Core System Elements</h4>
+                          <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                            {(product as any).components.map((component: { icon: ComponentType<{ className?: string }>; title: string; desc: string }) => (
+                              <div key={component.title} className="rounded-2xl border border-gray-200 bg-white p-6">
+                                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                                  <component.icon className="w-6 h-6 text-primary" />
+                                </div>
+                                <h5 className="font-bold text-foreground">{component.title}</h5>
+                                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{component.desc}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </TabsContent>
               ))}

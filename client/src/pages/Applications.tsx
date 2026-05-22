@@ -157,11 +157,7 @@ export default function Applications() {
       },
       ctaSubject: "VIVIFY — Hydrogen Power Application",
       ctaLabel: "Talk to Us About Hydrogen Power",
-      media: {
-        kind: "image",
-        src: "/images/HOG_Residential5.jpg",
-        alt: "Hydrogen power deployment in a connected infrastructure environment",
-      },
+      media: { kind: "video", src: `/video/Final_Website_Community_CC_Compressed.mp4` },
       mediaCaption: "Hydrogen power deployment in a connected infrastructure environment",
       mediaOnLeft: false,
       fitTitle: "Where hydrogen power fits",

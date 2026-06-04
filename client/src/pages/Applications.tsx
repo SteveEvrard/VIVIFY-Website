@@ -518,13 +518,13 @@ export default function Applications() {
                 className="group rounded-2xl border border-gray-200 bg-gray-50 p-8 transition-all hover:border-primary/40 hover:shadow-lg"
               >
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-                  Latest News
+                  Press Releases
                 </p>
                 <p className="mt-3 text-2xl font-bold tracking-tight text-foreground">
                   What's Moving
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  Press releases, partnerships, and deployments — read where VIVIFY is showing up in the real world.
+                  Announcements, partnerships, and deployments — read where VIVIFY is showing up in the real world.
                 </p>
                 <p className="mt-5 inline-flex items-center text-sm font-semibold text-primary group-hover:underline underline-offset-4">
                   Read the Latest <ArrowRight className="ml-2 h-4 w-4" />

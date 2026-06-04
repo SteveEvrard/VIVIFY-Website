@@ -17,6 +17,7 @@ import FAQ from "./pages/FAQ";
 import Framework from "./pages/Framework";
 import News from "./pages/News";
 import NewsArticle from "./pages/NewsArticle";
+import MediaCoverage from "./pages/MediaCoverage";
 import Redirect from "./pages/Redirect";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -63,6 +64,8 @@ function Router() {
       {SHOW_FRAMEWORK_PAGE && <Route path={"/framework"} component={Framework} />}
       <Route path={"/news"} component={News} />
       <Route path={"/news/:slug"} component={NewsArticle} />
+      <Route path={"/press-releases"} component={() => <Redirect to="/news" />} />
+      <Route path={"/media-coverage"} component={MediaCoverage} />
       <Route path={"/privacy"} component={Privacy} />
       <Route path={"/terms"} component={Terms} />
       <Route path={"/cookies"} component={Cookies} />

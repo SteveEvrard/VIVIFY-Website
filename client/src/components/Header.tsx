@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { buildContactMailto } from "@/lib/contactMailto";
-import { Menu, Phone, Mail } from "lucide-react";
+import { ChevronDown, Menu, Phone, Mail } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
 
@@ -10,10 +10,20 @@ const SHOW_FRAMEWORK_PAGE = false;
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [newsroomOpen, setNewsroomOpen] = useState(false);
+  const [newsroomMobileOpen, setNewsroomMobileOpen] = useState(false);
   const [location] = useLocation();
 
   const normalizePath = (p: string) => (p.length > 1 ? p.replace(/\/+$/, "") : p);
   const isActive = (href: string) => normalizePath(location) === normalizePath(href);
+  const isInNewsroom =
+    normalizePath(location).startsWith("/news") ||
+    normalizePath(location) === "/media-coverage";
+
+  // Auto-expand the mobile Newsroom group when the user is on a Newsroom page.
+  useEffect(() => {
+    if (isInNewsroom) setNewsroomMobileOpen(true);
+  }, [isInNewsroom]);
 
   const contactHref = buildContactMailto({
     subject: "VIVIFY — Clean Energy Intelligence Inquiry",
@@ -36,8 +46,9 @@ export default function Header() {
   });
 
   useEffect(() => {
-    // Close the mobile menu after navigation.
+    // Close menus after navigation.
     setMobileMenuOpen(false);
+    setNewsroomOpen(false);
   }, [location]);
 
   return (
@@ -106,13 +117,57 @@ export default function Header() {
                 Framework
               </Link>
             )}
-            <Link
-              href="/news"
-              aria-current={isActive("/news") ? "page" : undefined}
-              className={`transition-colors font-medium hover:text-primary ${isActive("/news") ? "text-primary" : ""}`}
+            <div
+              className="relative"
+              onMouseEnter={() => setNewsroomOpen(true)}
+              onMouseLeave={() => setNewsroomOpen(false)}
+              onBlur={(e) => {
+                if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+                  setNewsroomOpen(false);
+                }
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Escape") setNewsroomOpen(false);
+              }}
             >
-              News
-            </Link>
+              <button
+                type="button"
+                aria-haspopup="menu"
+                aria-expanded={newsroomOpen}
+                onClick={() => setNewsroomOpen((v) => !v)}
+                onFocus={() => setNewsroomOpen(true)}
+                className={`flex items-center gap-1 transition-colors font-medium hover:text-primary ${isInNewsroom ? "text-primary" : ""}`}
+              >
+                Newsroom
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform ${newsroomOpen ? "rotate-180" : ""}`}
+                  aria-hidden="true"
+                />
+              </button>
+              {newsroomOpen && (
+                <div
+                  role="menu"
+                  className="absolute left-0 top-full min-w-[12rem] rounded-md border border-gray-200 bg-white shadow-lg py-2 z-50"
+                >
+                  <Link
+                    href="/news"
+                    role="menuitem"
+                    aria-current={isActive("/news") ? "page" : undefined}
+                    className={`block px-4 py-2 text-sm font-medium hover:bg-gray-50 hover:text-primary transition-colors ${isActive("/news") ? "text-primary" : "text-muted-foreground"}`}
+                  >
+                    Press Releases
+                  </Link>
+                  <Link
+                    href="/media-coverage"
+                    role="menuitem"
+                    aria-current={isActive("/media-coverage") ? "page" : undefined}
+                    className={`block px-4 py-2 text-sm font-medium hover:bg-gray-50 hover:text-primary transition-colors ${isActive("/media-coverage") ? "text-primary" : "text-muted-foreground"}`}
+                  >
+                    Media Coverage
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link
               href="/faq"
               aria-current={isActive("/faq") ? "page" : undefined}
@@ -199,13 +254,44 @@ export default function Header() {
                 Framework
               </Link>
             )}
-            <Link
-              href="/news"
-              className="block hover:text-primary transition-colors font-medium"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              News
-            </Link>
+            <div>
+              <button
+                type="button"
+                aria-expanded={newsroomMobileOpen}
+                aria-controls="mobile-newsroom-submenu"
+                onClick={() => setNewsroomMobileOpen((v) => !v)}
+                className={`w-full flex items-center justify-between transition-colors font-medium hover:text-primary ${isInNewsroom ? "text-primary" : ""}`}
+              >
+                <span>Newsroom</span>
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform duration-200 ${newsroomMobileOpen ? "rotate-180" : ""}`}
+                  aria-hidden="true"
+                />
+              </button>
+              {newsroomMobileOpen && (
+                <div
+                  id="mobile-newsroom-submenu"
+                  className="mt-3 ml-2 pl-4 border-l-2 border-primary/40 space-y-3"
+                >
+                  <Link
+                    href="/news"
+                    aria-current={isActive("/news") ? "page" : undefined}
+                    className={`block hover:text-primary transition-colors font-medium ${isActive("/news") ? "text-primary" : ""}`}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Press Releases
+                  </Link>
+                  <Link
+                    href="/media-coverage"
+                    aria-current={isActive("/media-coverage") ? "page" : undefined}
+                    className={`block hover:text-primary transition-colors font-medium ${isActive("/media-coverage") ? "text-primary" : ""}`}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Media Coverage
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link
               href="/faq"
               className="block hover:text-primary transition-colors font-medium"

@@ -63,7 +63,7 @@ export default function NewsArticle(props: Props) {
             <Button variant="outline" className="border-primary text-primary hover:bg-primary/10" asChild>
               <Link href="/news">
                 <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to News
+                Back to Press Releases
               </Link>
             </Button>
           </div>

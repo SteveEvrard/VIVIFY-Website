@@ -58,7 +58,10 @@ export default function Footer() {
                 </Link>
               )}
               <Link href="/news" className="block text-muted-foreground hover:text-primary transition-colors">
-                News
+                Press Releases
+              </Link>
+              <Link href="/media-coverage" className="block text-muted-foreground hover:text-primary transition-colors">
+                Media Coverage
               </Link>
               <Link href="/about" className="block text-muted-foreground hover:text-primary transition-colors">
                 About

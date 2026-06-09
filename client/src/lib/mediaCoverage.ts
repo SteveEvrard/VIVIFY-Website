@@ -12,6 +12,16 @@ export type MediaCoverageItem = {
 
 export const MEDIA_COVERAGE: MediaCoverageItem[] = [
   {
+    slug: "forbes-hydrogen-developer-food-systems-off-grid",
+    title: "This Hydrogen Developer Is Trying To Take Food Systems Off Grid",
+    publication: "Forbes",
+    author: "Daphne Ewing-Chow",
+    date: "2026-06-06",
+    excerpt:
+      "Forbes profiles VIVIFY Technology and its push to apply hydrogen power to agriculture and food systems, exploring how the company's containerized energy platform could enable off-grid food production. The piece positions VIVIFY's approach as a path toward greater resilience for food infrastructure that has historically been tethered to fragile grid and fuel supply chains.",
+    url: "https://www.forbes.com/sites/daphneewingchow/2026/06/06/this-hydrogen-developer-is-trying-to-take-food-systems-off-grid/",
+  },
+  {
     slug: "intpolicydigest-elon-musk-of-hydrogen-energy",
     title: "Is Jason Herring the Elon Musk of Hydrogen Energy?",
     publication: "International Policy Digest",

@@ -175,7 +175,6 @@ export default function Leadership() {
                   img: "/images/team/melanie-tacher.jpg",
                 },
                 { name: "Guy Fronstin, ESQ", title: "Lead Director & Chief Legal Officer", img: "/images/team/guy-fronstin.jpg" },
-                { name: "Monica Victoria", title: "Director of Operations", img: "/images/team/monica-victoria.jpg" },
                 {
                   name: "Zac DelVecchio",
                   title: "Director of Innovations and Solutions",
@@ -187,8 +186,6 @@ export default function Leadership() {
                   img: "/images/team/steve-evrard.jpg",
                 },
                 { name: "Arthur L. Bernstein", title: "Director of Strategic Relations", img: "/images/team/arthur-bernstein.jpg" },
-
-
                 { name: "Ashley Stevenson", title: "Director of Marketing", img: "/images/team/ashley-stevenson.jpg" },
                 { name: "Anastasia Voll", title: "Director of Content Strategy", img: "/images/team/anastasia-voll.jpg" },
                 { name: "Chris Duncan", title: "Director of Creative Content", img: "/images/team/chris-duncan.jpg" },

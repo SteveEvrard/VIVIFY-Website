@@ -12,6 +12,16 @@ export type MediaCoverageItem = {
 
 export const MEDIA_COVERAGE: MediaCoverageItem[] = [
   {
+    slug: "datacenterfrontier-emerging-power-strategies-ai-data-center",
+    title: "Emerging Power Strategies Transforming AI Data Center Development",
+    publication: "Data Center Frontier",
+    author: "David Chernicoff",
+    date: "2026-06-16",
+    excerpt:
+      "Data Center Frontier examines how power availability is increasingly constraining AI data center development and driving new infrastructure approaches. The article highlights VIVIFY Technology's closed-loop, hydrogen-based power designed to reduce dependence on the traditional grid, positioning the containerized Flying Pig™ system as a modular alternative to conventional utility service and diesel backup generation.",
+    url: "https://www.datacenterfrontier.com/energy/article/55383447/emerging-power-strategies-transforming-ai-data-center-development",
+  },
+  {
     slug: "forbes-hydrogen-developer-food-systems-off-grid",
     title: "This Hydrogen Developer Is Trying To Take Food Systems Off Grid",
     publication: "Forbes",

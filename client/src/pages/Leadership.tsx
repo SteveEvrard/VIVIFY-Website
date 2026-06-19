@@ -195,9 +195,9 @@ export default function Leadership() {
                   title: "Director of AI Deployment",
                   img: "/images/team/prajwal-nagaraj.jpg",
                 },
-                { name: "Juan Carlos De La Coba", title: "AI Optimization Analyst", img: "/images/team/juan-carlos.jpg" },
                 { name: "Ross Cohen", title: "Co-Director of Talent Acquisition", img: "/images/team/brett-nortman.jpg" },
                 { name: "Brett Nortman", title: "Co-Director of Talent Acquisition", img: "/images/team/ross-cohen.jpg" },
+                { name: "Anthony Hernandez", title: "Director of Security", img: "/images/team/anthony-hernandez.jpg" },
                 { name: "Denise Starrantino", title: "Front Office Coordinator", img: "/images/team/denise-starrantino.jpg" }
               ].map((member, idx) => (
                 <div key={idx}

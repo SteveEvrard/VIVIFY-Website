@@ -190,11 +190,6 @@ export default function Leadership() {
                 { name: "Anastasia Voll", title: "Director of Content Strategy", img: "/images/team/anastasia-voll.jpg" },
                 { name: "Chris Duncan", title: "Director of Creative Content", img: "/images/team/chris-duncan.jpg" },
                 { name: "Josh Baker", title: "Web Developer", img: "/images/team/josh-baker.jpg" },
-                {
-                  name: "Prajwal Nagaraj",
-                  title: "Director of AI Deployment",
-                  img: "/images/team/prajwal-nagaraj.jpg",
-                },
                 { name: "Ross Cohen", title: "Co-Director of Talent Acquisition", img: "/images/team/brett-nortman.jpg" },
                 { name: "Brett Nortman", title: "Co-Director of Talent Acquisition", img: "/images/team/ross-cohen.jpg" },
                 { name: "Anthony Hernandez", title: "Director of Security", img: "/images/team/anthony-hernandez.jpg" },

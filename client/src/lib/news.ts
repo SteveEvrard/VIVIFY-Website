@@ -213,6 +213,39 @@ export const NEWS_POSTS: NewsPost[] = [
       "<a href='https://www.vivify-technology.com'>www.vivify-technology.com</a>",
       "<a target='_blank' href='https://www.instagram.com/vivify_tech/'>Instagram</a> | <a target='_blank' href='https://www.linkedin.com/company/vivifytechnology'>LinkedIn</a> | <a target='_blank' href='https://www.facebook.com/people/VIVIFY-Technology/61586714503615/'>Facebook</a> | <a target='_blank' href='https://x.com/VIVIFY_Tech'>X</a>"
     ].join("\n\n"),
+  },
+  {
+    slug: "jacksonville-leader-recognizes-vivify-technology-following-successful-product-testing-milestone",
+    title:
+      "Jacksonville Leader Recognizes VIVIFY Technology Following Successful Product Testing Milestone",
+    date: "2026-05-27",
+    category: "Press Release",
+    excerpt:
+      "City's Chief Administrative Officer extends formal congratulations and offers to facilitate introductions with JEA and Jacksonville's energy and infrastructure leadership",
+    content: [
+      "IMMEDIATE RELEASE",
+      "",
+      "<img src='/images/jacksonville-leader.jpg' />",
+      "",
+      "DELRAY BEACH, Fla., May 26, 2026 /PRNewswire/ -- VIVIFY Technology announced today it has received formal recognition from the Office of Jacksonville Mayor Donna Deegan following the company's recent product testing milestone. In a letter dated May 15, 2026, Chief Administrative Officer Mike Weinstein extended congratulations to <a href='https://vivify-technology.com/leadership'>VIVIFY CEO and Founder Jason Herring</a> on behalf of the Mayor, calling the successful test completion \"a significant achievement for a Florida-based company developing technology with the power to reshape how communities think about energy and infrastructure.\"",
+      "The letter follows a series of meetings between VIVIFY and Jacksonville stakeholders, and marks the beginning of a formal engagement between VIVIFY and one of Florida's largest and fastest-growing cities. Weinstein offered to facilitate introductions with representatives from the Jacksonville Electric Authority (JEA), as well as city leaders engaged in energy, infrastructure, economic development, and downtown growth.",
+      "\"The engineering is done. The deployment has begun. Jacksonville is exactly the kind of city we built this for.\"\n" +
+      "— JASON HERRING, CEO AND FOUNDER, VIVIFY TECHNOLOGY",
+      "Jacksonville is currently undergoing significant infrastructure expansion — major riverfront development, continued momentum around the sports and entertainment complex, and the University of Florida's graduate campus. Weinstein's letter cited these projects as part of a bold transformation demanding thoughtful planning, strong infrastructure, and reliable energy systems built to support long-term growth.",
+      "<a href='https://vivify-technology.com/#platform-hog'>VIVIFY's hydrogen energy platforms</a> — including the flagship Hydrogen Oxygen Generator™ (HOG), the five-stage Clean Air Technology™ (CAT) emissions control system, and the Flying Pig™ 1MW containerized power unit — are engineered for exactly the kind of high-demand, behind-the-meter infrastructure environments Jacksonville is building. The platforms operate independently of the legacy grid, require no transmission build-out, and deliver dependable, dedicated power on the schedule the work requires.",
+      "VIVIFY <a href='https://vivify-technology.com/applications'>works in coordination with host utilities</a>, not in competition with them. The company's behind-the-meter architecture is designed to add capacity where concentrated new-generation demand is greatest — reducing pressure on the rate environment and freeing utility resources for the infrastructure already carrying the city's load.",
+      "\"VIVIFY's work stands as a powerful bridge between today's urgent energy needs and tomorrow's cleaner, more resilient power systems.\"\n" +
+      "— MIKE WEINSTEIN, CHIEF ADMINISTRATIVE OFFICER, OFFICE OF MAYOR DONNA DEEGAN, CITY OF JACKSONVILLE",
+      "VIVIFY Technology is Florida-headquartered and operates with a Florida-first, America-first deployment posture — an explicit commitment to building, deploying, and scaling its platforms in the United States, beginning in the state where the company was founded.",
+      "About VIVIFY Technology",
+      "VIVIFY Technology, headquartered in South Florida, designs and develops hydrogen-based energy platforms engineered for demanding infrastructure environments. Learn more at <a href='https://www.vivify-technology.com'>vivify-technology.com</a>.",
+      "",
+      "Media Contact:",
+      "Daniel Boyle",
+      "VIVIFY Technology",
+      "<a href='mailto:Dboyle@vivify-technology.com'>Dboyle@vivify-technology.com</a>",
+      "<a href='https://www.vivify-technology.com'>www.vivify-technology.com</a>",
+    ].join("\n\n"),
   }
 ];
 

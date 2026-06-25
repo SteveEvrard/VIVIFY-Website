@@ -32,6 +32,15 @@ export const MEDIA_COVERAGE: MediaCoverageItem[] = [
     url: "https://www.forbes.com/sites/daphneewingchow/2026/06/06/this-hydrogen-developer-is-trying-to-take-food-systems-off-grid/",
   },
   {
+    slug: "advanceh2-jason-herring-visionary-hydrogen-power-ai-age",
+    title: "Jason Herring: The Visionary Behind Hydrogen Power Solutions for the AI Age",
+    publication: "AdvanceH2",
+    date: "2026-05-30",
+    excerpt:
+      "AdvanceH2 profiles VIVIFY Technology Founder Jason Herring and his push to establish hydrogen as a mainstream energy source for the AI-driven economy. The article spotlights VIVIFY's HOG™ (Hydrogen Oxygen Generator), a closed-loop system that produces hydrogen from water on-site, framing it as a response to the surging electricity demands of data centers projected to consume a growing share of U.S. power generation by 2030.",
+    url: "https://www.advanceh2.com/news/article/jason-herring-the-visionary-behind-hydrogen-power-solutions-for-the-ai-age",
+  },
+  {
     slug: "intpolicydigest-elon-musk-of-hydrogen-energy",
     title: "Is Jason Herring the Elon Musk of Hydrogen Energy?",
     publication: "International Policy Digest",

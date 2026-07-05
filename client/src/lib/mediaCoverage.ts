@@ -12,6 +12,17 @@ export type MediaCoverageItem = {
 
 export const MEDIA_COVERAGE: MediaCoverageItem[] = [
   {
+    slug: "calbizjournal-californias-next-competitive-advantage-energy-independence",
+    title:
+      "California's Next Competitive Advantage Will Be Built on Energy Independence, Not Just Innovation",
+    publication: "California Business Journal",
+    author: "Rick Weinberg",
+    date: "2026-07-05",
+    excerpt:
+      "California Business Journal argues that the state's economic future hinges on energy independence as much as technological innovation, as surging AI-driven electricity demand makes reliable power a strategic competitive asset. The article names VIVIFY Technology among the companies developing modular hydrogen-powered infrastructure designed to give industrial users flexible, scalable energy solutions and greater operational resilience through decentralized generation.",
+    url: "https://calbizjournal.com/californias-next-competitive-advantage-will-be-built-on-energy-independence-not-just-innovation/",
+  },
+  {
     slug: "hauteliving-return-of-industrial-grandeur-energy-independence-luxury-frontier",
     title:
       "VIVIFY Technology and the Return of Industrial Grandeur: Energy Independence as the New Luxury Frontier",

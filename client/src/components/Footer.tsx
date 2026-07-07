@@ -41,6 +41,19 @@ export default function Footer() {
             <p className="text-center text-muted-foreground max-w-xs">
               Dismantling the energy establishment. Making America independent. Changing the world. This is what we built VIVIFY to do.
             </p>
+            <a
+              href="https://apnews.com/press-release/ein-presswire-newsmatics/press-release-28943543ca21e214b16e229fc3536094"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="VIVIFY Technology — 2026 Pinnacle Award winner for Clean Energy Innovation"
+              className="inline-flex pt-2 transition-transform hover:scale-105"
+            >
+              <img
+                src="/images/awards/pinnacle-awards.png"
+                alt="Pinnacle Awards 2026 — Clean Energy Innovation Winner"
+                className="h-24 w-auto"
+              />
+            </a>
           </div>
 
           {/* Right Column - Links */}

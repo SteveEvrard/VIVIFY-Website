@@ -23,6 +23,15 @@ export const MEDIA_COVERAGE: MediaCoverageItem[] = [
     url: "https://calbizjournal.com/californias-next-competitive-advantage-will-be-built-on-energy-independence-not-just-innovation/",
   },
   {
+    slug: "apnews-pinnacle-awards-2026-technology-winners-clean-energy-innovation",
+    title: "Pinnacle Awards Announces 2026 Technology Winners",
+    publication: "AP News",
+    date: "2026-07-02",
+    excerpt:
+      "The Pinnacle Awards named VIVIFY Technology the Platinum winner for Clean Energy Innovation in its 2026 Technology Awards, announced in Irvine, California. The recognition, in the Sustainability & Green Tech category honoring technology that drives renewable energy efficiency and accessibility, spotlights VIVIFY's closed-loop, hydrogen-based power platform among the year's most groundbreaking innovations shaping the future of technology.",
+    url: "https://apnews.com/press-release/ein-presswire-newsmatics/press-release-28943543ca21e214b16e229fc3536094",
+  },
+  {
     slug: "hauteliving-return-of-industrial-grandeur-energy-independence-luxury-frontier",
     title:
       "VIVIFY Technology and the Return of Industrial Grandeur: Energy Independence as the New Luxury Frontier",

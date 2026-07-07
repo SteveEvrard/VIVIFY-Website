@@ -176,6 +176,11 @@ export default function Leadership() {
                 },
                 { name: "Guy Fronstin, ESQ", title: "Lead Director & Chief Legal Officer", img: "/images/team/guy-fronstin.jpg" },
                 {
+                  name: "Wes Persall",
+                  title: "Chief Engineer",
+                  img: "/images/team/wes-persall.jpg",
+                },
+                {
                   name: "Zac DelVecchio",
                   title: "Director of Innovations and Solutions",
                   img: "/images/team/zac-delvecchio.jpg",

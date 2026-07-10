@@ -12,6 +12,16 @@ export type MediaCoverageItem = {
 
 export const MEDIA_COVERAGE: MediaCoverageItem[] = [
   {
+    slug: "wflx-water-powered-generators-restore-power-1000-homes-15-minutes",
+    title: "Vivify's water-powered generators could restore power to 1,000 homes in 15 minutes",
+    publication: "WFLX Fox 29",
+    author: "Michael Hoffman",
+    date: "2026-07-08",
+    excerpt:
+      "West Palm Beach's WFLX Fox 29 reports on VIVIFY Technology's portable water-powered generators, which use electrolysis to produce power and could restore electricity to 1,000 homes within 15 minutes of deployment after hurricanes and other natural disasters. The segment highlights the Palm Beach County company's containerized Flying Pig™ units, with mass production slated to begin in January.",
+    url: "https://www.wflx.com/2026/07/09/vivifys-water-powered-generators-could-restore-power-1000-homes-15-minutes/",
+  },
+  {
     slug: "calbizjournal-californias-next-competitive-advantage-energy-independence",
     title:
       "California's Next Competitive Advantage Will Be Built on Energy Independence, Not Just Innovation",

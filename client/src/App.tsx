@@ -18,6 +18,8 @@ import Framework from "./pages/Framework";
 import News from "./pages/News";
 import NewsArticle from "./pages/NewsArticle";
 import MediaCoverage from "./pages/MediaCoverage";
+import Blogs from "./pages/Blogs";
+import BlogArticle from "./pages/BlogArticle";
 import Redirect from "./pages/Redirect";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -66,6 +68,8 @@ function Router() {
       <Route path={"/news/:slug"} component={NewsArticle} />
       <Route path={"/press-releases"} component={() => <Redirect to="/news" />} />
       <Route path={"/media-coverage"} component={MediaCoverage} />
+      <Route path={"/blogs"} component={Blogs} />
+      <Route path={"/blogs/:slug"} component={BlogArticle} />
       <Route path={"/privacy"} component={Privacy} />
       <Route path={"/terms"} component={Terms} />
       <Route path={"/cookies"} component={Cookies} />

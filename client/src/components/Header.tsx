@@ -18,6 +18,7 @@ export default function Header() {
   const isActive = (href: string) => normalizePath(location) === normalizePath(href);
   const isInNewsroom =
     normalizePath(location).startsWith("/news") ||
+    normalizePath(location).startsWith("/blogs") ||
     normalizePath(location) === "/media-coverage";
 
   // Auto-expand the mobile Newsroom group when the user is on a Newsroom page.
@@ -165,6 +166,14 @@ export default function Header() {
                   >
                     Media Coverage
                   </Link>
+                  <Link
+                    href="/blogs"
+                    role="menuitem"
+                    aria-current={isActive("/blogs") ? "page" : undefined}
+                    className={`block px-4 py-2 text-sm font-medium hover:bg-gray-50 hover:text-primary transition-colors ${isActive("/blogs") ? "text-primary" : "text-muted-foreground"}`}
+                  >
+                    Blogs
+                  </Link>
                 </div>
               )}
             </div>
@@ -288,6 +297,14 @@ export default function Header() {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Media Coverage
+                  </Link>
+                  <Link
+                    href="/blogs"
+                    aria-current={isActive("/blogs") ? "page" : undefined}
+                    className={`block hover:text-primary transition-colors font-medium ${isActive("/blogs") ? "text-primary" : ""}`}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Blogs
                   </Link>
                 </div>
               )}

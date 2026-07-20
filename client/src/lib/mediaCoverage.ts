@@ -12,6 +12,16 @@ export type MediaCoverageItem = {
 
 export const MEDIA_COVERAGE: MediaCoverageItem[] = [
   {
+    slug: "washingtonexaminer-america-delivery-problem-not-power-shortage",
+    title: "America doesn't have a power shortage. It has a delivery problem",
+    publication: "Washington Examiner",
+    author: "Duggan Flanakin",
+    date: "2026-07-14",
+    excerpt:
+      "In a Washington Examiner op-ed, Duggan Flanakin argues that America's energy challenge is not generating enough power but delivering it reliably, as interconnection delays and transmission bottlenecks stall industrial development. The piece highlights VIVIFY Technology's Flying Pig™ platform — one megawatt of dispatchable power inside a transportable container — as a distributed energy solution built for rapid deployment.",
+    url: "https://www.washingtonexaminer.com/op-eds/4643938/america-has-delivery-problem-not-power-shortage/",
+  },
+  {
     slug: "wflx-water-powered-generators-restore-power-1000-homes-15-minutes",
     title: "Vivify's water-powered generators could restore power to 1,000 homes in 15 minutes",
     publication: "WFLX Fox 29",

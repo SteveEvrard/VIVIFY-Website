@@ -76,6 +76,9 @@ export default function Footer() {
               <Link href="/media-coverage" className="block text-muted-foreground hover:text-primary transition-colors">
                 Media Coverage
               </Link>
+              <Link href="/blogs" className="block text-muted-foreground hover:text-primary transition-colors">
+                Blogs
+              </Link>
               <Link href="/about" className="block text-muted-foreground hover:text-primary transition-colors">
                 About
               </Link>

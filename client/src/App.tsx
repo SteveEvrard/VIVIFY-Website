@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Leadership from "./pages/Leadership";
+import BuddyPaul from "./pages/BuddyPaul";
 import Cookies from "./pages/Cookies";
 import Applications from "./pages/Applications";
 import Privacy from "./pages/Privacy";
@@ -58,6 +59,7 @@ function Router() {
       <Route path={"/capabilities"} component={() => <Redirect to="/technology" />} />
       <Route path={"/products"} component={() => <Redirect to="/technology" />} />
       <Route path={"/about"} component={About} />
+      <Route path={"/leadership/buddy-paul"} component={BuddyPaul} />
       <Route path={"/leadership"} component={Leadership} />
       <Route path={"/applications"} component={Applications} />
       <Route path={"/impact"} component={() => <Redirect to="/applications" />} />

@@ -112,6 +112,16 @@ export default function Leadership() {
                     </li>
                   </ul>
                 </div>
+
+                <Button className="mt-6" asChild>
+                  <a
+                    href="https://iamjasonherring.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Learn More
+                  </a>
+                </Button>
               </div>
             </div>
 
@@ -146,6 +156,10 @@ export default function Leadership() {
                       </li>
                     </ul>
                   </div>
+
+                  <Button className="mt-6" asChild>
+                    <Link href="/leadership/buddy-paul">Learn More</Link>
+                  </Button>
                 </div>
 
                 <div className="order-1 md:order-2">

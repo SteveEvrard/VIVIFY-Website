@@ -10,6 +10,38 @@ export type NewsPost = {
 
 export const NEWS_POSTS: NewsPost[] = [
   {
+    slug: "vivify-technology-hosts-governor-candidate-byron-donalds-at-south-florida-headquarters",
+    title:
+      "VIVIFY Technology Hosts Governor Candidate Byron Donalds at South Florida Headquarters",
+    date: "2026-07-21",
+    category: "Press Release",
+    excerpt:
+      "Delray Beach company demonstrates hydrogen energy platforms built to address Florida's hurricane recovery, infrastructure growth, and data center demand.",
+    content: [
+      "IMMEDIATE RELEASE",
+      "",
+      "<img src='/images/byron-donalds-vivify-headquarters.jpg' alt='Candidate for Florida Governor Byron Donalds with VIVIFY Technology Founder and CEO Jason Herring' />",
+      "",
+      "DELRAY BEACH, Fla., July 21, 2026 /PRNewswire/ — <a href='https://vivify-technology.com/'>VIVIFY Technology</a> today welcomed Florida Governor Candidate Byron Donalds to the company's South Florida headquarters for a firsthand demonstration of its deployed hydrogen energy platforms: the <a href='https://vivify-technology.com/technology#hog'>HOG™ (Hydrogen Oxygen Generator)</a>, the <a href='https://vivify-technology.com/technology#cat'>CAT™ (Clean Air Technology)</a> emissions control system, and the <a href='https://vivify-technology.com/technology#flying-pig'>Flying Pig™</a>, VIVIFY's 1MW containerized hydrogen power unit.",
+      "The visit focused on the direct applications of VIVIFY's technology to Florida's most pressing infrastructure challenges: disaster recovery and hurricane resilience, power capacity for the state's rapidly growing communities, and dedicated behind-the-meter energy for the data center build-out accelerating across the state.",
+      "The Flying Pig™ — a self-contained, 1MW hydrogen power system engineered for rapid deployment — is designed to be transported and operational within hours of arriving on site. In a post-storm environment, that means restoring critical power to Florida communities without waiting on grid repair timelines that can stretch for days or weeks.",
+      "“We didn't build VIVIFY in Florida by accident,” said <a href='https://vivify-technology.com/leadership'>Jason Herring, Founder and CEO of VIVIFY Technology</a>. “Hurricane season, the data center boom, communities being built faster than the grid can reach them: these are Florida realities. We built the answer here because the problem is here.”",
+      "Florida's population growth has created compounding pressure on transmission infrastructure. New master-planned communities, industrial corridors, and data center campuses across the state are running into the same constraint: available grid capacity cannot keep pace with announced development. VIVIFY's on-site hydrogen energy systems are engineered to close that gap, delivering dedicated power on the developer's schedule rather than the utility's.",
+      "“Every new community, every new data center, every growth corridor in this state runs into the same wall,” Herring said. “The grid can't keep up. We built the technology that lets Florida build without waiting.”",
+      "Candidate Donalds toured the facility and engaged directly with VIVIFY's engineering team and deployed systems.",
+      "“Hurricane recovery, new community development, the data center wave: these are the issues that define Florida's future,” Candidate Donalds said. “The technology I saw today addresses every one of them.”",
+      "",
+      "About VIVIFY Technology",
+      "VIVIFY Technology is a hydrogen energy company headquartered in South Florida. The company designs and develops hydrogen-based energy platforms — including its flagship Hydrogen Oxygen Generator™ (HOG™), the Clean Air Technology™ (CAT™) emissions control system, and the Flying Pig™ containerized power unit — engineered to deliver dependable, dedicated power for the most demanding infrastructure environments in operation today. Learn more at <a href='https://vivify-technology.com/'>vivify-technology.com</a>.",
+      "",
+      "Forward-Looking Statements: This release contains forward-looking statements regarding VIVIFY Technology's products, platforms, and intended performance. Forward-looking statements are subject to inherent uncertainty and reflect the company's current expectations. Actual results may differ materially. The company undertakes no obligation to update any forward-looking statement except as required by law.",
+      "",
+      "Media Contact",
+      "Ashley Stevenson, Chief Marketing Officer",
+      "<a href='mailto:ashley@vivify-technology.com'>ashley@vivify-technology.com</a>",
+    ].join("\n\n"),
+  },
+  {
     slug: "mobia-selects-vivify-saudi-mobility-projects",
     title:
       "MOBIA Selects VIVIFY as Sole Provider of Power, Energy and Advanced Technology for Saudi Arabia Mobility Projects and Confidential U.S. Initiative",

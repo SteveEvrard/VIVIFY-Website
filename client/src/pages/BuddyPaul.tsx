@@ -588,7 +588,7 @@ export default function BuddyPaul() {
           </p>
           <h2
             id="buddy-closing-title"
-            className="mt-5 max-w-5xl text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl"
+            className="mt-5 max-w-5xl text-5xl font-extrabold tracking-tight text-black sm:text-6xl md:text-7xl"
           >
             Space Shuttle.
             <br />

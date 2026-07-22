@@ -13,7 +13,7 @@ export const NEWS_POSTS: NewsPost[] = [
     slug: "vivify-technology-hosts-governor-candidate-byron-donalds-at-south-florida-headquarters",
     title:
       "VIVIFY Technology Hosts Governor Candidate Byron Donalds at South Florida Headquarters",
-    date: "2026-07-21",
+    date: "2026-07-22",
     category: "Press Release",
     excerpt:
       "Delray Beach company demonstrates hydrogen energy platforms built to address Florida's hurricane recovery, infrastructure growth, and data center demand.",

@@ -6,11 +6,12 @@ export type BlogPost = {
   excerpt: string;
   featuredImage: string;
   featuredImageAlt: string;
-  inlineImage: { after: string; src: string; alt: string };
+  inlineImages: Array<{ after: string; src: string; alt: string }>;
   content: string[];
 };
 
 const IMAGE_ROOT = "/images/blog/engineering-without-an-agenda";
+const HOG_IMAGE_ROOT = "/images/blog/behind-the-meter-autonomy-hog-energy-system";
 
 export const BLOG_POSTS: BlogPost[] = [
   {
@@ -21,11 +22,13 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: "Bipartisan energy security starts with infrastructure, not ideology. A practical case for modernizing the systems people already depend on.",
     featuredImage: IMAGE_ROOT + "/featured.png",
     featuredImageAlt: "VIVIFY infrastructure technology representing reliable, modern energy systems",
-    inlineImage: {
-      after: "It means useful infrastructure should be evaluated by what it can become, not only by what it was.",
-      src: IMAGE_ROOT + "/clean-air-technology.png",
-      alt: "VIVIFY Clean Air Technology modular energy system for emissions control and infrastructure modernization",
-    },
+    inlineImages: [
+      {
+        after: "It means useful infrastructure should be evaluated by what it can become, not only by what it was.",
+        src: IMAGE_ROOT + "/clean-air-technology.png",
+        alt: "VIVIFY Clean Air Technology modular energy system for emissions control and infrastructure modernization",
+      },
+    ],
     content: [
       "Energy has become one of the most politically loaded conversations in America. On one side is “energy dominance,” or the argument that fossil fuels built this country, and the people attacking them are attacking America. On the other side is “clean energy,” or the argument that fossil fuels are destroying the planet, and anyone defending them is on the wrong side of history. Both sides are certain. Neither one is building anything.",
       "The grid doesn't care which phrase wins. Power either reaches homes, hospitals, data centers, and manufacturing plants — or it doesn't. Bipartisan energy security has to start with infrastructure, not ideology. That is the position VIVIFY builds from.",
@@ -63,6 +66,64 @@ export const BLOG_POSTS: BlogPost[] = [
       "That question does not belong to one party. It belongs to anyone responsible for keeping power reliable, emissions lower, communities stable, and infrastructure ready for what comes next.",
       "## Learn More About VIVIFY",
       "To learn more about VIVIFY's hydrogen energy and clean air technologies, contact Ashley Stevenson, Director of Marketing, at ashley@vivify-technology.com.",
+    ],
+  },
+  {
+    slug: "behind-the-meter-autonomy-hog-energy-system",
+    title: "Behind-the-Meter Autonomy: The HOG™ Energy System",
+    date: "2026-07-22",
+    category: "Energy",
+    excerpt: "How the HOG™ brings on-demand hydrogen generation, 99% emission-free output, and site-level energy control to high-demand infrastructure.",
+    featuredImage: HOG_IMAGE_ROOT + "/featured.png",
+    featuredImageAlt: "VIVIFY HOG™ hydrogen oxygen generator system installed outside a hospital facility at night, delivering behind-the-meter clean hydrogen energy for critical infrastructure and mission-critical power applications",
+    inlineImages: [
+      {
+        after: "HOG™ is built for that environment, not as a backup but as a primary energy architecture.",
+        src: HOG_IMAGE_ROOT + "/hog-system.png",
+        alt: "VIVIFY HOG™ hydrogen oxygen generator with integrated micro turbine system, a self-supporting, 99% emission-free behind-the-meter hydrogen energy platform engineered for industrial-scale power generation",
+      },
+      {
+        after: "It is energy infrastructure, designed to work when demand is high, operations are complex, and downtime is expensive.",
+        src: HOG_IMAGE_ROOT + "/control-room.png",
+        alt: "VIVIFY HOG™ hydrogen energy system monitored from an industrial control room, showing AI-driven real-time operations management for behind-the-meter hydrogen power generation at scale",
+      },
+    ],
+    content: [
+      "Energy planning used to be mostly about supply. A facility needed power, the grid delivered it, and the meter recorded the exchange.",
+      "That model is under pressure now.",
+      "U.S. electricity generation hit a new record in 2025, at 4.43 thousand terawatt-hours (TWh), up 2.8% from 2024, which had been the highest annual total on record dating back to 1949, according to the U.S. Energy Information Administration. The EIA projects industrial sector demand will grow another 3% in 2026, driven by new semiconductor and battery manufacturing coming online. Data centers are pushing commercial demand higher at the same rate.",
+      "Power demand is rising across industrial sites, data centers, mixed-use developments, and district-scale infrastructure. At the same time, operators are being asked to lower emissions, improve resilience, and reduce exposure to grid instability, leading many to ask, “Where will the power come from?”",
+      "The better question is, “How much energy control can a site build for itself?”",
+      "That is where behind-the-meter autonomy begins. It is also where the HOG™ enters the conversation.",
+      "## What Is the HOG™?",
+      "HOG™ stands for Hydrogen Oxygen Generator™. It is VIVIFY’s flagship energy platform: a self-supporting hydrogen energy system powered by water, producing 99% emission-free output, and built for behind-the-meter deployment.",
+      "Behind-the-meter means the system operates on the customer’s side of the utility meter. Instead of depending entirely on grid-supplied electricity, a site generates and manages power closer to where it is used. For high-demand operations, that distinction matters. Behind-the-meter power supports resilience during grid strain, reduces exposure to peak demand volatility, and gives operators direct visibility into their own energy profile.",
+      "HOG™ is built for that environment, not as a backup but as a primary energy architecture.",
+      "## A Self-Supporting Platform, Not a Conventional Generator",
+      "A conventional generator depends on a fuel supply chain. Fuel is extracted, processed, transported, stored, and consumed on-site. Each step adds another point where cost, timing, or reliability can become a problem.",
+      "HOG™ uses a different architecture.",
+      "The system integrates an H₂O input generator — VIVIFY’s Pulsar™ technology — for on-demand hydrogen creation and system revitalization, multi-stage turbines, multi-functioning transformers, and combustion chambers for power and heat distribution. Each component supports the larger energy cycle. Water is the primary fuel input. Pulsar™ enables on-demand hydrogen and oxygen separation. Turbines and transformers convert and manage usable energy. Combustion chambers handle power and heat distribution.",
+      "The result is a closed-loop energy platform that does not depend on an external fuel supply chain to operate. That changes the planning model. A site stops being a passive consumer of grid power and becomes an active participant in its own energy output.",
+      "## Why H₂O-Based Hydrogen Changes the Planning Model",
+      "Most hydrogen strategies still depend on off-site production: hydrogen produced elsewhere, compressed, stored, transported, and delivered before it can be used. For infrastructure operators, that makes hydrogen feel like a future category rather than a present tool.",
+      "HOG™ moves hydrogen to the point of use.",
+      "The integrated architecture enables on-demand hydrogen generation from a water-based input, eliminating the logistics chain that makes conventional hydrogen strategies difficult to operationalize. When hydrogen is created on-site as part of a self-supporting energy platform, it stops being a fuel category and starts being an energy asset.",
+      "That matters more as grid timelines continue to stretch. AI infrastructure projects entering service in 2025 took an average of more than seven years to reach operational status, according to PJM Interconnection data. The primary bottleneck has shifted downstream from the interconnection queue itself to transmission buildouts, substation capacity, and supply chain constraints.",
+      "For sites that cannot wait seven years for grid infrastructure to catch up, on-site hydrogen generation is not a theoretical alternative. It’s a practical one. HOG™ can serve a direct role in facility-level power planning, particularly for operators that need cleaner output on a timeline the grid cannot meet.",
+      "## What 99% Emission-Free Means for Operators",
+      "For most facilities, energy decisions are shaped by reliability, cost control, and emissions reduction simultaneously. A system that helps one area while creating problems in another is a trade-off, not a solution. A system that lowers emissions but weakens reliability will not survive in a mission-critical environment. A system that adds resilience but creates new compliance exposure falls short before it starts.",
+      "HOG™ is engineered to avoid that trade-off.",
+      "The system delivers 99% emission-free, scalable, on-demand hydrogen energy. For an operator, that means HOG™ is not a sustainability feature bolted onto an existing energy plan. It is energy infrastructure, designed to work when demand is high, operations are complex, and downtime is expensive.",
+      "## Where HOG™ Fits in a Behind-the-Meter Strategy",
+      "Behind-the-meter systems are typically discussed in terms of solar, batteries, backup generators, and energy management software. HOG™ adds a different category: on-site hydrogen energy creation at industrial scale.",
+      "The market is already moving in this direction. The global behind-the-meter energy storage market was valued at $6.12 billion in 2024 and is projected to reach $28.59 billion by 2033, growing at a compound annual rate of 18.9%, according to Grand View Research. North America holds the largest share of that market at 38%. The growth is being driven by rising demand for decentralized power and grid resilience — the same pressures HOG™ is built to answer.",
+      "The applications vary by site. An industrial campus may need additional capacity without placing further strain on local grid infrastructure. A data center may need cleaner power capable of supporting constant, high-density demand. A mixed-use development may need a more resilient energy layer for daily operations and long-term expansion. In each case, HOG™ functions as a site-level energy asset, scalable to the load, deployable behind the meter, and capable of operating independently of the grid when conditions require it.",
+      "## Energy Autonomy Without Energy Isolation",
+      "Behind-the-meter autonomy is not about cutting a site off from the grid. For most operators, the grid remains important. The goal is a better balance: more control over how energy is produced, how it supports demand, and how it positions a site for growth when utility infrastructure cannot move fast enough.",
+      "HOG™ gives operators a concrete way to use hydrogen as an on-site energy source rather than treating it as a distant fuel category. It brings on-demand hydrogen production, integrated energy conversion, and power and heat distribution into a single platform architecture.",
+      "The grid still matters. But the sites that will operate most effectively in the next decade are the ones taking a more active role in their own power strategy. HOG™ is how that starts.",
+      "## Learn More About VIVIFY",
+      "To learn more about the HOG™ Energy System or discuss a deployment use case, contact Ashley Stevenson, Director of Marketing, at ashley@vivify-technology.com.",
     ],
   },
 ];

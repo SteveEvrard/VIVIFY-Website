@@ -33,8 +33,8 @@ export default function BlogArticle({ params }: Props) {
               if (text.startsWith("## ")) return <h2 key={index} className="pt-8 text-3xl font-bold leading-tight text-foreground">{text.slice(3)}</h2>;
               const isContact = text.includes("ashley@vivify-technology.com");
               const paragraph = isContact ? <p className="rounded-2xl border border-primary/20 bg-primary/5 p-6 text-base leading-relaxed text-muted-foreground md:text-lg">{text.replace("ashley@vivify-technology.com.", "")}<a className="font-semibold text-primary underline-offset-4 hover:underline" href="mailto:ashley@vivify-technology.com">ashley@vivify-technology.com</a>.</p> : <p className="text-base leading-8 text-muted-foreground md:text-lg md:leading-9">{text}</p>;
-              const showImage = text.endsWith(post.inlineImage.after);
-              return <Fragment key={index}>{paragraph}{showImage && <figure className="py-6"><div className="overflow-hidden rounded-2xl border border-gray-200 bg-gray-100"><img src={post.inlineImage.src} alt={post.inlineImage.alt} className="h-auto w-full" loading="lazy" /></div></figure>}</Fragment>;
+              const inlineImages = post.inlineImages.filter((image) => text.endsWith(image.after));
+              return <Fragment key={index}>{paragraph}{inlineImages.map((image) => <figure key={image.src} className="py-6"><div className="overflow-hidden rounded-2xl border border-gray-200 bg-gray-100"><img src={image.src} alt={image.alt} className="h-auto w-full" loading="lazy" /></div></figure>)}</Fragment>;
             })}
           </div>
         </div>

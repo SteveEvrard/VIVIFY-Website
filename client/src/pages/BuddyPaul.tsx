@@ -353,6 +353,14 @@ export default function BuddyPaul() {
             </footer>
           </blockquote>
 
+          <figure className="mt-14 overflow-hidden rounded-2xl border border-white/15 shadow-2xl">
+            <img
+              src="/images/buddy-paul/DSC07446.jpg"
+              alt="Buddy R. Paul working with VIVIFY technology"
+              className="aspect-[4/3] w-full object-cover"
+            />
+          </figure>
+
           <div className="mt-20">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary">
               A Career of Invention
@@ -576,7 +584,7 @@ export default function BuddyPaul() {
       >
         <div className="container">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-black/60">
-            VIVIFY Engineering Technology - 70 Lite
+            Vivify: Bringing Technology to Life
           </p>
           <h2
             id="buddy-closing-title"

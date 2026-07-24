@@ -1,6 +1,6 @@
 import Seo from "@/components/Seo";
 import { Card, CardContent } from "@/components/ui/card";
-import { BLOG_POSTS } from "@/lib/blogs";
+import { getPublishedBlogPosts } from "@/lib/blogs";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 
@@ -10,7 +10,7 @@ function formatDate(iso: string) {
 }
 
 export default function Blogs() {
-  const posts = [...BLOG_POSTS].sort((a, b) => b.date.localeCompare(a.date));
+  const posts = getPublishedBlogPosts().sort((a, b) => b.publishAt.localeCompare(a.publishAt));
   return (
     <div className="min-h-screen flex flex-col pt-16 md:pt-20">
       <Seo title="Blogs" description="Ideas and perspectives from VIVIFY on energy, infrastructure, and technology." path="/blogs" />

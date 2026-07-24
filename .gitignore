@@ -112,3 +112,6 @@ GEMINI.md
 AGENTS.md
 .codex*
 
+# Generated scheduled-blog outputs (source lives in content/blogs)
+client/src/generated/
+client/public/images/blog/scheduled/

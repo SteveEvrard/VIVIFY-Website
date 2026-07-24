@@ -1,0 +1,44 @@
+name: Publish scheduled blogs
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: scheduled-blog-publisher
+  cancel-in-progress: false
+
+jobs:
+  publish-if-due:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the publication schedule
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install project dependencies
+        run: npm ci
+
+      - name: Check for due posts
+        id: due
+        run: npx tsx scripts/check-scheduled-blogs.ts
+
+      - name: Trigger the Amplify deployment
+        if: steps.due.outputs.should_publish == 'true'
+        env:
+          AMPLIFY_BUILD_HOOK_URL: ${{ secrets.AMPLIFY_BUILD_HOOK_URL }}
+        run: |
+          if [ -z "$AMPLIFY_BUILD_HOOK_URL" ]; then
+            echo "The AMPLIFY_BUILD_HOOK_URL repository secret is not configured."
+            exit 1
+          fi
+          curl --fail --silent --show-error --request POST "$AMPLIFY_BUILD_HOOK_URL"

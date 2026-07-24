@@ -1,0 +1,105 @@
+{
+  "slug": "hurricane-preparedness-for-florida-businesses",
+  "title": "Hurricane Preparedness for Florida Businesses: Why Backup Power Plans Fail",
+  "publishAt": "2026-07-24T00:00:00-05:00",
+  "category": "Infrastructure",
+  "targetKeyword": "hurricane preparedness checklist",
+  "excerpt": "Most Florida businesses have a backup power plan. Fewer have one that survives an actual hurricane. Here's where those plans break — and what preparedness actually requires.",
+  "featuredImage": "featured.png",
+  "featuredImageAlt": "VIVIFY microturbine unit installed beside a commercial office building, with palm trees and a parking lot in the background.",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Most Florida businesses have a backup power plan. Few have one that survives contact with an actual hurricane."
+    },
+    {
+      "type": "paragraph",
+      "text": "A generator in the parking lot is not a preparedness plan. It is one component of one, and it is usually the component that gets the most attention and the least scrutiny. The plan looks solid on paper — until the storm arrives and the assumptions underlying it no longer hold."
+    },
+    {
+      "type": "paragraph",
+      "text": "Here is where those plans actually break, and what preparedness looks like when it is built to survive the thing it is supposed to survive."
+    },
+    {
+      "type": "heading",
+      "text": "The Fuel Supply Chain Is Also a Storm Victim"
+    },
+    {
+      "type": "paragraph",
+      "text": "A diesel or propane generator is not an independent power source. It is a power source that depends on a second system: the fuel supply chain. That chain runs on roads, fuel terminals, delivery trucks, and gas stations — the exact infrastructure a hurricane disrupts first."
+    },
+    {
+      "type": "paragraph",
+      "text": "Roads get blocked. Terminals lose power. Stations run dry within hours as entire counties try to fuel up at once. A generator with a full tank on Tuesday can be a generator with an empty tank by Thursday, at the exact moment the business needs it most. Preparedness plans that end at \"we have a generator\" have not accounted for what happens when the fuel run does not come."
+    },
+    {
+      "type": "heading",
+      "text": "Generators Run Until They Don't"
+    },
+    {
+      "type": "paragraph",
+      "text": "Runtime is a spec, not a guarantee. Most commercial backup generators are sized and maintained for short, occasional outages: a few hours here and there, not the extended multi-day outages that follow a major storm. Continuous operation under load accelerates wear on components that were never inspected under storm conditions, because storm conditions do not happen often enough to test them."
+    },
+    {
+      "type": "paragraph",
+      "text": "The businesses that get caught are rarely the ones without a generator. They are the ones whose generator was rated for eight hours but needed for eighty."
+    },
+    {
+      "type": "heading",
+      "text": "\"Backup\" Is Not the Same as \"Independent\""
+    },
+    {
+      "type": "paragraph",
+      "text": "Backup power is designed to answer a narrow question: What happens if the grid goes down for a little while? It is not designed to answer the question Florida businesses actually face every hurricane season: What happens if the grid goes down, the fuel supply chain goes down, and both stay down for a week?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Those are different engineering problems. The first is solved with a generator and a service contract. The second requires a power source that does not depend on the same systems the storm just took out. It needs a system that runs on an input that is not competing with every other business in the county for a tanker truck."
+    },
+    {
+      "type": "heading",
+      "text": "What Preparedness Actually Requires"
+    },
+    {
+      "type": "paragraph",
+      "text": "A hurricane preparedness plan that holds up needs a power source with three characteristics a diesel generator cannot offer:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "A fuel input that does not run through the same supply chain the storm disrupts.",
+        "Deployment measured in hours, not the days it takes for a fuel delivery to reach a blocked-off region.",
+        "Independence from the grid it is supposed to be backing up, not a smaller, temporary version of it."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "This is the gap VIVIFY built the Flying Pig™ to close. It is a 1MW containerized hydrogen power system that runs on a water-based input rather than a fuel truck, arrives ready to generate power the moment it lands on site, and operates independently of both the grid and the diesel supply chain that a storm compromises first. Field assembly is measured in hours. There is no fuel run to wait for, because there is no fuel run required.",
+      "links": [
+        {
+          "text": "Flying Pig™",
+          "href": "/technology"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Preparedness is not a generator in the parking lot. It is a power source built for the conditions the parking lot generator was never designed to survive."
+    },
+    {
+      "type": "heading",
+      "text": "Get In the Room"
+    },
+    {
+      "type": "paragraph",
+      "variant": "contact",
+      "text": "VIVIFY works with businesses, property managers, and critical facilities across Florida to build power plans that hold up when the grid and the fuel supply chain both go down at once. Discuss a deployment use case with the VIVIFY team before this season's next storm.",
+      "links": [
+        {
+          "text": "Discuss a deployment use case",
+          "href": "mailto:info@vivify-technology.com"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "slug": "why-diesel-generators-fail-communities-after-a-hurricane",
+  "title": "Why Diesel Generators Fail Communities After a Hurricane",
+  "publishAt": "2026-07-29T00:00:00-05:00",
+  "category": "Infrastructure",
+  "targetKeyword": "diesel generator alternative",
+  "excerpt": "Diesel generators are the default answer to storm power outages. Here's why that default fails communities after a hurricane — and what a real alternative requires.",
+  "featuredImage": "featured.png",
+  "featuredImageAlt": "VIVIFY HOG hydrogen power system installed beside a residential pond, with homes and palm trees in the background.",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Diesel generators are the default answer to hurricane power outages. They are also, reliably, the part of the disaster response that fails first, not because the machines are poorly built but because the entire model depends on a supply chain the hurricane just broke."
+    },
+    {
+      "type": "paragraph",
+      "text": "Here is where diesel actually falls short after a storm, and what a community-scale power system needs to look like instead."
+    },
+    {
+      "type": "heading",
+      "text": "The Fuel Has to Get There First"
+    },
+    {
+      "type": "paragraph",
+      "text": "A diesel generator is only as useful as the next delivery of diesel. After a major hurricane, that delivery is competing with blocked roads, downed power lines, flooded routes, and every other business, hospital, and household in the region trying to source fuel at the same time."
+    },
+    {
+      "type": "paragraph",
+      "text": "Fuel terminals lose power. Distribution networks stall. Price spikes and rationing follow within days. None of that is a failure of the generator itself; it is a failure of the assumption that fuel will keep arriving on schedule during the exact event that disrupts schedules."
+    },
+    {
+      "type": "heading",
+      "text": "Diesel Doesn't Scale to a Community, It Scales to a Building"
+    },
+    {
+      "type": "paragraph",
+      "text": "A diesel generator can keep a single site running. Keeping a neighborhood, a hospital campus, or a downtown corridor running takes a fleet of them, each with its own tank, maintenance schedule, and place in the fuel delivery queue. The math that works for one building does not hold at community scale. It simply multiplies the same fuel-dependency problem across every site that needs power."
+    },
+    {
+      "type": "heading",
+      "text": "Runtime, Noise, and Maintenance Add Up Fast"
+    },
+    {
+      "type": "paragraph",
+      "text": "Diesel units are built for intermittent use, not for running continuously for a week or more under real load. Extended runtime accelerates wear, and post-storm conditions rarely allow for the maintenance windows those systems assume. Noise and exhaust also become a real constraint in dense, close-quarters deployment, a factor that matters more in a residential neighborhood running on generator power for days than it does in a single isolated outage.",
+      "links": [
+        {
+          "text": "dense, close-quarters deployment",
+          "href": "/applications"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "What a Real Alternative Requires"
+    },
+    {
+      "type": "paragraph",
+      "text": "A power system built to serve a community after a hurricane — not just a single building — needs to solve the problem diesel cannot:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "A fuel input that does not depend on the same roads, terminals, and trucks that the storm just disrupted.",
+        "Output that scales by adding units, not by multiplying an already-strained fuel delivery problem.",
+        "Deployment fast enough to matter in the first hours after the storm, not the first week."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "VIVIFY built the Flying Pig™ to answer exactly this. It is a 1MW containerized hydrogen power system that runs on a water-based input — the unit ships with its own water supply and does not require an external fuel delivery to keep running. Scale is achieved by adding containers, not by adding trucks to an already-overwhelmed supply line. Field assembly is measured in hours, and the system is designed to generate power the moment it arrives on site.",
+      "links": [
+        {
+          "text": "built the Flying Pig™",
+          "href": "/technology"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Diesel was the answer when the alternative was nothing. It is not the answer when the alternative is a system that does not need the fuel truck to show up at all."
+    },
+    {
+      "type": "heading",
+      "text": "Get In the Room"
+    },
+    {
+      "type": "paragraph",
+      "variant": "contact",
+      "text": "VIVIFY works with government agencies, emergency response teams, and community operators to deploy hydrogen power where diesel logistics fall short. Discuss a deployment use case with the VIVIFY team ahead of the next storm.",
+      "links": [
+        {
+          "text": "Discuss a deployment use case",
+          "href": "mailto:info@vivify-technology.com"
+        }
+      ]
+    }
+  ]
+}

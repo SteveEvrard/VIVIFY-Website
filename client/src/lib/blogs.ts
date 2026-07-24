@@ -1,23 +1,48 @@
+import { GENERATED_BLOG_POSTS } from "../generated/blogs";
+
+export type BlogLink = {
+  text: string;
+  href: string;
+};
+
+export type BlogContentBlock =
+  | {
+      type: "heading";
+      text: string;
+    }
+  | {
+      type: "paragraph";
+      text: string;
+      variant?: "contact";
+      links?: BlogLink[];
+    }
+  | {
+      type: "list";
+      items: string[];
+    };
+
 export type BlogPost = {
   slug: string;
   title: string;
   date: string;
+  publishAt: string;
   category: "Infrastructure" | "Energy" | "Technology";
   excerpt: string;
   featuredImage: string;
   featuredImageAlt: string;
   inlineImages: Array<{ after: string; src: string; alt: string }>;
-  content: string[];
+  content: Array<string | BlogContentBlock>;
 };
 
 const IMAGE_ROOT = "/images/blog/engineering-without-an-agenda";
 const HOG_IMAGE_ROOT = "/images/blog/behind-the-meter-autonomy-hog-energy-system";
 
-export const BLOG_POSTS: BlogPost[] = [
+const LEGACY_BLOG_POSTS: BlogPost[] = [
   {
     slug: "engineering-without-an-agenda",
     title: "Engineering Without an Agenda: The Case for Neutral Infrastructure",
     date: "2026-07-20",
+    publishAt: "2026-07-20T00:00:00-05:00",
     category: "Infrastructure",
     excerpt: "Bipartisan energy security starts with infrastructure, not ideology. A practical case for modernizing the systems people already depend on.",
     featuredImage: IMAGE_ROOT + "/featured.png",
@@ -72,6 +97,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "behind-the-meter-autonomy-hog-energy-system",
     title: "Behind-the-Meter Autonomy: The HOG™ Energy System",
     date: "2026-07-22",
+    publishAt: "2026-07-22T00:00:00-05:00",
     category: "Energy",
     excerpt: "How the HOG™ brings on-demand hydrogen generation, 99% emission-free output, and site-level energy control to high-demand infrastructure.",
     featuredImage: HOG_IMAGE_ROOT + "/featured.png",
@@ -128,6 +154,17 @@ export const BLOG_POSTS: BlogPost[] = [
   },
 ];
 
-export function getBlogPost(slug: string) {
-  return BLOG_POSTS.find((post) => post.slug === slug);
+export const BLOG_POSTS: BlogPost[] = [...LEGACY_BLOG_POSTS, ...GENERATED_BLOG_POSTS];
+
+export function isBlogPostPublished(post: BlogPost, now = Date.now()) {
+  const publishTime = Date.parse(post.publishAt);
+  return !Number.isNaN(publishTime) && publishTime <= now;
+}
+
+export function getPublishedBlogPosts(now = Date.now()) {
+  return BLOG_POSTS.filter((post) => isBlogPostPublished(post, now));
+}
+
+export function getBlogPost(slug: string, now = Date.now()) {
+  return getPublishedBlogPosts(now).find((post) => post.slug === slug);
 }

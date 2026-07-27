@@ -1,5 +1,6 @@
 import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
+import { useBlogPublicationTime } from "@/hooks/useBlogPublicationTime";
 import { getBlogPost, type BlogLink } from "@/lib/blogs";
 import NotFound from "@/pages/NotFound";
 import { ArrowLeft } from "lucide-react";
@@ -53,7 +54,8 @@ function legacyParagraph(text: string) {
 }
 
 export default function BlogArticle({ params }: Props) {
-  const post = getBlogPost(params?.slug ?? "");
+  const now = useBlogPublicationTime();
+  const post = getBlogPost(params?.slug ?? "", now);
   if (!post) return <NotFound />;
 
   return (

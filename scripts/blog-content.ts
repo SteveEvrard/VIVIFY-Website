@@ -160,7 +160,3 @@ export async function loadBlogSources(repositoryRoot = process.cwd()) {
 
   return posts;
 }
-
-export function isDue(source: BlogSource, now = new Date()) {
-  return Date.parse(source.publishAt) <= now.getTime();
-}

@@ -12,6 +12,8 @@
     "preview": "vite preview --host",
     "precheck": "tsx scripts/generate-blog-content.ts",
     "check": "tsc --noEmit",
+    "pretest": "tsx scripts/generate-blog-content.ts",
+    "test": "vitest run",
     "format": "prettier --write ."
   },
   "dependencies": {

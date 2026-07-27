@@ -165,6 +165,13 @@ export function getPublishedBlogPosts(now = Date.now()) {
   return BLOG_POSTS.filter((post) => isBlogPostPublished(post, now));
 }
 
+export function getNextBlogPublicationTime(now = Date.now()) {
+  const futurePublicationTimes = BLOG_POSTS.map((post) => Date.parse(post.publishAt)).filter(
+    (publishTime) => !Number.isNaN(publishTime) && publishTime > now,
+  );
+  return futurePublicationTimes.length > 0 ? Math.min(...futurePublicationTimes) : undefined;
+}
+
 export function getBlogPost(slug: string, now = Date.now()) {
   return getPublishedBlogPosts(now).find((post) => post.slug === slug);
 }

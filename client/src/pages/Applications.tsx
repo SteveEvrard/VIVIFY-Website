@@ -7,8 +7,6 @@ import { tm, TM } from "@/lib/tm";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 
-const CLOUDFRONT_BASE = "https://d2t61k482lx79u.cloudfront.net";
-
 type FitCard = { title: string; body: string };
 
 type MediaSpec =
@@ -187,7 +185,7 @@ export default function Applications() {
       ],
       ctaSubject: "VIVIFY — Clean Emissions Application",
       ctaLabel: "Talk to Us About Clean Emissions",
-      media: { kind: "video", src: `${CLOUDFRONT_BASE}/coal-application.mp4` },
+      media: { kind: "video", src: "/video/coal-application.mp4" },
       mediaCaption: "Industrial exhaust treatment in a heavy industry environment",
       mediaOnLeft: true,
       fitTitle: "Where clean emissions fits",
@@ -217,7 +215,7 @@ export default function Applications() {
       ],
       ctaSubject: "VIVIFY — Water Treatment Application",
       ctaLabel: "Talk to Us About Water Treatment",
-      media: { kind: "video", src: `${CLOUDFRONT_BASE}/water-treatment-application.mp4` },
+      media: { kind: "video", src: "/video/water-treatment-application.mp4" },
       mediaCaption: "Industrial water treatment facility",
       mediaOnLeft: false,
       fitTitle: "Where water treatment fits",

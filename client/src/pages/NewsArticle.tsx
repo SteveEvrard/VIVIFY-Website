@@ -16,7 +16,12 @@ type Props = {
 function formatDate(iso: string) {
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return iso;
-  return d.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
+  return d.toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  });
 }
 
 function isReleaseLabel(text: string) {
@@ -26,6 +31,8 @@ function isReleaseLabel(text: string) {
 
 function isSectionHeading(text: string) {
   const t = text.trim();
+  if (t === "A Watch Built for the Work") return true;
+  if (t === "About VIVIFY") return true;
   if (t === "About MOBIA Industries") return true;
   if (t === "About VIVIFY Technology") return true;
   if (t === "Media Contact:" || t === "Media Contact") return true;
@@ -187,7 +194,7 @@ export default function NewsArticle(props: Props) {
                         preload="metadata"
                         className="w-full aspect-video"
                       >
-                        <source src="https://d2t61k482lx79u.cloudfront.net/news/Press-Release-020926.mov" type="video/mp4" />
+                        <source src="/video/Press-Release-020926.mov" type="video/mp4" />
                       </video>
                     </div>
                   );
@@ -211,4 +218,3 @@ export default function NewsArticle(props: Props) {
     </div>
   );
 }
-

@@ -10,6 +10,42 @@ export type NewsPost = {
 
 export const NEWS_POSTS: NewsPost[] = [
   {
+    slug: "buddy-paul-relocates-to-delray",
+    title:
+      "VIVIFY Chief Systems Architect Buddy Paul Relocates to Delray Beach as Company Moves from Fabrication to Manufacturing; Founder Jason Herring Marks the Milestone with Rolex Milgauss Presentation",
+    date: "2026-07-29",
+    category: "Press Release",
+    excerpt:
+      "Former NASA and Lockheed Martin aerospace engineer brings more than 40 years of advanced systems design experience as VIVIFY opens its Delray Beach manufacturing facility and honors the engineer who built the platform that got it there",
+    content: [
+      "<img src='/images/press-release/buddy-paul-relocates-to-delray/buddy-and-jason.jpg' alt='VIVIFY Chief Systems Architect Buddy Paul with founder and CEO Jason Herring' />",
+      `Delray Beach, Fla. July 29, 2026 — VIVIFY Technology, a hydrogen energy company headquartered in South Florida, today announced that <a href='https://vivify-technology.com/leadership/buddy-paul'>Distinguished Engineer & Chief Systems Architect Buddy Paul</a> is relocating to Delray Beach, Florida, to lead the company's new manufacturing facility located in Jupiter, marking VIVIFY's transition from fabrication to manufacturing at scale. Founder and CEO Jason Herring marked the occasion by presenting Paul with a Rolex Milgauss, recognizing the engineering work that carried VIVIFY to this point.`,
+      `Paul brings more than 40 years of experience designing complex technologies across aerospace, defense, energy, electronics, hydraulics, pneumatics, and nuclear systems, including work connected to NASA's Space Shuttle program, the Terminal High Altitude Area Defense program, Airbus aircraft systems, and Lockheed Martin, where he was named Inventor of the Year in 2003. His career includes roughly 250 patents and patent-related technologies developed across multiple industries.`,
+      `At VIVIFY, Paul leads the engineering execution behind the company's <a href='https://vivify-technology.com/technology#cat'>Clean Air Technology™ (CAT™) platform</a> and its hydrogen systems. Paul built VIVIFY's platforms in fabrication. The new Jupiter facility is where VIVIFY will begin manufacturing them in January 2027. The site marks the company's transition from single-unit fabrication to repeatable, scaled manufacturing of the CAT™ and hydrogen platforms.`,
+      `"Buddy is one of the rare engineers who can look at an impossible problem and start designing the answer," said Jason Herring, Founder and CEO of VIVIFY. "His experience spans some of the most technically demanding programs in aerospace, defense, and energy, but what makes him invaluable to VIVIFY is how he thinks. He designs the answer to a real problem, and he has spent years building the technical foundation for what VIVIFY is now manufacturing."`,
+      `Paul describes his work in direct terms: identifying the need for something and building the answer. Throughout his career, that approach has carried him across a wide range of engineering challenges, from aerospace systems to emissions control and hydrogen technology.`,
+      `“My passion has always been design,” said Paul. “I like identifying the need for something and then coming up with the answer for that need. That is what I have always done.”`,
+      `VIVIFY's platform is engineered to address one of the central challenges facing <a href='https://vivify-technology.com/applications'>modern energy infrastructure</a>: how to meet rising electricity demand while cutting emissions from the systems already in the ground. The company's CAT™ platform retrofits directly onto legacy coal, diesel, and natural-gas infrastructure — no teardown required — removing virtually every pollutant from exhaust streams while supporting reliable baseload electricity. Its hydrogen platforms, HOG™ and Flying Pig™, deliver independent, near-zero-emission power behind the meter.`,
+      `CAT™ is a five-stage emissions control system engineered to remove virtually every pollutant from exhaust streams without forcing operators to shut down and start over. VIVIFY's broader Arsenal includes HOG™, the flagship hydrogen energy platform, and Flying Pig™, a containerized 1MW hydrogen power unit — both engineered for behind-the-meter deployment, independent of the legacy grid.`,
+      `Paul's technical background aligns directly with VIVIFY's engineering philosophy: transform infrastructure rather than abandon it. The company's approach is focused on working with existing power plants, grids, labor forces, and communities to make energy systems cleaner, more efficient, and economically viable.`,
+      `"Buddy built this platform in fabrication. Jupiter is where we’ll manufacture it. That is the milestone. We are not preparing for production. We are in it,” said Herring.`,
+      "A Watch Built for the Work",
+      `To mark the milestone, Herring presented Paul with a Rolex Milgauss, a model first created in 1956 for scientists and engineers working around powerful electromagnetic fields, its name combining mille, meaning one thousand, with gauss, the measure of magnetic strength. Protected against fields of up to 1,000 gauss, the Milgauss became associated with the pioneering researchers at CERN and carried a distinctive lightning-bolt seconds hand, a symbol of energy, ingenuity, and unconventional thinking. After nearly two decades out of production, it returned in 2007 with modern antimagnetic engineering and the same lightning bolt intact.`,
+      `"It felt like the right watch for the man building VIVIFY," Herring said. "The Milgauss was made for people who work where ordinary solutions are not enough. Its lightning bolt represents energy, its resistance to magnetism represents resilience, and its history honors those willing to challenge what the world considers possible."`,
+      `"This project is something I have worked on for over 15 years, and now it’s coming together," said Paul. "I'm excited about bringing it to life. It will create a paradigm shift in energy, the cost of energy, and how power can reach people in remote areas and beyond."`,
+      `The Jupiter facility is VIVIFY's manufacturing site: concepts validated, systems hardened, platforms in production. What comes next is scale.`,
+      `For Paul, the mission is both technical and practical.`,
+      `"Thinking outside the box helps solve problems that seem like they do not have a direct answer," Paul said. "That's what this work requires."`,
+      `As VIVIFY continues building the team and infrastructure required for scale, Paul's relocation to Delray Beach — and the recognition that came with it — marks the company's transition from technical foundation to manufacturing`,
+      "About VIVIFY",
+      `VIVIFY Technology is a hydrogen energy company headquartered in South Florida, engineering platforms that address some of the most pressing challenges facing modern energy infrastructure. The company's CAT™ platform retrofits directly onto legacy coal, diesel, and natural-gas infrastructure — no teardown required — removing virtually every pollutant from exhaust streams while supporting reliable baseload electricity. Its hydrogen platforms, HOG™ and Flying Pig™, deliver independent, near-zero-emission power behind the meter.`,
+      `VIVIFY is built at the intersection of science, engineering, and infrastructure, engineered to eliminate pollutants rather than manage them, preserving grid stability, protecting jobs, and meeting tightening emissions standards. Beyond power generation, VIVIFY is advancing hydrogen-based technology across water restoration, waste-to-energy conversion, and broader infrastructure modernization.`,
+      `For more information, visit <a href='http://www.vivify-technology.com'>www.vivify-technology.com</a>.`,
+      "Media Contact",
+      `Ashley Stevenson<br />Chief Marketing Officer<br />VIVIFY Technology<br /><a href='mailto:ashley@vivify-technology.com'>ashley@vivify-technology.com</a><br /><a href='http://www.vivify-technology.com'>www.vivify-technology.com</a><br /><a target='_blank' href='https://www.instagram.com/vivify_tech/'>Instagram</a> | <a target='_blank' href='https://www.linkedin.com/company/vivifytechnology/'>LinkedIn</a> | <a target='_blank' href='https://www.facebook.com/profile.php?id=61586714503615'>Facebook</a> | <a target='_blank' href='https://x.com/VIVIFY_Tech'>X</a>`,
+    ].join("\n\n"),
+  },
+  {
     slug: "vivify-technology-hosts-governor-candidate-byron-donalds-at-south-florida-headquarters",
     title:
       "VIVIFY Technology Hosts Governor Candidate Byron Donalds at South Florida Headquarters",
@@ -284,4 +320,3 @@ export const NEWS_POSTS: NewsPost[] = [
 export function getNewsPost(slug: string): NewsPost | undefined {
   return NEWS_POSTS.find((p) => p.slug === slug);
 }
-

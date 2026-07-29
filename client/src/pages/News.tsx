@@ -7,7 +7,12 @@ function formatDate(iso: string) {
   const d = new Date(iso);
   // Fallback if date parsing fails
   if (Number.isNaN(d.getTime())) return iso;
-  return d.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
+  return d.toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    timeZone: "UTC",
+  });
 }
 
 export default function News() {
@@ -90,4 +95,3 @@ export default function News() {
     </div>
   );
 }
-

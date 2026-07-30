@@ -12,6 +12,16 @@ export type MediaCoverageItem = {
 
 export const MEDIA_COVERAGE: MediaCoverageItem[] = [
   {
+    slug: "investorshangout-vivify-expands-manufacturing-engineering-legend",
+    title: "VIVIFY Expands Manufacturing with Engineering Legend",
+    publication: "Investors Hangout",
+    author: "Olivia Taylor",
+    date: "2026-07-30",
+    excerpt:
+      "Investors Hangout covers VIVIFY Technology's transition from development to large-scale manufacturing at its Jupiter facility. The article highlights veteran aerospace engineer Buddy Paul's role in scaling the company's CAT, HOG, and Flying Pig energy platforms for production.",
+    url: "https://investorshangout.com/vivify-expands-manufacturing-with-engineering-legend-531369-/",
+  },
+  {
     slug: "washingtonexaminer-america-delivery-problem-not-power-shortage",
     title: "America doesn't have a power shortage. It has a delivery problem",
     publication: "Washington Examiner",
@@ -23,7 +33,8 @@ export const MEDIA_COVERAGE: MediaCoverageItem[] = [
   },
   {
     slug: "wflx-water-powered-generators-restore-power-1000-homes-15-minutes",
-    title: "Vivify's water-powered generators could restore power to 1,000 homes in 15 minutes",
+    title:
+      "Vivify's water-powered generators could restore power to 1,000 homes in 15 minutes",
     publication: "WFLX Fox 29",
     author: "Michael Hoffman",
     date: "2026-07-08",
@@ -84,7 +95,8 @@ export const MEDIA_COVERAGE: MediaCoverageItem[] = [
   },
   {
     slug: "advanceh2-jason-herring-visionary-hydrogen-power-ai-age",
-    title: "Jason Herring: The Visionary Behind Hydrogen Power Solutions for the AI Age",
+    title:
+      "Jason Herring: The Visionary Behind Hydrogen Power Solutions for the AI Age",
     publication: "AdvanceH2",
     date: "2026-05-30",
     excerpt:

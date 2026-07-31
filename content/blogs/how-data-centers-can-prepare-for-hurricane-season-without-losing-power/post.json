@@ -1,0 +1,125 @@
+{
+  "slug": "how-data-centers-can-prepare-for-hurricane-season-without-losing-power",
+  "title": "How Data Centers Can Prepare for Hurricane Season Without Losing Power",
+  "publishAt": "2026-07-31T00:00:00-05:00",
+  "category": "Infrastructure",
+  "targetKeyword": "data center backup power",
+  "excerpt": "Data center power demand is already outpacing the grid. Add hurricane season and the risk compounds. Here's what real preparedness looks like for a data center campus.",
+  "featuredImage": "featured.png",
+  "featuredImageAlt": "VIVIFY HOGâ„¢ hydrogen microturbine system installed on-site beside a data center, providing dedicated behind-the-meter power independent of the utility grid.",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Data centers were already running into a power problem before hurricane season became part of the conversation. U.S. data center power demand is projected to climb from 31 gigawatts in 2025 to 41 gigawatts in 2026, and to roughly 66 gigawatts by 2027, according to Goldman Sachs Research. That growth is arriving faster than new grid capacity can be built to meet it.",
+      "links": [
+        {
+          "text": "according to Goldman Sachs Research",
+          "href": "https://www.goldmansachs.com/insights/articles/us-data-center-power-demand-projected-to-double-by-2027"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Layer a hurricane season on top of a grid that is already stretched thin, and the risk compounds. Here is what that risk actually looks like for a data center campus, and what preparedness requires when standard grid capacity is no longer a safe assumption."
+    },
+    {
+      "type": "heading",
+      "text": "The Grid Problem Existed Before the Storm Problem"
+    },
+    {
+      "type": "paragraph",
+      "text": "Interconnection delays are becoming the norm for large-load customers, not the exception. S&P Global's research on the U.S. data center power crunch found that customer-sited, on-site power resources now offer a faster path to capacity than waiting for new grid-connected supply â€” a shift driven by the pace of AI-related demand outrunning what utilities can deliver on a workable timeline. That means many data center campuses are already evaluating on-site generation for capacity reasons alone, before weather ever enters the conversation.",
+      "links": [
+        {
+          "text": "S&P Global's research",
+          "href": "https://www.spglobal.com/en/research-insights/special-reports/look-forward/data-center-frontiers/navigating-us-data-center-energy-demand"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "What an Outage Actually Costs a Data Center"
+    },
+    {
+      "type": "paragraph",
+      "text": "The financial stakes of losing power at a data center are not abstract. Industry estimates place the cost of data center downtime at roughly $9,000 per minute, and a full day of downtime at a major facility has been estimated to exceed $12 million, according to figures compiled by Bloom Energy and Empower IT Services. For hyperscale facilities supporting AI workloads, per-hour costs during an extended outage can run into the millions once cascading effects on dependent customers and service-level agreements are factored in.",
+      "links": [
+        {
+          "text": "by Bloom Energy",
+          "href": "https://resources.bloomenergy.com/data-centers"
+        },
+        {
+          "text": "Empower IT Services",
+          "href": "https://empowerit.tech/docs/what-is-the-cost-of-a-day-without-power-for-your-business/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Those numbers do not require a direct hit from a hurricane to materialize. A regional grid failure, a damaged substation, or an extended utility restoration timeline after a storm passes nearby can produce the same outcome."
+    },
+    {
+      "type": "heading",
+      "text": "Hurricane Season Adds a Second Layer of Risk"
+    },
+    {
+      "type": "paragraph",
+      "text": "NOAA's official outlook for the 2026 Atlantic hurricane season, which runs June 1 through November 30, calls for a below-average year: 8 to 14 named storms, with 3 to 6 expected to become hurricanes and 1 to 3 reaching major hurricane strength. A below-average forecast is not the same as a low-risk season, and NOAA has been direct about that distinction. As National Weather Service Director Ken Graham put it when the outlook was released, \"It only takes one.\"",
+      "links": [
+        {
+          "text": "NOAA's official outlook for the 2026 Atlantic hurricane season",
+          "href": "https://www.noaa.gov/news-release/noaa-predicts-below-normal-2026-atlantic-hurricane-season"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "For a data center campus, one storm affecting the regional grid is enough to turn a capacity-planning problem into an operational one, especially for facilities already running close to their interconnection limits."
+    },
+    {
+      "type": "heading",
+      "text": "What Real Preparedness Looks Like"
+    },
+    {
+      "type": "paragraph",
+      "text": "Preparedness for a data center campus is not a generator sized for a brief outage. It is a power architecture built to operate independent of the grid it would otherwise be waiting on before, during, and after a storm. That requires:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "On-site, behind-the-meter power that does not depend on utility restoration timelines.",
+        "A platform that scales with campus load rather than functioning as a stopgap measure.",
+        "A fuel input that isn't competing with the rest of the region for the same delivery trucks after a storm."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "This is the gap VIVIFY's HOGâ„¢ platform was engineered to close â€” a self-supporting, behind-the-meter hydrogen energy system that scales from a single site to a full campus, running on water rather than a fuel supply chain a hurricane can disrupt. For facilities that need rapid, containerized capacity, the Flying Pigâ„¢ adds modular power that can be deployed in hours.",
+      "links": [
+        {
+          "text": "VIVIFY's HOGâ„¢ platform",
+          "href": "/technology"
+        },
+        {
+          "text": "the Flying Pigâ„¢",
+          "href": "/technology"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Get In the Room"
+    },
+    {
+      "type": "paragraph",
+      "variant": "contact",
+      "text": "VIVIFY works with data center operators and large-load developers to build power architecture that holds up through interconnection delays and hurricane season alike. Discuss a deployment use case with the VIVIFY team.",
+      "links": [
+        {
+          "text": "Discuss a deployment use case with the VIVIFY team.",
+          "href": "mailto:info@vivify-technology.com"
+        }
+      ]
+    }
+  ]
+}

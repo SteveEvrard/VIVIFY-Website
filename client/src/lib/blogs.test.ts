@@ -19,4 +19,21 @@ describe("scheduled blog publication", () => {
     expect(getNextBlogPublicationTime(beforePublish)).toBe(publishTime);
     expect(getBlogPost(slug, publishTime)?.slug).toBe(slug);
   });
+
+  it("publishes the July 31 article immediately at midnight Central Time", () => {
+    const slug = "how-data-centers-can-prepare-for-hurricane-season-without-losing-power";
+    const publishTime = Date.parse("2026-07-31T00:00:00-05:00");
+
+    expect(getBlogPost(slug, publishTime - 1)).toBeUndefined();
+    expect(getBlogPost(slug, publishTime)?.slug).toBe(slug);
+  });
+
+  it("holds the August 3 article until Monday at midnight Central Time", () => {
+    const slug = "how-hydrogen-is-made-from-water-electrolysis-explained";
+    const publishTime = Date.parse("2026-08-03T00:00:00-05:00");
+
+    expect(getBlogPost(slug, publishTime - 1)).toBeUndefined();
+    expect(getNextBlogPublicationTime(publishTime - 1)).toBe(publishTime);
+    expect(getBlogPost(slug, publishTime)?.slug).toBe(slug);
+  });
 });

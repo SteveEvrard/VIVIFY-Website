@@ -37,6 +37,7 @@ export type BlogSource = {
     after: string;
     source: string;
     alt: string;
+    caption?: string;
   }>;
   content: BlogSourceBlock[];
 };
@@ -130,6 +131,9 @@ async function validateSource(source: BlogSource, directory: string) {
     requireString(image.after, `${source.slug}.inlineImages[${index}].after`);
     requireString(image.source, `${source.slug}.inlineImages[${index}].source`);
     requireString(image.alt, `${source.slug}.inlineImages[${index}].alt`);
+    if (image.caption !== undefined) {
+      requireString(image.caption, `${source.slug}.inlineImages[${index}].caption`);
+    }
     await assertAssetExists(directory, image.source, `${source.slug}.inlineImages[${index}].source`);
   }
 }

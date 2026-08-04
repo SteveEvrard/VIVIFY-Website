@@ -36,4 +36,22 @@ describe("scheduled blog publication", () => {
     expect(getNextBlogPublicationTime(publishTime - 1)).toBe(publishTime);
     expect(getBlogPost(slug, publishTime)?.slug).toBe(slug);
   });
+
+  it("holds the August 5 article until Wednesday at midnight Central Time", () => {
+    const slug = "hidden-cost-of-power-outages-florida-businesses-storm-season";
+    const publishTime = Date.parse("2026-08-05T00:00:00-05:00");
+
+    expect(getBlogPost(slug, publishTime - 1)).toBeUndefined();
+    expect(getNextBlogPublicationTime(publishTime - 1)).toBe(publishTime);
+    expect(getBlogPost(slug, publishTime)?.slug).toBe(slug);
+  });
+
+  it("holds the August 7 article until Friday at midnight Central Time", () => {
+    const slug = "next-generation-engineering-talent-joins-vivify-technology";
+    const publishTime = Date.parse("2026-08-07T00:00:00-05:00");
+
+    expect(getBlogPost(slug, publishTime - 1)).toBeUndefined();
+    expect(getNextBlogPublicationTime(publishTime - 1)).toBe(publishTime);
+    expect(getBlogPost(slug, publishTime)?.slug).toBe(slug);
+  });
 });

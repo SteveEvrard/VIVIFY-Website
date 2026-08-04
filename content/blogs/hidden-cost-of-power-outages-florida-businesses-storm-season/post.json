@@ -1,0 +1,135 @@
+{
+  "slug": "hidden-cost-of-power-outages-florida-businesses-storm-season",
+  "title": "The Hidden Cost of Power Outages: What Florida Businesses Lose Every Storm Season",
+  "publishAt": "2026-08-05T00:00:00-05:00",
+  "category": "Infrastructure",
+  "targetKeyword": "power outage during hurricane",
+  "excerpt": "Power outages cost the U.S. economy an estimated $150 billion a year, and Southeast states carry a disproportionate share. Here's what that costs a Florida business, storm season after storm season.",
+  "featuredImage": "featured.png",
+  "featuredImageAlt": "VIVIFY microturbine unit stationed outside a commercial building as a storm approaches, with a clearing sunset on one side and dark storm clouds and lightning on the other.",
+  "inlineImages": [
+    {
+      "after": "the average outage length grew from 9.6 hours to 11.8 hours.",
+      "source": "national-outage-costs.png",
+      "alt": "Bar chart comparing national power outage costs: $67 billion per year average from 2018-2024, versus $121 billion in 2024 alone.",
+      "caption": "Major power outage costs to U.S. electricity customers, seven-year average vs. 2024. Source: Oak Ridge National Laboratory."
+    },
+    {
+      "after": "the routine number stops looking routine.",
+      "source": "florida-business-outage-costs.png",
+      "alt": "Bar chart comparing the cost to a Florida business of a routine power outage, $2,956, versus an illustrative estimate for a 19.1-hour hurricane-length outage, approximately $61,128, calculated by scaling the reported per-minute interruption cost.",
+      "caption": "Illustrative cost to a Florida non-residential customer: a routine outage vs. a hurricane-length outage, based on Florida's 2022 average storm-year outage duration of 19.1 hours. Sources: Lawrence Berkeley National Laboratory (ICE Calculator) and U.S. Energy Information Administration."
+    },
+    {
+      "after": "only 31% actually have a plan in place.",
+      "source": "disaster-preparedness-gap.png",
+      "alt": "Horizontal bar chart showing 94% of small business owners believe they could recover from a disaster, while only 31% actually have a disaster plan in place.",
+      "caption": "Small business disaster preparedness: perception vs. reality. Source: 2026 U.S. Chamber of Commerce Foundation survey."
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "The cost of a power outage rarely shows up as a single line item. It shows up as spoiled inventory, missed orders, idle staff, emergency equipment rentals, and - often - customers who don't come back. Add those up across a storm season, and the number is larger than most Florida businesses have actually calculated."
+    },
+    {
+      "type": "paragraph",
+      "text": "Here's what the data says about what an outage really costs and why Florida businesses carry more of that cost than most."
+    },
+    {
+      "type": "heading",
+      "text": "The National Numbers Are Already Staggering"
+    },
+    {
+      "type": "paragraph",
+      "text": "A 2026 analysis from Oak Ridge National Laboratory gives the clearest picture of the trend: Major power outages cost U.S. customers an average of $67 billion a year over the past seven years, but that burden has climbed sharply, with the price tag hitting $121 billion in 2024 alone. The average cost per outage for commercial and industrial customers was $6,031 that year. Between 2018 and 2024, the number of major outages nationwide rose 29%, and the average outage length grew from 9.6 hours to 11.8 hours.",
+      "links": [
+        {
+          "text": "2026 analysis from Oak Ridge National Laboratory",
+          "href": "https://www.ornl.gov/news/analysis-shows-power-outages-cost-us-electricity-customers-billions"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Those are national figures. The Oak Ridge analysis specifically noted that the highest outage costs per customer are concentrated in the Southeast and along the coasts - not coincidentally, the same regions where hurricanes do the most damage."
+    },
+    {
+      "type": "heading",
+      "text": "What That Looks Like at the Business Level"
+    },
+    {
+      "type": "paragraph",
+      "text": "To see what that looks like for an individual business, Florida Power & Light's own reported reliability data - run through Lawrence Berkeley National Laboratory's Interruption Cost Estimate model - puts the average cost of a routine, non-storm power interruption at $2,955.66 for a non-residential customer, or roughly $53 for every minute the power stays off. That's the cost of an ordinary outage.",
+      "links": [
+        {
+          "text": "Lawrence Berkeley National Laboratory's Interruption Cost Estimate model",
+          "href": "https://icecalculator.com/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "A hurricane is not an ordinary outage: in 2022, Florida customers averaged 19.1 hours without power over the course of the year, the highest of any U.S. state, driven by Hurricane Ian alone leaving 2.6 million Florida customers in the dark, some for more than two weeks. Two years later, Hurricane Milton knocked out power to 3.4 million Florida customers, according to the U.S. Energy Information Administration. Multiply an ordinary outage's per-minute cost by a multi-day hurricane restoration timeline, and the routine number stops looking routine.",
+      "links": [
+        {
+          "text": "Florida customers averaged 19.1 hours without power",
+          "href": "https://www.eia.gov/todayinenergy/detail.php?id=61303"
+        },
+        {
+          "text": "according to the U.S. Energy Information Administration",
+          "href": "https://www.eia.gov/todayinenergy/detail.php?id=66744"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "The Outage Is Rarely the Whole Story"
+    },
+    {
+      "type": "paragraph",
+      "text": "The financial exposure doesn't end when the power comes back on. FEMA has long estimated that 40% to 60% of businesses affected by a major disaster never reopen - a widely cited figure driven as much by lost data, lost customers, and depleted cash reserves as by the physical damage itself. That risk compounds with confidence: A 2026 U.S. Chamber of Commerce Foundation survey found that 94% of small business owners believe they could recover from a disaster, but only 31% actually have a plan in place.",
+      "links": [
+        {
+          "text": "FEMA has long estimated",
+          "href": "https://www.fema.gov/sites/default/files/documents/fema_effak-toolkit.pdf"
+        },
+        {
+          "text": "2026 U.S. Chamber of Commerce Foundation survey",
+          "href": "https://www.uschamberfoundation.org/disasters/94-of-small-businesses-say-they-could-recover-from-a-disaster-but-only-31-have-a-plan"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "The businesses hit hardest tend to be the ones who assumed they were the exception. That statistic is the real argument for treating backup power as a continuity investment rather than an insurance line item nobody expects to use."
+    },
+    {
+      "type": "heading",
+      "text": "What Preparedness Actually Buys Back"
+    },
+    {
+      "type": "paragraph",
+      "text": "None of this cost is inevitable; it's what happens when a business can't stay open before, during, and after a storm. But staying open requires power that doesn't wait on grid restoration or a fuel delivery competing with the rest of the region, which is the gap VIVIFY's Flying Pig\u2122 was built to close: a containerized hydrogen power system that runs on a water-based input and can be deployed in hours, not the days a utility crew or a fuel truck may need to reach a storm-affected area."
+    },
+    {
+      "type": "paragraph",
+      "text": "The cost of an outage is well documented. The cost of not preparing for one is what most businesses only calculate after the fact."
+    },
+    {
+      "type": "heading",
+      "text": "Get In the Room"
+    },
+    {
+      "type": "paragraph",
+      "variant": "contact",
+      "text": "Discuss a deployment use case with the VIVIFY team before this season's next storm.",
+      "links": [
+        {
+          "text": "Discuss a deployment use case",
+          "href": "mailto:info@vivify-technology.com"
+        }
+      ]
+    }
+  ]
+}

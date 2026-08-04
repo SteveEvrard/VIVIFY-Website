@@ -75,7 +75,7 @@ export default function BlogArticle({ params }: Props) {
               if (typeof block === "string") {
                 if (block.startsWith("## ")) return <h2 key={index} className="pt-8 text-3xl font-bold leading-tight text-foreground">{block.slice(3)}</h2>;
                 const inlineImages = post.inlineImages.filter((image) => block.endsWith(image.after));
-                return <Fragment key={index}>{legacyParagraph(block)}{inlineImages.map((image) => <figure key={image.src} className="py-6"><div className="overflow-hidden rounded-2xl border border-gray-200 bg-gray-100"><img src={image.src} alt={image.alt} className="h-auto w-full" loading="lazy" /></div></figure>)}</Fragment>;
+                return <Fragment key={index}>{legacyParagraph(block)}{inlineImages.map((image) => <figure key={image.src} className="py-6"><div className="overflow-hidden rounded-2xl border border-gray-200 bg-gray-100"><img src={image.src} alt={image.alt} className="h-auto w-full" loading="lazy" /></div>{image.caption && <figcaption className="mt-3 text-sm leading-relaxed text-muted-foreground">{image.caption}</figcaption>}</figure>)}</Fragment>;
               }
 
               if (block.type === "heading") {
@@ -89,7 +89,7 @@ export default function BlogArticle({ params }: Props) {
               const paragraphClass = block.variant === "contact"
                 ? "rounded-2xl border border-primary/20 bg-primary/5 p-6 text-base leading-relaxed text-muted-foreground md:text-lg"
                 : "text-base leading-8 text-muted-foreground md:text-lg md:leading-9";
-              return <Fragment key={index}><p className={paragraphClass}>{linkedText(block.text, block.links)}</p>{inlineImages.map((image) => <figure key={image.src} className="py-6"><div className="overflow-hidden rounded-2xl border border-gray-200 bg-gray-100"><img src={image.src} alt={image.alt} className="h-auto w-full" loading="lazy" /></div></figure>)}</Fragment>;
+              return <Fragment key={index}><p className={paragraphClass}>{linkedText(block.text, block.links)}</p>{inlineImages.map((image) => <figure key={image.src} className="py-6"><div className="overflow-hidden rounded-2xl border border-gray-200 bg-gray-100"><img src={image.src} alt={image.alt} className="h-auto w-full" loading="lazy" /></div>{image.caption && <figcaption className="mt-3 text-sm leading-relaxed text-muted-foreground">{image.caption}</figcaption>}</figure>)}</Fragment>;
             })}
           </div>
         </div>

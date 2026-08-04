@@ -26,6 +26,7 @@ function toPublicPost(source: BlogSource) {
       after: image.after,
       src: `${imageRoot}/${path.basename(image.source)}`,
       alt: image.alt,
+      caption: image.caption,
     })),
     content: source.content,
   };

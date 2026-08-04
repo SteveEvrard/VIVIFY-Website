@@ -30,7 +30,7 @@ export type BlogPost = {
   excerpt: string;
   featuredImage: string;
   featuredImageAlt: string;
-  inlineImages: Array<{ after: string; src: string; alt: string }>;
+  inlineImages: Array<{ after: string; src: string; alt: string; caption?: string }>;
   content: Array<string | BlogContentBlock>;
 };
 

@@ -12,6 +12,16 @@ export type MediaCoverageItem = {
 
 export const MEDIA_COVERAGE: MediaCoverageItem[] = [
   {
+    slug: "townhall-vivify-hydrogen-generators-power-anything",
+    title: "VIVIFY's Hydrogen Generators Can Power Anything",
+    publication: "Townhall",
+    author: "Duggan Flanakin",
+    date: "2026-08-05",
+    excerpt:
+      "Townhall columnist Duggan Flanakin profiles VIVIFY Technology's production-ready CAT, HOG, and Flying Pig platforms and the company's push to deliver scalable, off-grid hydrogen power. The column highlights the 1MW containerized Flying Pig's rapid deployment and potential applications across data centers, remote industrial sites, military operations, and disaster response.",
+    url: "https://townhall.com/columnists/dugganflanakin/2026/08/04/vivifys-hydrogen-generators-can-power-anything-n2680612",
+  },
+  {
     slug: "investorshangout-vivify-expands-manufacturing-engineering-legend",
     title: "VIVIFY Expands Manufacturing with Engineering Legend",
     publication: "Investors Hangout",
@@ -20,6 +30,17 @@ export const MEDIA_COVERAGE: MediaCoverageItem[] = [
     excerpt:
       "Investors Hangout covers VIVIFY Technology's transition from development to large-scale manufacturing at its Jupiter facility. The article highlights veteran aerospace engineer Buddy Paul's role in scaling the company's CAT, HOG, and Flying Pig energy platforms for production.",
     url: "https://investorshangout.com/vivify-expands-manufacturing-with-engineering-legend-531369-/",
+  },
+  {
+    slug: "briefglance-vivify-pivot-production-industrial-scale",
+    title:
+      "VIVIFY's Pivot to Production: From Engineering Vision to Industrial Scale",
+    publication: "BriefGlance.com",
+    author: "Patrick Griffin",
+    date: "2026-07-30",
+    excerpt:
+      "BriefGlance examines VIVIFY Technology's transition from bespoke fabrication to industrial-scale manufacturing at its new Jupiter, Florida facility. The article profiles Chief Systems Architect Buddy Paul's role in developing the company's CAT, HOG, and Flying Pig platforms and explores how scalable production could advance VIVIFY's pragmatic approach to decarbonization.",
+    url: "https://briefglance.com/articles/vivifys-pivot-to-production-from-engineering-vision-to-industrial-scale",
   },
   {
     slug: "washingtonexaminer-america-delivery-problem-not-power-shortage",

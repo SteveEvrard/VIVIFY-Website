@@ -10,7 +10,7 @@ function formatDate(iso: string) {
 }
 
 export default function MediaCoverage() {
-  const items = [...MEDIA_COVERAGE].sort((a, b) => (a.date < b.date ? 1 : -1));
+  const items = [...MEDIA_COVERAGE].sort((a, b) => b.date.localeCompare(a.date));
 
   return (
     <div className="min-h-screen flex flex-col pt-16 md:pt-20">

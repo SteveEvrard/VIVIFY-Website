@@ -12,6 +12,17 @@ export type MediaCoverageItem = {
 
 export const MEDIA_COVERAGE: MediaCoverageItem[] = [
   {
+    slug: "barchart-nasa-lockheed-martin-inventor-hydrogen-power-units-florida",
+    title:
+      "A NASA & Lockheed Martin Inventor Are Now Building Hydrogen Power Units in Florida",
+    publication: "Barchart",
+    author: "Ivan Patriki",
+    date: "2026-08-06",
+    excerpt:
+      "Barchart profiles VIVIFY Technology's expansion into production under Distinguished Engineer and Chief Systems Architect Buddy Paul, a former NASA engineer and Lockheed Martin Inventor of the Year. The article highlights the company's 1MW Flying Pig™ hydrogen power unit, its Florida manufacturing operation, and the platform's potential to provide independent power for homes and other applications.",
+    url: "https://www.barchart.com/story/news/3665989/a-nasa-and-lockheed-martin-inventor-is-now-building-hydrogen-power-units-in-florida",
+  },
+  {
     slug: "townhall-vivify-hydrogen-generators-power-anything",
     title: "VIVIFY's Hydrogen Generators Can Power Anything",
     publication: "Townhall",
